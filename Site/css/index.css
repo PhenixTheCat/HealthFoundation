@@ -1,3 +1,11 @@
+/*@font-face{
+	font-family: 'Open-Sans';
+	src:url('open-sans/OpenSans-Bold.ttf','open-sans/OpenSans-BoldItalic.ttf','open-sans/OpenSans-Italic.ttf',
+		'open-sans/OpenSans-Light.ttf','open-sans/OpenSans-Regular.ttf','open-sans/OpenSans-LightItalic.ttf',
+		'open-sans/OpenSans-SemiBold');
+	
+}*/
+
 body
 {
     font-family: Open Sans;
@@ -118,46 +126,77 @@ li a {
 
 }
 
-
-
-* {box-sizing: border-box;}
-
-
-#inscription {
-background-color: #7CA0E4;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.section1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
-
-.enteteInscription {
-  width: 100px;
-  padding: 10px;
-  background-color: rgba(111,41,97,.3);
-  border: 2px solid rgba(111,41,97,.5);
-  display: inline-block;
-  vertical-align: middle
-}
-
-input[type=text],input[type=password],input[type=email]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-label{
-	display: block;
+.section1 h1{
+	display: flex;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 25px;
+	color: black;
+	align-items: center;
 
 }
-input[type=submit]{
-	margin: 20px;
+.section1_1{
+	display: flex;
+	flex-direction: column;
+
+}
+
+.section1_1_1{
+	display: flex;
+	flex-direction: row;
+		align-items: center;
+
+
+}
+
+.section1_1_1 p{
+	height: 50px;
+	width:250px;
 	font-size: 20px;
-	border:2px solid #000000;
-	background-color: #D2E1FF;
+	text-align: center;
+	background-color: rgba(41, 105, 151, 0.49);
 }
 
-fieldset {
-      padding: 20px;
-      }
+}
+.section1_2{
+	display: flex;
+	margin-left:auto; 
+}
 
+
+.section2{
+	height: 200px;
+	width: 1000px
+
+}
+
+.section2 h1{
+	text-align: center;
+	display: flex;
+	font-style: bold;
+	font-size: 20px;
+    border-bottom: 3px solid #FFFFFF;
+    color: white;
+
+}
+
+
+footer
+{
+	display: flex;
+	border-top: solid grey 1px;
+
+}
+#connexion{
+	color:#3A79FF;
+	font-style: normal;
+	background-color: #D2E1FF;
+	text-align: center;
+	right: 0px;
+}
