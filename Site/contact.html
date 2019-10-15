@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <title>Health Foundation</title>
+    <link rel="stylesheet" media="screen" href="contact.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  </head>
+  <body>
+
+    <header class="entete" >
+            <div class = logoPrincipal >
+        <img src="images/HF4.png" class="logo">
+        <h1 id="Titre"><a href="accueil.html">Health Foundation</h1>
+        </div>
+            <nav id="menu">
+                <ul>
+              <li><a href="index.html"> Accueil</li>
+              <li><a href="apropos.html">À propos </li>
+              <li><a href="connexion.html">Connexion</li>
+              <li><a href="inscription.html">Inscription</li>
+
+            </ul>
+
+            </nav>
+
+      </header>
+
+<div class="header_contact">
+    <h1 class= contact> Contact </h1>
+  </div>
+    
+    <div class="formulaire">  
+      
+    <form action="envoi.php" method="post"> 
+    <label for="Nom" id="nom">Nom</label>
+    <input type="text" name="nom">
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom">
+    <label for="mail">Adresse e-mail</label>
+    <input type="email" name="mail">
+    <label for="objet">Objet</label>
+    <input type="text" name="objet">
+    <label for="message">Votre message</label>
+    <textarea name="message" rows="10" cols= "55">
+    Tapez votre message ici
+    </textarea>
+    <input type="submit" Value="Envoyer" id="envoi">
+
+  </div> 
+  </body>
+</html>
