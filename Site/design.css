@@ -1,3 +1,8 @@
+@font-face{
+	font-family: 'OpenSansLight';
+	src:url('OpenSans-Light.ttf');
+}
+
 /*=========     Mise en page commune du header    ======.*/
 
 .logoPrincipal{
@@ -31,7 +36,7 @@
 
 body
 {
-    font-family: Open Sans;
+    font-family: 'OpenSansLight';
     background-image: radial-gradient(closest-side ellipse at center, white, rgb(248,248,243));
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -184,12 +189,16 @@ div.menuBas>a#connexion{
 /* =============       Page d'inscription ============ */
 
 .inscriptionP1 {
-background-color: #7CA0E4;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	background-color: #7CA0E4;
+	border: 1px solid #000000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
-.enteteInscription {
+ {
   width: 100px;
   padding: 10px;
   background-color: rgba(111,41,97,.3);
@@ -208,11 +217,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .inscriptionP1 label{
 	display: block;
+	left: 0px;
 
-}
-
-.inscriptionP1 fieldset  {
-      padding: 20px;
 }
 
 .inscriptionP1 input[type=submit]{
@@ -220,6 +226,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	font-size: 20px;
 	border:2px solid #000000;
 	background-color: #D2E1FF;
+}
+
+.inscriptionP1 fieldset{
+	border:none;
 }
 
 
@@ -260,7 +270,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	font-size: 50px;	
 	border-bottom: 5px solid black;
 	width: 700px;
-	margin-left: auto;
+		margin-left: auto;
 	margin-right: auto;
 }
 
