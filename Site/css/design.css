@@ -110,20 +110,7 @@ li a {
 
  
     
-    
-#inscription {
-  background-color: #7CA0E4;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
 
-
-#connexion{
-    color:#3A79FF;
-    font-style: normal;
-    background-color: #D2E1FF;
-    text-align: center;
-}
 
 
 
@@ -317,7 +304,20 @@ fieldsetInscription {
 
 
 
+    
+#inscription404 {
+  background-color: #7CA0E4;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
+
+#connexion404 {
+    color:#3A79FF;
+    font-style: normal;
+    background-color: #D2E1FF;
+    text-align: center;
+}
 
 
 
@@ -344,7 +344,7 @@ fieldsetInscription {
 
 
 
-/*Les ?????????? sont rensignées ici */
+
 
 
 div.formulaireContact{
