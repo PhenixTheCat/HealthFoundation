@@ -1,4 +1,4 @@
-/*Ici, la mise en page principale, commune.*/
+/*=========     Mise en page commune du header    ======.*/
 
 .logoPrincipal{
 	display: flex;
@@ -27,20 +27,6 @@
     letter-spacing: 0.03em;
     margin: 15px 0 0 10px;
     }
-
-
-
-
-.contact{
-	font-size: 50px;	
-	text-align: center;
-	border-bottom: 5px solid black;
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
 
 
 body
@@ -72,13 +58,6 @@ nav a:hover
 
 
 
-label{
-	display: block;
-
-}
-
-
-
 ul {
   list-style-type: none;
   float: right;
@@ -96,9 +75,22 @@ li a {
   padding: 0px 10px;
 }
 
+/* =================   Header non connecté  ============== */
 
 
+.headerNonConnecte
+{
 
+	display: flex;
+	align-items: center;
+	align-content: center;
+	border-bottom: solid #3A79FF 1px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+/* =================   Footer non connecté  ============== */
 
 
 .footerNonConnecte
@@ -108,19 +100,42 @@ li a {
 
 }
 
- 
+#connexion{
+    display:inline;
+    float: right;
+}
+div#connexion>a{
+	color:#3A79FF;
+	font-style: normal;
+	background-color: #D2E1FF;
+	text-align: center;
+	right: 0px;
+}
+div.menuBas>a{
+    margin : 0 20px;
     
-
-
-
-
-
-
+}
+div.menuBas>p{
+    font-size: 10px;
+    
+}
+div.menuBas>a#connexion{
+    margin : 0 20px 0 70%;
+    padding:0 10px 0 10px;
+}
+.menuBas{
+    padding:10px;
+    width : 100%;
+}
+.photoAccueil{
+    width:90%
+}
+    
 
 
 /*La gestion de taille d'écran est renseignée ici */
 
-
+/*  ==============      A REVOIR (MEDIA QUERIES) =============== */
 
 /* min-width pour moyennes résolutions */
 @media screen and (min-width: 1024px) {
@@ -163,84 +178,16 @@ li a {
 
 
 
-
-
-/*Ici, la liste des input.*/
-
-
-
-
-input[type=text]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-
-input[type=password]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-
-
-input[type=email]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Ici, les définitions propres à chaque page.*/
 
 
+/* =============       Page d'inscription ============ */
 
-section{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.inscriptionP1 {
+background-color: #7CA0E4;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.404 {
-    width: 500px;
-    height: 300px;
-}
-
-
-
-
-fieldsetInscription {
-      padding: 20px;
-}
-
-
-
-
 
 .enteteInscription {
   width: 100px;
@@ -251,46 +198,24 @@ fieldsetInscription {
   vertical-align: middle
 }
 
-
-
-
-.headerNonConnecte
-{
-
-	display: flex;
-	align-items: center;
-	align-content: center;
-	border-bottom: solid #3A79FF 1px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-   
-}
-
-
-
-
-
-.textareaContact{
-	display: block;
-	padding: 20px;
-	margin-left: auto;
-	margin-right: auto;
+.inscriptionP1 input[type=text],input[type=password],input[type=email]{
 	border:none;
-	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-
-
-.submitTransparent{
-	margin: 20px;
-	font-size: 20px;
-	border:2px solid #000000;
 	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
 }
 
+.inscriptionP1 label{
+	display: block;
 
-.submitD2E1FF{
+}
+
+.inscriptionP1 fieldset  {
+      padding: 20px;
+}
+
+.inscriptionP1 input[type=submit]{
 	margin: 20px;
 	font-size: 20px;
 	border:2px solid #000000;
@@ -298,74 +223,97 @@ fieldsetInscription {
 }
 
 
+/* ==========  Page 404  ==========  */
 
+.errror404 img {
+    width: 500px;
+    height: 300px;
+}
 
+.error404{
 
-
-
-
-    
-#inscription404 {
-  background-color: #7CA0E4;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-
-#connexion404 {
-    color:#3A79FF;
-    font-style: normal;
-    background-color: #D2E1FF;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 
 
 
+/* ==========  Page contact  ==========  */
 
 
 
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-div.formulaireContact{
+.formulaireContact{
 	text-align: center;
 }
 
-div.headerContact{
+.headerContact{
 	text-align: center;
-	font-size: 30px;
-	border-bottom:  5px solid black;
-	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 
+.headerContact h1{
+	font-size: 50px;	
+	border-bottom: 5px solid black;
+	width: 700px;
+}
+
+.formulaireContact label{
+	display: block;
+
+}
+
+/*Ici, la liste des input.*/
 
 
 
 
+.formulaireContact input[type=text]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
 
+
+.formulaireContact input[type=password]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+
+
+.formulaireContact input[type=email]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+.formulaireContact input[type=submit]{
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: transparent;
+}
+
+.formulaireContact textarea{
+	display: block;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border:none;
+	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 
 
