@@ -1,3 +1,9 @@
+/*Les fonctions principales sont rensignées ici */
+
+
+
+
+
 body
 {
     font-family: Open Sans;
@@ -83,10 +89,19 @@ li a {
 
 
 
+fieldset {
+      padding: 20px;
+}
 
 
 
 
+
+
+
+
+
+/*Les ?????????? sont rensignées ici */
 
 
 .logoPrincipal{
@@ -106,117 +121,6 @@ li a {
 	
 }
 
-
-#Titre{
-    display: flex;
-    font-family: Proza Libre;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    letter-spacing: 0.03em;
-    margin: 15px 0 0 10px;
-    }
-    
-    
-    
-    
-#inscription {
-  background-color: #7CA0E4;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-
-
-div.formulaireContact{
-	text-align: center;
-}
-
-div.headerContact{
-	text-align: center;
-	font-size: 30px;
-	border-bottom:  5px solid black;
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* min-width pour moyennes résolutions */
-@media screen and (min-width: 1024px) {
-	#main {
-		width:70%;
-		clear:none;
-	}
-	#aside {
-		width:30%;
-		clear:none;
-	}
-}
-
-/* max-width pour faibles résolutions */
-@media screen and (max-width: 600px) {
-	header
-	{
-    display: flex;
-   flex-wrap: wrap;
-	}
-
-
-	#menu a {
-		display: flex;
-		align-items: center;
-		align-content: center;
-		justify-content: flex-end;
-		flex-direction: column;
-		text-align: center;
-		flex-wrap: wrap;
-
-	}
-	#menu li {
-		text-align: center;
-		float:none; 
-		width:100%;
-	}
-
-}
-
-
-
-
-.footer
-{
-    display: flex;
-    border-top: solid grey 1px;
-
-}
-
-#connexion{
-    color:#3A79FF;
-    font-style: normal;
-    background-color: #D2E1FF;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-}
 .contact{
 	font-size: 50px;	
 	text-align: center;
@@ -272,6 +176,151 @@ div.headerContact{
 	border:2px solid #000000;
 	background-color: #D2E1FF;
 }
+
+
+
+
+.footer
+{
+    display: flex;
+    border-top: solid grey 1px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Les ?????????? sont rensignées ici */
+
+
+#Titre{
+    display: flex;
+    font-family: Proza Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    letter-spacing: 0.03em;
+    margin: 15px 0 0 10px;
+    }
+    
+    
+    
+    
+#inscription {
+  background-color: #7CA0E4;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+#connexion{
+    color:#3A79FF;
+    font-style: normal;
+    background-color: #D2E1FF;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Les ?????????? sont rensignées ici */
+
+
+div.formulaireContact{
+	text-align: center;
+}
+
+div.headerContact{
+	text-align: center;
+	font-size: 30px;
+	border-bottom:  5px solid black;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+/*La gestion de taille d'écran est renseignée ici */
+
+
+
+/* min-width pour moyennes résolutions */
+@media screen and (min-width: 1024px) {
+	#main {
+		width:70%;
+		clear:none;
+	}
+	#aside {
+		width:30%;
+		clear:none;
+	}
+}
+
+/* max-width pour faibles résolutions */
+@media screen and (max-width: 600px) {
+	header
+	{
+    display: flex;
+   flex-wrap: wrap;
+	}
+
+
+	#menu a {
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		text-align: center;
+		flex-wrap: wrap;
+
+	}
+	#menu li {
+		text-align: center;
+		float:none; 
+		width:100%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
