@@ -1,5 +1,44 @@
-/*Les classes sont rensignées ici */
+/*Ici, la mise en page principale, commune.*/
 
+.logoPrincipal{
+	display: flex;
+	flex-direction: row; 
+}
+
+
+.logo
+{
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 0 10px;
+    display: flex;
+    flex-direction: row;
+
+	
+}
+
+
+#Titre{
+    display: flex;
+    font-family: Proza Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    letter-spacing: 0.03em;
+    margin: 15px 0 0 10px;
+    }
+
+
+
+
+.contact{
+	font-size: 50px;	
+	text-align: center;
+	border-bottom: 5px solid black;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 
@@ -33,25 +72,6 @@ nav a:hover
 
 
 
-
-
-
-section{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section img{
-    width: 500px;
-    height: 300px;
-}
-
-
-
-
-
 label{
 	display: block;
 
@@ -79,46 +99,159 @@ li a {
 
 
 
-fieldset {
+
+
+.footerNonConnecte
+{
+    display: flex;
+    border-top: solid grey 1px;
+
+}
+
+ 
+    
+    
+#inscription {
+  background-color: #7CA0E4;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+#connexion{
+    color:#3A79FF;
+    font-style: normal;
+    background-color: #D2E1FF;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*La gestion de taille d'écran est renseignée ici */
+
+
+
+/* min-width pour moyennes résolutions */
+@media screen and (min-width: 1024px) {
+	#main {
+		width:70%;
+		clear:none;
+	}
+	#aside {
+		width:30%;
+		clear:none;
+	}
+}
+
+/* max-width pour faibles résolutions */
+@media screen and (max-width: 600px) {
+	header
+	{
+    display: flex;
+   flex-wrap: wrap;
+	}
+
+
+	#menu a {
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		text-align: center;
+		flex-wrap: wrap;
+
+	}
+	#menu li {
+		text-align: center;
+		float:none; 
+		width:100%;
+	}
+
+}
+
+
+
+
+
+/*Ici, la liste des input.*/
+
+
+
+
+input[type=text]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+
+input[type=password]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+
+
+input[type=email]{
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Ici, les définitions propres à chaque page.*/
+
+
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.404 {
+    width: 500px;
+    height: 300px;
+}
+
+
+
+
+fieldsetInscription {
       padding: 20px;
 }
 
 
-
-
-
-
-
-
-
-/*Les ?????????? sont rensignées ici */
-
-
-.logoPrincipal{
-	display: flex;
-	flex-direction: row; 
-}
-
-
-.logo
-{
-	width: 100px;
-	height: 100px;
-	margin: 10px 0 0 10px;
-    display: flex;
-    flex-direction: row;
-
-	
-}
-
-.contact{
-	font-size: 50px;	
-	text-align: center;
-	border-bottom: 5px solid black;
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 
 
@@ -180,12 +313,6 @@ fieldset {
 
 
 
-.footer
-{
-    display: flex;
-    border-top: solid grey 1px;
-
-}
 
 
 
@@ -200,37 +327,10 @@ fieldset {
 
 
 
-/*Les ?????????? sont rensignées ici */
 
 
-#Titre{
-    display: flex;
-    font-family: Proza Libre;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    letter-spacing: 0.03em;
-    margin: 15px 0 0 10px;
-    }
+
     
-    
-    
-    
-#inscription {
-  background-color: #7CA0E4;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-
-#connexion{
-    color:#3A79FF;
-    font-style: normal;
-    background-color: #D2E1FF;
-    text-align: center;
-}
-
-
 
 
 
@@ -268,93 +368,10 @@ div.headerContact{
 
 
 
-/*La gestion de taille d'écran est renseignée ici */
-
-
-
-/* min-width pour moyennes résolutions */
-@media screen and (min-width: 1024px) {
-	#main {
-		width:70%;
-		clear:none;
-	}
-	#aside {
-		width:30%;
-		clear:none;
-	}
-}
-
-/* max-width pour faibles résolutions */
-@media screen and (max-width: 600px) {
-	header
-	{
-    display: flex;
-   flex-wrap: wrap;
-	}
-
-
-	#menu a {
-		display: flex;
-		align-items: center;
-		align-content: center;
-		justify-content: flex-end;
-		flex-direction: column;
-		text-align: center;
-		flex-wrap: wrap;
-
-	}
-	#menu li {
-		text-align: center;
-		float:none; 
-		width:100%;
-	}
-
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-input[type=text]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-
-input[type=password]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-
-
-input[type=email]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
 
 
 
