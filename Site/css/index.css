@@ -163,7 +163,7 @@ li a {
 	background-color: rgba(41, 105, 151, 0.49);
 }
 
-}
+
 .section1_2{
 	display: flex;
 	margin-left:auto; 
@@ -194,9 +194,32 @@ footer
 
 }
 #connexion{
+    display:inline;
+    float: right;
+}
+div#connexion>a{
 	color:#3A79FF;
 	font-style: normal;
 	background-color: #D2E1FF;
 	text-align: center;
 	right: 0px;
+}
+div.menuBas>a{
+    margin : 0 20px;
+    
+}
+div.menuBas>p{
+    font-size: 10px;
+    
+}
+div.menuBas>a#connexion{
+    margin : 0 20px 0 70%;
+    padding:0 10px 0 10px;
+}
+.menuBas{
+    padding:10px;
+    width : 100%;
+}
+.photoAccueil{
+    width:90%
 }
