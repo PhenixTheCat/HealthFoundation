@@ -26,7 +26,7 @@ nav a:hover
 }
 
 
-header
+headerNonConnecte
 {
 
 	display: flex;
@@ -40,6 +40,21 @@ header
 
 
 
+section{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section img{
+    width: 500px;
+    height: 300px;
+}
+
+
+
+
 
 label{
 	display: block;
@@ -47,6 +62,23 @@ label{
 }
 
 
+
+ul {
+  list-style-type: none;
+  float: right;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+
+  text-align: center;
+  padding: 0px 10px;
+}
 
 
 
@@ -95,22 +127,28 @@ label{
   }
 
 
-ul {
-  list-style-type: none;
-  float: right;
-  line-height: 25px;
-  overflow: hidden;
+
+div.formulaireContact{
+	text-align: center;
 }
 
-li {
-  float: left;
+div.headerContact{
+	text-align: center;
+	font-size: 30px;
+	border-bottom:  5px solid black;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-li a {
 
-  text-align: center;
-  padding: 0px 10px;
-}
+
+
+
+
+
+
+
 
 
 
@@ -156,20 +194,8 @@ li a {
 
 
 
-section{
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section img{
-    width: 500px;
-    height: 300px;
-}
-
-
-footer
+.footer
 {
     display: flex;
     border-top: solid grey 1px;
@@ -187,20 +213,6 @@ footer
 
 
 
-
-
-div.formulaire_contact{
-	text-align: center;
-}
-
-div.header_contact{
-	text-align: center;
-	font-size: 30px;
-	border-bottom:  5px solid black;
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 
 
@@ -234,7 +246,7 @@ div.header_contact{
 
 
 
-textarea_contact{
+.textareaContact{
 	display: block;
 	padding: 20px;
 	margin-left: auto;
@@ -246,7 +258,7 @@ textarea_contact{
 
 
 
-.submit_transparent{
+.submitTransparent{
 	margin: 20px;
 	font-size: 20px;
 	border:2px solid #000000;
@@ -254,12 +266,18 @@ textarea_contact{
 }
 
 
-.submit_D2E1FF{
+.submitD2E1FF{
 	margin: 20px;
 	font-size: 20px;
 	border:2px solid #000000;
 	background-color: #D2E1FF;
 }
+
+
+
+
+
+
 
 
 input[type=text]{
