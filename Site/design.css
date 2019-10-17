@@ -187,19 +187,27 @@ div.menuBas>a#connexion{
 .inscriptionP1 {
 background-color: #7CA0E4;
 border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: auto;
 }
 
 .enteteInscription {
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
   width: 100px;
   padding: 10px;
-  background-color: rgba(111,41,97,.3);
-  border: 2px solid rgba(111,41,97,.5);
+  background-color: #7CA0E4;
+  border-bottom: : 2px solid #D2E1FF;
   display: inline-block;
-  vertical-align: middle
+  vertical-align: middle ;
 }
 
 .inscriptionP1 input[type=text],input[type=password],input[type=email]{
+	text-align: center;
 	border:none;
 	background-color: transparent;
 	border-bottom:  1px solid black;
@@ -213,10 +221,51 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .inscriptionP1 fieldset  {
-      padding: 20px;
+      padding: 1px;
+      text-align: center;
 }
 
 .inscriptionP1 input[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: #D2E1FF;
+}
+/* =============       Page de connection ============ */
+
+.ConnexionP1 {
+background-color: #7CA0E4;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: auto;
+}
+
+
+.ConnexionP1 input[type=password],input[type=email]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+.ConnexionP1 label{
+	display: block;
+
+}
+
+.ConnexionP1 fieldset  {
+      padding: 1px;
+      text-align: center;
+}
+
+.ConnexionP1 input[type=submit]{
+	text-align: center;
 	margin: 20px;
 	font-size: 20px;
 	border:2px solid #000000;
