@@ -199,8 +199,8 @@ margin: auto;
   display: flex;
   flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
   text-align: center;
-  width: 100px;
-  padding: 10px;
+  width: 200px;
+  padding: 20px;
   background-color: #7CA0E4;
   display: inline-block;
   vertical-align: middle ;
