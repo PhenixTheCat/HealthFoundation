@@ -110,6 +110,14 @@ li a {
    
 }
 
+.logoLangue .logo{
+	display: inline;
+	height: 20px;
+	width:32px;
+	float: right;
+	margin: 10px;
+}
+
 /* =================   Footer non connecté  ============== */
 
 
