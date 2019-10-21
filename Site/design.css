@@ -205,16 +205,17 @@ div.menuBas>a#connexion{
 .blocIntro {
   text-align: center;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   font-size: 20px;
-  overflow: hidden;
-  white-space: nowrap;
+  word-wrap: break-word
 }
 
 
-.blockConnexionAPP {
+.blocConnexionAPP {
+  display: inline-block;
   flex-direction: column;
   text-align: left;
+ 
 }
 
 
@@ -225,14 +226,22 @@ div.menuBas>a#connexion{
 
 
 
+.tailleImage {
+  min-width: 300px;
+}
+
+
 .logoAPP {
   flex: 1 1;
+  position: relative;
+  right: 0;
 }
 
 
 
 .boutonConnexion {
-  margin: auto;
+  position: relative;
+  left: 0;
   width: 50%;
   max-width:50%;
   background-color: rgba(41, 105, 151, 0.49);
@@ -242,7 +251,6 @@ div.menuBas>a#connexion{
   font-size: 22px;
   line-height: 28px;
 }
-
 /*===========    Centrer les blocs ================*/
 
 .centrer_bloc{
