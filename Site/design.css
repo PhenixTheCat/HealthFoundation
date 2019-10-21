@@ -448,7 +448,7 @@ margin: auto;
 
 * =============       Page de confirmation de l'inscription  ============ */
 
-.pageConfirmationInscription {
+.pageInscriptionSuite {
 background-color: #7CA0E4;
 border: 1px solid #000000;
 width: 50%;
@@ -459,7 +459,7 @@ margin: auto;
 }
 
 
-.pageConfirmationInscription input[type=text],input[type=date],input[type=string] {
+.pageInscriptionSuite input[type=text],input[type=string] {
 	text-align: center;
 	border:none;
 	background-color: transparent;
@@ -468,19 +468,19 @@ margin: auto;
 	margin: 30px;
 }
 
-.pageConfirmationInscription label{
+.pageInscriptionSuite label{
 	display: block;
 	font-weight: bold;
 
 }
 
-.pageConfirmationInscription fieldset  {
+.pageInscriptionSuite fieldset  {
       padding: 1px;
       text-align: center;
 	border :none;
 }
 
-.pageConfirmationInscription input[type=submit]{
+.pageInscriptionSuite input[type=submit]{
 	text-align: center;
 	margin: 20px;
 	font-size: 20px;
@@ -488,10 +488,22 @@ margin: auto;
 	background-color: #D2E1FF;
 }
 
+.pageInscriptionSuite input[type=date]{
+    text-align: center;
+	border:none;
+	background-color: transparent;
+	padding: 0 38%;
+	width: 300px;
+	margin: 30px;
+	
+
+}
+
 
 .etoile {
 	color: red;
-}	
+
+}
 
 
 
