@@ -1,4 +1,4 @@
-/*=========     Mise en page commune du header    ======.*/
+/*=========     Mise en page commune à toutes les pages du site    ======.*/
 
 .logoPrincipal{
 	display: flex;
@@ -98,6 +98,9 @@ li a {
   padding: 0px 10px;
 }
 
+
+
+
 /* =================   Header non connecté  ============== */
 
 
@@ -112,6 +115,9 @@ li a {
     flex-wrap: wrap;
    
 }
+
+
+
 
 /* =================   Footer non connecté  ============== */
 
@@ -155,6 +161,7 @@ div.menuBas>a#connexion{
     width:90%
 }
     
+
 
 
 /*La gestion de taille d'écran est renseignée ici */
@@ -202,8 +209,17 @@ div.menuBas>a#connexion{
 
 
 
-/*Ici, les définitions propres à chaque page.*/
 
+
+
+
+
+
+
+
+
+
+/*Ici, les définitions propres à chaque page.*/
 
 /* =============       Accueil     ============ */
 
@@ -247,6 +263,9 @@ div.menuBas>a#connexion{
   font-size: 22px;
   line-height: 28px;
 }
+
+
+
 
 /*===========    Centrer les blocs ================*/
 
@@ -314,6 +333,10 @@ margin: auto;
 	border:2px solid #000000;
 	background-color: #D2E1FF;
 }
+
+
+
+
 /* =============       Page de connexion ============ */
 
 .Connexion {
@@ -362,6 +385,10 @@ margin: auto;
 	border:2px solid #000000;
 	background-color: #D2E1FF;
 }
+
+
+
+
 /* =============       Mot de passe oublié  ============ */
 
 .motDePasseOublie {
@@ -404,6 +431,9 @@ margin: auto;
 	background-color: #D2E1FF;
 }
 
+
+
+
 /* ==========  Page 404  ==========  */
 
 .errror404 img {
@@ -417,7 +447,6 @@ margin: auto;
     flex-direction: column;
     align-items: center;
 }
-
 
 
 
@@ -449,6 +478,9 @@ margin: auto;
 	display: block;
 
 }
+
+
+
 
 /*Ici, la liste des input.*/
 
@@ -497,6 +529,9 @@ margin: auto;
 	border:none;
 	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+
 
 /* =============       Page de confirmation de l'inscription  ============ */
 
@@ -556,6 +591,8 @@ margin: auto;
 	color: red;
 
 }
+
+
 
 
 /*=========== Confirmation inscription ===============*/
