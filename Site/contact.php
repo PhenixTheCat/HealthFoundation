@@ -14,16 +14,21 @@
         <img src="Images/HF4.png" class="logo" alt="Logo de Health Foundation">
         <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
         </div>
+                        <div class="partieDroite">
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html"> Accueil</a></li>
-              <li><a href="apropos.html">A propos </a></li>
-              <li><a href="connexion.html">Connexion</a></li>
-              <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="accueil.html"> Accueil</a></li>
+                    <li><a href="apropos.html">À propos </a></li>
+                    <li><a href="connexion.html">Connexion</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
 
-            </ul>
-
+                </ul>
             </nav>
+            <div class=" logoLangue">
+                <a href="accueil.html"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                <a href="accueil.html"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+            </div>
+            </div>
 
       </header>
     <?php
