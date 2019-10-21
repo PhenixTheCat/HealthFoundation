@@ -125,7 +125,26 @@ li a {
 {
     display: flex;
     border-top: solid grey 1px;
+}
+.allPage{
+    height:100vh;
+    position:relative;
+}
+.footerBloque{
+    width:100%;
+    border-top: solid grey 1px;
+    position:absolute;
+    bottom:0;
+}
 
+@media only screen and (max-height: 700px) {
+    .footerBloque {
+        position:inherit;
+        display: flex;
+    }
+    .allPage{
+        height:auto;
+    }
 }
 
 #connexion{
