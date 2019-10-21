@@ -205,6 +205,57 @@ div.menuBas>a#connexion{
 /*Ici, les définitions propres à chaque page.*/
 
 
+/* =============       Accueil     ============ */
+
+.blocIntro {
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.blockConnexionAPP {
+  flex-direction: column;
+  text-align: left;
+}
+
+
+
+.colonnes {
+  flex: 1 1;
+}
+
+
+
+.logoAPP {
+  flex: 1 1;
+}
+
+
+
+.boutonConnexion {
+  margin: auto;
+  width: 50%;
+  max-width:50%;
+  background-color: rgba(41, 105, 151, 0.49);
+  font-style: normal;
+  text-align: center;
+  
+  font-size: 22px;
+  line-height: 28px;
+}
+
+
+
+
+
+
+
+
+
 /* =============       Page d'inscription ============ */
 
 .inscriptionP1 {
