@@ -606,7 +606,58 @@ margin: auto;
 	margin: 60px;
 }
 
+/*=========== Nouveau mot de passe ===============*/
 
+.nouveauMdp{
+background-color: #7CA0E4;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: auto;
+}
+
+.nouveauMdp input[type=password]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+.nouveauMdp label{
+	display: block;
+	font-weight: bold;
+
+}
+
+.nouveauMdp fieldset  {
+      padding: 1px;
+      text-align: center;
+	  border :none;
+}
+
+.nouveauMdp input[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: #D2E1FF;
+}
+
+.enteteNouveauMdp {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
+  padding: 20px;
+  background-color: #7CA0E4;
+  display: inline-block;
+  vertical-align: middle ;
+
+}
 
 
 
