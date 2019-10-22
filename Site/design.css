@@ -884,3 +884,44 @@ margin: auto;
   vertical-align: middle ;
 
 }
+/*=========== Pilote modification mot de passe validée ===============*/
+.piloteModiMdpv{
+background-color: #7CA0E4;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: auto;
+}
+.piloteModiMdpv label{
+	display: block;
+	font-weight: bold;
+
+}
+
+.piloteModiMdpv fieldset  {
+      padding: 1px;
+      text-align: center;
+	  border :none;
+}
+
+.piloteModiMdpv input[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: #D2E1FF;
+}
+
+.piloteModiMdpv {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
+  padding: 20px;
+  background-color: #7CA0E4;
+  display: inline-block;
+  vertical-align: middle ;
+
+}
