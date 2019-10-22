@@ -136,7 +136,10 @@ li a {
     position:absolute;
     bottom:0;
 }
-
+.menuBas{
+    padding:10px;
+    width:100%;
+}
 @media only screen and (max-height: 700px) {
     .footerBloque {
         position:inherit;
@@ -174,10 +177,7 @@ div.menuBas>a#connexion{
     margin : 0 20px 0 70%;
     padding:0 10px 0 10px;
 }
-.menuBas{
-    padding:10px;
-    width:100%;
-}
+
 .photoAccueil{
     width:90%
 }
