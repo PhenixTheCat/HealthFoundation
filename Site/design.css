@@ -175,10 +175,7 @@ div.menuBas>a#connexion{
     margin : 0 20px 0 70%;
     padding:0 10px 0 10px;
 }
-.photoAccueil{
-    width:50%;
-    float:right;
-}
+
 .menuInformations{
     
 }
@@ -286,6 +283,7 @@ div.menuBas>a#connexion{
 
 
 
+
 /*Ici, les définitions propres à chaque page.*/
 /* =============       Accueil     ============ */
 
@@ -294,14 +292,15 @@ div.menuBas>a#connexion{
   display: flex;
   flex-direction: row;
   font-size: 20px;
-  word-wrap: break-word
+  word-wrap: break-word;
+  font-family: "Times New Roman", Times, serif;
 }
 
 
 .blocConnexionAPP {
-  display: inline-block;
-  flex-direction: column;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
  
 }
 
@@ -311,20 +310,17 @@ div.menuBas>a#connexion{
   flex: 1 1;
 }
 
-
-
-.tailleImage {
-  min-width: 500px;
+.photoAccueil {
+  min-width: 600px;
+  max-width: 1500px;
+  width: auto;
 }
-
 
 .logoAPP {
   flex: 1 1;
   position: relative;
   right: 0;
 }
-
-
 
 .boutonConnexion {
   position: relative;
@@ -338,6 +334,10 @@ div.menuBas>a#connexion{
   font-size: 22px;
   line-height: 28px;
 }
+
+
+
+
 /*===========    Centrer les blocs ================*/
 
 .centrer_bloc{
