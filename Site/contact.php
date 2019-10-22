@@ -50,7 +50,7 @@
             $headers[] = 'Content-type: text/html; charset=iso-8859-1';
             $headers [] = "From : $nom \n Reply-To:$mail";
             mail('health.foundation.g3c@gmail.com','formulaire de contact',$message,$headers);
-            header('Location:contactenvoi.html');
+            header('Location:contactMessageEnvoye.html');
         }
         else
         {
