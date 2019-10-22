@@ -305,7 +305,7 @@ div.menuBas>a#connexion{
 }
 
 
-.colonne1 {
+.colonne1Accueil {
   flex: 1 1;
   margin-right: 0px;
   margin-left: 1%;
@@ -313,7 +313,7 @@ div.menuBas>a#connexion{
 }
 
 
-.colonne2 {
+.colonne2Accueil {
   margin-left: 2%;
   width: 95%;
   margin-right: 0px;
@@ -326,14 +326,14 @@ div.menuBas>a#connexion{
 }
 
 
-.logoAPP {
+.logoAPPAccueil {
   flex: 1 1;
   position: relative;
   right: 0;
 }
 
 
-.boutonConnexion {
+.boutonConnexionAccueil {
   position: relative;
   left: 0;
   width: 50%;
@@ -347,13 +347,13 @@ div.menuBas>a#connexion{
 }
 
 
-.nosServices {
+.nosServicesAccueil {
   text-align: center;
   
 }
 
 
-.actualites{
+.actualitesAccueil {
   text-align: center;
   
   
