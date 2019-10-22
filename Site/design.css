@@ -301,26 +301,37 @@ div.menuBas>a#connexion{
   display: flex;
   flex-direction: row;
   margin: 10px;
- 
+
 }
 
 
-
-.colonnes {
+.colonne1 {
   flex: 1 1;
-}
-
-.photoAccueil {
-  min-width: 600px;
-  max-width: 1500px;
+  margin-right: 0px;
+  margin-left: 1%;
   width: auto;
 }
+
+
+.colonne2 {
+  margin-left: 2%;
+  width: 95%;
+  margin-right: 0px;
+}
+
+
+.imageAccueil {
+  max-width: 95%;
+  width: auto;
+}
+
 
 .logoAPP {
   flex: 1 1;
   position: relative;
   right: 0;
 }
+
 
 .boutonConnexion {
   position: relative;
@@ -334,6 +345,20 @@ div.menuBas>a#connexion{
   font-size: 22px;
   line-height: 28px;
 }
+
+
+.nosServices {
+  text-align: center;
+  
+}
+
+
+.actualites{
+  text-align: center;
+  
+  
+}
+
 
 
 
