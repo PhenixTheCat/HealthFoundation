@@ -175,7 +175,10 @@ div.menuBas>a#connexion{
     margin : 0 20px 0 70%;
     padding:0 10px 0 10px;
 }
-
+.photoAccueil{
+    width:50%;
+    float:right;
+}
 .menuInformations{
     
 }
@@ -195,34 +198,37 @@ div.menuBas>a#connexion{
     text-decoration: underline;
 }
 .section3{
-    padding: 5% 20%;
+    padding: 5% 25%;
     background-image: url("Images/carreaux.png");
     background-repeat: no-repeat;
     background-position:bottom right;
+    background-size: 25%;
         
-}
-.sectionInformations>div>div{
-    background-color:red;
-    width:100%;
-    height:20%;
 }
 .section3>h2{
     text-align: center;
     text-decoration: underline;
+    font-size:30px;
 }
 .sectionInformations{
-    padding:5% 0;
+    padding:0;
 }
 .sectionInformations>div>div>h3{
-    text-decoration: underline;
+    margin-top:0;
 }
-.colonne1{
-    width:35%;
-    display:inline-block;
+.ligneInformation{
+    display:block;
+    margin: 5% 0;
 }
-.colonne2{
+.info1{
+    float:left;
+}
+.info2{
+    margin-left: 70%;
+}
+.ligneInformation>div{
     width:35%;
-    display:inline-block;
+        
 }
 .partieMenu{
     width:20%;
