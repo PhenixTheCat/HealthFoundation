@@ -287,7 +287,7 @@ div.menuBas>a#connexion{
 /*Ici, les définitions propres à chaque page.*/
 /* =============       Accueil     ============ */
 
-.blocIntro {
+.blocIntroAccueil {
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -297,7 +297,7 @@ div.menuBas>a#connexion{
 }
 
 
-.blocConnexionAPP {
+.blocConnexionAPPAccueil {
   display: flex;
   flex-direction: row;
   margin: 10px;
