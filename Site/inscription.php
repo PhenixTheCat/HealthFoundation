@@ -11,21 +11,21 @@
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
         <img src="Images/HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="index.html">Health Foundation</a></h1>
+        <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
         </div>
             <div class="partieDroite">
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html"> Accueil</a></li>
-                    <li><a href="apropos.html">À propos </a></li>
+                    <li><a href="index.php"> Accueil</a></li>
+                    <li><a href="apropos.php">À propos </a></li>
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
 
                 </ul>
             </nav>
             <div class=" logoLangue">
-                <a href="index.html"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
-                <a href="index.html"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
             </div>
             </div>
 
@@ -59,7 +59,7 @@
     </div>
 <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
+                <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
                 <div id="connexion"><a href="connexion.php" >Connexion</a></div>
