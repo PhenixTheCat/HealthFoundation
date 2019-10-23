@@ -288,6 +288,19 @@ div.menuBas>a#connexion{
 		width:100%;
 	}
 
+	
+	
+ 	 div {
+   		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		text-align: center;
+		flex-wrap: wrap;
+  }
+
+
 }
 
 
@@ -327,12 +340,14 @@ div.menuBas>a#connexion{
   margin-left: 2%;
   width: 95%;
   margin-right: 0px;
+  object-fit: cover;
 }
 
 
 .imageAccueil {
   max-width: 95%;
   width: auto;
+  object-fit: cover;
 }
 
 
@@ -345,8 +360,8 @@ div.menuBas>a#connexion{
 
 .boutonConnexionAccueil {
   position: relative;
-  left: 0;
-  width: 50%;
+  left: 0px;
+  width: auto;
   max-width:50%;
   background-color: rgba(41, 105, 151, 0.49);
   font-style: normal;
@@ -356,9 +371,26 @@ div.menuBas>a#connexion{
 }
 
 
+.boutonConnexionAccueil:hover {
+  position: relative;
+  left: 0px;
+  width: auto;
+  max-width:50%;
+  background-color: rgba(41, 105, 151, 0.49);
+  font-style: normal;
+  text-align: center;
+  font-size: 22px;
+  line-height: 28px;
+  color: #3A79FF;
+}
+
+
 .nosServicesAccueil {
   text-align: center;
-  
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items:center;
 }
 
 
@@ -369,8 +401,11 @@ div.menuBas>a#connexion{
   background-size: 25%;
   margin-right: 15%;
   margin-left: 10%;
-  
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+
 
 
 
