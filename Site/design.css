@@ -1107,4 +1107,51 @@ margin:auto;
   vertical-align: middle ;
 
 }
+/*=========== Pilote modification du profil ===============*/
 
+.adminCp {
+background-color: transparent;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin:auto;
+}
+
+
+
+
+.adminCp label{
+	display: block;
+	font-weight: bold;
+	text-align: center;
+
+
+}
+
+.adminCp fieldset  {
+      padding: 1px;
+      text-align: center;
+	  border :none;
+}
+
+.adminCp[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: transparent;
+}
+
+.adminCp {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle ;
+
+}
