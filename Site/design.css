@@ -601,6 +601,7 @@ margin: auto;
 	border-bottom:  1px solid black;
 	width: 300px;
 	margin: 30px;
+	text-align:left;
 }
 
 .formulaireContact input[type=submit]{
