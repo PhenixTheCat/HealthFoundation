@@ -67,7 +67,7 @@ catch(Exception $error)
     </div>
 <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
+                <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
                 <div id="connexion"><a href="connexion.php" >Connexion</a></div>

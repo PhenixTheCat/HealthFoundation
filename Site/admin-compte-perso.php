@@ -16,9 +16,9 @@
             <nav id="menu">
                 <ul>
                 <li><a href="accueil.html"> Accueil</a></li>
-                <li><a href="apropos.html">A propos </a></li>
+                <li><a href="apropos.php">A propos </a></li>
                 <li><a href="accueil.html">Déconnexion</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="inscription.php">Inscription</a></li>
 
             </ul>
 
@@ -64,9 +64,9 @@
   </div>
  <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
+                <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.html"> FAQ/Aide</a>
-                <a href="contact.html"> Contact</a>
+                <a href="contact.php"> Contact</a>
                 <div id="deconnexion"><a href="accueil.html" >Déconnexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
