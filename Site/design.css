@@ -288,7 +288,10 @@ div.menuBas>a#connexion{
 		width:100%;
 	}
 
-	
+}
+
+
+@media screen and (max-width: 850px) {
 	
  	 div {
    		display: flex;
@@ -298,7 +301,7 @@ div.menuBas>a#connexion{
 		flex-direction: column;
 		text-align: center;
 		flex-wrap: wrap;
-  }
+  	}
 
 
 }
