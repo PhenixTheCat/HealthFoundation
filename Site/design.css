@@ -1031,9 +1031,10 @@ margin:auto;
 	text-align: center;
 	border:none;
 	background-color: transparent;
-	border-bottom:  1px solid black;
+	
 	width: 300px;
 	margin: 30px;
+	padding: 0 37%;
 }
 .piloteModifMdpp label{
 	display: block;
