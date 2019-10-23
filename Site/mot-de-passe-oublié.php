@@ -24,8 +24,8 @@
                 </ul>
             </nav>
             <div class=" logoLangue">
-                <a href="index.html"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
-                <a href="index.html"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
             </div>
             </div>
 
