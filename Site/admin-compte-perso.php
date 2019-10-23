@@ -35,7 +35,7 @@
 
     <div class="adminCp">  
            
-            <fieldset>
+           
             <form action=""  method="post"> 
             <h3> Informations détaillés </h3>
 
@@ -50,13 +50,15 @@
             <h4> Adresse email</h4>
             <h5> (A remplir avec php)</h5>
             <h4> Mot de passe </h4>
+            <a class = "lien" href="admin-modif-mdp.html">Modifier le mot de passe  </a>
+            <a class= "lien" href="admin-modif-profil-perso.html"> Modifier le profil</a>
 
 
-            <input type="submit" Value="Modifier le profil" name="mp" > 
-            <input type="submit" Value="Modifier le mot de passe" name="mmp" > 
+
+             
 
         </form>
-        </fieldset>
+       
       </div>
   </div>
   </div>
