@@ -40,17 +40,30 @@
             $mail = securisation($_POST['mail']);
             $objet = securisation($_POST['objet']);
             $message = str_replace("\n.", "\n..", $_POST['message']);
-            $msg="Un mail a été  reçu \n
-            Nom : $nom \n
-            Prénom : $prenom \n
-            Email : $mail \n
-            Objet :$objet \n
-            Message :$message \n";
-            $headers[] = 'MIME-Version: 1.0';
-            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-            $headers [] = "From : $nom \n Reply-To:$mail";
-            mail('health.foundation.g3c@gmail.com','formulaire de contact',$message,$headers);
-            header('Location:contactMessageEnvoye.html');
+            $msg='
+            <html>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <body>
+                       <div align="center">
+                          <img src="Images/HF4.png"/>
+                          <br />
+                            <h1> Un mail à été reçu !</h1>
+                          <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
+                          <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
+                          <br />
+                          '.nl2br($_POST['message']).'
+                          <br />
+                       </div>
+                    </body>
+                 </html>
+                 ';
+            $headers = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            $headers .= "From : ".$nom." <".$mail.">"."\r\n";
+            
+            
+            mail('health.foundation.g3c@free.fr',$objet,$msg,$headers);
+            header('Location:contactMessageEnvoye.php');
         }
         else
         {
