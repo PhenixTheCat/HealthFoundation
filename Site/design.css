@@ -296,46 +296,84 @@ div.menuBas>a#connexion{
 /*Ici, les définitions propres à chaque page.*/
 /* =============       Accueil     ============ */
 
-.blocIntro {
+.blocIntroAccueil {
   text-align: center;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   font-size: 20px;
-  overflow: hidden;
-  white-space: nowrap;
+  word-wrap: break-word;
+  font-family: "Times New Roman", Times, serif;
 }
 
 
-.blockConnexionAPP {
-  flex-direction: column;
-  text-align: left;
+.blocConnexionAPPAccueil {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width:130%;
+
 }
 
 
-
-.colonnes {
+.colonne1Accueil {
   flex: 1 1;
+  margin-right: 0px;
+  margin-left: 1%;
+  width: 100%;
 }
 
 
+.colonne2Accueil {
+  margin-left: 2%;
+  width: 95%;
+  margin-right: 0px;
+}
 
-.logoAPP {
+
+.imageAccueil {
+  max-width: 95%;
+  width: auto;
+}
+
+
+.logoAPPAccueil {
   flex: 1 1;
+  position: relative;
+  right: 0;
 }
 
 
-
-.boutonConnexion {
-  margin: auto;
+.boutonConnexionAccueil {
+  position: relative;
+  left: 0;
   width: 50%;
   max-width:50%;
   background-color: rgba(41, 105, 151, 0.49);
   font-style: normal;
   text-align: center;
-  
   font-size: 22px;
   line-height: 28px;
 }
+
+
+.nosServicesAccueil {
+  text-align: center;
+  
+}
+
+
+.actualitesAccueil {
+  text-align: center;
+  width:80%;
+  background-position:bottom right;
+  background-size: 25%;
+  margin-right: 15%;
+  margin-left: 10%;
+  
+}
+
+
+
 
 /*===========    Centrer les blocs ================*/
 
