@@ -1,3 +1,48 @@
+<?php
+try{
+	//connexion à la database
+  $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage());
+}
+
+if(isset($_POST['inscriptionP1'])) {
+   $mail = htmlspecialchars($_POST['mail']);
+   $mdp = sha1($_POST['mdp']);
+   $mdp2 = sha1($_POST['mdp2']);
+   $codeformateur = htmlspecialchars($_POST['codeFormateur']);
+   if(!empty($_POST['mail']) AND !empty($_POST['codeFormateur']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
+        if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+               $reqmail = $bdd->prepare("SELECT * FROM user WHERE email = ?");
+               $reqmail->execute(array($mail));
+               $mailexist = $reqmail->rowCount();
+               if($mailexist == 0) {
+                  if($mdp == $mdp2) {
+                     $requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
+                     if($donnee = $requete->fetch()){
+                        $erreur = header('Location:page-inscription-suite.php');
+                        }
+                    else{
+                            $erreur = "Le code formateur est invalide";
+                        }
+                  } else {
+                     $erreur = "Vos mots de passes ne correspondent pas !";
+                  }
+               } else {
+                  $erreur = "Adresse mail déjà utilisée !";
+               }
+            }else {
+               $erreur = "Votre adresse mail n'est pas valide !";
+                } 
+            } else {
+      $erreur = "Tous les champs doivent être complétés !";
+   }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,15 +78,19 @@
     <div class="centrer_bloc">
      <div class="inscriptionP1">
         <span>
+        <?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
           <a class="enteteInscription" href="connexion.php"> Connexion </a>
           <a class="enteteInscription" href="inscription.php"> Inscription </a>
         </span>
-         
           <fieldset>
           <form action="" method="post"> 
           
           <label for="mail" id="email">Email</label>
-          <input type="email" name="mail" id="mail" >
+          <input type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
           <label for="mdp">Mot de passe</label>
           <input type="password" name="mdp" id="mdp">
@@ -50,11 +99,12 @@
           <input type="password" name="mdp2" id="mdp2">
           <br>
           <label for="codeFormateur">Code formateur</label>
-          <input type="text" name="codeFormateur" id="codeFormateur">
+          <input type="text" name="codeFormateur" id="codeFormateur" value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
           <br>
           <input type="submit" Value="Suivant" name="inscriptionP1">
         </form>
         </fieldset>
+
       </div>
     </div>
 <footer class="footerNonConnecte">
