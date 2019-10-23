@@ -38,6 +38,7 @@ body
     width: 100%;
     margin:0;
 
+
 }
 
 
@@ -70,6 +71,8 @@ h5 {
 	font-size: small;
 
 }
+
+
 
 nav a:hover
 {
@@ -110,8 +113,8 @@ li a {
     flex-wrap: wrap;
    
 }
-
 .logoLangue .logo{
+	display: inline;
 	height: 20px;
 	width:32px;
 	float: right;
@@ -293,55 +296,37 @@ div.menuBas>a#connexion{
 /*Ici, les définitions propres à chaque page.*/
 /* =============       Accueil     ============ */
 
-.blocIntroAccueil {
+.blocIntro {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   font-size: 20px;
-  word-wrap: break-word;
-  font-family: "Times New Roman", Times, serif;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 
-.blocConnexionAPPAccueil {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-
+.blockConnexionAPP {
+  flex-direction: column;
+  text-align: left;
 }
 
 
-.colonne1Accueil {
+
+.colonnes {
   flex: 1 1;
-  margin-right: 0px;
-  margin-left: 1%;
-  width: auto;
 }
 
 
-.colonne2Accueil {
-  margin-left: 2%;
-  width: 95%;
-  margin-right: 0px;
-}
 
-
-.imageAccueil {
-  max-width: 95%;
-  width: auto;
-}
-
-
-.logoAPPAccueil {
+.logoAPP {
   flex: 1 1;
-  position: relative;
-  right: 0;
 }
 
 
-.boutonConnexionAccueil {
-  position: relative;
-  left: 0;
+
+.boutonConnexion {
+  margin: auto;
   width: 50%;
   max-width:50%;
   background-color: rgba(41, 105, 151, 0.49);
@@ -352,27 +337,10 @@ div.menuBas>a#connexion{
   line-height: 28px;
 }
 
-
-.nosServicesAccueil {
-  text-align: center;
-  
-}
-
-
-.actualitesAccueil {
-  text-align: center;
-  
-  
-}
-
-
-
-
-
 /*===========    Centrer les blocs ================*/
 
 .centrer_bloc{
-	margin: 50%;
+	margin: 50px;
 }
 
 
@@ -485,6 +453,8 @@ margin: auto;
 }
 /* =============       Mot de passe oublié  ============ */
 
+/* =============       Mot de passe oublié  ============ */
+
 .motDePasseOublie {
 background-color: #7CA0E4;
 border: 1px solid #000000;
@@ -561,7 +531,7 @@ margin: auto;
 .headerContact h1{
 	font-size: 50px;	
 	border-bottom: 5px solid black;
-	width: 70%;
+	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -601,7 +571,6 @@ margin: auto;
 	border-bottom:  1px solid black;
 	width: 300px;
 	margin: 30px;
-	text-align:left;
 }
 
 .formulaireContact input[type=submit]{
@@ -618,30 +587,6 @@ margin: auto;
 	margin-right: auto;
 	border:none;
 	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
-	
-}
-
-
-
-
-/*================      Page de contact confirmation   ===========*/
-.confirmationContact{
-	text-align: center;
-	padding: 5% 0% 10% 0%;
-}
-.confirmationContact p{
-	
-	font-size: 35px;
-	line-height: 61px;
-	letter-spacing: 0.03em;
-	color: #000000;
-	text-align: center;
-}
-.confirmationContact a{
-
-	text-align: center;
-	border:1px solid #000000;
-
 }
 
 /* =============       Page de confirmation de l'inscription  ============ */
@@ -703,6 +648,7 @@ margin: auto;
 
 }
 
+
 /*=========== Confirmation inscription ===============*/
 .confirmationInscription{
 	background-color: #7CA0E4;
@@ -722,58 +668,7 @@ margin: auto;
 	margin: 60px;
 }
 
-/*=========== Nouveau mot de passe ===============*/
 
-.nouveauMdp{
-background-color: #7CA0E4;
-border: 1px solid #000000;
-width: 50%;
-max-width:50%;
-text-align: center;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-margin: auto;
-}
-
-.nouveauMdp input[type=password]{
-	text-align: center;
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
-
-.nouveauMdp label{
-	display: block;
-	font-weight: bold;
-
-}
-
-.nouveauMdp fieldset  {
-      padding: 1px;
-      text-align: center;
-	  border :none;
-}
-
-.nouveauMdp input[type=submit]{
-	text-align: center;
-	margin: 20px;
-	font-size: 20px;
-	border:2px solid #000000;
-	background-color: #D2E1FF;
-}
-
-.enteteNouveauMdp {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
-  text-align: center;
-  padding: 20px;
-  background-color: #7CA0E4;
-  display: inline-block;
-  vertical-align: middle ;
-
-}
 
 
 
@@ -863,8 +758,58 @@ i{
 	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/*=========== Nouveau mot de passe ===============*/
 
+.nouveauMdp{
+background-color: #7CA0E4;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: auto;
+}
 
+.nouveauMdp input[type=password]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+
+.nouveauMdp label{
+	display: block;
+	font-weight: bold;
+
+}
+
+.nouveauMdp fieldset  {
+      padding: 1px;
+      text-align: center;
+	  border :none;
+}
+
+.nouveauMdp input[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: #D2E1FF;
+}
+
+.enteteNouveauMdp {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
+  padding: 20px;
+  background-color: #7CA0E4;
+  display: inline-block;
+  vertical-align: middle ;
+
+}
 /*=========== Nouveau mot de passe confirmation ===============*/
 .nouveauMdpc{
 background-color: #7CA0E4;
@@ -998,3 +943,91 @@ margin: auto;
   vertical-align: middle ;
 
 }
+/*=========== Pilote modification du profil ===============*/
+
+.piloteModifMdpp {
+background-color: transparent;
+border: 1px solid #000000;
+width: 50%;
+max-width:50%;
+text-align: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin:auto;
+}
+
+
+
+.piloteModifMdpp input[type=text]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+.piloteModifMdpp input[type=password]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+.piloteModifMdpp input[type=email]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+.piloteModifMdpp input[type=string]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+.piloteModifMdpp input[type=date]{
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	border-bottom:  1px solid black;
+	width: 300px;
+	margin: 30px;
+}
+.piloteModifMdpp label{
+	display: block;
+	font-weight: bold;
+	text-align: center;
+
+
+}
+
+.piloteModifMdpp fieldset  {
+      padding: 1px;
+      text-align: center;
+	  border :none;
+}
+
+.piloteModifMdppinput[type=submit]{
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+	border:2px solid #000000;
+	background-color: transparent;
+}
+
+.piloteModifMdpp {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle ;
+
+}
+
