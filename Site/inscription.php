@@ -30,18 +30,34 @@
             </div>
 
       </header>
-        <section class="error404">
-            <img src="Images/404.png" alt="404">
-            <h1>La page que vous cherchez n'existe pas</h1>
-        </section>
-    
-
-
-        <!-- Pied de page non connecté -->
-
-<!-- Pied de page non connecté -->
-
-        <footer class="footerNonConnecte">
+    <div class="centrer_bloc">
+     <div class="inscriptionP1">
+        <span>
+          <a class="enteteInscription" href="connexion.php"> Connexion </a>
+          <a class="enteteInscription" href="inscription.php"> Inscription </a>
+        </span>
+         
+          <fieldset>
+          <form action="" method="post"> 
+          
+          <label for="mail" id="email">Email</label>
+          <input type="email" name="mail" id="mail" >
+          <br>
+          <label for="mdp">Mot de passe</label>
+          <input type="password" name="mdp" id="mdp">
+          <br>
+          <label for="mdp2">Confirmation du mot de passe</label>
+          <input type="password" name="mdp2" id="mdp2">
+          <br>
+          <label for="codeFormateur">Code formateur</label>
+          <input type="text" name="codeFormateur" id="codeFormateur">
+          <br>
+          <input type="submit" Value="Suivant" name="inscriptionP1">
+        </form>
+        </fieldset>
+      </div>
+    </div>
+<footer class="footerNonConnecte">
             <div class="menuBas">
                 <a href="cgu.html" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
@@ -50,6 +66,6 @@
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
-    
-    </body>
+
+  </body>
 </html>
