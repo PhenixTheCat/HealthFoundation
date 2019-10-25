@@ -1,14 +1,35 @@
 <?php
 
+session_start();
 try{
 	//connexion à la database
-	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation;charset=utf8','root','');
+	//Pour les utilisateurs Mac : entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	//Pour windows entrez cette ligne
+	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
 }
 catch(Exception $error)
 {
-	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage());
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
 }
 
+if(isset($_POST['Connexion'])) {
+	
+	$mail = htmlspecialchars($_POST['mail']);
+	$mdp = htmlspecialchars($_POST['mdp']);
+	//On vérifie si le mail et le mdp correspondent
+	$requete = $bdd->query('SELECT id FROM user WHERE email=\''.$mail.'\' AND password =\''.$mdp.'\'');
+	if($donnee = $requete->fetch())
+	{
+		$_SESSION['isConnected'] = true;
+		$_SESSION['userID'] = $donnee['id'];
+		header('Location:index.php');
+	}
+	else
+	{
+		$erreur = "L'email et le mot de passe ne correspondent pas";
+	}
+}
 ?>
 
 
@@ -46,15 +67,20 @@ catch(Exception $error)
     <div class="centrer_bloc">
      <div class="Connexion">
         <span>
+		<?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
           <a class="enteteInscription" href="connexion.php"> Connexion </a>
           <a class="enteteInscription" href="inscription.php"> Inscription </a>
         </span>
          
           <fieldset>
-          <form action="verification_connexion.php" method="post"> 
+          <form action="" method="post"> 
           
           <label for="mail" id="email">Email</label>
-          <input type="email" name="mail" id="mail" >
+          <input type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" >
           <br>
           <label for="mdp">Mot de passe</label>
           <input type="password" name="mdp" id="mdp">

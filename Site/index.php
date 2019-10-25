@@ -1,3 +1,47 @@
+
+<?php
+
+session_start();
+try{
+	//connexion à la database
+	//Pour les utilisateurs Mac : entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	//Pour windows entrez cette ligne
+	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
+}
+
+if($_SESSION['isConnected'])
+{
+	//On recherche les prenoms et noms si l'utilisateur est connecté
+	$requetePrenom = $bdd->query('SELECT first_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneePrenom = $requetePrenom->fetch())
+	{
+		$prenom = $donneePrenom['first_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+	}
+	
+	$requeteNom = $bdd->query('SELECT last_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneeNom = $requeteNom->fetch())
+	{
+		$nom = $donneeNom['last_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+	}
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,9 +61,18 @@
                 <ul>
                     <li><a href="index.php"> Accueil</a></li>
                     <li><a href="apropos.php">À propos </a></li>
+					<?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
-
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+                    <li><a href="connexion.php"><?php echo $nom.' '.$prenom ?></a></li>
+                    <li><a href="inscription.php">Se déconnecter</a></li>
+					<?php endif;?>
                 </ul>
              
             </nav>
@@ -46,7 +99,7 @@
               
             </div>
             <div class="colonne2Accueil">
-                <img src="Images/fond1bis.png" class="imageAccueil" alt="Fond">
+                <img src="Images/fond1.png" class="imageAccueil" alt="Fond">
             </div>
     	</div>
 
