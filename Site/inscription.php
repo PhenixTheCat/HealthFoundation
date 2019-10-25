@@ -20,13 +20,25 @@ if(isset($_POST['inscriptionP1'])) {
                $mailexist = $reqmail->rowCount();
                if($mailexist == 0) {
                   if($mdp == $mdp2) {
-                     $requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
-                     if($donnee = $requete->fetch()){
-                        $erreur = header('Location:page-inscription-suite.php');
+			//Inscription d'un formateur avec un code structure
+                    	$requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
+                   	if($donnee = $requete->fetch()){
+                       		 $erreur = header('Location:page-inscription-suite.php');
                         }
-                    else{
+                   	else{
                             $erreur = "Le code formateur est invalide";
                         }
+			// Inscription d'un pilote avec code formateur
+			$requeteCodeFormateur = $bdd->query('SELECT * FROM user  WHERE code=\''.$codeformateur.'\'');
+			if($donneeCodeFormateur = $requete->fetch())
+			{
+				// Le code existe
+				$erreur = "Le code est valide et appartient à une structure";
+			}
+			else{
+                            	$erreur = "Le code formateur est invalide";
+                        }
+				
                   } else {
                      $erreur = "Vos mots de passes ne correspondent pas !";
                   }
