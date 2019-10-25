@@ -32,7 +32,7 @@
 
     <div class="adminModiMdp">    
             <fieldset>
-            <form action=""  method="post"> 
+            <form action="admin-compte-perso.html"  method="post"> 
             <h3> Modification du mot de passe </h3>
             
             <label for="Nmdp" id="Nmdp">Nouveau mot de passe </label>
