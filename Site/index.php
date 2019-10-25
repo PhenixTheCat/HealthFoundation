@@ -46,7 +46,7 @@
               
             </div>
             <div class="colonne2Accueil">
-                <img src="Images/fond1.png" class="imageAccueil" alt="Fond">
+                <img src="Images/fond1bis.png" class="imageAccueil" alt="Fond">
             </div>
     	</div>
 
