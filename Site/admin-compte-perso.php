@@ -1,3 +1,46 @@
+<?php
+session_start();
+try{
+	//connexion à la database
+	//Pour les utilisateurs Mac : entrez cette ligne
+	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	//Pour windows entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
+}
+$requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
+$requser->execute(array($_SESSION['userID']));
+$user = $requser->fetch();
+if($_SESSION['isConnected'])
+{
+	//On recherche les prenoms et noms si l'utilisateur est connecté
+	$requetePrenom = $bdd->query('SELECT first_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneePrenom = $requetePrenom->fetch())
+	{
+		$prenom = $donneePrenom['first_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+	}
+	
+	$requeteNom = $bdd->query('SELECT last_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneeNom = $requeteNom->fetch())
+	{
+		$nom = $donneeNom['last_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+  }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,16 +51,16 @@
   </head>
   <body >
 
-    <header class="headerNonConnecte" >
+    <header class="headerConnecte" >
             <div class = logoPrincipal >
         <img src="Images/HF4.png" class="logo" alt="Logo de Health Foundation">
         <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
         </div>
             <nav id="menu">
                 <ul>
-                <li><a href="accueil.html"> Accueil</a></li>
+                <li><a href="index.php"> Accueil</a></li>
                 <li><a href="apropos.php">A propos </a></li>
-                <li><a href="accueil.html">Déconnexion</a></li>
+                <li><a href="index.php">Déconnexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
 
             </ul>
@@ -65,9 +108,9 @@
  <footer class="footerNonConnecte">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
-                <a href="faq.html"> FAQ/Aide</a>
+                <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="deconnexion"><a href="accueil.html" >Déconnexion</a></div>
+                <div id="deconnexion"><a href="index.php" >Déconnexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
