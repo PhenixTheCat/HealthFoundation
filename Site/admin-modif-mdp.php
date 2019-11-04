@@ -1,3 +1,47 @@
+<?php
+session_start();
+try{
+	//connexion à la database
+	//Pour les utilisateurs Mac : entrez cette ligne
+	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	//Pour windows entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
+}
+if($_SESSION['isConnected']) {
+  $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
+  $requser->execute(array($_SESSION['userID']));
+  $user = $requser->fetch();
+if(isset($_POST['adminModifMdp'])) {
+  //if(!empty($_POST['Nmdp']) AND !empty($_POST['Amdp']) AND !empty($_POST['Cmdp'])) {
+      $amdp = $_POST['Amdp'];
+      $nmdp = sha1($_POST['Nmdp']);
+      $cmdp = sha1($_POST['Cmdp']);
+      if($amdp==$user['password']){
+        if($nmdp == $cmdp) {
+          $reqnmdp = $bdd->prepare("UPDATE user SET password = ? WHERE id = ?");
+          $reqnmdp -> execute(array($nmdp,$_SESSION['userID']
+            ));
+              $erreur = 'Modification prise en compte';
+              header('admin-compte-perso.php');
+                  }
+              else{
+                      $erreur = "Vos mots de passes ne correspondent pas !";
+                  }
+              } else {
+                 $erreur = "Mot de passe actuel n'est pas le bon";
+              }
+          // }
+     //$erreur = "Tous les champs doivent être complétés !";
+}
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,7 +74,13 @@
     <h1 > Mon compte </h1>
   
 
-    <div class="adminModiMdp">    
+    <div class="adminModiMdp"> 
+        
+        <?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>  
             <fieldset>
             <form action="admin-compte-perso.html"  method="post"> 
             <h3> Modification du mot de passe </h3>
