@@ -40,25 +40,25 @@
 
    <div class ="GestionDuStress">
     <span class = "Gestion du stress">
-      <h1><a href="gestiondustress.html">Gestion du stress</a></h1>
+      <h1><a href="gestionDuStress.html">Gestion du stress</a></h1>
     </span>
     </div>
 
     <div class="ReconnaissanceDeTonalité">
       <span class="Reconnaissance de tonalité">
-        <h1><a href="reconnaissancedetonalite.html">Reconnaissance de tonalité</a></h1>
+        <h1><a href="reconnaissanceDeTonalite.html">Reconnaissance de tonalité</a></h1>
       </span>
     </div>
 
     <div class="TempsDeRéaction">
       <span class="Temps de réaction">
-        <h1><a href="tempsdereaction.html">Temps de réaction</a></h1>
+        <h1><a href="tempsDeReaction.html">Temps de réaction</a></h1>
       </span>
     </div>
 
     <div class="SeuilDePerception">
       <span class="Seuil de perception">
-        <h1><a href="seuildeperception.html">Seuil de perception</a></h1>
+        <h1><a href="seuilDePerception.html">Seuil de perception</a></h1>
       </span>
     </div>
 
