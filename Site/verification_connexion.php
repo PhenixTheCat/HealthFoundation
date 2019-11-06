@@ -12,10 +12,13 @@ catch(Exception $error)
 $requete = $bdd->query('SELECT * FROM user WHERE email=\''.$_POST['mail'].'\' AND password_hash(password) =\''.$_POST['mdp'].'\'');
 
 if($donnee = $requete->fetch())
-{
+{	$type = $bdd->query('SELECT type FROM user WHERE email=\''.$_POST['mail'].'\' AND password_hash(password) =\''.$_POST['mdp'].'\'');
+	
+	
+	
 	echo 'ça marche';
 	$_SESSION['loggedin'] = true;
-	
+	$_SESSION['type'] = $type;
 }
 else
 {
