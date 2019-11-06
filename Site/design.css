@@ -8,7 +8,13 @@
 .logoPrincipal:hover .bigTitle{
     
 }
-.logoPrincipal>h1{
+.logoPrincipal>h1>a{
+    display: flex;
+    font-family: Proza Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    font-family: Verdana;
 }
 
 
