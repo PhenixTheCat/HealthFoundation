@@ -9,7 +9,7 @@ catch(Exception $error)
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage());
 }
 
-$requete = $bdd->query('SELECT * FROM user WHERE email=\''.$_POST['mail'].'\' AND password =\''.$_POST['mdp'].'\'');
+$requete = $bdd->query('SELECT * FROM user WHERE email=\''.$_POST['mail'].'\' AND password_hash(password) =\''.$_POST['mdp'].'\'');
 
 if($donnee = $requete->fetch())
 {
