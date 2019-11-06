@@ -11,7 +11,7 @@ catch(Exception $error)
 {
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
 }
-if($_SESSION['isConnected']) {
+if($_SESSION['loggedin'] && $type == 'administrateur') {
   $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
   $requser->execute(array($_SESSION['userID']));
   $user = $requser->fetch();
