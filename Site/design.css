@@ -1248,6 +1248,8 @@ color: black;
 font-size: small;
 }
 
+
+
 /*=========== Admin modification mot de passe ===============*/
 .adminModiMdp{
 background-color: #7CA0E4;
@@ -1387,3 +1389,210 @@ margin:auto;
 
 }
 
+/*==================    A propos ================= */
+
+.about {
+	text-align: center;
+	margin: auto;
+}
+
+
+/*=============     Mon compte ================== */
+
+.infoUtilisateur {
+	background-color: transparent;
+	border: 1px solid #000000;
+	width: 40%;
+	max-width:50%;
+	padding: 2%;
+
+	margin: 5%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	}
+
+.moncompteblochaut{
+
+	display: inline;
+}
+.resumeResultat {
+	background-color: transparent;
+	border: 1px solid #000000;
+	width: 40%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	padding: 1%;
+	margin: 5%;
+	}
+	.resumeResultat h1 {
+
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+	.resumeResultat p {
+		background-color: white;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top:0% ;
+		text-align: center;
+	}
+
+	.resultatsParCat{
+	background-color: transparent;
+	border: 1px solid #000000;
+	width: 40%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	padding: 1%;
+	margin: 5%;
+	}
+	.resultatsParCat h1 {
+
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+
+	.resultatsParCat p {
+		background-color: white;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top:0% ;
+		text-align: center;
+	}
+
+	#gestionDuStress h1{
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/stress.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+
+#tempsDeReaction h1{
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tempsdereaction.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+	#seuilDePerception h1{
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/perception.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+	
+	#reconnaissanceDeTonalite h1{
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tonalite.jpg");;
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+
+	#resultatstestenligne {
+		background-color: transparent;
+		border: 1px solid #000000;
+		width: 40%;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		text-align: center;
+		padding: 1%;
+		margin: 5%;
+		}
+
+	#resultatenligne p {
+		background-color: white;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top:0% ;
+		text-align: center;
+	}
+
+	#resultatenligne h1{
+		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%);
+		opacity: 0,2;
+		background-repeat: no-repeat;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom:0% ;
+	}
+
+	.testResults p {
+		background-color: white;
+		padding: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top:0% ;
+		text-align: center;
+	}
+/* ================ Gestion du stress =============*/
+	.GestionDuStress {
+		background-color: transparent;
+		border: 1px solid #000000;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		text-align: center;
+		padding: 1%;
+		margin: 5%;
+		}
+
+		.GestionDuStress h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/stress.jpg");;
+			opacity: 0,2;
+			background-repeat: no-repeat;
+			padding: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom:0% ;
+		}
+	
+	.tempsDeReaction h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tempsdereaction.jpg");;
+			opacity: 0,2;
+			background-repeat: no-repeat;
+			padding: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom:0% ;
+		}
+		.seuilDePerception h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/perception.jpg");;
+			opacity: 0,2;
+			background-repeat: no-repeat;
+			padding: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom:0% ;
+		}
+		
+		.reconnaissanceDeTonalite h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tonalite.jpg");;
+			opacity: 0,2;
+			background-repeat: no-repeat;
+			padding: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom:0% ;
+		}

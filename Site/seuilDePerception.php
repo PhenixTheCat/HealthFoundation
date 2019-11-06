@@ -8,43 +8,49 @@
   </head>
   <body>
 
-    <header class="headerNonConnecte" >
+  <header class="headerNonConnecte" >
             <div class = logoPrincipal >
-        <img src="HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
-        </div>
+                <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
+                <h1 ><a href="accueil.php" class="bigTitle">Health Foundation</a></h1>
+            </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html"> Accueil</a></li>
-              <li><a href="apropos.html">A propos </a></li>
-              <li><a href="connexion.html">Connexion</a></li>
-              <li><a href="inscription.html">Inscription</a></li>
+                    <ul>
+                    <li><a href="index.php"> Accueil</a></li>
+                    <li><a href="apropos.php">À propos </a></li>
+                    <li><a href="moncompte.php">Mon compte</a></li>
+                    <li><a href="deconnexion.php">Se déconnecter</a></li>
 
-            </ul>
+                </ul>
 
+                
+                <div class=" logoLangue">
+                    <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                    <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                </div>
             </nav>
+    	</header>
 
-    </header>
 
 
-    <div class ="Perception">
-    <span class = "Seuil de perception">
-      <h1>Seuil de perception</h1>
-    </span>
+    <div class="SeuilDePerception">
+      <div class="testResults">
+        <h1><a href="seuilDePerception.php">Seuil de perception</a></h1>
+      </div>
     </div>
 
 
 
-
     <footer class="footerNonConnecte">
-            <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
-                <a href="faq.html"> FAQ/Aide</a>
-                <a href="contact.html"> Contact</a>
-                <div id="connexion"><a href="connexion.html" >Connexion</a></div>
-                <p>©Copyright Health Foundation, tout droits réservés</p>
-            </div>
-      </footer>
+    <div class="menuBas">
+        <a href="cgu.php" target="_blank"> CGU</a>
+        <a href="faq.php"> FAQ/Aide</a>
+        <a href="contact.php"> Contact</a>
+
+         <div id="connexion"><a href="deconnexion.php" >Deconnexion</a></div>    
+        <p>©Copyright Health Foundation, tout droits réservés</p>
+    </div>
+</footer>
 
   </body>
 </html>
