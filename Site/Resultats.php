@@ -38,10 +38,10 @@
 
     <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
-                <a href="faq.html"> FAQ/Aide</a>
-                <a href="contact.html"> Contact</a>
-                <div id="connexion"><a href="connexion.html" >Connexion</a></div>
+                <a href="cgu.php" target="_blank"> CGU</a>
+                <a href="faq.php"> FAQ/Aide</a>
+                <a href="contact.php"> Contact</a>
+                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
       </footer>
