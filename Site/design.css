@@ -158,60 +158,119 @@ li a {
     display:inline;
     float: right;
 }
-
+.logoApp{
+    width: 100px;
+    margin: 0 0 0 80%;
+    display: inline;
+    flex-direction: row;
+}
 div#connexion>a{
-    color:#3A79FF;
     font-style: normal;
-    background-color: #D2E1FF;
     text-align: center;
     right: 0px;
+    padding: 5%;
+    background-color: none;
+    border: solid 1px #D2E1FF;
+    text-decoration: none;
+    color: #3A79FF;
+}
+div#connexion>a:hover{
+    background-color: #D2E1FF;
+    border: solid 1px #D2E1FF;
+    text-decoration: none;
+    color: #3A79FF;
 }
 div.menuBas>a{
     margin : 0 20px;
-    
+    color:#666666;
+}
+div.menuBas>a:hover{
+    color: black;
 }
 div.menuBas>p{
     font-size: 10px;
     padding-left:0.5%;
+    color:#666666;
 }
 div.menuBas>a#connexion{
     margin : 0 20px 0 70%;
     padding:0 10px 0 10px;
 }
 .photoAccueil{
-    width:50%;
-    float:right;
-}
-.menuInformations{
-    
+    width:49%;
+    margin:1% 1% 1% 50%;
 }
 .section1{
     display:block;
+    position:relative;
+    margin:100px 0 ;
+}
+.texteGauche{
+    position:absolute;  
+    float:left;
+    width:50%;
+    height:80%;
+    padding:60px 0;
+}
+.boutonTest{
+    width:15em;
+    font-size: 24px;
+    background-color: rgba(41,105,151,0.49);
+    border:0;
+    font-weight: bold;
+    font-family:Nunito Sans;
+    text-align:center;
+    padding: 2%;
+    cursor: pointer;
+    background-image:linear-gradient(45deg,rgba(0,0,0,0.2) ,rgba(255,255,255,0.1) ,rgba(0,0,0,0.2) );
+    border-radius: 3px;
+    position:absolute;
+    margin: 5px;
+    transition: all 0.2s;
+    border: 1px solid rgba(41,105,151,0.49);
+}
+.boutonTest:hover{
+    background-color:#e6e6e7;
+    text-shadow: -0.5px -0.5px rgba(0,0,0,0.2);
+}
+
+
+.texteGauche>h2{
+    text-align: center;
+    font-size:40px;
+}
+.texteGauche>form{
+    padding:0px 17%;
 }
 .section2{
+    margin:100px 0 ;
     text-align:center;
     background-image: url("images/fond2.jpg");
     color : white;
-    background-size: 100% 100%;
-    padding-top:7px;
+    background-size: 100% 200%;
+    padding: 3% 5%;
 }
 .section2>h2{
     font-size:3rem;
     margin-top:0;
     text-decoration: underline;
+    margin-bottom:60px;
 }
 .section3{
-    padding: 5% 25%;
+    padding: 75px 25% 175px 25%;
     background-image: url("Images/carreaux.png");
     background-repeat: no-repeat;
     background-position:bottom right;
-    background-size: 25%;
-        
+    background-size: 70%;
+    /*background-image : linear-gradient(rgba(0,0,0,0),white,white,white,white);
+    background-size: 100% 100%;*/
 }
 .section3>h2{
     text-align: center;
     text-decoration: underline;
     font-size:30px;
+    margin-bottom: 100px;
+    
 }
 .sectionInformations{
     padding:0;
@@ -240,10 +299,20 @@ div.menuBas>a#connexion{
     margin:auto;
 }
 .partieMenu>img{
-    margin : auto;
+    margin: 0 auto 40px auto;
+    box-shadow: 4px 4px 4px rgba(255,255,255, 0.25);
 }
 .partieMenu>div{
     height:5rem;
+}
+.specialTest{
+    z-index:-1;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-image: url("https://i0.wp.com/osezcourir.fr/wp-content/uploads/2017/01/fond-blanc-gris-Alta%C3%AFr.jpg?w=2320&ssl=1");
+    background-position-y: 50%;
 }
 
 
