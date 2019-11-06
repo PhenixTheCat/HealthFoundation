@@ -78,24 +78,36 @@ if($_SESSION['isConnected'])
 
     <div class="adminCp">  
            
+           // On récupère tout le contenu de la table user 
+           <?php  
+           
+           $reponse = $bdd->query('SELECT * FROM user');
+           // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch())  
+            {    
+           ?>
            
             <form action=""  method="post"> 
             <h3> Informations détaillés </h3>
 
             <h4> Nom </h4>
-            <h5> (A remplir avec php)</h5>
+            <h5> <?php echo $coordonnees['last_name'];?></h5>
             <h4> Prénom </h4>
-            <h5> (A remplir avec php)</h5>
+            <h5> <?php echo $coordonnees['first_name'];?></h5>
             <h4> Date de naissance </h4>
-            <h5> (A remplir avec php)</h5>
-            <h4> Nom d'utilisateur </h4>
-            <h5> (A remplir avec php)</h5>
+            <h5><?php echo $coordonnees['birthdate'];?></h5>
             <h4> Adresse email</h4>
-            <h5> (A remplir avec php)</h5>
+            <h5><?php echo $coordonnees['email'];?></h5>
             <h4> Mot de passe </h4>
-            <a class = "lien" href="admin-modif-mdp.html">Modifier le mot de passe  </a>
-            <a class= "lien" href="admin-modif-profil-perso.html"> Modifier le profil</a>
 
+
+
+            <a class = "lien" href="admin-modif-mdp.php">Modifier le mot de passe  </a>
+            <a class= "lien" href="admin-modif-profil-perso.php"> Modifier le profil</a>
+            <?php
+                }
+                    $reponse->closeCursor(); // Termine le traitement de la requête
+            ?>
 
 
              
