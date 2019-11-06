@@ -6,7 +6,6 @@
    @Desc    : Retourne le nom de l'os grâce à l'user agent
    @Param   : $ua (str) : l'user agent dont on veux trouver l'os
    @Return  : (str) le nom de l'os trouvé sinon "Système d'exploitation inconnu"
-   @licence : http://opensource.org/licenses/lgpl-license.php GNU LGPL
 /
 
 function getOS( $ua = '' )
