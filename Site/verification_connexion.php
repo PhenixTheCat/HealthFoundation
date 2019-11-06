@@ -14,12 +14,13 @@ $requete = $bdd->query('SELECT * FROM user WHERE email=\''.$_POST['mail'].'\' AN
 if($donnee = $requete->fetch())
 {
 	echo 'ça marche';
+	$_SESSION['loggedin'] = true;
+	
 }
 else
 {
 	header('Location: connexion_retry.php');
 	exit();
 }
-
 
 ?>
