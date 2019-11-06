@@ -1,32 +1,26 @@
 /*=========     Mise en page commune du header    ======.*/
 
 .logoPrincipal{
-	display: flex;
-	flex-direction: row; 
+    display: flex;
+    flex-direction: row; 
+    transition:all 0.2s;
+}
+.logoPrincipal:hover .bigTitle{
+    
+}
+.logoPrincipal>h1{
 }
 
 
 .logo
 {
-	width: 100px;
-	height: 100px;
-	margin: 10px 0 0 10px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
-
-	
+    
 }
-
-
-#Titre{
-    display: flex;
-    font-family: Proza Libre;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    letter-spacing: 0.03em;
-    margin: 15px 0 0 10px;
-    }
 
 
 body
@@ -37,19 +31,28 @@ body
     background-attachment: scroll;
     width: 100%;
     margin:0;
-
-
 }
-
+.pasImage{
+    background-image:none;
+}
+.bigTitle{
+    display: flex;
+    font-family: Proza Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    font-family: Verdana;
+}
 
 a {
 
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: bold;
-	color: black;
-	text-decoration: none;
-	font-size: x-large;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: large;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 h4 {
@@ -87,6 +90,9 @@ ul {
   float: right;
   line-height: 25px;
   overflow: hidden;
+  margin-right: 10px;
+  display:flex; 
+  width:100%;
 }
 
 li {
@@ -105,14 +111,15 @@ li a {
 .headerNonConnecte
 {
 
-	display: flex;
-	align-items: center;
-	align-content: center;
-	border-bottom: solid #3A79FF 1px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-bottom: solid #3A79FF 1px;
     justify-content: space-between;
     flex-wrap: wrap;
    
 }
+
 .logoLangue .logo{
 	display: inline;
 	height: 20px;
