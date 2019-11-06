@@ -4,8 +4,8 @@
    Fonction : getOs
 ----------------------------------------------
    @Desc    : Retourne le nom de l'os grâce à l'user agent
-   @Param   : $ua (str) : l'user agent dont on veux trouver l'os
-   @Return  : (str) le nom de l'os trouvé sinon "Système d'exploitation inconnu"
+   @Param   : $ua (str) : l'user agent dont on veut trouver l'os
+   @Return  : (str) le nom de l'os trouvé, sinon "Système d'exploitation inconnu"
 /
 
 function getOS( $ua = '' )
@@ -15,6 +15,7 @@ function getOS( $ua = '' )
     
     $os_arr = Array(
                      // -- Windows
+                     'Windows NT 10.0'     => 'Windows 10',
                      'Windows NT 6.1'       => 'Windows Seven',
                      'Windows NT 6.0'       => 'Windows Vista',
                      'Windows NT 5.2'       => 'Windows Server 2003',
