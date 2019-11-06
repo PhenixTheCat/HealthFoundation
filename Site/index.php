@@ -37,7 +37,7 @@ if($_SESSION['isConnected'])
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="decorFond">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" media="screen" href="design.css" />
@@ -45,84 +45,61 @@ if($_SESSION['isConnected'])
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+    <body class="pasImage">
+        
     	<header class="headerNonConnecte" >
             <div class = logoPrincipal >
                 <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
-                <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
+                <h1 ><a href="accueil.html" class="bigTitle">Health Foundation</a></h1>
             </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.php"> Accueil</a></li>
-                    <li><a href="apropos.php">À propos </a></li>
-					<?php //Si l'utilisateur n'est pas connecté
-					if(!$_SESSION['isConnected']) : ?> 
+                    <li><a href="accueil.html"> Accueil</a></li>
+                    <li><a href="apropos.html">À propos </a></li>
+                    <li><a href="connexion.html">Connexion</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
 
-                    <li><a href="connexion.php">Connexion</a></li>
-                    <li><a href="inscription.php">Inscription</a></li>
-					<?php endif;?>
-
-					<?php //Si l'utilisateur est connecté
-					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="connexion.php"><?php echo $nom.' '.$prenom ?></a></li>
-                    <li><a href="inscription.php">Se déconnecter</a></li>
-					<?php endif;?>
                 </ul>
-
+                <button class="drapeauFr"> </button>
             </nav>
-            <div class=" logoLangue">
-                <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
-                <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
-            </div>
     	</header>
-
-    	<div class="blocIntroAccueil">
-            <div class="colonne1Accueil">
-                <h1>"A LEGACY OF EXCELLENCE"</h1>
-
-
-                <div class="blocConnexionAPPAccueil">
-                  <div class="boutonConnexionAccueil"> <p><a href="connexion.php">Se connecter pour passer <br>le pilotest en ligne </a> </p></div>
-
-                <div class="logoAPPAccueil">
-
-                <img src="Images/AppLogo.png" class="logo" alt="Logo solution APP">
-                </div>
-              </div>
-
-
+        <div class="specialTest"></div>
+    	<section class="section1">
+            <div>
+                <div class="texteGauche">
+                    <h2>"A LEGACY OF EXCELLENCE"</h2>
+                    <form action="connexion.html"><button type="submit" class="boutonTest">Connectez-vous pour passer le pilotest test en ligne</button> 
+                        <img src="Images/AppLogo.png" class="logoApp" alt="Logo solution APP">
+                    </form>
+                </div>  
+                <img src="Images/fond1.png" class="photoAccueil" alt="Fond">
             </div>
-            <div class="colonne2Accueil">
-                <img src="Images/fond1.png" class="imageAccueil" alt="Fond">
-            </div>
-    	</div>
+    	</section>
 
-    	<section class="nosServicesAccueil">
-            <h1>Nos services</h1>
-              <div class="menuInformations">            
+    	<section class="section2">
+            <h2>    Nos services    </h2>
+            <div class="menuInformations">            
                 <div class="partieMenu">
-                    <img src="Images/logoFrance.png" class="logo" alt="Cardio">
+                    <img src="Images/coeur.png" class="logo" alt="Logo coeur">
                     <div>Réalisations de tests du rythme cardiaque grâce aux électrodes</div>
                 </div>
                 <div class="partieMenu">
-                    <img src="Images/logoFrance.png" class="logo" alt="Pulmo">
+                    <img src="Images/poumon.png" class="logo" alt="Logo poumon">
                     <div>Réalisations de tests respiratoires grâce aux examens de Bronchoscopie</div>
                 </div>
                 <div class="partieMenu">
-                    <img src="Images/logoFrance.png" class="logo" alt="Visio">
+                    <img src="Images/oreille.png" class="logo" alt="Logo oeil">
                     <div>Réalisations de tests d’acuité visuelle grâce à l’OCULUS Binoptometer 4P</div>
                 </div>
                 <div class="partieMenu">
-                    <img src="Images/logoFrance.png" class="logo" alt="Auditio">
+                    <img src="Images/oeil.png" class="logo" alt="Logo oreille">
                     <div>Réalisations de tests auditifs grâce aux examens d’otoscopie et d’audiométrie</div>
                 </div>
             </div>
-            <br>
     	</section>
 
-    	<section class="actualitesAccueil">
-            <h1>Actualités</h1>
-
+    	<section class="section3">
+            <h2>                    Actualités                    </h2>
             <div class="sectionInformations">
                 <div class="ligneInformation">
                     <div class="info1">
@@ -178,13 +155,14 @@ if($_SESSION['isConnected'])
 
         <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.php" target="_blank"> CGU</a>
-                <a href="faq.php"> FAQ/Aide</a>
-                <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+                <a href="cgu.html" target="_blank"> CGU</a>
+                <a href="faq.html"> FAQ/Aide</a>
+                <a href="contact.html"> Contact</a>
+                <div id="connexion"><a href="connexion.html" >Connexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
-
+    
     </body>
 </html>
+
