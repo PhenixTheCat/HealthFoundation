@@ -35,7 +35,6 @@ if($_SESSION['isConnected'])
 	}
 }
 ?>
-
 <!DOCTYPE html>
 <html class="decorFond">
     <head>
@@ -50,17 +49,33 @@ if($_SESSION['isConnected'])
     	<header class="headerNonConnecte" >
             <div class = logoPrincipal >
                 <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
-                <h1 ><a href="accueil.html" class="bigTitle">Health Foundation</a></h1>
+                <h1 ><a href="accueil.php" class="bigTitle">Health Foundation</a></h1>
             </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="accueil.html"> Accueil</a></li>
-                    <li><a href="apropos.html">À propos </a></li>
-                    <li><a href="connexion.html">Connexion</a></li>
-                    <li><a href="inscription.html">Inscription</a></li>
+                    <ul>
+                    <li><a href="index.php"> Accueil</a></li>
+                    <li><a href="apropos.php">À propos </a></li>
+					<?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+                    <li><a href="connexion.php"><?php echo $nom.' '.$prenom ?></a></li>
+                    <li><a href="inscription.php">Se déconnecter</a></li>
+					<?php endif;?>
+                </ul>
 
                 </ul>
-                <button class="drapeauFr"> </button>
+                
+                <div class=" logoLangue">
+                    <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                    <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                </div>
             </nav>
     	</header>
         <div class="specialTest"></div>
@@ -68,7 +83,7 @@ if($_SESSION['isConnected'])
             <div>
                 <div class="texteGauche">
                     <h2>"A LEGACY OF EXCELLENCE"</h2>
-                    <form action="connexion.html"><button type="submit" class="boutonTest">Connectez-vous pour passer le pilotest test en ligne</button> 
+                    <form action="connexion.php"><button type="submit" class="boutonTest">Connectez-vous pour passer le pilotest test en ligne</button> 
                         <img src="Images/AppLogo.png" class="logoApp" alt="Logo solution APP">
                     </form>
                 </div>  
@@ -155,14 +170,13 @@ if($_SESSION['isConnected'])
 
         <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
-                <a href="faq.html"> FAQ/Aide</a>
-                <a href="contact.html"> Contact</a>
-                <div id="connexion"><a href="connexion.html" >Connexion</a></div>
+                <a href="cgu.php" target="_blank"> CGU</a>
+                <a href="faq.php"> FAQ/Aide</a>
+                <a href="contact.php"> Contact</a>
+                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
     
     </body>
 </html>
-
