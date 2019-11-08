@@ -61,7 +61,7 @@ if(isset($_POST['adminModifMdp'])) {
                 <ul>
                 <li><a href="index.php"> Accueil</a></li>
                 <li><a href="apropos.php">A propos </a></li>
-                <li><a href="accueil.php">Déconnexion</a></li>
+                <li><a href="index.php">Déconnexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
 
             </ul>
@@ -82,7 +82,7 @@ if(isset($_POST['adminModifMdp'])) {
          }
          ?>  
             <fieldset>
-            <form action="admin-compte-perso.html"  method="post"> 
+            <form action="admin-compte-perso.php"  method="post"> 
             <h3> Modification du mot de passe </h3>
             
             <label for="Nmdp" id="Nmdp">Nouveau mot de passe </label>
@@ -106,7 +106,7 @@ if(isset($_POST['adminModifMdp'])) {
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <li><a href="accueil.php">Déconnexion</a></li>
+                <li><a href="index.php">Déconnexion</a></li>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
