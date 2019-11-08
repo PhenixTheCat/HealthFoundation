@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,14 +14,14 @@
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
         <img src="Images/HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
+        <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
         </div>
             <nav id="menu">
                 <ul>
-                <li><a href="accueil.html"> Accueil</a></li>
-                <li><a href="apropos.html">A propos </a></li>
-                <li><a href="accueil.html">Déconnexion</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="index.php"> Accueil</a></li>
+                <li><a href="apropos.php">A propos </a></li>
+                <li><a href="index.php">Déconnexion</a></li>
+                <li><a href="inscription.php">Inscription</a></li>
 
             </ul>
 
@@ -36,7 +39,7 @@
     <div class="adminModifpp">  
           
           <fieldset>
-          <form action="admin-compte-perso.html" method="post"> 
+          <form action="admin-compte-perso.php" method="post"> 
           <h4> Participant </h4>
           <label for="nom" id="nom">Nom </label>
           <input type="text" name="nom" id="nom">
@@ -79,10 +82,10 @@
   </div>
  <footer class="footerNonConnecte">
             <div class="menuBas">
-                <a href="cgu.html" target="_blank"> CGU</a>
-                <a href="faq.html"> FAQ/Aide</a>
-                <a href="contact.html"> Contact</a>
-                <div id="deconnexion"><a href="accueil.html" >Déconnexion</a></div>
+                <a href="cgu.php" target="_blank"> CGU</a>
+                <a href="faq.php"> FAQ/Aide</a>
+                <a href="contact.php"> Contact</a>
+                <div id="deconnexion"><a href="index.php" >Déconnexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
