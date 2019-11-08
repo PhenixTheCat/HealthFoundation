@@ -16,7 +16,7 @@
             <nav id="menu">
                 <ul>
                     <li><a href="index.php"> Accueil</a></li>
-              <li><a href="apropos.php">A propos </a></li>
+              <li><a href="aPropos.php">A propos </a></li>
               <li><a href="connexion.php">Connexion</a></li>
               <li><a href="inscription.php">Inscription</a></li>
 
