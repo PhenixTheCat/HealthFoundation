@@ -55,7 +55,7 @@ if($_SESSION['isConnected'])
                 <ul>
                     <ul>
                     <li><a href="index.php"> Accueil</a></li>
-                    <li><a href="apropos.php">À propos </a></li>
+                    <li><a href="aPropos.php">À propos </a></li>
 					<?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
 					
