@@ -74,7 +74,7 @@ if(isset($_POST['inscriptionP1'])) {
             <nav id="menu">
                 <ul>
                     <li><a href="index.php"> Accueil</a></li>
-                    <li><a href="apropos.php">À propos </a></li>
+                    <li><a href="aPropos.php">À propos </a></li>
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
 
