@@ -38,6 +38,20 @@ if(isset($_POST['adminModifMdp'])) {
      //$erreur = "Tous les champs doivent être complétés !";
 }
 }
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   
+  
+  
+  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
+  
+  
+  
+  
+  
+} else {
+     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+}
 ?>
 
 
