@@ -16,7 +16,7 @@
             <nav id="menu">
                 <ul>
                 <li><a href="index.php"> Accueil</a></li>
-                <li><a href="apropos.php">A propos </a></li>
+                <li><a href="aPropos.php">A propos </a></li>
                 <li><a href="connexion.php">Connexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
 
@@ -33,7 +33,7 @@
         </span>
            
             <fieldset>
-            <form action="Nouveau-Mdp-confirmation.html" method="post"> 
+            <form action="NouveauMdpConfirmation.html" method="post"> 
 
             <label for="Nmdp" id="Nmdp">Nouveau mot de passe </label>
             <input type="password" name="Nmdp" id="Nmdp">
