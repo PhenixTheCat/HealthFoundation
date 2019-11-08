@@ -15,10 +15,10 @@
         </div>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.html"> Accueil</a></li>
-              <li><a href="apropos.html">A propos </a></li>
-              <li><a href="connexion.html">Connexion</a></li>
-              <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="index.php"> Accueil</a></li>
+              <li><a href="apropos.php">A propos </a></li>
+              <li><a href="connexion.php">Connexion</a></li>
+              <li><a href="inscription.php">Inscription</a></li>
 
             </ul>
 
