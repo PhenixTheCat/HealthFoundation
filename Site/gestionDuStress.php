@@ -17,7 +17,7 @@
                 <ul>
                     <ul>
                     <li><a href="index.php"> Accueil</a></li>
-                    <li><a href="apropos.php">À propos </a></li>
+                    <li><a href="aPropos.php">À propos </a></li>
                     <li><a href="moncompte.php">Mon compte</a></li>
                     <li><a href="deconnexion.php">Se déconnecter</a></li>
 
