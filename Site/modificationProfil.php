@@ -16,7 +16,7 @@
             <nav id="menu">
                 <ul>
                 <li><a href="index.php"> Accueil</a></li>
-                <li><a href="apropos.php">A propos </a></li>
+                <li><a href="aPropos.php">A propos </a></li>
                 <li><a href="index.php">Déconnexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
 
@@ -36,7 +36,7 @@
     <div class="piloteModifMdpp">  
            
             <fieldset>
-            <form action="pilote-modif-mdp.html"  method="post"> 
+            <form action="piloteModifMdp.html"  method="post"> 
             <h3> Informations détaillés </h3>
             <label for="nom" id="nom">Nom  </label>
             <input type="text" name="nom" id="nom">
