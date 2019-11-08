@@ -11,7 +11,7 @@
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
         <img src="HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
+        <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
         </div>
             <nav id="menu">
                 <ul>
