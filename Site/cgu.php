@@ -1,3 +1,20 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   
+  
+  
+  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
+  
+  
+  
+  
+  
+} else {
+     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
