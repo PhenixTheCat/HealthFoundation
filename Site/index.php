@@ -5,35 +5,33 @@ try{
 	//Pour les utilisateurs Mac : entrez cette ligne
 	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
 	//Pour windows entrez cette ligne
-	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	}
+	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	}
 }
 catch(Exception $error)
 {
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
 }
-if($_SESSION['isConnected'])
+//Test si l'utilisateur veut se déconnecter
+if(isset($_GET['deconnexion']))
 {
-	//On recherche les prenoms et noms si l'utilisateur est connecté
-	$requetePrenom = $bdd->query('SELECT first_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
-	if($donneePrenom = $requetePrenom->fetch())
-	{
-		$prenom = $donneePrenom['first_name'];
-	}
-	else
-	{
-		echo 'Erreur, utilisateur inexistant';
-	}
-	
-	$requeteNom = $bdd->query('SELECT last_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
-	if($donneeNom = $requeteNom->fetch())
-	{
-		$nom = $donneeNom['last_name'];
-	}
-	else
-	{
-		echo 'Erreur, utilisateur inexistant';
-	}
+	$_SESSION['isConnected'] = false;
+	header('Location:index.php');
+	exit();
 }
+
+//Test d'arrivée sur le site du visiteur
+if(!isset($_SESSION['isConnected']))
+{
+	$_SESSION['isConnected'] = false;
+}
+
 ?>
 <!DOCTYPE html>
 <html class="decorFond">
@@ -173,7 +171,15 @@ if($_SESSION['isConnected'])
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+				<?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
+				<?php endif;?>
+				
+				<?php //Si l'utilisateur est connecté
+				if($_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
+				<?php endif;?>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>

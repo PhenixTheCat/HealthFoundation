@@ -1,16 +1,27 @@
 <?php
 session_start();
 try{
-	//connexion à la database
-	//Pour les utilisateurs Mac : entrez cette ligne
-	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	//Pour windows entrez cette ligne
-	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
+	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	}
+	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	}
 }
 catch(Exception $error)
 {
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
 }
+
+//Test d'arrivée sur le site du visiteur
+if(!isset($_SESSION['isConnected']))
+{
+	$_SESSION['isConnected'] = false;
+}
+
 $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
 $requser->execute(array($_SESSION['userID']));
 $user = $requser->fetch();
@@ -60,8 +71,18 @@ if($_SESSION['isConnected'])
                 <ul>
                 <li><a href="index.php"> Accueil</a></li>
                 <li><a href="aPropos.php">A propos </a></li>
-                <li><a href="index.php">Déconnexion</a></li>
-                <li><a href="inscription.php">Inscription</a></li>
+                <?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+					<?php endif;?>
 
             </ul>
 
@@ -122,8 +143,16 @@ if($_SESSION['isConnected'])
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="deconnexion"><a href="index.php" >Déconnexion</a></div>
-                <p>©Copyright Health Foundation, tout droits réservés</p>
+				<?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
+				<?php endif;?>
+				
+				<?php //Si l'utilisateur est connecté
+				if($_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
+				<?php endif;?>                
+				<p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
 

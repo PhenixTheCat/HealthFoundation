@@ -167,7 +167,7 @@ li a {
         height:auto;
     }
 }
-#connexion{
+#footerButton{
     display:inline;
     float: right;
 }
@@ -177,7 +177,7 @@ li a {
     display: inline;
     flex-direction: row;
 }
-div#connexion>a{
+div#footerButton>a{
     font-style: normal;
     text-align: center;
     right: 0px;
@@ -187,7 +187,7 @@ div#connexion>a{
     text-decoration: none;
     color: #3A79FF;
 }
-div#connexion>a:hover{
+div#footerButton>a:hover{
     background-color: #D2E1FF;
     border: solid 1px #D2E1FF;
     text-decoration: none;
@@ -205,7 +205,7 @@ div.menuBas>p{
     padding-left:0.5%;
     color:#666666;
 }
-div.menuBas>a#connexion{
+div.menuBas>a#footerButton{
     margin : 0 20px 0 70%;
     padding:0 10px 0 10px;
 }

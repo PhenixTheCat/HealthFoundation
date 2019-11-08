@@ -16,9 +16,19 @@
             <nav id="menu">
                 <ul>
                     <li><a href="index.php"> Accueil</a></li>
-              <li><a href="aPropos.php">A propos </a></li>
-              <li><a href="connexion.php">Connexion</a></li>
-              <li><a href="inscription.php">Inscription</a></li>
+					<li><a href="aPropos.php">A propos </a></li>
+				   <?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+					<?php endif;?>
 
             </ul>
 
@@ -75,7 +85,15 @@
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+                <?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
+				<?php endif;?>
+				
+				<?php //Si l'utilisateur est connecté
+				if($_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
+				<?php endif;?>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
       </footer>

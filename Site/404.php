@@ -1,18 +1,26 @@
 <?php
-session_start();
 
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-   
-  
-  
-  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
-  
-  
-  
-  
-  
-} else {
-     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+session_start();
+try{
+	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
+	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	}
+	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	}
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
+}
+
+//Test d'arrivée sur le site du visiteur
+if(!isset($_SESSION['isConnected']))
+{
+	$_SESSION['isConnected'] = false;
 }
 
 
@@ -40,8 +48,18 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <ul>
                     <li><a href="index.php"> Accueil</a></li>
                     <li><a href="aPropos.php">À propos </a></li>
+                    <?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+					<?php endif;?>
 
                 </ul>
             </nav>
@@ -58,17 +76,21 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </section>
     
 
-
-        <!-- Pied de page non connecté -->
-
-<!-- Pied de page non connecté -->
-
         <footer class="footerNonConnecte">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+				<?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
+				<?php endif;?>
+				
+				<?php //Si l'utilisateur est connecté
+				if($_SESSION['isConnected']) : ?> 
+				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
+				<?php endif;?>
+                
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>

@@ -77,7 +77,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     L'Utilisateur est invité à ne pas se connecter au Site ni utiliser les Services s'il n'accepte pas tout ou partie des documents visés ci-dessus.
   </p>
   <p>
-    L’Editeur peut à tout moment modifier les termes des CGU. L’Utilisateur est expressément informé que la version en vigueur est celle qui est mise en ligne à l’adresse URL <a href="CGU.html"
+    L’Editeur peut à tout moment modifier les termes des CGU. L’Utilisateur est expressément informé que la version en vigueur est celle qui est mise en ligne à l’adresse URL <a href="cgu.php"
       target="_self">https://www.health.foundation.com/Mentions-Legales-et-CGU</a>&nbsp;à la date de son accès à l’un quelconque des Services, ce que l’Utilisateur reconnaît et accepte sans restriction, s’engageant à s’y référer systématiquement lors
     de chaque connexion.
   </p>
