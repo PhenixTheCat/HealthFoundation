@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   
+  
+  
+  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
+  
+  
+  
+  
+  
+} else {
+     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -41,7 +61,7 @@
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+                <div id="connexion"><a href="connexion.php" >Connexion</a></div> // je pense qu'il faut modifier ça avec du php
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
       </footer>
