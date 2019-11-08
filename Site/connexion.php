@@ -30,6 +30,20 @@ if(isset($_POST['Connexion'])) {
 		$erreur = "L'email et le mot de passe ne correspondent pas";
 	}
 }
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   
+  
+  
+  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
+  
+  
+  
+  
+  
+} else {
+     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+}
 ?>
 
 
