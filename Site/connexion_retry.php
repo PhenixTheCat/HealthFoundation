@@ -9,6 +9,20 @@ catch(Exception $error)
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage());
 }
 
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+   
+  
+  
+  /*!!!!!!! ajouter ici la référence du header et bas de page connecté*/
+  
+  
+  
+  
+  
+} else {
+     /*!!!!!!! ajouter ici la référence du header et bas de page déconnecté*/
+}
+
 ?>
 
 
