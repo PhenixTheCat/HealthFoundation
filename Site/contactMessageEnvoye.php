@@ -49,7 +49,7 @@ if(!isset($_SESSION['isConnected']))
 				
 				<?php //Si l'utilisateur est connecté
 				if($_SESSION['isConnected']) : ?> 
-				<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+				<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 				<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 				<?php endif;?>
             </ul>

@@ -4,9 +4,9 @@ session_start();
 try{
 	//connexion à la database
 	//Pour les utilisateurs Mac : entrez cette ligne
-	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
 	//Pour windows entrez cette ligne
-	$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	//bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
 }
 catch(Exception $error)
 {
@@ -69,7 +69,7 @@ if(isset($_POST['Connexion'])) {
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="monCompte.php">Mon compte</a></li>
                     <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
 
@@ -105,7 +105,7 @@ if(isset($_POST['Connexion'])) {
           <input type="submit" Value="Suivant" name="Connexion">
         </form>
         </fieldset>
-        <a id= mdp href="mot-de-passe-oublié.php">Mot de passe oublié</a>
+        <a id= mdp href="motDePasseOublie.php">Mot de passe oublié</a>
       </div>
     </div>
 <footer class="footerNonConnecte">

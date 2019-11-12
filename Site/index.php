@@ -63,8 +63,8 @@ if(!isset($_SESSION['isConnected']))
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="connexion.php"><?php echo $nom.' '.$prenom ?></a></li>
-                    <li><a href="inscription.php">Se déconnecter</a></li>
+                    <li><a href="connexion.php">Mon compte</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
 					<?php endif;?>
                 </ul>
 
