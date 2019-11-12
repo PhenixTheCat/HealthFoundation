@@ -3,14 +3,13 @@
 session_start();
 try{
 	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
+
+		//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	
+	
+    $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+    $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	
 }
 catch(Exception $error)
 {
@@ -22,9 +21,54 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+if(isset($_SESSION['userID'])){
+  $requser = $bdd->prepare('SELECT * FROM user WHERE id = ?');
+  $requser->execute(array($_SESSION['userID']));
+  $user = $requser->fetch();
+}
 
+if(isset($_POST['modifProfil'])){ 
+  $last_name = $_POST['nom'];
+  $first_name = $_POST['prenom'];
+  $birthdate = $_POST['date'];
+  $email= $_POST['mail'];
+  $adress= $_POST['adressePostale'];
+  $postecode= $_POST['codePostale'];
+  $city= $_POST['ville'];
+  $country= $_POST['pays'];
+  $phone_number=$_POST['numeroDeTelephone'];
+
+    $reqModifProfil = $bdd->prepare("UPDATE user SET last_name= ?, first_name= ?,birthdate= ?,adress= ?,postecode= ?,city= ?,country= ?,phone_number= ? WHERE id = ?");
+    $reqModifProfil->execute(array($last_name,
+    $first_name,
+    $birthdate,
+    $adress,
+    $postecode,
+    $city,
+    $country,
+    $phone_number,$_SESSION['userID']));
+    header("Location : modifProfilValidee.php");
+  }
+
+
+if(isset($_POST['modifmail'])){ 
+
+  $email = $_POST['mail'];
+  $reqmail = $bdd->prepare("SELECT * FROM user WHERE email = ?");
+  $reqmail->execute(array($email));
+  $mailexist = $reqmail->rowCount();
+  if($mailexist == 0) {
+    $reqModifProfil = $bdd->prepare("UPDATE user SET email=?,WHERE id =?");
+    $reqModifProfil->execute(array($email,$_SESSION['userID']));
+    $erreur ="Mail enregistré";
+  }
+else{
+  $erreur = "Le mail est déja utilisé";
+}
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -73,37 +117,44 @@ if(!isset($_SESSION['isConnected']))
     <div class="piloteModifMdpp">  
            
             <fieldset>
-            <form action="piloteModifMdp.html"  method="post"> 
+            <form action=""  method="post"> 
+            <?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
             <h3> Informations détaillés </h3>
             <label for="nom" id="nom">Nom  </label>
-            <input type="text" name="nom" id="nom">
+            <input type="text" name="nom" id="nom" value="<?php echo $user['last_name']; ?>">
             <br>
             <label for="prenom" id="prenom">Prénom </label>
-            <input type="text" name="prenom" id="prenom">
+            <input type="text" name="prenom" id="prenom" value="<?php echo $user['first_name']; ?>">
             <br>
             <label for="date" id="date">Date de naissance </label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" value="<?php echo $user['birthdate']; ?>">
             <br>
-            <label for="nomUtilisateur" id="nomUtilisateur">Nom d'utilisateur </label>
-            <input type="text" name="nomUtilisateur" id="nomUtilisateur">
-            <br>
+            
             <label for="mail" id="email">Adresse email</label>
-            <input type="email" name="mail" id="mail" >
+            <input type="email" name="mail" id="mail" value="<?php echo $user['email']; ?>" >
+            <input type="submit" Value="Enregistrer" name="modifmail" > 
             <br>
             <label for="adressePostale" id="adressePostale">Adresse postale</label>
-            <input type="text" name="adressePostale" id="adressePostale">
+            <input type="text" name="adressePostale" id="adressePostale" value="<?php echo $user['adress']; ?>">
             <br>
             <label for="codePostal" id="codePostal">Code postal</label>
-            <input type="string" name="codePostale" id="codePostale">
+            <input type="string" name="codePostale" id="codePostale" value="<?php echo $user['postecode']; ?>">
+            <br>
+            <label for="ville" id="ville">Pays </label>
+            <input type="text" name="ville" id="ville" value="<?php echo $user['city']; ?>">
             <br>
             <label for="pays" id="pays">Pays </label>
-            <input type="text" name="pays" id="pays">
+            <input type="text" name="pays" id="pays" value="<?php echo $user['country']; ?>">
             <br>
             <label for="numeroDeTelephone" id="numeroDeTelephone">Numéro de téléphone</label>
-            <input type="string" name="numeroDeTelephone" id="numeroDeTelephone">
+            <input type="string" name="numeroDeTelephone" id="numeroDeTelephone" value="<?php echo $user['phone_number']; ?>">
             <br>
 
-            <input type="submit" Value="Enregistrer" name="piloteModifMdpp" > 
+            <input type="submit" Value="Enregistrer" name="modifProfil" > 
         </form>
         </fieldset>
       </div>

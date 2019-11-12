@@ -3,7 +3,8 @@
 session_start();
 try{
 
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+    $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+  $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	
 } 
 catch(Exception $error)
@@ -16,38 +17,40 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
-$code=$_GET['code'];
+
 
 if(!isset($_GET["code"])){
   exit(header("Location:404.php"));
 }
+$code=$_GET["code"];
 
-$reqemail = $bdd->query('SELECT email FROM resetPass WHERE  code = "$code"');
-/*if(mysqli_num_rows($reqemail)==0){
-  exit(header("Location:404.php"));
-}*/
+$reqemail = $bdd->prepare('SELECT email FROM resetPass WHERE  code =?');
+$reqemail ->execute(array($code));
+$get = $reqemail->fetch();
+$mail = $get['email'];
+
 
 if(isset($_POST['nouveauMdp'])){
+
   $nouveauMdp=sha1($_POST['Nmdp']);
   $confirmationMdp=sha1($_POST['Cmdp']);
-  $mailPresent = mysqli_fetch_array($reqemail);
-  $mail=$row["email"];
       if (!empty($_POST['Nmdp']) AND !empty($_POST['Cmdp'])) {
               if($nouveauMdp==$confirmationMdp){
-                $reqNouveauMdp = $bdd->query("UPDATE user SET password='$nouveauMdp' WHERE  email ='$mail' ");
-              if($reqNouveauMdp->fetch()){
-                $reqNouveauMdp = $bdd->query('DELETE FROM resetPass WHERE  code = "$code"');
+              $reqNouveauMdp = $bdd->prepare('UPDATE user SET password =?WHERE  email =?');
+              $reqNouveauMdp->execute(array($nouveauMdp,$mail));
+              if($reqNouveauMdp){
+                $reqNouveauMdp = $bdd->query("DELETE FROM resetPass WHERE  code = '$code'");
                 header("Location: motDePasseOublieConfirmation.php");
               }
               else{
-                echo "erreur";
+                $erreur = "erreur";
               }
               
               } else {
-                  echo 'Les mots de passe ne correspondent pas!';
+                  $erreur ='Les mots de passe ne correspondent pas!';
               }
       } else {
-          echo 'Veuillez remplir tous les champs';
+        $erreur ='Veuillez remplir tous les champs';
       }
   }         
 
@@ -97,7 +100,10 @@ if(isset($_POST['nouveauMdp'])){
           <a class="enteteNouveauMdp"> Nouveau mot de passe </a>
           
         </span>
-           
+        <?php
+        if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }?>
             <fieldset>
             <form action="" method="post"> 
 

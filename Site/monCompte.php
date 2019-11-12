@@ -1,18 +1,11 @@
 <?php
 session_start();
 try{
-	//connexion à la database
-	//Pour les utilisateurs Mac : entrez cette ligne
-	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	//Pour windows entrez cette ligne
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
+
+		//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
+
 }
 catch(Exception $error)
 {
@@ -31,6 +24,12 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+
+if(isset($_SESSION['userID'])){
+    $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
+    $requser->execute(array($_SESSION['userID']));
+    $user = $requser->fetch();
+  }
 
 ?>
 <!DOCTYPE html>
@@ -86,7 +85,7 @@ if(!isset($_SESSION['isConnected']))
         <div class="infoUtilisateur">
               
                 <h3> Informations détaillés </h3>
-                <a class= "lien" href="modif-profil-perso.php"> Modifier le profil</a>
+                <a class= "lien" href="modifProfil.php"> Modifier le profil</a>
                 <h4> Nom </h4>
                 <h5> <?php echo $user['last_name'];?></h5>
                 <h4> Prénom </h4>
