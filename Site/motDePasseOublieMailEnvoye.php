@@ -55,7 +55,7 @@ if(!isset($_SESSION['isConnected']))
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-					<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+					<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 					<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
 
@@ -77,7 +77,7 @@ if(!isset($_SESSION['isConnected']))
 
         <fieldset>
           <form action="" method="post"> 
-          <p>L'email a bien été envoyé à l'adresse l'adresse xxx@xxx.xx.</p>
+          <p>L'email a bien été envoyé. Veuillez vérifiez dans votre boite mail.</p>
           <h2>Retourner à l'accueil</h2>
           </form>
         </fieldset>

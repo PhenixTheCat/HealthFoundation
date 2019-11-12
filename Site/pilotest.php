@@ -26,7 +26,7 @@
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
                     <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
 
@@ -34,8 +34,8 @@
 
             </nav>
              <div class=" logoLangue">
-                <a href="accueil.html"><img src="logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
-                <a href="accueil.html"><img src="logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                <a href="accueil.php"><img src="logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                <a href="accueil.php"><img src="logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
             </div>
             </div>
 
@@ -50,31 +50,31 @@
 
    <div class ="GestionDuStress">
     <span class = "Gestion du stress">
-      <h1><a href="gestionDuStress.html">Gestion du stress</a></h1>
+      <h1><a href="resultatsGestionDuStress.php">Gestion du stress</a></h1>
     </span>
     </div>
 
     <div class="ReconnaissanceDeTonalité">
       <span class="Reconnaissance de tonalité">
-        <h1><a href="reconnaissanceDeTonalite.html">Reconnaissance de tonalité</a></h1>
+        <h1><a href="resultatsReconnaissanceDeTonalite.php">Reconnaissance de tonalité</a></h1>
       </span>
     </div>
 
     <div class="TempsDeRéaction">
       <span class="Temps de réaction">
-        <h1><a href="tempsDeReaction.html">Temps de réaction</a></h1>
+        <h1><a href="resultatsTempsDeReaction.php">Temps de réaction</a></h1>
       </span>
     </div>
 
     <div class="SeuilDePerception">
       <span class="Seuil de perception">
-        <h1><a href="seuilDePerception.html">Seuil de perception</a></h1>
+        <h1><a href="resultatsSeuilsDeperception.php">Seuil de perception</a></h1>
       </span>
     </div>
 
     <div class="Résultats">
       <span class="Résultats">
-        <h1><a href="resultats.html">Résultats</a></h1>
+        <h1><a href="resultats.php">Résultats</a></h1>
       </span>
     </div>
 

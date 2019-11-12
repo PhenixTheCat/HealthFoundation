@@ -2,15 +2,9 @@
 
 session_start();
 try{
-	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
+
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
+
 }
 catch(Exception $error)
 {
@@ -54,7 +48,7 @@ if(!isset($_SESSION['isConnected']))
 				
 				<?php //Si l'utilisateur est connecté
 				if($_SESSION['isConnected']) : ?> 
-				<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+				<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 				<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 				<?php endif;?>
 

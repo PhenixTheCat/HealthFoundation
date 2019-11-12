@@ -2,16 +2,10 @@
 
 session_start();
 try{
-	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
+
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
-}
+	
+} 
 catch(Exception $error)
 {
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
@@ -22,6 +16,40 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+$code=$_GET['code'];
+
+if(!isset($_GET["code"])){
+  exit(header("Location:404.php"));
+}
+
+$reqemail = $bdd->query('SELECT email FROM resetPass WHERE  code = "$code"');
+/*if(mysqli_num_rows($reqemail)==0){
+  exit(header("Location:404.php"));
+}*/
+
+if(isset($_POST['nouveauMdp'])){
+  $nouveauMdp=sha1($_POST['Nmdp']);
+  $confirmationMdp=sha1($_POST['Cmdp']);
+  $mailPresent = mysqli_fetch_array($reqemail);
+  $mail=$row["email"];
+      if (!empty($_POST['Nmdp']) AND !empty($_POST['Cmdp'])) {
+              if($nouveauMdp==$confirmationMdp){
+                $reqNouveauMdp = $bdd->query("UPDATE user SET password='$nouveauMdp' WHERE  email ='$mail' ");
+              if($reqNouveauMdp->fetch()){
+                $reqNouveauMdp = $bdd->query('DELETE FROM resetPass WHERE  code = "$code"');
+                header("Location: motDePasseOublieConfirmation.php");
+              }
+              else{
+                echo "erreur";
+              }
+              
+              } else {
+                  echo 'Les mots de passe ne correspondent pas!';
+              }
+      } else {
+          echo 'Veuillez remplir tous les champs';
+      }
+  }         
 
 
 ?>
@@ -54,7 +82,7 @@ if(!isset($_SESSION['isConnected']))
 				
 				<?php //Si l'utilisateur est connecté
 				if($_SESSION['isConnected']) : ?> 
-				<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+				<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 				<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 				<?php endif;?>
 
@@ -71,7 +99,7 @@ if(!isset($_SESSION['isConnected']))
         </span>
            
             <fieldset>
-            <form action="NouveauMdpConfirmation.html" method="post"> 
+            <form action="" method="post"> 
 
             <label for="Nmdp" id="Nmdp">Nouveau mot de passe </label>
             <input type="password" name="Nmdp" id="Nmdp">

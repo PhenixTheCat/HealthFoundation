@@ -1,16 +1,11 @@
 <?php
-
 session_start();
 try{
-	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
-	{
+
+		//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
+
 }
 catch(Exception $error)
 {
@@ -24,7 +19,72 @@ if(!isset($_SESSION['isConnected']))
 }
 
 
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+if(isset($_POST["motDePasseOublie"])){
+
+  $mailTo= $_POST["mail"];
+  $code=uniqid(true);
+  $requete = $bdd->query('SELECT id FROM user WHERE  email=\''.$mailTo.'\'');
+	if($donnee = $requete->fetch())
+	{
+    $requetemdp = $bdd->query("INSERT INTO resetPass(email,code) VALUES ('$mailTo','$code')");
+
+    // Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+  
+    $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/motDePasseOublieNouveauMotDePasse.php?code=$code";
+    $url= "motDePasseOublieNouveauMotDePasse.php";
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.free.fr';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
+    $mail->Password   = "mQlcsjk5:sa.M";                               // SMTP password
+    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 465;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('health.foundation.g3c@free.fr', 'Health Foundation');
+    $mail->addAddress($mailTo);     // Add a recipient
+    $mail->addReplyTo('no-reply-health.foundation.g3c@free.fr', 'No reply');
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Changement de mot de passe';
+    $mail->Body    = "Vous avez démandé un changement de mot de passe ?
+     Cliquez sur ce <a href='$url'>lien  </a>pour changer votre mot de passe
+     Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/motDePasseOublieNouveauMotDePasse.php?code=$code dans votre navigateur
+      ";
+    $mail->AltBody = "Vous avez démandé un changement de mot de passe ?
+    Cliquez sur ce <a href='$url'>lien</a>pour changer votre mot de passe"
+     ;
+
+
+    $mail->send();
+    header("Location:motDePasseOublieMailEnvoye.php");
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+  }
+  else{
+    echo "Le mail n'existe pas";
+  }
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,7 +114,7 @@ if(!isset($_SESSION['isConnected']))
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-					<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+					<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 					<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
 
