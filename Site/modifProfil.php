@@ -58,7 +58,7 @@ if(isset($_POST['modifmail'])){
   $reqmail->execute(array($email));
   $mailexist = $reqmail->rowCount();
   if($mailexist == 0) {
-    $reqModifProfil = $bdd->prepare("UPDATE user SET email=?,WHERE id =?");
+    $reqModifProfil = $bdd->prepare("UPDATE user SET email=? WHERE id =?");
     $reqModifProfil->execute(array($email,$_SESSION['userID']));
     $erreur ="Mail enregistré";
   }
