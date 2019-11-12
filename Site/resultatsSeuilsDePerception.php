@@ -25,6 +25,7 @@ if(!isset($_SESSION['isConnected']))
 
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -38,29 +39,28 @@ if(!isset($_SESSION['isConnected']))
   <header class="headerNonConnecte" >
             <div class = logoPrincipal >
                 <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
-                <h1 ><a href="accueil.php" class="bigTitle">Health Foundation</a></h1>
+                <h1 ><a href="index.php" class="bigTitle">Health Foundation</a></h1>
             </div>
             <nav id="menu">
                 <ul>
                     <ul>
                     <li><a href="index.php"> Accueil</a></li>
                     <li><a href="aPropos.php">À propos </a></li>
-                     <?php //Si l'utilisateur n'est pas connecté
+                    <?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
 					
-					<li><a href="connexion.php">Connexion</a></li>
-					<li><a href="inscription.php">Inscription</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
 					<?php endif;?>
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-					<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
-					<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+                    <li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
 
                 </ul>
 
-            
                 
                 <div class=" logoLangue">
                     <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
@@ -70,15 +70,13 @@ if(!isset($_SESSION['isConnected']))
     	</header>
 
 
-      <div class ="reconnaissanceDeTonalite">
-      <h1>Reconnaissance de tonalité</h1>
+
+    <div class="SeuilDePerception">
       <div class="testResults">
-
+        <h1><a href="resultatsSeuilsDeperception.php">Seuil de perception</a></h1>
       </div>
-
     </div>
 
-  
 
 
     <footer class="footerNonConnecte">

@@ -1,3 +1,31 @@
+<?php
+
+session_start();
+try{
+	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
+	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+	}
+	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+	}
+}
+catch(Exception $error)
+{
+	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
+}
+
+//Test d'arrivée sur le site du visiteur
+if(!isset($_SESSION['isConnected']))
+{
+	$_SESSION['isConnected'] = false;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,23 +36,38 @@
   </head>
   <body>
 
-    <header class="headerNonConnecte" >
+  <header class="headerNonConnecte" >
             <div class = logoPrincipal >
-        <img src="HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
-        </div>
+                <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
+                <h1 ><a href="index.php" class="bigTitle">Health Foundation</a></h1>
+            </div>
             <nav id="menu">
                 <ul>
+                    <ul>
                     <li><a href="index.php"> Accueil</a></li>
-              <li><a href="aPropos.php">A propos </a></li>
-              <li><a href="connexion.php">Connexion</a></li>
-              <li><a href="inscription.php">Inscription</a></li>
+                    <li><a href="aPropos.php">À propos </a></li>
+                     <?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
+					<li><a href="connexion.php">Connexion</a></li>
+					<li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']) : ?> 
+					<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
+					<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+					<?php endif;?>
 
-            </ul>
+                </ul>
 
+                
+                <div class=" logoLangue">
+                    <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                    <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                </div>
             </nav>
-
-    </header>
+    	</header>
 
 
     <div class ="RésultatsEnLigne">

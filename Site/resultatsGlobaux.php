@@ -39,7 +39,7 @@ if(!isset($_SESSION['isConnected']))
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
         <img src="HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="accueil.html">Health Foundation</a></h1>
+        <h1 id="Titre"><a href="accueil.php">Health Foundation</a></h1>
         </div>
             <nav id="menu">
                 <ul>
@@ -54,7 +54,7 @@ if(!isset($_SESSION['isConnected']))
 			
 			<?php //Si l'utilisateur est connecté
 			if($_SESSION['isConnected']) : ?> 
-			<li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+			<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
 			<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 			<?php endif;?>
 
