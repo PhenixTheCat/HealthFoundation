@@ -1,21 +1,19 @@
+
 <?php
+
 session_start();
-include('osQuery.php');
 try{
 	//connexion à la database
 	//Pour les utilisateurs Mac : entrez cette ligne
 	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-    //Pour windows entrez cette ligne
-    
-	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
+	//Pour windows entrez cette ligne
+	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
 	{
-        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
 	}
-	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
+	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
 	{
-        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
 	}
 }
 catch(Exception $error)
@@ -37,9 +35,39 @@ if(!isset($_SESSION['isConnected']))
 }
 
 
+//test si l'utilisateur est connecté
+if($_SESSION['isConnected'])
+{
+	//On recherche les prenoms et noms si l'utilisateur est connecté
+	$requetePrenom = $bdd->query('SELECT first_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneePrenom = $requetePrenom->fetch())
+	{
+		$prenom = $donneePrenom['first_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+	}
+	
+	$requeteNom = $bdd->query('SELECT last_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
+	if($donneeNom = $requeteNom->fetch())
+	{
+		$nom = $donneeNom['last_name'];
+	}
+	else
+	{
+		echo 'Erreur, utilisateur inexistant';
+	}
+}
+
+
+
+
+
 ?>
+
 <!DOCTYPE html>
-<html class="decorFond">
+<html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" media="screen" href="design.css" />
@@ -47,18 +75,16 @@ if(!isset($_SESSION['isConnected']))
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body class="pasImage">
-        
+    <body>
     	<header class="headerNonConnecte" >
             <div class = logoPrincipal >
                 <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
-                <h1 ><a href="index.php" class="bigTitle">Health Foundation</a></h1>
+                <h1 ><a href="accueil.php" class="bigTitle">Health Foundation</a></h1>
             </div>
             <nav id="menu">
                 <ul>
-                    <ul>
                     <li><a href="index.php"> Accueil</a></li>
-                    <li><a href="aPropos.php">À propos </a></li>
+                    <li><a href="apropos.php">À propos </a></li>
 					<?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
 					
@@ -68,19 +94,19 @@ if(!isset($_SESSION['isConnected']))
 					
 					<?php //Si l'utilisateur est connecté
 					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="monCompte.php">Mon compte</a></li>
-                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+                    <li><a href="pilote-mon-profil.php"><?php echo 'Mon compte' ?></a></li>
+                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
 					<?php endif;?>
                 </ul>
-
-                </ul>
-                
+             
                 <div class=" logoLangue">
                     <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
                     <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
                 </div>
             </nav>
+            
     	</header>
+        
         <div class="specialTest"></div>
     	<section class="section1">
             <div>
@@ -176,15 +202,7 @@ if(!isset($_SESSION['isConnected']))
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-				<?php //Si l'utilisateur n'est pas connecté
-				if(!$_SESSION['isConnected']) : ?> 
-				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
-				<?php endif;?>
-				
-				<?php //Si l'utilisateur est connecté
-				if($_SESSION['isConnected']) : ?> 
-				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
-				<?php endif;?>
+                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
