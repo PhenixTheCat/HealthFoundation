@@ -52,7 +52,7 @@ function getOS( $ua = '' )
     $ua = strtolower( $ua ); 
     foreach( $os_arr as $k => $v )
     {
-        if( ereg( strtolower( $k ), $ua ) )
+        if( preg_match( strtolower( $k ), $ua ) )
         {
             $os = $v;
             break;
