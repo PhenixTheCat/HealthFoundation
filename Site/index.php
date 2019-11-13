@@ -2,18 +2,22 @@
 <?php
 
 session_start();
+include('osQuery.php');
 try{
 	//connexion à la database
 	//Pour les utilisateurs Mac : entrez cette ligne
 	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	//Pour windows entrez cette ligne
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+    //Pour windows entrez cette ligne
+    
+	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
 }
 catch(Exception $error)
@@ -27,43 +31,13 @@ if(isset($_GET['deconnexion']))
 	header('Location:index.php');
 	exit();
 }
-
 //Test d'arrivée sur le site du visiteur
 if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
-
-
-//test si l'utilisateur est connecté
-if($_SESSION['isConnected'])
-{
-	//On recherche les prenoms et noms si l'utilisateur est connecté
-	$requetePrenom = $bdd->query('SELECT first_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
-	if($donneePrenom = $requetePrenom->fetch())
-	{
-		$prenom = $donneePrenom['first_name'];
-	}
-	else
-	{
-		echo 'Erreur, utilisateur inexistant';
-	}
-	
-	$requeteNom = $bdd->query('SELECT last_name FROM user WHERE id = \''.$_SESSION['userID'].'\'');
-	if($donneeNom = $requeteNom->fetch())
-	{
-		$nom = $donneeNom['last_name'];
-	}
-	else
-	{
-		echo 'Erreur, utilisateur inexistant';
-	}
-}
-
-
-
-
-
+		
+		
 ?>
 
 <!DOCTYPE html>
