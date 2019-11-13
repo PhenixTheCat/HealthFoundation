@@ -1,15 +1,22 @@
 <?php
-
 session_start();
+include('osQuery.php');
 try{
-	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-
-		//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
-	
-	
-    $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-    $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-	
+	//connexion à la database
+	//Pour les utilisateurs Mac : entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+    //Pour windows entrez cette ligne
+    
+	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
+	{
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	}
+	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
+	{
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	}
 }
 catch(Exception $error)
 {
@@ -59,7 +66,7 @@ if(isset($_POST['modifmail'])){
   $mailexist = $reqmail->rowCount();
   if($mailexist == 0) {
     $reqModifProfil = $bdd->prepare("UPDATE user SET email=? WHERE id =?");
-    $reqModifProfil->execute(array($email,$_SESSION['userID']));
+    $reqModifProfil->execute(array($email, $_SESSION['userID']));
     $erreur ="Mail enregistré";
   }
 else{
@@ -130,8 +137,8 @@ else{
             <label for="prenom" id="prenom">Prénom </label>
             <input type="text" name="prenom" id="prenom" value="<?php echo $user['first_name']; ?>">
             <br>
-            <label for="date" id="date">Date de naissance </label>
-            <input type="date" name="date" id="date" value="<?php echo $user['birthdate']; ?>">
+            <label for="date" id="date"> Date de naissance </label>
+            <input type="date" name="date" id="date">
             <br>
             
             <label for="mail" id="email">Adresse email</label>

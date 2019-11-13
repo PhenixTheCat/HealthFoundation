@@ -9,11 +9,13 @@ try{
     
 	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
 	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+        $bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+        $bdd-> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
 }
 catch(Exception $error)
