@@ -36,7 +36,7 @@ function getOS( $ua = '' )
                      // -- Mac
                      '/Macintosh/'            => 'Mac',
                      '/Mac OS X/'             => 'Mac',
-                     '/Mac_PowerPC/'          => '/Mac',
+                     '/Mac_PowerPC/'          => 'Mac',
                      
                      // -- Autres ...
                     
