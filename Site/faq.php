@@ -28,7 +28,43 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+
+
+if(isset($_POST["envoi"]))
+    if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND!empty($_POST['message'])){
+        $nom = securisation($_POST['nom']);
+        $prenom = securisation($_POST['prenom']);
+        $mail = securisation($_POST['mail']);
+        $msg = str_replace("\n.", "\n..", $_POST['message']);    
+        if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
+            $reqfaq = $bdd->prepare('INSERT INTO faq (first_name, last_name, email, question) VALUES (:nom,:prenom,:mail,:msg)');
+            $reqfaq->execute(array(
+                'nom' => $nom,
+                'prenom' => $prenom,
+                'mail' => $mail,
+                'msg' => $msg
+            ));
+            $erreur = "Question envoyée<br />"; 
+                 } 
+                
+                
+    else{
+        $erreur = "Adresse mail non valide";
+      }
+    }
+    else
+    {
+        $erreur ="Tous les champs doivent être remplis";
+    }
+
+function securisation($donnees){
+    $donnees = trim($donnees);
+    $donnees = stripcslashes($donnees);
+    $donnees = strip_tags($donnees);
+    return $donnees;
+}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,23 +82,30 @@ if(!isset($_SESSION['isConnected']))
     </div>
     <div class="partieDroite">
         <nav id="menu">
-            <ul>
-                <li><a href="index.php"> Accueil</a></li>
-                <li><a href="aPropos.php">À propos </a></li>
-                <?php //Si l'utilisateur n'est pas connecté
-				if(!$_SESSION['isConnected']) : ?> 
-				
-				<li><a href="connexion.php">Connexion</a></li>
-				<li><a href="inscription.php">Inscription</a></li>
-				<?php endif;?>
-				
-				<?php //Si l'utilisateur est connecté
-				if($_SESSION['isConnected']) : ?> 
-				<li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
-				<li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
-				<?php endif;?>
-
-            </ul>
+        <ul>
+                    <li><a href="index.php"> Accueil</a></li>
+                    <li><a href="aPropos.php">À propos </a></li>
+					<?php //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?> 
+					
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+					<?php endif;?>
+					
+					<?php //Si l'utilisateur est connecté
+					if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> 
+                    <li><a href="monCompte.php">Mon compte</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+                    <?php endif;?>
+                    
+                    <?php //Si l'utilisateur est connecté
+                    if($_SESSION['isConnected']&& $_SESSION['admin']) : ?> 
+                    
+                    <li><a href="gestionUtilisateur.php">Gestion des <br> utilisateurs</a></li>
+                    <li><a href="gestionDesStructures.php">Gestion des <br> structures</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+					<?php endif;?>
+                </ul>
         </nav>
         <div class=" logoLangue">
             <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
@@ -80,50 +123,80 @@ if(!isset($_SESSION['isConnected']))
     <h2> Les questions souvent posées</h2>
     <div class="question">
         <button class="questionVisible">  Question 1 <i>+</i> </button>
+        <div class="ReponseQuestion">
+            <h4>Réponse 1</h4>
+        </div>
+    </div>
+
+    <div class="question">
+        <button class="questionVisible">  Question 2 <i>+</i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse 1</h4>
+                <h4>Réponse </h4>
             </div>
     </div>
 
     <div class="question">
-
-        <button class="questionVisible">  Question 2 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 2</h4>
-        </div>
-    </div>
-        <div class="question">
         <button class="questionVisible">  Question 3 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 3</h4>
-        </div>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
     </div>
+
     <div class="question">
         <button class="questionVisible">  Question 4 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 4</h4>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
     </div>
-    <div class="">
 
-        <button class="questionVisible">  Question 2 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 2</h4>
-        </div>
-    </div>
-        <div class="question">
-        <button class="questionVisible">  Question 3 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 3</h4>
-        </div>
-    </div>
+
     <div class="question">
-        <button class="questionVisible">  Question 4 <i>+</i> </button>
-        <div class="ReponseQuestion">
-            <h4>Réponse 4</h4>
+        <button class="questionVisible">  Question 5 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
     </div>
 
 
+    <div class="question">
+        <button class="questionVisible">  Question 6 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
     </div>
+
+
+    <div class="question">
+        <button class="questionVisible">  Question 7 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
+    </div>
+
+
+    <div class="question">
+        <button class="questionVisible">  Question 8 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
+    </div>
+
+
+    <div class="question">
+        <button class="questionVisible">  Question 9 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
+    </div>
+
+    <div class="question">
+        <button class="questionVisible">  Question 10 <i>+</i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
+    </div>
+
+
 
     <div class="formulaireFAQ">  
         <h2>Votre question n'est pas présente ?</h2>
