@@ -15,29 +15,29 @@ function getOS( $ua = '' )
     
     $os_arr = Array(
                      // -- Windows
-                     'Windows NT 10.0'     => 'Windows 10',
-                     'Windows NT 6.1'       => 'Windows Seven',
-                     'Windows NT 6.0'       => 'Windows Vista',
-                     'Windows NT 5.2'       => 'Windows Server 2003',
-                     'Windows NT 5.1'       => 'Windows XP',
-                     'Windows NT 5.0'       => 'Windows 2000',
-                     'Windows 2000'         => 'Windows 2000',
-                     'Windows CE'           => 'Windows Mobile',
-                     'Win 9x 4.90'          => 'Windows Me.',
-                     'Windows 98'           => 'Windows 98',
-                     'Windows 95'           => 'Windows 95',
-                     'Win95'                => 'Windows 95',
-                     'Windows NT'           => 'Windows NT',
+                     'Windows NT 10.0'     => 'Windows',
+                     'Windows NT 6.1'       => 'Windows',
+                     'Windows NT 6.0'       => 'Windows',
+                     'Windows NT 5.2'       => 'Windows',
+                     'Windows NT 5.1'       => 'Windows',
+                     'Windows NT 5.0'       => 'Windows',
+                     'Windows 2000'         => 'Windows',
+                     'Windows CE'           => 'Windows',
+                     'Win 9x 4.90'          => 'Windows',
+                     'Windows 98'           => 'Windows',
+                     'Windows 95'           => 'Windows',
+                     'Win95'                => 'Windows',
+                     'Windows NT'           => 'Windows',
                      
                      // -- Linux
-                     'Ubuntu'               => 'Linux Ubuntu',
-                     'Fedora'               => 'Linux Fedora',
+                     'Ubuntu'               => 'Linux',
+                     'Fedora'               => 'Linux',
                      'Linux'                => 'Linux',
                      
                      // -- Mac
                      'Macintosh'            => 'Mac',
-                     'Mac OS X'             => 'Mac OS X',
-                     'Mac_PowerPC'          => 'Mac OS X',
+                     'Mac OS X'             => 'Mac',
+                     'Mac_PowerPC'          => 'Mac',
                      
                      // -- Autres ...
                      'FreeBSD'              => 'FreeBSD',
