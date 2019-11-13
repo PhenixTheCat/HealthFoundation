@@ -32,7 +32,7 @@ if(!isset($_SESSION['isConnected']))
 if(isset($_POST['Connexion'])) {
 	
 	$mail = htmlspecialchars($_POST['mail']);
-	$mdp = htmlspecialchars($_POST['mdp']);
+	$mdp = password_hash(htmlspecialchars($_POST['mdp']), PASSWORD_DEFAULT);
 	//On vérifie si le mail et le mdp correspondent
 	$requete = $bdd->query('SELECT id FROM user WHERE email=\''.$mail.'\' AND password =\''.$mdp.'\'');
 	if($donnee = $requete->fetch())
