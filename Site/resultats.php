@@ -90,7 +90,7 @@ if(!isset($_SESSION['isConnected']))
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-                <div id="connexion"><a href="connexion.php" >Connexion</a></div>
+                <div id="footerButton"><a href="connexion.php" >Connexion</a></div>
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
       </footer>
