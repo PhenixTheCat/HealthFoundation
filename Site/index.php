@@ -1,15 +1,17 @@
 <?php
 session_start();
+include('osQuery.php');
 try{
 	//connexion à la database
 	//Pour les utilisateurs Mac : entrez cette ligne
 	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	//Pour windows entrez cette ligne
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+    //Pour windows entrez cette ligne
+    
+	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
 	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
 	}

@@ -1,16 +1,20 @@
 <?php
-
+include('osQuery.php');
 session_start();
 try{
-	//Détecte l'OS du visiteur pour savoir quelle commande utiliser pour se connecter à la base de donnée
-	if (preg_match_all("#Windows NT (.*)[;|\)]#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	//connexion à la database
+	//Pour les utilisateurs Mac : entrez cette ligne
+	//$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
+    //Pour windows entrez cette ligne
+    
+	if (getOS( $_SERVER['HTTP_USER_AGENT'])=='Windows' || getOS( $_SERVER['HTTP_USER_AGENT'])=='Linux')
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','');
 	}
-	elseif (preg_match_all("#Mac (.*);#isU", $_SERVER["HTTP_USER_AGENT"], $version))
+	elseif (getOS( $_SERVER['HTTP_USER_AGENT'])=='Mac')
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=health_foundation','root','root');
-	}
+  }
 }
 catch(Exception $error)
 {
@@ -22,6 +26,35 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+
+if(isset($_SESSION['userID'])){
+  $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
+  $requser->execute(array($_SESSION['userID']));
+  $user = $requser->fetch();
+}
+if(isset($_POST['piloteModifMdp'])){
+  $ancienMdp = sha1($_POST['Amdp']);
+  $nouveauMdp=sha1($_POST['Nmdp']);
+  $confirmationMdp=sha1($_POST['Cmdp']);
+    if (!empty($_POST['Nmdp']) AND !empty($_POST['Cmdp']) AND !empty($_POST['Amdp'])) {
+      if($user['password']==$ancienMdp){
+              if($nouveauMdp==$confirmationMdp){
+              $reqNouveauMdp = $bdd->prepare('UPDATE user SET password =? WHERE  id =?');
+              $reqNouveauMdp->execute(array($nouveauMdp,$_SESSION['userID']));
+              header("Location:motDePasseOublieConfirmation.php");
+              }
+             else {
+                $erreur= 'Les mots de passe ne correspondent pas!';
+              }
+            }else{
+              $erreur= "L'ancien mot de passe n'est pas valide!";
+            }
+          }else {
+        $erreur= 'Veuillez remplir tous les champs';
+      }
+  
+}   
+
 
 
 ?>
@@ -66,9 +99,14 @@ if(!isset($_SESSION['isConnected']))
     <div class="centrer_bloc">
     <div class="headerContact">
     <h1 > Mon compte </h1>
-  
+
 
     <div class="piloteModiMdp">    
+    <?php
+        if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
             <fieldset>
             <form action=""  method="post"> 
             <h4> Modification du mot de passe </h4>
