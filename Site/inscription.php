@@ -45,21 +45,19 @@ if(isset($_POST['inscriptionP1'])) {
 			//Inscription d'un formateur avec un code structure
                     	$requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
                    	if($donnee = $requete->fetch()){
-                       		 $erreur = header('Location:page-inscription-suite.php');
-                        }
-                   	else{
-                            $erreur = "Le code formateur est invalide";
-                        }
-			// Inscription d'un pilote avec code formateur
-			$requeteCodeFormateur = $bdd->query('SELECT * FROM user  WHERE code=\''.$codeformateur.'\'');
-			if($donneeCodeFormateur = $requete->fetch())
-			{
-				// Le code existe
-				$erreur = "Le code est valide et appartient à une structure";
-			}
-			else{
-                            	$erreur = "Le code formateur est invalide";
-                        }
+                       		 $erreur = header('Location:nscriptionSuite.php');
+                    }
+                   	
+					// Inscription d'un pilote avec code formateur
+					$requeteCodeFormateur = $bdd->query('SELECT * FROM user  WHERE code=\''.$codeformateur.'\'');
+					if($donneeCodeFormateur = $requeteCodeFormateur->fetch())
+					{
+						$erreur = header('Location:nscriptionSuite.php');
+					}
+					else
+					{
+                        $erreur = "Le code formateur est invalide";
+                    }
 				
                   } else {
                      $erreur = "Vos mots de passes ne correspondent pas !";
