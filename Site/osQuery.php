@@ -9,8 +9,13 @@
 /
 
 function getOS( $ua = '' )
+
+echo php_uname();
+echo PHP_OS;
+
 {
-    if( ! $ua  ) $ua = $_SERVER['HTTP_USER_AGENT'];
+    if( ! $ua  ) $ua = $_PHP_OS;
+
     $os = 'Système d&#39;exploitation inconnu';
     
     $os_arr = Array(
