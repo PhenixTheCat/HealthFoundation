@@ -67,8 +67,16 @@ if(!isset($_SESSION['isConnected']))
 					<?php endif;?>
 					
 					<?php //Si l'utilisateur est connecté
-					if($_SESSION['isConnected']) : ?> 
+					if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> 
                     <li><a href="monCompte.php">Mon compte</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+                    <?php endif;?>
+                    
+                    <?php //Si l'utilisateur est connecté
+                    if($_SESSION['isConnected']&& $_SESSION['admin']) : ?> 
+                    
+                    <li><a href="gestionUtilisateur.php">Gestion des <br> utilisateurs</a></li>
+                    <li><a href="gestionDesStructures.php">Gestion des <br> structures</a></li>
                     <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
 					<?php endif;?>
                 </ul>

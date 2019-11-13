@@ -32,14 +32,28 @@ if(!isset($_SESSION['isConnected']))
 if(isset($_POST['Connexion'])) {
 	
 	$mail = htmlspecialchars($_POST['mail']);
-	$mdp = password_hash(htmlspecialchars($_POST['mdp']), PASSWORD_DEFAULT);
+	$mdp = htmlspecialchars(sha1($_POST['mdp']));
 	//On vérifie si le mail et le mdp correspondent
-	$requete = $bdd->query('SELECT id FROM user WHERE email=\''.$mail.'\' AND password =\''.$mdp.'\'');
+  $requete = $bdd->query('SELECT id FROM user WHERE email=\''.$mail.'\' AND password =\''.$mdp.'\'');
+  
 	if($donnee = $requete->fetch())
 	{
 		$_SESSION['isConnected'] = true;
-		$_SESSION['userID'] = $donnee['id'];
-		header('Location:index.php');
+    $_SESSION['userID'] = $donnee['id'];
+    
+    //On cherche le type :
+    $requser = $bdd->prepare("SELECT * FROM user WHERE id = ?");
+    $requser->execute(array($_SESSION['userID']));
+    $user = $requser->fetch();
+
+        if($user[type]=="Administrator"){
+          $_SESSION['admin']=true;
+          header('Location:index.php');
+        }
+        else{
+          $_SESSION["admin"]=false;
+          header('Location:index.php');
+        }
 	}
 	else
 	{
