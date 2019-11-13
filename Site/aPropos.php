@@ -87,7 +87,13 @@ if(!isset($_SESSION['isConnected']))
   </div>
     
     <div class="about">  
-      <p>Du texte qui decrit notre solution et hf</p>
+	    <h3> Qui sommes-nous ? </h3>
+            <p> Health Foundation est une Sas pluripersonnelle, fondée le 24 septembre 2017, au capital encore non référencé. Notre siège social est situé au 28, rue Notre-Dame-des-Champs, 75006 Paris (salle L313 du campus Notre-Dame-des-Champs de l'ISEP). </p>
+	    <h3> Notre credo : </h3>
+	    <p>“A Legacy of Excellence” Lors de sa création, ses co-fondateurs sortaient tout juste de l'ISEP, nommément CHEN Eva, responsable technique, DALUZ Mattéo, chef de projet, ESTRIBEAU Elias, coordinateur, NORA Ariel, responsable communication, et moi-même, BAIN Maë, directrice générale.</p> 
+	    <h3> Nos invertiseurs </h3>
+            <p>Nos investisseurs sont aujourd’hui : l'État, à travers les aides financières fournies par le Ministère des Affaires Sociales et de la Santé, et l'ISEP, qui nous fournit le matériel et nous accompagne pendant la mise en place de notre projet. </p>
+	
   </div> 
 
  
