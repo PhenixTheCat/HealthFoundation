@@ -157,7 +157,7 @@ if(isset($_SESSION['userID'])){
         <a href="faq.php"> FAQ/Aide</a>
         <a href="contact.php"> Contact</a>
 
-         <div id="connexion"><a href="deconnexion.php" >Deconnexion</a></div>    
+         <div id="footerButton"><a href="deconnexion.php" >Deconnexion</a></div>    
         <p>©Copyright Health Foundation, tout droits réservés</p>
     </div>
 </footer>
