@@ -28,6 +28,9 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 ?>
 <!DOCTYPE html>
@@ -47,10 +50,10 @@ if(!isset($_SESSION['isConnected']))
         </div>
                         <div class="partieDroite">
             <nav id="menu">
-                <ul>
+            <ul>
                     <li><a href="index.php"> Accueil</a></li>
                     <li><a href="aPropos.php">À propos </a></li>
-                    <?php //Si l'utilisateur n'est pas connecté
+					<?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
 					
                     <li><a href="connexion.php">Connexion</a></li>
@@ -58,11 +61,18 @@ if(!isset($_SESSION['isConnected']))
 					<?php endif;?>
 					
 					<?php //Si l'utilisateur est connecté
-					if($_SESSION['isConnected']) : ?> 
-                    <li><a href="monCompte.php"><?php echo 'Mon compte' ?></a></li>
-                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
+					if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> 
+                    <li><a href="monCompte.php">Mon compte</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+                    <?php endif;?>
+                    
+                    <?php //Si l'utilisateur est connecté
+                    if($_SESSION['isConnected']&& $_SESSION['admin']) : ?> 
+                    
+                    <li><a href="gestionUtilisateur.php">Gestion des <br> utilisateurs</a></li>
+                    <li><a href="gestionDesStructures.php">Gestion des <br> structures</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
 					<?php endif;?>
-
                 </ul>
             </nav>
             <div class=" logoLangue">
@@ -76,41 +86,58 @@ if(!isset($_SESSION['isConnected']))
     if(isset($_POST) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['mail']) AND isset($_POST['objet']) AND!empty($_POST['message'])){
         if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail'])
             AND !empty($_POST['objet']) AND!empty($_POST['message'])){
+
+
+
+                require 'PHPMailer/src/Exception.php';
+                require 'PHPMailer/src/PHPMailer.php';
+                require 'PHPMailer/src/SMTP.php';
+            
             $nom = securisation($_POST['nom']);
             $prenom = securisation($_POST['prenom']);
-            $mail = securisation($_POST['mail']);
+            $email = securisation($_POST['mail']);
             $objet = securisation($_POST['objet']);
             $message = str_replace("\n.", "\n..", $_POST['message']);
-            $msg='
-            <html>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-                    <body>
-                       <div align="center">
-                          <img src="Images/HF4.png"/>
-                          <br />
-                            <h1> Un mail à été reçu !</h1>
-                          <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
-                          <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
-                          <br />
-                          '.nl2br($_POST['message']).'
-                          <br />
-                       </div>
-                    </body>
-                 </html>
-                 ';
-            $headers = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-            $headers .= "From : ".$nom." <".$mail.">"."\r\n";
-            
-            
-            mail('health.foundation.g3c@free.fr',$objet,$msg,$headers);
-            header('Location:contactMessageEnvoye.php');
+            $mail = new PHPMailer(true);
+
+            $mail->isSMTP();                                            // Send using SMTP
+                $mail->Host       = 'smtp.free.fr';                    // Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+                $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
+                $mail->Password   = "mQlcsjk5:sa.M";                               // SMTP password
+                $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+                $mail->Port       = 465;     
+
+                $mail->setFrom('health.foundation.g3c@free.fr', 'Health Foundation');
+                $mail->addAddress('health.foundation.g3c@gmail.com','Health Foundation -  Contact'); 
+
+                if ($mail->addReplyTo($email, $nom .$prenom )){ 
+                    $mail->Subject = 'Contact';
+                    $mail->isHTML(false);
+                    $mail->Body = <<<EOT
+                    Email: $email
+                    Nom : $nom
+                    Prénom : $prenom
+                    Objet : $objet
+                    Message: $message
+                    EOT;
+                $mail->send();
+                if (!$mail->send()) {
+                    $erreur =  "Il y a eu un problème veuillez réessayer plus tard !";
+                } else {
+                    header('Location:contactMessageEnvoye.php');
+                }
+            }
+             else {
+                $erreur = 'Adresse mail invalide';
+            }
         }
         else
         {
-            echo "Tous les champs doivent être remplis";
+            $erreur = "Tous les champs doivent être remplis";
         }
-    }
+    } 
+    
     function securisation($donnees){
         $donnees = trim($donnees);
         $donnees = stripcslashes($donnees);
@@ -123,7 +150,9 @@ if(!isset($_SESSION['isConnected']))
     <div class="headerContact">
     <h1 > Contact </h1>
   </div>
-    
+    <?php if (!empty($erreur)) {
+    echo "<h2>$erreur</h2>";
+} ?>
     <div class="formulaireContact">  
       
     <form action="" method="post" >
