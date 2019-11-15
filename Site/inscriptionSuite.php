@@ -112,7 +112,7 @@ if(!isset($_SESSION['isConnected']))
 
           <input type="checkbox" name="politiqueDeConfidentialite" id="politiqueDeConfidentialite"> J'accepte et j'ai lu la politique de confidentialité <br>
 
-          <input type="submit" Value="Terminer l'inscription" name="pageConfirmationInscription"> 
+          <input class="submitButtons" type="submit" Value="Terminer l'inscription" name="pageConfirmationInscription"> 
         </form>
         </fieldset>
       </div>
