@@ -1329,7 +1329,7 @@ margin: auto;
 }
 /*=========== Admin modification du profil ===============*/
 .adminModifpp {
-background-color: transparent;
+background-color: #7CA0E4;
 border: 1px solid #000000;
 width: 50%;
 max-width:50%;
@@ -1622,3 +1622,41 @@ margin:auto;
 			margin-right: 5%;
 			margin-bottom:0% ;
 		}
+
+
+/*=====================         Buttons de changement de page, ou submit pour fond bleu          =====================*/
+.submitButtons {
+	font-size: 20px;
+	overflow: hidden;
+	border: 3px solid #000000;
+	color: #000000;
+	background: none;
+	cursor: pointer;
+	padding: 15px 40px;
+	display: inline-block;
+	margin: 15px 30px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+.submitButtons:hover {
+	content: '';
+	background: #D2E1FF;
+
+
+}
+
+.submitButtons:before {
+	line-height: 1;
+	position: relative;
+}
+
+.submitButtons:hover,
+.submitButtons:active {
+	font-size: 20px;
+	color: #000000;
+}
+
+
+
