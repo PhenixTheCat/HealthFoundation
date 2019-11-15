@@ -126,7 +126,7 @@ if(isset($_POST['Connexion'])) {
           <label for="mdp">Mot de passe</label>
           <input type="password" name="mdp" id="mdp">
           <br>
-          <input type="submit" Value="Suivant" name="Connexion">
+          <input class="submitButtons" type="submit" Value="Suivant" name="Connexion">
         </form>
         </fieldset>
         <a id= mdp href="motDePasseOublie.php">Mot de passe oublié</a>
