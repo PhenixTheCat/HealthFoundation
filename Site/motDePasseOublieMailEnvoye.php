@@ -84,7 +84,7 @@ if(!isset($_SESSION['isConnected']))
         <fieldset>
           <form action="" method="post"> 
           <p>L'email a bien été envoyé. Veuillez vérifiez dans votre boite mail.</p>
-          <h2>Retourner à l'accueil</h2>
+          <a class="submitButtons"  href="index.php">Retourner à l'accueil</a>
           </form>
         </fieldset>
       </div>
