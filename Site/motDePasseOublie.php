@@ -152,7 +152,7 @@ try {
           <label for="mail" id="email">Email</label>
           <input type="email" name="mail" id="mail" >
           <br>
-          <input type="submit" Value="Valider" name="motDePasseOublie">
+          <input class="submitButtons" type="submit" Value="Valider" name="motDePasseOublie">
           </form>
         </fieldset>
       </div>
