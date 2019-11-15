@@ -76,6 +76,7 @@ if(!isset($_SESSION['isConnected']))
 <div class="confirmationInscription">
         <h2>Confirmation de création de compte </h2>
     <p>Un mail a été envoyé à l’adresse <?php $_POST['mail']?>. Pour confirmer votre inscription, veuillez vérifier votre boite de réception</p>
+	<a class = "submitButtons" href="index.php">Retourner à la page d'accueil</a>
 </div>
 </div>
 
