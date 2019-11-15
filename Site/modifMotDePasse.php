@@ -122,7 +122,7 @@ if(isset($_POST['piloteModifMdp'])){
             <input type="password" name="Cmdp" id="Cmdp">
             <br>
 
-            <input type="submit" Value="Enregistrer" name="piloteModifMdp" > 
+            <input class="submitButtons" type="submit" Value="Enregistrer" name="piloteModifMdp" > 
         </form>
         </fieldset>
       </div>
