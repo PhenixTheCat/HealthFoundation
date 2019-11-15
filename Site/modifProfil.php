@@ -161,7 +161,7 @@ else{
             <input type="string" name="numeroDeTelephone" id="numeroDeTelephone" value="<?php echo $user['phone_number']; ?>">
             <br>
 
-            <input type="submit" Value="Enregistrer" name="modifProfil" > 
+            <input class="submitButtons" type="submit" Value="Enregistrer" name="modifProfil" > 
         </form>
         </fieldset>
       </div>
