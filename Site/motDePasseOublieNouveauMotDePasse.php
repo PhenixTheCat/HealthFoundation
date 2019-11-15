@@ -124,7 +124,7 @@ if(isset($_POST['nouveauMdp'])){
             <label for="Cmdp" id="Cmdp">Confirmer votre mot de passe </label>
             <input type="password" name="Cmdp" id="Cmdp">
             <br>
-            <input type="submit" Value="Valider" name="nouveauMdp"> 
+            <input class="submitButtons" type="submit" Value="Valider" name="nouveauMdp"> 
         </form>
         </fieldset>
       </div>
