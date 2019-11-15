@@ -80,7 +80,7 @@ if(!isset($_SESSION['isConnected']))
             <form action="index.php"  method="post"> 
              <h3> Votre mot de passe a bien été enregistré </h3>
 
-            <input type="submit" Value="Retour à l'accueil" name="nouveauMdpc"> 
+            <input class="submitButtons"  type="submit" Value="Retour à l'accueil" name="nouveauMdpc"> 
         </form>
         </fieldset>
       </div>
