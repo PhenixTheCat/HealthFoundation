@@ -143,7 +143,7 @@ if(isset($_POST['inscriptionP1'])) {
           <label for="codeFormateur">Code formateur</label>
           <input type="text" name="codeFormateur" id="codeFormateur" value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
           <br>
-          <input type="submit" Value="Suivant" name="inscriptionP1">
+          <input class="submitButtons" type="submit" Value="Suivant" name="inscriptionP1">
         </form>
         </fieldset>
 
