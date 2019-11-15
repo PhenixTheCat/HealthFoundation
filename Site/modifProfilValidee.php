@@ -80,7 +80,7 @@ if(!isset($_SESSION['isConnected']))
             <h3> Les modifications ont bien été enregistrées </h3>
             
 
-            <input type="submit" Value="Retourner à la page mon compte" name="piloteModifMdpv" > 
+            <input class="submitButtons" type="submit" Value="Retourner à la page mon compte" name="piloteModifMdpv" > 
         </form>
         </fieldset>
       </div>
