@@ -79,8 +79,7 @@ if(!isset($_SESSION['isConnected']))
 </div>
 </div>
 
-<div class="footer">
-    <footer class="footerNonConnecte">
+    <footer id="footer">
         <div class="menuBas">
             <a href="cgu.php" target="_blank"> CGU</a>
             <a href="faq.php"> FAQ/Aide</a>
@@ -96,7 +95,8 @@ if(!isset($_SESSION['isConnected']))
 			<?php endif;?>            <p>©Copyright Health Foundation, tout droits réservés</p>
         </div>
     </footer>
-</div>
+	<script src="script.js"></script>
+
 
 </body>
 </html>
