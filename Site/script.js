@@ -24,7 +24,7 @@ function myFunction(x) {
     
 if(document.getElementById("footer").classList.contains('footerBloque')){
     var footerHeight = Math.max( document.getElementById("footer").scrollHeight, document.getElementById("footer").offsetHeight);
-    alert("height footer : "+footerHeight);
+    
     var totalHeight = footerHeight + bodyHeight;
     var y = window.matchMedia("(max-height: "+totalHeight+"px)");
     myFunction(y); // Call listener function at run time
