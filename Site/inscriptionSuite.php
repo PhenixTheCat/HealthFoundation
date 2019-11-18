@@ -23,6 +23,14 @@ catch(Exception $error)
 	die('Erreur lors du chargement de la base de donnée : '.$error->getMessage().' Vérifiez dans le code source les instructions');
 }
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 //Test d'arrivée sur le site du visiteur
 if(!isset($_SESSION['isConnected']))
 {
@@ -57,7 +65,7 @@ if(isset($_POST['inscriptionSuite'])) {
 	{
 		echo('erreur');
 	}
-	$mail = $_SESSION['signupMail'];
+	$email = $_SESSION['signupMail'];
 	$password = $_SESSION['signupPassword'];
 	
 	
@@ -67,10 +75,59 @@ if(isset($_POST['inscriptionSuite'])) {
 	$request = $bdd->prepare('INSERT INTO user VALUES (0, ?, ?, ?, ?, ?, ?,1,1,1, ?, ?, ?, ?, ?,"","P",0)');
 	//CERTAINES VALEURS SONT A VERIF : Instructor, structure, les champs obligatoires et optionnels + cpafini
 	
-	$request->execute(array($firstName,$lastName,$userType,$mail,$password,$birthdate,$address,$city,$postCode,$country,$phoneNumber));
-	
-	header("Location:inscriptionMailEnvoye.php");
+	$request->execute(array($firstName,$lastName,$userType,$email,$password,$birthdate,$address,$city,$postCode,$country,$phoneNumber));
+
+
+  $code=uniqid(true);
+  $requete = $bdd->query('SELECT id FROM user WHERE  email=\''.$email.'\'');
+	if($donnee = $requete->fetch())
+	{
+    $reqCode = $bdd->prepare('UPDATE user SET validation_key=? WHERE  email =?');
+    $reqCode->execute(array($code,$email));
+
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+  
+    $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/inscriptionCompteActive?code=$code";
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.free.fr';   
+    $mail->SMTPDebug = 3;                 // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
+    $mail->Password   = "mQlcsjk5:sa.M";                               // SMTP password
+    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('health.foundation.g3c@free.fr', 'Health Foundation');
+    $mail->addAddress($email);     // Add a recipient
+    $mail->addReplyTo('no-reply-health.foundation.g3c@free.fr', 'No reply');
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Confirmation du compte';
+    $mail->Body    = " Cliquez sur ce <a href='$url'>lien  </a>pour changer votre mot de passe
+     Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/inscriptionCompteActive?code=$code dans votre navigateur
+      ";
+    $mail->AltBody = " Cliquez sur ce <a href='$url'>lien  </a>pour changer votre mot de passe
+    Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/inscriptionCompteActive?code=$code dans votre navigateur
+     ";
+
+
+    $mail->send();
+    header("Location:inscriptionMailEnvoye.php");
+} catch (Exception $e) {
+  
+    echo "Le message n'a pas pu être envoyé Mailer Error: {$mail->ErrorInfo}";
 }
+  }
+  else{
+    echo "Le mail n'existe pas";
+  }
+}
+
 
 ?>
 
@@ -159,7 +216,7 @@ if(isset($_POST['inscriptionSuite'])) {
 
           <input type="checkbox" name="politiqueDeConfidentialite" id="politiqueDeConfidentialite"> J'accepte et j'ai lu la politique de confidentialité <br>
 
-          <input class="submitButtons" type="submit" Value="Terminer l'inscription" name="inscriptionSuite"> 
+          <input type="submit" Value="Terminer l'inscription" name="inscriptionSuite"> 
         </form>
         </fieldset>
       </div>
