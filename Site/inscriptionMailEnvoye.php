@@ -75,12 +75,12 @@ if(!isset($_SESSION['isConnected']))
 <div class="centrer_bloc">
 <div class="confirmationInscription">
         <h2>Confirmation de création de compte </h2>
-    <p>Un mail a été envoyé à l’adresse <?php $_POST['mail']?>. Pour confirmer votre inscription, veuillez vérifier votre boite de réception</p>
-	<a class = "submitButtons" href="index.php">Retourner à la page d'accueil</a>
+    <p>Un mail a été envoyé à l’adresse <?php $_SESSION['signupMail']?>. Pour confirmer votre inscription, veuillez vérifier votre boite de réception</p>
 </div>
 </div>
 
-    <footer id="footer">
+<div class="footer">
+    <footer class="footerNonConnecte">
         <div class="menuBas">
             <a href="cgu.php" target="_blank"> CGU</a>
             <a href="faq.php"> FAQ/Aide</a>
@@ -96,7 +96,7 @@ if(!isset($_SESSION['isConnected']))
 			<?php endif;?>            <p>©Copyright Health Foundation, tout droits réservés</p>
         </div>
     </footer>
-	<script src="script.js"></script>
+</div>
 
 </body>
 </html>

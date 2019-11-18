@@ -45,14 +45,21 @@ if(isset($_POST['inscriptionP1'])) {
 			//Inscription d'un formateur avec un code structure
                     	$requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
                    	if($donnee = $requete->fetch()){
-                       		 $erreur = header('Location:nscriptionSuite.php');
+							$_SESSION['signupCodeType'] = "structure";
+							$_SESSION['signupMail'] = $mail;
+                       		$_SESSION['signupPassword'] = $mdp;
+							$erreur = header('Location:inscriptionSuite.php');
                     }
                    	
 					// Inscription d'un pilote avec code formateur
 					$requeteCodeFormateur = $bdd->query('SELECT * FROM user  WHERE code=\''.$codeformateur.'\'');
 					if($donneeCodeFormateur = $requeteCodeFormateur->fetch())
 					{
-						$erreur = header('Location:nscriptionSuite.php');
+						$_SESSION['signupCodeType'] = "instructor";
+						$_SESSION['signupMail'] = $mail;
+                       	$_SESSION['signupPassword'] = $mdp;
+						$erreur = header('Location:inscriptionSuite.php');
+							
 					}
 					else
 					{
@@ -143,13 +150,13 @@ if(isset($_POST['inscriptionP1'])) {
           <label for="codeFormateur">Code formateur</label>
           <input type="text" name="codeFormateur" id="codeFormateur" value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
           <br>
-          <input class="submitButtons" type="submit" Value="Suivant" name="inscriptionP1">
+          <input type="submit" Value="Suivant" name="inscriptionP1">
         </form>
         </fieldset>
 
       </div>
     </div>
-<footer id="footer">
+<footer class="footerNonConnecte">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
@@ -166,6 +173,6 @@ if(isset($_POST['inscriptionP1'])) {
 				<p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
-        <script src="script.js"></script>
+
   </body>
 </html>
