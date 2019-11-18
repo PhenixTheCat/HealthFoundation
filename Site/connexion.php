@@ -132,7 +132,7 @@ if(isset($_POST['Connexion'])) {
         <a id= mdp href="motDePasseOublie.php">Mot de passe oublié</a>
       </div>
     </div>
-<footer class="footerNonConnecte">
+<footer id="footer">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
@@ -148,6 +148,7 @@ if(isset($_POST['Connexion'])) {
 				<?php endif;?>                <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
+	  <script src="script.js"></script>
 
   </body>
 </html>
