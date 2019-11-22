@@ -61,7 +61,8 @@ if(!isset($_SESSION['isConnected']))
                     <li><a href="aPropos.php">À propos </a></li>
 					<?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
-					
+                </ul>
+                <ul>
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
 					<?php endif;?>
@@ -103,7 +104,7 @@ if(!isset($_SESSION['isConnected']))
     	</section>
 
     	<section class="section2">
-            <h2>    Nos services    </h2>
+            <h2>Nos services</h2>
             <div class="menuInformations">            
                 <div class="partieMenu">
                     <img src="Images/coeur.png" class="logo" alt="Logo coeur">
@@ -125,7 +126,7 @@ if(!isset($_SESSION['isConnected']))
     	</section>
 
     	<section class="section3">
-            <h2>                    Actualités                    </h2>
+            <h2>Actualités</h2>
             <div class="sectionInformations">
                 <div class="ligneInformation">
                     <div class="info1">
