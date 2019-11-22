@@ -61,8 +61,7 @@ if(!isset($_SESSION['isConnected']))
                     <li><a href="aPropos.php">À propos </a></li>
 					<?php //Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?> 
-                </ul>
-                <ul>
+					
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
 					<?php endif;?>
