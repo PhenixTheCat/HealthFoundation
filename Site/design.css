@@ -20,8 +20,13 @@
 nav#menu>ul>li{
     margin:auto;
 }
-
-
+header{
+    background-color:rgb(248,248,243);
+}
+footer{
+    background-color:rgb(248,248,243);
+    border-top: solid gray 1px;
+}
 
 @media only screen and (max-width: 540px) {
     .logoPrincipal img{
@@ -32,6 +37,7 @@ nav#menu>ul>li{
     }
     nav#menu ul{
         width:100%;
+        
     }
 }
 
@@ -102,7 +108,6 @@ h5 {
 }
 
 
-
 nav a:hover
 {
     color: #3A79FF;
@@ -133,7 +138,21 @@ li {
     align-items: center;
     align-content: center;
 }
-
+@media only screen and (max-width: 500px) {
+    .logoPrincipal>h1>a{
+        font-size:55px;
+    }
+    .logoPrincipal img{
+        width:80px;
+        height:80px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .logoPrincipal img{
+        width:60px;
+        height:60px;
+    }
+}
 li a {
 
   text-align: center;
@@ -150,6 +169,8 @@ li a {
     
 }
 
+
+
 /* =================   Header non connecté  ============== */
 
 
@@ -159,7 +180,7 @@ li a {
     display: flex;
     align-items: center;
     align-content: center;
-    border-bottom: solid #3A79FF 1px;
+    border-bottom: solid gray 1px;
     justify-content: space-between;
     flex-wrap: wrap;
    
@@ -180,7 +201,6 @@ li a {
 .footerNonConnecte
 {
     display: flex;
-    border-top: solid grey 1px;
 }
 .allPage{
     height:100vh;
@@ -188,7 +208,6 @@ li a {
 }
 .footerBloque{
     width:100%;
-    border-top: solid grey 1px;
     position:absolute;
     bottom:0;
 }
@@ -256,8 +275,10 @@ div.menuBas>a#footerButton{
     padding:0 10px 0 10px;
 }
 .photoAccueil{
+    box-shadow: 0 0 6px 0 white;
     width:49%;
-    margin:1% 1% 1% 50%;
+    margin-bottom:20px;
+    /*margin:1% 1% 1% 50%;*/
 }
 .section1{
     display:block;
@@ -265,7 +286,7 @@ div.menuBas>a#footerButton{
     margin:100px 0 ;
 }
 .texteGauche{
-    position:absolute;  
+    /*position:absolute;*/  
     float:left;
     width:50%;
     height:80%;
@@ -279,7 +300,8 @@ div.menuBas>a#footerButton{
     font-weight: bold;
     font-family:Nunito Sans;
     text-align:center;
-    padding: 2%;
+    /*padding: 2%;*/
+    height:4em;
     cursor: pointer;
     background-image:linear-gradient(45deg,rgba(0,0,0,0.2) ,rgba(255,255,255,0.1) ,rgba(0,0,0,0.2) );
     border-radius: 3px;
@@ -304,26 +326,52 @@ div.menuBas>a#footerButton{
 .section2{
     margin:100px 0 ;
     text-align:center;
-    background-image: url("images/fond2.jpg");
+    background-image: url("images/fondbleustyle.jpg");
     color : white;
-    background-size: 100% 200%;
+    background-size: cover;
     padding: 3% 5%;
+    background-color:black;
+    background-position-x: 622px;
+    margin-bottom:0;
+    box-shadow: 0px 0px 30px 0 #042c4f;
 }
 .section2>h2{
     font-size:3rem;
-    margin-top:0;
+    margin-top:25px;
     text-decoration: underline;
     margin-bottom:60px;
 }
+@media only screen and (max-width:1400px){
+    .section2{
+        padding: 3% 3%;
+    }
+}
+.ligneMenu{
+    display:inline;
+}
+@media only screen and (max-width:1325px){
+    .ligneMenu{
+        display:block;
+        margin-bottom:20px;
+    }
+    .partieMenu{
+        margin:0 60px;
+        width:35%;
+    }
+}
+
 .section3{
-    padding: 75px 25% 175px 25%;
-    background-image: url("Images/carreaux.png");
+    padding: 175px 25% 175px 25%;
+    /*background-image: url("images/fondgrisstyle.jpg");*/
     background-repeat: no-repeat;
     background-position:bottom right;
-    background-size: 70%;
+    background-size: cover;
     /*background-image : linear-gradient(rgba(0,0,0,0),white,white,white,white);
     background-size: 100% 100%;*/
+    background-position-y: 100%;
+    background-position-x:0;
 }
+
 .section3>h2{
     text-align: center;
     text-decoration: underline;
@@ -339,7 +387,7 @@ div.menuBas>a#footerButton{
 }
 .ligneInformation{
     display:block;
-    margin: 5% 0;
+    margin: 6% 0;
 }
 .info1{
     float:left;
@@ -351,18 +399,20 @@ div.menuBas>a#footerButton{
     width:35%;
         
 }
+
+.menuInformations{
+    padding-bottom: 2%;
+}
 .partieMenu{
     width:20%;
     text-align: center;
-    display:inline-block;;
-    margin:auto;
+    display:inline-grid;;
+    background-image: radial-gradient(rgba(35,144,183,0.3),rgba(35,144,183,0.3),rgba(35,144,183,0.3),rgba(255,255,255,0),rgba(255,255,255,0));
+
 }
 .partieMenu>img{
     margin: 0 auto 40px auto;
     box-shadow: 4px 4px 4px rgba(255,255,255, 0.25);
-}
-.partieMenu>div{
-    height:5rem;
 }
 .specialTest{
     z-index:-1;
@@ -370,11 +420,84 @@ div.menuBas>a#footerButton{
     height: 100vh;
     width: 100%;
     top: 0;
-    background-image: url("https://i0.wp.com/osezcourir.fr/wp-content/uploads/2017/01/fond-blanc-gris-Alta%C3%AFr.jpg?w=2320&ssl=1");
     background-position-y: 50%;
+    background-image:url("images/fondgrisstyle.jpg");
+    background-size:cover;
 }
-
-
+@media only screen and (max-width: 500px) {
+    .section2{
+        margin-top:25px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .boutonTest{
+        position:inherit;
+        display:block;
+        margin:auto;
+        margin-bottom: 25px;
+    }
+    .logoApp{
+        display:block;
+        margin:auto;
+    }
+}
+@media only screen and (max-width:880px){
+    .partieMenu{
+        display:block;
+        width:40%;
+        margin:auto;
+        margin-bottom:55px;
+    }
+    .section2{
+        padding-bottom: 0;
+    }
+    .info1{
+        float:none;
+        margin:auto;
+    }
+    .info2{
+        margin:auto;
+    }
+    .ligneInformation>div{
+        width:80%;
+        margin-bottom: 80px;
+    }
+}
+@media only screen and (max-width:550px){
+    .partieMenu{
+        width:70%;
+    }
+}
+@media screen and (max-width: 1230px) {
+    .photoAccueil{
+        width:60%;
+        display:block;
+        margin:auto;
+    }
+    .section1{
+        margin:25px 0;
+    }
+    .texteGauche{
+        width:100%;
+        padding:0;
+        float:none;
+        display:block;
+        margin:auto;
+    }
+}
+@media screen and (max-width: 530px){
+    .texteGauche > form{
+        padding:0;
+    }
+    .boutonTest{
+        width:100%;
+    }
+    .photoAccueil{
+        width:100%;
+        display:block;
+        margin:auto;
+    }
+}
 /*La gestion de taille d'écran est renseignée ici */
 
 /*  ==============      A REVOIR (MEDIA QUERIES) =============== */
