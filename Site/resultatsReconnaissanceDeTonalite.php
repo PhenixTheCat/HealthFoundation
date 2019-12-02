@@ -87,13 +87,13 @@ if(!isset($_SESSION['isConnected']))
 
 
 // requête
-$table = '(results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
-    $condition = 'WHERE measured_data LIKE'12' ORDER BY date DESC';
+$table = 'results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
+    $condition = "WHERE measured_data LIKE '12' ORDER BY date DESC";
     // measured_date LIKE '12' correspond au test ReconnaissanceDeTonalite je lui ai mis un ID de 12 pour le reconnaître
-$query = 'SELECT * FROM '.$table.$condition;
+$query = 'SELECT * FROM '.$table." ".$condition;
 
 try {
-    $pdo_select = $pdo->prepare($query);
+    $pdo_select = $bdd->prepare($query);
     $pdo_select->execute();
     $NbreData = $pdo_select->rowCount();    // nombre d'enregistrements (lignes)
     $rowAll = $pdo_select->fetchAll();
@@ -144,7 +144,7 @@ if ($NbreData != 0)
                        <td><?php echo $row['duration']; ?></td>
                        <td><?php echo $row['score']; ?></td>
                        <td><?php echo $row['testbed']; ?></td>
-                       <td><?php echo $row['messured_data']; ?></td>
+                       <td><?php echo $row['measured_data']; ?></td>
                        <td><?php echo $row['pilot']; ?></td>
                        <td><?php echo $row['instructor']; ?></td>
                        <td><?php echo $row['sensor']; ?></td>

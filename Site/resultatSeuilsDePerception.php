@@ -82,13 +82,13 @@ if(!isset($_SESSION['isConnected']))
 
 
 // requête
-$table = '(results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
-    $condition = 'WHERE measured_data LIKE'10' ORDER BY date DESC';
+$table = 'results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
+    $condition = "WHERE measured_data LIKE'10' ORDER BY date DESC";
     // measured_date LIKE '10' correspond au test SeuilsDePerception je lui ai mis un ID de 10 pour le reconnaître
-$query = 'SELECT * FROM '.$table.$condition;
+$query = 'SELECT * FROM '.$table." ".$condition;
 
 try {
-    $pdo_select = $pdo->prepare($query);
+    $pdo_select = $bdd->prepare($query);
     $pdo_select->execute();
     $NbreData = $pdo_select->rowCount();    // nombre d'enregistrements (lignes)
     $rowAll = $pdo_select->fetchAll();

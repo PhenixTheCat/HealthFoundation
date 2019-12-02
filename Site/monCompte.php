@@ -137,7 +137,7 @@ if(isset($_SESSION['userID'])){
         </div>
 
         <div id="seuilDePerception">
-            <h1><a href="resultatsSeuilsDePerception.php">Seuil de perception</a></h1>
+            <h1><a href="resultatSeuilsDePerception.php">Seuil de perception</a></h1>
             <p>Description</p>
 
         </div>
