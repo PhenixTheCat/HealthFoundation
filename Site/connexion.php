@@ -43,7 +43,19 @@ if(isset($_POST['Connexion'])) {
 		{
 			$_SESSION['isConnected'] = true;
 			$_SESSION['userID'] = $donnee['id'];
-			header('Location:index.php');
+            if($donnee['type']=="Administrator"){
+                $_SESSION['admin'] = true;
+                header('Location:index.php');}
+            else if ($donnee['type']=="Instructor"){
+                 $_SESSION['instructor'] = true;
+                 $_SESSION['admin'] = false;
+                 header('Location:index.php');
+            }
+            else{
+                 $_SESSION['instructor'] = false;
+                 $_SESSION['admin'] = false;
+                 header('Location:index.php');
+            }
 		}
 		else
 		{
