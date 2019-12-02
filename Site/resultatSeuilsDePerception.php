@@ -83,8 +83,8 @@ if(!isset($_SESSION['isConnected']))
 
 // requête
 $table = 'results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
-    $condition = "WHERE measured_data LIKE'10' ORDER BY date DESC";
-    // measured_date LIKE '10' correspond au test SeuilsDePerception je lui ai mis un ID de 10 pour le reconnaître
+    $condition = "WHERE measured_data LIKE'2' ORDER BY date DESC";
+    // measured_date LIKE '2' correspond au test SeuilsDePerception je lui ai mis un ID de 2 pour le reconnaître
 $query = 'SELECT * FROM '.$table." ".$condition;
 
 try {
