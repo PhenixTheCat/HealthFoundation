@@ -1663,12 +1663,10 @@ font-size: small;
 			height: 20%;
 			background-image: url(résultats.jpg);
 			text-align: center;
-			margin: 5% 50% 100% 0;
-			padding: auto;
-			font-size: 3em;
 			padding: 5%;
-			background-size: 100% 75%;
-			background-repeat: no-repeat;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom:0% ;
 			}
 	
 
