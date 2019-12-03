@@ -2,8 +2,6 @@
 <?php
 session_start();
 include('osQuery.php');
-$_SESSION['admin'] = false;
-$_SESSION['isConnected'] = true;
 try{
 	//connexion à la database
 	//Pour les utilisateurs Mac : entrez cette ligne
