@@ -129,7 +129,7 @@ if(isset($_SESSION['userID'])){
 
         </div>
 
-        <div class="ResultatsGlobaux">
+        <div class="resumeResultat">
         <h3> Résumé des resultats </h3>
             <h1><a href="resultatsGlobaux.php">Résultats </a></h1>
             <p>Description</p>
