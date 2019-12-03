@@ -71,7 +71,7 @@ if(!isset($_SESSION['isConnected']))
 
 
 
-    <div class="SeuilDePerception">
+    <div class="seuilDePerception">
       <div class="testResults">
         <h1><a href="seuilDePerception.php">Seuil de perception</a></h1>
       <?php
