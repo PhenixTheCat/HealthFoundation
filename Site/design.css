@@ -1425,6 +1425,9 @@ font-size: small;
 
 /*=============     Mon compte ================== */
 
+
+
+
 .infoUtilisateur {
 	background-color: transparent;
 	border: 1px solid #000000;
@@ -1460,7 +1463,9 @@ font-size: small;
 		padding: 5%;
 		margin-left: 5%;
 		margin-right: 5%;
-		margin-bottom:0% ;
+		margin-bottom:0% 
+		background-size: 100%;
+		background-position-y: center;;
 	}
 	.resumeResultat p {
 		background-color: white;
@@ -1491,6 +1496,8 @@ font-size: small;
 		margin-left: 5%;
 		margin-right: 5%;
 		margin-bottom:0% ;
+		background-size: 100%;
+		background-position-y: center;
 	}
 
 	.resultatsParCat p {
@@ -1510,6 +1517,8 @@ font-size: small;
 		margin-left: 5%;
 		margin-right: 5%;
 		margin-bottom:0% ;
+		background-size: 100%;
+		background-position-y: center;
 	}
 
 #tempsDeReaction h1{
@@ -1570,6 +1579,8 @@ font-size: small;
 		margin-left: 5%;
 		margin-right: 5%;
 		margin-bottom:0% ;
+		background-size: 100%;
+		background-position-y: center;
 	}
 
 	.testResults p {
