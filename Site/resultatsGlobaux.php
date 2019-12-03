@@ -96,7 +96,89 @@ if(!isset($_SESSION['isConnected']))
 
     <div class ="RésultatsGlobaux">
     <span class = "Résultats globaux">
-      <h3>Résultats globaux</h3>
+       <h1>Résultats globaux</h1>
+
+        <?php
+// $NbreData : le nombre de données à afficher
+// $NbrCol : le nombre de colonnes
+// $NbrLigne : calcul automatique a la FIN
+// -------------------------------------------------------
+
+
+// requête
+$table = 'results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id';
+    $condition = "ORDER BY date DESC";
+    // measured_date LIKE '11' correspond au test GestionDuStress je lui ai mis un ID de 11 pour le reconnaître
+$query = 'SELECT * FROM '.$table." ".$condition;
+
+try {
+    $pdo_select = $bdd->prepare($query);
+    $pdo_select->execute();
+    $NbreData = $pdo_select->rowCount();    // nombre d'enregistrements (lignes)
+    $rowAll = $pdo_select->fetchAll();
+  } catch (PDOException $e){ echo 'Erreur SQL : '. $e->getMessage().'<br/>'; die(); }
+// --------------------------------
+ // affichage
+if ($NbreData != 0)
+{
+?>
+    <table border="1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>test</th>
+            <th>timeline</th>
+            <th>value</th>
+            <th>id</th>
+            <th>type</th>
+            <th>unité</th>
+            <th>id</th>
+            <th>date</th>
+            <th>durée</th>
+            <th>score</th>
+            <th>banc de test</th>
+            <th>les données mesurées</th>
+            <th>pilot</th>
+            <th>instructeur</th>
+            <th>capteurs</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+    // pour chaque ligne (chaque enregistrement)
+    foreach ( $rowAll as $row )
+    {
+        // DONNEES A AFFICHER dans chaque cellule de la ligne
+?>
+        <tr>
+                       <td><?php echo $row['id']; ?></td>
+                       <td><?php echo $row['test']; ?></td>
+                       <td><?php echo $row['timeline']; ?></td>
+                       <td><?php echo $row['value']; ?></td>
+                       <td><?php echo $row['id']; ?></td>
+                       <td><?php echo $row['type']; ?></td>
+                       <td><?php echo $row['unit']; ?></td>
+                       <td><?php echo $row['id']; ?></td>
+                       <td><?php echo $row['date']; ?></td>
+                       <td><?php echo $row['duration']; ?></td>
+                       <td><?php echo $row['score']; ?></td>
+                       <td><?php echo $row['testbed']; ?></td>
+                       <td><?php echo $row['measured_data']; ?></td>
+                       <td><?php echo $row['pilot']; ?></td>
+                       <td><?php echo $row['instructor']; ?></td>
+                       <td><?php echo $row['sensor']; ?></td>
+        </tr>
+<?php
+    } // fin foreach
+?>
+    </tbody>
+    </table>
+<?php
+} else { ?>
+    pas de données à afficher
+<?php
+}
+?>
     </span>
     </div>
 
