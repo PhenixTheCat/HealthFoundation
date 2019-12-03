@@ -222,7 +222,7 @@ function securisation($donnees){
         <textarea name="message" rows="10" cols= "55" placeholder="Votre message">
         
         </textarea>
-        <input type="submit" Value="Envoyer" id="envoi">
+        <input class="submitButtons" type="submit" Value="Envoyer" id="envoi">
           </form>
       </div> 
 
