@@ -46,36 +46,54 @@ if(!isset($_SESSION['isConnected']))
 
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
-        <img src="Images/HF4.png" class="logo" alt="Logo de Health Foundation">
-        <h1 id="Titre"><a href="index.php">Health Foundation</a></h1>
-        </div>
-            <div class="partieDroite">
-            <nav id="menu">
-                <ul>
+                <img src="Images/HF4.png" class="logo" alt="Logo Health Foundation">
+                <h1 ><a href="index.php" class="bigTitle">Health Foundation</a></h1>
+            </div>
+            <nav <?php  if(!$_SESSION['isConnected']) : ?> class="notConnectedNAV"<?php endif;?>
+                 <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedNAV"<?php endif;?> 
+                 <?php  if($_SESSION['admin']) : ?> class="adminNAV"<?php endif;?>                                                              
+                                                                                id="menu">
+                <ul <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedrightUL"<?php endif;?>
+                    <?php  if($_SESSION['admin']) : ?> class="adminrightUL"<?php endif;?> >
                     <li><a href="index.php"> Accueil</a></li>
+                                            <?php //Si l'utilisateur n'est pas un admin
+					if(!$_SESSION['admin']) : ?>
                     <li><a href="aPropos.php">À propos </a></li>
-                    <?php //Si l'utilisateur n'est pas connecté
-					if(!$_SESSION['isConnected']) : ?> 
-					
+                </ul>
+                <ul <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedLeftUL"<?php endif;?>>
+					<?php endif;
+                                            //Si l'utilisateur n'est pas connecté
+					if(!$_SESSION['isConnected']) : ?>
+                
+                
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
 					<?php endif;?>
 					
 					<?php //Si l'utilisateur est connecté
-					if($_SESSION['isConnected']) : ?> 
+					if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> 
                     <li><a href="monCompte.php">Mon compte</a></li>
-                    <li><a href="index.php?deconnexion=true">Se déconnecter</a></li>
-					<?php endif;?>
-
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+                    <?php endif;?>
+                    
+                    <?php //Si l'utilisateur est connecté
+                    if($_SESSION['isConnected']&& $_SESSION['admin']) : ?> 
+                    
+                    <li><a href="gestionUtilisateur.php">Gestion des utilisateurs</a></li>
                 </ul>
+                <ul <?php  if($_SESSION['admin']) : ?> class="adminLeftUL"<?php endif;?> >
+                    <li><a href="gestionDesStructures.php">Gestion des structures</a></li>
+                    <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
+					<?php endif;?>
+                </ul>
+             
+                <div class=" logoLangue">
+                    <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
+                    <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
+                </div>
             </nav>
-            <div class=" logoLangue">
-                <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
-                <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Drapeau francais"></a>
-            </div>
-            </div>
-
-      </header>
+            
+    	</header>
         <section class="error404">
             <img src="Images/404.png" alt="404">
             <h1>La page que vous cherchez n'existe pas</h1>
