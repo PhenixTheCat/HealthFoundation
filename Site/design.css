@@ -1570,6 +1570,22 @@ font-size: small;
 		background-size: 100%;
 		background-position-y: center;
 	}
+	
+	div.RésultatsGlobaux{
+		width: 90%;
+		height: 20%;
+		background-image: url(résultats.jpg);
+		text-align: center;
+		margin: 5% 50% 100% 0;
+		padding: auto;
+		font-size: 3em;
+		padding: 5%;
+		background-size: 100% 75%;
+		background-repeat: no-repeat;
+	}
+	div a:active{
+		color: blue;
+	}
 
 	.testResults p {
 		background-color: white;
