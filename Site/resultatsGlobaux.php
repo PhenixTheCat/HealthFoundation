@@ -96,7 +96,7 @@ if(!isset($_SESSION['isConnected']))
 
     <div class ="RésultatsGlobaux">
     <span class = "Résultats globaux">
-      <h1>Résultats globaux</h1>
+      <h3>Résultats globaux</h3>
     </span>
     </div>
 
