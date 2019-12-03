@@ -797,7 +797,7 @@ margin: auto;
 }
 
 
-/* =============       Mot de passe oublié  ============ */
+
 
 /* =============       Mot de passe oublié  ============ */
 
@@ -913,12 +913,6 @@ margin: auto;
 	margin: 30px;
 }
 
-.formulaireContact input[type=submit]{
-	margin: 20px;
-	font-size: 20px;
-	border:2px solid #000000;
-	background-color: transparent;
-}
 
 .formulaireContact textarea{
 	display: block;
@@ -1101,12 +1095,6 @@ i{
 	text-align: left;
 }
 
-.formulaireFAQ input[type=submit]{
-	margin: 20px;
-	font-size: 20px;
-	border:2px solid #000000;
-	background-color: transparent;
-}
 
 .formulaireFAQ textarea{
 	display: block;
@@ -1707,5 +1695,10 @@ font-size: small;
 	color: #000000;
 }
 
-
+table
+{
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
 
