@@ -1659,14 +1659,29 @@ font-size: small;
 			margin: 5%;
 			}
 		.RésultatsGlobaux {
-			width: 90%;
-			height: 20%;
-			background-image: url(résultats.jpg);
+			background-color: transparent;
+			border: 1px solid #000000;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			text-align: center;
+			padding: 1%;
+			margin: 5%;
+			}
+	
+.RésultatsGlobaux h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+			opacity: 0,2;
+			/*background-repeat: no-repeat;*/
 			padding: 5%;
 			margin-left: 5%;
 			margin-right: 5%;
 			margin-bottom:0% ;
+			background-size: 100%;
+			background-position-y: center;
+		}
+.RésultatsGlobaux table{
+			margin-top: 5%;
+			margin-left: auto;
+			margin-right: auto;
 			}
 	
 
