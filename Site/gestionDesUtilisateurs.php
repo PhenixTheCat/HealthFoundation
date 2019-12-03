@@ -206,11 +206,10 @@ if(isset($_POST['rechercher'])&&!empty($_POST['searchUser'])){
 
 }
         ?>
-        
-    </table>
-    <form action="" id="searchUser" method="post">
-    <input type="submit" name="save" value="Enregistrer">
+            <form action="" id="searchUser" method="post">
+    <input class="submitButtons"type="submit" name="save" value="Enregistrer">
     </form>
+    </table>
   </div> 
 
 
