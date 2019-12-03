@@ -1399,7 +1399,12 @@ font-size: small;
 			margin-right: 5%;
 			margin-bottom:0% ;
 		}
-	
+		.GestionDuStress table{    /* permet au tableau qui retourne les résultats des tests d'être centré */
+			margin-top: 5%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+
 	.tempsDeReaction h1{
 			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tempsdereaction.jpg");;
 			opacity: 0,2;
