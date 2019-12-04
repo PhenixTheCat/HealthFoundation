@@ -1445,7 +1445,7 @@ font-size: small;
 	}
 	.resumeResultat h1 {
 
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/resultats.jpg");;
 		opacity: 0,2;
 		/*background-repeat: no-repeat;*/
 		padding: 5%;
@@ -1454,7 +1454,9 @@ font-size: small;
 		margin-bottom:0% 
 		background-size: 100%;
 		background-position-y: center;;
+		
 	}
+	
 	.resumeResultat p {
 		background-color: white;
 		padding: 5%;
@@ -1477,7 +1479,7 @@ font-size: small;
 	}
 	.resultatsParCat h1 {
 
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/resultats.jpg");;
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1498,7 +1500,7 @@ font-size: small;
 	}
 
 	#gestionDuStress h1{
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/stress.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/stress.jpg");;
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1510,7 +1512,7 @@ font-size: small;
 	}
 
 #tempsDeReaction h1{
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tempsdereaction.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/tempsdereaction.jpg");;
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1519,7 +1521,7 @@ font-size: small;
 		margin-bottom:0% ;
 	}
 	#seuilDePerception h1{
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/perception.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/perception.jpg");;
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1529,7 +1531,7 @@ font-size: small;
 	}
 	
 	#reconnaissanceDeTonalite h1{
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tonalite.jpg");;
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/tonalite.jpg");;
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1560,7 +1562,7 @@ font-size: small;
 	}
 
 	#resultatenligne h1{
-		background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%);
+		background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%);
 		opacity: 0,2;
 		background-repeat: no-repeat;
 		padding: 5%;
@@ -1579,7 +1581,7 @@ font-size: small;
 		margin-top:0% ;
 		text-align: center;
 	}
-/* ================ Gestion du stress =============*/
+/* ================ Pour toutes les pages de tests =============*/
 	.GestionDuStress {
 		background-color: transparent;
 		border: 1px solid #000000;
@@ -1590,13 +1592,15 @@ font-size: small;
 		}
 
 		.GestionDuStress h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/stress.jpg");;
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/stress.jpg");;
 			opacity: 0,2;
 			
 			padding: 5%;
 			margin-left: 5%;
 			margin-right: 5%;
 			margin-bottom:0% ;
+			background-size: 100%;
+			background-position-y: center;
 		}
 		.GestionDuStress table{
 			margin-top: 5%;
@@ -1606,7 +1610,7 @@ font-size: small;
 
 	
 		.tempsDeReaction h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tempsdereaction.jpg");;
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/tempsdereaction.jpg");;
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
 			padding: 5%;
@@ -1624,7 +1628,7 @@ font-size: small;
 			}
 
 		.seuilDePerception h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/perception.jpg");;
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/perception.jpg");;
 			opacity: 0,2;
 			background-repeat: no-repeat;
 			padding: 5%;
@@ -1642,7 +1646,7 @@ font-size: small;
 			}
 		
 		.reconnaissanceDeTonalite h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/tonalite.jpg");;
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/tonalite.jpg");;
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
 			padding: 5%;
@@ -1667,8 +1671,8 @@ font-size: small;
 			margin: 5%;
 			}
 	
-.RésultatsGlobaux h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%),url("Images/resultats.jpg");;
+		.RésultatsGlobaux h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/resultats.jpg");;
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
 			padding: 5%;
@@ -1678,14 +1682,13 @@ font-size: small;
 			background-size: 100%;
 			background-position-y: center;
 		}
-.RésultatsGlobaux table{
+		.RésultatsGlobaux table{
 			margin-top: 5%;
 			margin-left: auto;
 			margin-right: auto;
 			}
-	
 
-.RésultatsEnLigne {
+		.RésultatsEnLigne {
 			background-color: transparent;
 			border: 1px solid #000000;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1693,21 +1696,23 @@ font-size: small;
 			padding: 1%;
 			margin: 5%;
 			}
-.RésultatsEnLigne h1{
-			background-image:linear-gradient( rgba(173, 132, 238, 0.5), rgba(173, 132, 238, 0.5) 80%);
+
+			.RésultatsEnLigne h1{
+			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%);
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
 			padding: 5%;
 			margin-left: 5%;
 			margin-right: 5%;
 			margin-bottom:0% ;
-			}
-
-.RésultatsEnLigne table{
+			
+		}
+		.RésultatsEnLigne table{
 			margin-top: 5%;
 			margin-left: auto;
 			margin-right: auto;
 			}
+
 
 /*=====================         Buttons de changement de page, ou submit pour fond bleu          =====================*/
 .submitButtons {
