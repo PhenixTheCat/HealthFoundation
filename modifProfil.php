@@ -28,11 +28,54 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+if(isset($_SESSION['userID'])){
+  $requser = $bdd->prepare('SELECT * FROM user WHERE id = ?');
+  $requser->execute(array($_SESSION['userID']));
+  $user = $requser->fetch();
+}
+
+if(isset($_POST['modifProfil'])){ 
+  $last_name = $_POST['nom'];
+  $first_name = $_POST['prenom'];
+  $birthdate = $_POST['date'];
+  $email= $_POST['mail'];
+  $adress= $_POST['adressePostale'];
+  $postecode= $_POST['codePostale'];
+  $city= $_POST['ville'];
+  $country= $_POST['pays'];
+  $phone_number=$_POST['numeroDeTelephone'];
+
+    $reqModifProfil = $bdd->prepare("UPDATE user SET last_name= ?, first_name= ?,birthdate= ?,adress= ?,postecode= ?,city= ?,country= ?,phone_number= ? WHERE id = ?");
+    $reqModifProfil->execute(array($last_name,
+    $first_name,
+    $birthdate,
+    $adress,
+    $postecode,
+    $city,
+    $country,
+    $phone_number,$_SESSION['userID']));
+    header("Location : modifProfilValidee.php");
+  }
+
+
+if(isset($_POST['modifmail'])){ 
+
+  $email = $_POST['mail'];
+  $reqmail = $bdd->prepare("SELECT * FROM user WHERE email = ?");
+  $reqmail->execute(array($email));
+  $mailexist = $reqmail->rowCount();
+  if($mailexist == 0) {
+    $reqModifProfil = $bdd->prepare("UPDATE user SET email=? WHERE id =?");
+    $reqModifProfil->execute(array($email, $_SESSION['userID']));
+    $erreur ="Mail enregistré";
+  }
+else{
+  $erreur = "Le mail est déja utilisé";
+}
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -41,7 +84,7 @@ use PHPMailer\PHPMailer\Exception;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
-  <body>
+  <body >
 
     <header class="headerNonConnecte" >
             <div class = logoPrincipal >
@@ -100,102 +143,67 @@ use PHPMailer\PHPMailer\Exception;
             </nav>
             
     	</header>
-    <?php
-    if(isset($_POST) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['mail']) AND isset($_POST['objet']) AND!empty($_POST['message'])){
-        if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail'])
-            AND !empty($_POST['objet']) AND!empty($_POST['message'])){
-
-
-
-                require 'PHPMailer/src/Exception.php';
-                require 'PHPMailer/src/PHPMailer.php';
-                require 'PHPMailer/src/SMTP.php';
-            
-            $nom = securisation($_POST['nom']);
-            $prenom = securisation($_POST['prenom']);
-            $email = securisation($_POST['mail']);
-            $objet = securisation($_POST['objet']);
-            $message = str_replace("\n.", "\n..", $_POST['message']);
-            $mail = new PHPMailer(true);
-
-            $mail->isSMTP();                                            // Send using SMTP
-                $mail->Host       = 'smtp.free.fr';                    // Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
-                $mail->Password   = "mQlcsjk5:sa.M";                               // SMTP password
-                $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-                $mail->Port       = 465;     
-
-                $mail->setFrom('health.foundation.g3c@free.fr', 'Health Foundation');
-                $mail->addAddress('health.foundation.g3c@gmail.com','Health Foundation -  Contact'); 
-
-                if ($mail->addReplyTo($email, $nom .$prenom )){ 
-                    $mail->Subject = 'Contact';
-                    $mail->isHTML(false);
-                    $mail->Body = "
-                    Email: $email
-                    Nom : $nom
-                    Prénom : $prenom
-                    Objet : $objet
-                    Message: $message
-                    ";
-                $mail->send();
-                if (!$mail->send()) {
-                    $erreur =  "Il y a eu un problème veuillez réessayer plus tard !";
-                } else {
-                    header('Location:contactMessageEnvoye.php');
-                }
-            }
-             else {
-                $erreur = 'Adresse mail invalide';
-            }
-        }
-        else
-        {
-            $erreur = "Tous les champs doivent être remplis";
-        }
-    } 
-    
-    function securisation($donnees){
-        $donnees = trim($donnees);
-        $donnees = stripcslashes($donnees);
-        $donnees = strip_tags($donnees);
-        return $donnees;
-    }
-    ?>
-
-
+   
+    <div class="centrer_bloc">
     <div class="headerContact">
-    <h1 > Contact </h1>
-  </div>
-    <?php if (!empty($erreur)) {
-    echo "<h2>$erreur</h2>";
-} ?>
-    <div class="formulaireContact">  
-      
-    <form action="" method="post" >
-    <label for="Nom" id="nom">Nom</label>
-    <input type="text" name="nom" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />
-    <label for="prenom">Prénom</label>
-    <input type="text" name="prenom"  placeholder="Votre prénom" value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>" /><br /><br />
-    <label for="mail">Adresse e-mail</label>
-    <input type="email" name="mail"  placeholder="Votre mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
-    <label for="objet">Objet</label>
-    <input type="text" name="objet"  placeholder="L'objet du mail" value="<?php if(isset($_POST['objet'])) { echo $_POST['objet']; } ?>" /><br /><br />
-    <label for="message">Votre message</label>
-    <textarea name="message" rows="10" cols= "55"  placeholder="Votre message" >
-        <?php if(isset($_POST['message'])) { echo $_POST['message']; } ?>
-    </textarea>
-    <input class="submitButtons" type="submit" Value="Envoyer" id="envoi">
-      </form>
-  </div> 
+    <h1 > Mon compte </h1>
+     
+  
+  
 
-  <footer id="footer">
+    <div class="piloteModifMdpp">  
+           
+            <fieldset>
+            <form action=""  method="post"> 
+            <?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
+            <h3> Informations détaillés </h3>
+            <label for="nom" id="nom">Nom  </label>
+            <input type="text" name="nom" id="nom" value="<?php echo $user['last_name']; ?>">
+            <br>
+            <label for="prenom" id="prenom">Prénom </label>
+            <input type="text" name="prenom" id="prenom" value="<?php echo $user['first_name']; ?>">
+            <br>
+            <label for="date" id="date"> Date de naissance </label>
+            <input type="date" name="date" id="date">
+            <br>
+            
+            <label for="mail" id="email">Adresse email</label>
+            <input type="email" name="mail" id="mail" value="<?php echo $user['email']; ?>" >
+            <input type="submit" Value="Enregistrer" name="modifmail" > 
+            <br>
+            <label for="adressePostale" id="adressePostale">Adresse postale</label>
+            <input type="text" name="adressePostale" id="adressePostale" value="<?php echo $user['adress']; ?>">
+            <br>
+            <label for="codePostal" id="codePostal">Code postal</label>
+            <input type="string" name="codePostale" id="codePostale" value="<?php echo $user['postecode']; ?>">
+            <br>
+            <label for="ville" id="ville">Pays </label>
+            <input type="text" name="ville" id="ville" value="<?php echo $user['city']; ?>">
+            <br>
+            <label for="pays" id="pays">Pays </label>
+            <input type="text" name="pays" id="pays" value="<?php echo $user['country']; ?>">
+            <br>
+            <label for="numeroDeTelephone" id="numeroDeTelephone">Numéro de téléphone</label>
+            <input type="string" name="numeroDeTelephone" id="numeroDeTelephone" value="<?php echo $user['phone_number']; ?>">
+            <br>
+
+            <input class="submitButtons" type="submit" Value="Enregistrer" name="modifProfil" > 
+        </form>
+        </fieldset>
+      </div>
+  </div>
+  </div>
+ <footer id="footer">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-				<?php if(!$_SESSION['isConnected']) : ?> 
+				<?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
 				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
 				<?php endif;?>
 				
@@ -206,6 +214,8 @@ use PHPMailer\PHPMailer\Exception;
                 <p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
-	<script src="script.js"></script>
+	  <script src="script.js"></script>
+
   </body>
-</html>
+</html>     
+

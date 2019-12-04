@@ -28,11 +28,60 @@ if(!isset($_SESSION['isConnected']))
 {
 	$_SESSION['isConnected'] = false;
 }
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
+
+if(isset($_POST['inscriptionP1'])) {
+   $mail = htmlspecialchars($_POST['mail']);
+   $mdp = sha1($_POST['mdp']);
+   $mdp2 = sha1($_POST['mdp2']);
+   $codeformateur = htmlspecialchars($_POST['codeFormateur']);
+   if(!empty($_POST['mail']) AND !empty($_POST['codeFormateur']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
+        if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+               $reqmail = $bdd->prepare("SELECT * FROM user WHERE email = ?");
+               $reqmail->execute(array($mail));
+               $mailexist = $reqmail->rowCount();
+               if($mailexist == 0) {
+                  if($mdp == $mdp2) {
+			//Inscription d'un formateur avec un code structure
+                    	$requete = $bdd->query("SELECT * FROM structure WHERE code = '".$codeformateur."'");
+                   	if($donnee = $requete->fetch()){
+							$_SESSION['signupCodeType'] = "structure";
+							$_SESSION['signupMail'] = $mail;
+                       		$_SESSION['signupPassword'] = $mdp;
+							$erreur = header('Location:inscriptionSuite.php');
+                    }
+                   	
+					// Inscription d'un pilote avec code formateur
+					$requeteCodeFormateur = $bdd->query('SELECT * FROM user  WHERE code=\''.$codeformateur.'\'');
+					if($donneeCodeFormateur = $requeteCodeFormateur->fetch())
+					{
+						$_SESSION['signupCodeType'] = "instructor";
+						$_SESSION['signupMail'] = $mail;
+                       	$_SESSION['signupPassword'] = $mdp;
+						$erreur = header('Location:inscriptionSuite.php');
+							
+					}
+					else
+					{
+                        $erreur = "Le code formateur est invalide";
+                    }
+				
+                  } else {
+                     $erreur = "Vos mots de passes ne correspondent pas !";
+                  }
+               } else {
+                  $erreur = "Adresse mail déjà utilisée !";
+               }
+            }else {
+               $erreur = "Votre adresse mail n'est pas valide !";
+                } 
+            } else {
+      $erreur = "Tous les champs doivent être complétés !";
+   }
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,112 +149,56 @@ use PHPMailer\PHPMailer\Exception;
             </nav>
             
     	</header>
-    <?php
-    if(isset($_POST) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['mail']) AND isset($_POST['objet']) AND!empty($_POST['message'])){
-        if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail'])
-            AND !empty($_POST['objet']) AND!empty($_POST['message'])){
+    <div class="centrer_bloc">
+     <div class="inscriptionP1">
+        <span>
+        <?php
+         if(isset($erreur)) {
+            echo '<font color="black">'.$erreur."</font>";
+         }
+         ?>
+          <a class="enteteInscription" href="connexion.php"> Connexion </a>
+          <a class="enteteInscription" href="inscription.php"> Inscription </a>
+        </span>
+          <fieldset>
+          <form action="" method="post"> 
+          
+          <label for="mail" id="email">Email</label>
+          <input type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
+          <br>
+          <label for="mdp">Mot de passe</label>
+          <input type="password" name="mdp" id="mdp">
+          <br>
+          <label for="mdp2">Confirmation du mot de passe</label>
+          <input type="password" name="mdp2" id="mdp2">
+          <br>
+          <label for="codeFormateur">Code formateur</label>
+          <input type="text" name="codeFormateur" id="codeFormateur" value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
+          <br>
+          <input class="submitButtons" type="submit" Value="Suivant" name="inscriptionP1">
+        </form>
+        </fieldset>
 
-
-
-                require 'PHPMailer/src/Exception.php';
-                require 'PHPMailer/src/PHPMailer.php';
-                require 'PHPMailer/src/SMTP.php';
-            
-            $nom = securisation($_POST['nom']);
-            $prenom = securisation($_POST['prenom']);
-            $email = securisation($_POST['mail']);
-            $objet = securisation($_POST['objet']);
-            $message = str_replace("\n.", "\n..", $_POST['message']);
-            $mail = new PHPMailer(true);
-
-            $mail->isSMTP();                                            // Send using SMTP
-                $mail->Host       = 'smtp.free.fr';                    // Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
-                $mail->Password   = "mQlcsjk5:sa.M";                               // SMTP password
-                $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-                $mail->Port       = 465;     
-
-                $mail->setFrom('health.foundation.g3c@free.fr', 'Health Foundation');
-                $mail->addAddress('health.foundation.g3c@gmail.com','Health Foundation -  Contact'); 
-
-                if ($mail->addReplyTo($email, $nom .$prenom )){ 
-                    $mail->Subject = 'Contact';
-                    $mail->isHTML(false);
-                    $mail->Body = "
-                    Email: $email
-                    Nom : $nom
-                    Prénom : $prenom
-                    Objet : $objet
-                    Message: $message
-                    ";
-                $mail->send();
-                if (!$mail->send()) {
-                    $erreur =  "Il y a eu un problème veuillez réessayer plus tard !";
-                } else {
-                    header('Location:contactMessageEnvoye.php');
-                }
-            }
-             else {
-                $erreur = 'Adresse mail invalide';
-            }
-        }
-        else
-        {
-            $erreur = "Tous les champs doivent être remplis";
-        }
-    } 
-    
-    function securisation($donnees){
-        $donnees = trim($donnees);
-        $donnees = stripcslashes($donnees);
-        $donnees = strip_tags($donnees);
-        return $donnees;
-    }
-    ?>
-
-
-    <div class="headerContact">
-    <h1 > Contact </h1>
-  </div>
-    <?php if (!empty($erreur)) {
-    echo "<h2>$erreur</h2>";
-} ?>
-    <div class="formulaireContact">  
-      
-    <form action="" method="post" >
-    <label for="Nom" id="nom">Nom</label>
-    <input type="text" name="nom" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />
-    <label for="prenom">Prénom</label>
-    <input type="text" name="prenom"  placeholder="Votre prénom" value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>" /><br /><br />
-    <label for="mail">Adresse e-mail</label>
-    <input type="email" name="mail"  placeholder="Votre mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
-    <label for="objet">Objet</label>
-    <input type="text" name="objet"  placeholder="L'objet du mail" value="<?php if(isset($_POST['objet'])) { echo $_POST['objet']; } ?>" /><br /><br />
-    <label for="message">Votre message</label>
-    <textarea name="message" rows="10" cols= "55"  placeholder="Votre message" >
-        <?php if(isset($_POST['message'])) { echo $_POST['message']; } ?>
-    </textarea>
-    <input class="submitButtons" type="submit" Value="Envoyer" id="envoi">
-      </form>
-  </div> 
-
-  <footer id="footer">
+      </div>
+    </div>
+<footer id="footer">
             <div class="menuBas">
                 <a href="cgu.php" target="_blank"> CGU</a>
                 <a href="faq.php"> FAQ/Aide</a>
                 <a href="contact.php"> Contact</a>
-				<?php if(!$_SESSION['isConnected']) : ?> 
+				<?php //Si l'utilisateur n'est pas connecté
+				if(!$_SESSION['isConnected']) : ?> 
 				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
 				<?php endif;?>
 				
 				<?php //Si l'utilisateur est connecté
 				if($_SESSION['isConnected']) : ?> 
 				<div id="footerButton"><a href="index.php?deconnexion=true.php" >Déconnexion</a></div>
-				<?php endif;?>
-                <p>©Copyright Health Foundation, tout droits réservés</p>
+				<?php endif;?> 
+				<p>©Copyright Health Foundation, tout droits réservés</p>
             </div>
         </footer>
-	<script src="script.js"></script>
+	  <script src="script.js"></script>
+
   </body>
 </html>
