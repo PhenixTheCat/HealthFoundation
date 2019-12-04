@@ -42,19 +42,25 @@ if(!isset($_SESSION['isConnected']))
                 <h1 ><a href="index.php" class="bigTitle">Health Foundation</a></h1>
             </div>
             <nav <?php  if(!$_SESSION['isConnected']) : ?> class="notConnectedNAV"<?php endif;?>
-                 <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedNAV"<?php endif;?> 
-                 <?php  if($_SESSION['admin']) : ?> class="adminNAV"<?php endif;?>                                                              
+                 <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?> class="connectedNAV"<?php endif;?> 
+                 <?php  if($_SESSION['userType'] == "Administrator") : ?> class="adminNAV"<?php endif;?>                                                              
                                                                                 id="menu">
-                <ul <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedrightUL"<?php endif;?>
-                    <?php  if($_SESSION['admin']) : ?> class="adminrightUL"<?php endif;?> >
+                <ul <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?> class="connectedrightUL"<?php endif;?>
+                    <?php  if($_SESSION['userType']=="Administrator") : ?> class="adminrightUL"<?php endif;?> >
                     <li><a href="index.php"> Accueil</a></li>
                                             <?php //Si l'utilisateur n'est pas un admin
-					if(!$_SESSION['admin']) : ?>
+					if($_SESSION['userType'] == "Pilot" || $_SESSION['userType'] == "user") : ?>
                     <li><a href="aPropos.php">À propos </a></li>
                 </ul>
-                <ul <?php  if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> class="connectedLeftUL"<?php endif;?>>
+                <ul <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?> class="connectedLeftUL"<?php endif;?>>
 					<?php endif;
-                                            //Si l'utilisateur n'est pas connecté
+                    if($_SESSION['userType'] == "Instructor") : ?>
+                    <li><a href="index.php">Resultats Pilotes</a></li>
+                </ul>
+                <ul <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?> class="connectedLeftUL"<?php endif;?>>
+					<?php endif;
+                    
+					//Si l'utilisateur n'est pas connecté
 					if(!$_SESSION['isConnected']) : ?>
                 
                 
@@ -63,21 +69,22 @@ if(!isset($_SESSION['isConnected']))
 					<?php endif;?>
 					
 					<?php //Si l'utilisateur est connecté
-					if($_SESSION['isConnected']&& !$_SESSION['admin']) : ?> 
+					if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?> 
                     <li><a href="monCompte.php">Mon compte</a></li>
                     <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
                     <?php endif;?>
                     
                     <?php //Si l'utilisateur est connecté
-                    if($_SESSION['isConnected']&& $_SESSION['admin']) : ?> 
+                    if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?> 
                     
-                    <li><a href="gestionUtilisateur.php">Gestion des utilisateurs</a></li>
+                    <li><a href="gestionDesUtilisateurs.php">Gestion des utilisateurs</a></li>
                 </ul>
-                <ul <?php  if($_SESSION['admin']) : ?> class="adminLeftUL"<?php endif;?> >
+                <ul <?php  if($_SESSION['userType'] == "Administrator") : ?> class="adminLeftUL"<?php endif;?> >
                     <li><a href="gestionDesStructures.php">Gestion des structures</a></li>
                     <li><a href="index.php?deconnexion=true.php">Se déconnecter</a></li>
 					<?php endif;?>
                 </ul>
+				
              
                 <div class=" logoLangue">
                     <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Drapeau Anglais"></a>
