@@ -191,8 +191,9 @@ if(isset($_POST['rechercher'])&&!empty($_POST['searchUser'])){
                 <form action="" id="searchUser" method="post">
                 Supprimer<input type="checkbox" name="delete[]" value="<?php echo $donnee['id']?>"/> </br> 
                  Bannir<input type="checkbox"name="banned[]" value="<?php echo $donnee['id']?>" /> </br> 
+		 <input type="text" name="instructorCode[]"</br> 
                 Formateur <input type="checkbox" name="instructor[]" value="<?php echo $donnee['id']?>"/> </br> 
-                <input type="text" name="instructorCode[]"</br> 
+      
                  Référent <input type="checkbox" name="referent[]"value="<?php echo $donnee['id']?>" /> </br> 
                  <form action="" id="searchUser" method="post">
                  </td>
