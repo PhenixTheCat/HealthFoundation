@@ -156,7 +156,8 @@ if(isset($_POST['Connexion'])) {
                 <img src="Images/fond1.png" class="photoAccueil" alt="Fond">
                 <div class="texteGauche">
                     <h2>"A LEGACY OF EXCELLENCE"</h2>
-                    <form action="connexion.php"><button type="submit" class="boutonTest">Connectez-vous pour passer le pilotest test en ligne</button> 
+		    <h3> Leader européen du matériel médical. </h3>
+                    <form action="connexion.php"><button type="submit" class="boutonTest">Connectez-vous pour passer le pilotest en ligne</button> 
                         <img src="Images/AppLogo.png" class="logoApp" alt="Logo solution APP">
                     </form>
                 </div>  
