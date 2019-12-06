@@ -253,7 +253,7 @@ if(isset($_POST['Connexion'])) {
                 <a href="contact.php"> Contact</a>
 				<?php //Si l'utilisateur n'est pas connecté
 				if(!$_SESSION['isConnected']) : ?> 
-				<div id="footerButton"><a href="inscription.php" >S'inscrire</a></div>
+				<div id="footerButton"><a href="inscription.php" >Inscription</a></div>
 				<?php endif;?>
 				
 				<?php //Si l'utilisateur est connecté
