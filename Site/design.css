@@ -5,16 +5,17 @@
     flex-direction: row; 
     transition:all 0.2s;
 }
-.logoPrincipal:hover .bigTitle{
-    
-}
+
 .logoPrincipal>h1>a{
     display: flex;
     font-family: Proza Libre;
     font-style: normal;
     font-weight: normal;
-    font-size: 72px;
+    font-size: 40px;
     font-family: Verdana;
+    width:660px;
+    text-align:center;
+    font-weight:bold;
 }
 
 nav#menu>ul>li{
@@ -28,16 +29,25 @@ footer{
     border-top: solid gray 1px;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 800px) {
     .logoPrincipal img{
         position:absolute;
+        width: 70px;
+        height: 70px;
+        margin-top: 78px;
     }
     .logoPrincipal h1{
         text-align:center;
     }
-    nav#menu ul{
+    .logoPrincipal h1 a{
         width:100%;
-        
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .logoPrincipal img{
+        margin-top:5px;
+        margin-left:5px;
     }
 }
 
@@ -74,6 +84,15 @@ body
     font-weight: normal;
     font-size: 72px;
     font-family: Verdana;
+}
+.littleTitle{
+    display: flex;
+    font-family: Proza Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Verdana;
+	margin: 50px 0 0 10px;
 }
 
 a {
@@ -137,21 +156,6 @@ li {
     align-items: center;
     align-content: center;
 }
-@media only screen and (max-width: 500px) {
-    .logoPrincipal>h1>a{
-        font-size:55px;
-    }
-    .logoPrincipal img{
-        width:80px;
-        height:80px;
-    }
-}
-@media only screen and (max-width: 360px) {
-    .logoPrincipal img{
-        width:60px;
-        height:60px;
-    }
-}
 li a {
 
   text-align: center;
@@ -169,11 +173,20 @@ li a {
 .connectedNAV{
     width: 541px;
 }
+.instructorrightUL{
+    width: 49%;
+}
+.instructorLeftUL{
+    width: 51%;
+}
+.instructorNAV{
+    width: 580px;
+}
 .adminrightUL{
-    width: 44%;
+    width: 49%;
 }
 .adminLeftUL{
-    width: 56%;
+    width: 51%;
 }
 .adminNAV{
     width: 800px;
@@ -546,50 +559,6 @@ div.menuBas>a#footerButton{
 	}
 }
 
-/* max-width pour faibles résolutions */
-/*
-@media screen and (max-width: 600px) {
-	header
-	{
-    display: flex;
-   flex-wrap: wrap;
-	}
-
-
-	#menu a {
-		display: flex;
-		align-items: center;
-		align-content: center;
-		justify-content: flex-end;
-		flex-direction: column;
-		text-align: center;
-		flex-wrap: wrap;
-
-	}
-	#menu li {
-		text-align: center;
-		float:none; 
-		width:100%;
-	}
-
-}
-*/
-/*
-@media screen and (max-width: 850px) {
-	
- 	 div {
-   		display: flex;
-		align-items: center;
-		align-content: center;
-		justify-content: flex-end;
-		flex-direction: column;
-		text-align: center;
-		flex-wrap: wrap;
-  	}
-}
-*/
-
-
 
 /*Ici, les définitions propres à chaque page.*/
 /* =============       Accueil     ============ */
@@ -641,6 +610,7 @@ div.menuBas>a#footerButton{
   position: relative;
   right: 0;
 }
+
 
 
 .boutonConnexionAccueil {
@@ -698,7 +668,7 @@ div.menuBas>a#footerButton{
 /*===========    Centrer les blocs ================*/
 
 .centrer_bloc{
-	margin: 50px;
+	margin: 3%;
 }
 
 
@@ -721,8 +691,8 @@ margin: auto;
   display: flex;
   flex-direction: row; /* Pour mettre inscription et connextion sur la même ligne*/
   text-align: center;
-  width: 200px;
-  padding: 20px;
+  padding: 2%;
+  margin: 2%;
   background-color: #7CA0E4;
   display: inline-block;
   vertical-align: middle ;
@@ -734,8 +704,8 @@ margin: auto;
 	border:none;
 	background-color: transparent;
 	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
+	width: 50%;
+	margin: 5%;
 }
 
 .enteteInscription:hover
@@ -777,12 +747,14 @@ margin: auto;
 	border:none;
 	background-color: transparent;
 	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
+	width: 50%;
+	margin: 5%;
 }
 #mdp{
 	font-weight: normal;
-	margin: 30px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 5%;
 }
 
 .Connexion label{
@@ -853,7 +825,7 @@ margin: auto;
 
 
 
-/* ==========  Page contact  ==========  */
+/* ==========  Page contact  et FAQ ==========  */
 
 
 
@@ -871,7 +843,7 @@ margin: auto;
 .headerContact h1{
 	font-size: 50px;	
 	border-bottom: 5px solid black;
-	width: 700px;
+	width:70%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -884,13 +856,16 @@ margin: auto;
 /*Ici, la liste des input.*/
 
 
+.formulaireContact{
+	margin-left: 20%;
+	margin-right: 20%;
+}
 
-
-.formulaireContact input[type=text]{
+.formulaireContact input[type=text],input[type=email]{
 	border:none;
 	background-color: transparent;
 	border-bottom:  1px solid black;
-	width: 300px;
+	width: 60%;
 	margin: 30px;
 }
 
@@ -903,15 +878,6 @@ margin: auto;
 	margin: 30px;
 }
 
-
-
-.formulaireContact input[type=email]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
 
 
 .formulaireContact textarea{
@@ -967,8 +933,8 @@ margin: auto;
 	border:none;
 	background-color: transparent;
 	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
+	width: 50%;
+	margin: 5%;
 }
 
 .pageInscriptionSuite label{
@@ -985,13 +951,15 @@ margin: auto;
 
 
 .pageInscriptionSuite input[type=date]{
-    text-align: center;
+
+	font-style: large;
+	text-align: center;
 	border:none;
 	background-color: transparent;
-	padding: 0 38%;
-	width: 300px;
-	margin: 30px;
 	font-style: large;
+	width: 50%;
+	margin: 5%;
+	padding: 0 38%;
 
 }
 
@@ -1014,11 +982,11 @@ margin: auto;
 
 }
 .confirmationInscription h2{
-	margin: 60px;
+	margin: 10%;
 }
 .confirmationInscription p{
 	text-align: center;
-	margin: 60px;
+	margin: 10%;
 }
 
 
@@ -1051,7 +1019,7 @@ margin: auto;
 	border-radius: 10px;
 	margin-bottom:10px;
 	width: 90%;
-	height: 90%;
+	height: 10%;
 	font-size: 25px;
 }
 .ReponseQuestion {
@@ -1069,41 +1037,10 @@ margin: auto;
 .question:hover .ReponseQuestion {
 	max-height: 17em;
 }
-i{
-	float: right;
-}
-.formulaireFAQ label{
-	display: block;
-
-}
-
-.formulaireFAQ input[type=text]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-}
 
 
-.formulaireFAQ input[type=email]{
-	border:none;
-	background-color: transparent;
-	border-bottom:  1px solid black;
-	width: 300px;
-	margin: 30px;
-	text-align: left;
-}
 
 
-.formulaireFAQ textarea{
-	display: block;
-	padding: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	border:none;
-	box-shadow :0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 /*=========== Nouveau mot de passe ===============*/
 
@@ -1405,10 +1342,23 @@ font-size: small;
 
 /*==================    A propos ================= */
 
-.about {
-	text-align: center;
-	margin: auto;
+div.produit {
+  width: 35%;
+  height: 425px; 
+  background-color: #7CA0E4; 
+  margin: 5% 50% 5% 50%;
+  padding: 3%;
+  text-align: justify;
 }
+
+div.imageProduit {
+  margin : -38% 55% 10% 20%;
+}
+
+div.about {
+	text-align: center;
+}
+
 
 
 /*=============     Mon compte ================== */
@@ -1451,12 +1401,10 @@ font-size: small;
 		padding: 5%;
 		margin-left: 5%;
 		margin-right: 5%;
-		margin-bottom:0% 
+		margin-bottom:0% ;
 		background-size: 100%;
-		background-position-y: center;;
-		
+		background-position-y: center;
 	}
-	
 	.resumeResultat p {
 		background-color: white;
 		padding: 5%;
@@ -1474,6 +1422,7 @@ font-size: small;
 	text-align: center;
 	padding: 1%;
 	margin-top: 5%;
+	margin-bottom: 5%;
 	margin-left: auto;
 	margin-right: auto;
 	}
@@ -1581,7 +1530,7 @@ font-size: small;
 		margin-top:0% ;
 		text-align: center;
 	}
-/* ================ Pour toutes les pages de tests =============*/
+/* Pour tout les tests */
 	.GestionDuStress {
 		background-color: transparent;
 		border: 1px solid #000000;
@@ -1599,8 +1548,6 @@ font-size: small;
 			margin-left: 5%;
 			margin-right: 5%;
 			margin-bottom:0% ;
-			background-size: 100%;
-			background-position-y: center;
 		}
 		.GestionDuStress table{
 			margin-top: 5%;
@@ -1671,7 +1618,7 @@ font-size: small;
 			margin: 5%;
 			}
 	
-		.RésultatsGlobaux h1{
+.RésultatsGlobaux h1{
 			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%),url("Images/resultats.jpg");;
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
@@ -1682,13 +1629,14 @@ font-size: small;
 			background-size: 100%;
 			background-position-y: center;
 		}
-		.RésultatsGlobaux table{
+.RésultatsGlobaux table{
 			margin-top: 5%;
 			margin-left: auto;
 			margin-right: auto;
 			}
+	
 
-		.RésultatsEnLigne {
+.RésultatsEnLigne {
 			background-color: transparent;
 			border: 1px solid #000000;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1696,8 +1644,7 @@ font-size: small;
 			padding: 1%;
 			margin: 5%;
 			}
-
-			.RésultatsEnLigne h1{
+.RésultatsEnLigne h1{
 			background-image:linear-gradient( rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%);
 			opacity: 0,2;
 			/*background-repeat: no-repeat;*/
@@ -1705,14 +1652,13 @@ font-size: small;
 			margin-left: 5%;
 			margin-right: 5%;
 			margin-bottom:0% ;
-			
-		}
-		.RésultatsEnLigne table{
+			}
+
+.RésultatsEnLigne table{
 			margin-top: 5%;
 			margin-left: auto;
 			margin-right: auto;
 			}
-
 
 /*=====================         Buttons de changement de page, ou submit pour fond bleu          =====================*/
 .submitButtons {
@@ -1722,9 +1668,12 @@ font-size: small;
 	color: #000000;
 	background: none;
 	cursor: pointer;
-	padding: 15px 40px;
+	padding: 1% 5%;
 	display: inline-block;
-	margin: 15px 30px;
+	margin-left: auto;
+	margin-right : auto;
+	margin-top: 2% ;
+	margin-bottom: 2% ;
 	letter-spacing: 1px;
 	font-weight: 700;
 	transition: all 0.3s;
@@ -1747,27 +1696,130 @@ font-size: small;
 	font-size: 20px;
 	color: #000000;
 }
+/*=====================         Buttons pour enregistrer des modifications          =====================*/
+
+.editButtons {
+	font-size: 10px;
+	overflow: hidden;
+	border: 3px solid #000000;
+	color: #000000;
+	background: none;
+	cursor: pointer;
+	padding: 1% 2%;
+	display: inline-block;
+	margin-left: auto;
+	margin-right : auto;
+	margin-top: 2% ;
+	margin-bottom: 2% ;
+	letter-spacing: 1px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.editButtons:hover {
+	content: '';
+	background: #D2E1FF;
+
+
+}
+
+.editButtons:before {
+	line-height: 1;
+	position: relative;
+}
+
+.editButtons:hover,
+.editButtons:active {
+	font-size: 12px;
+	color: #000000;
+}
+
+.tableau{
+	background-color: transparent;
+	
+	width: 90%;
+	text-align: center;
+	padding: 1%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+table a{
+	text-decoration: underline;
+	font-weight: normal;
+	
+	}	
 
 table
 {
 	border-collapse: collapse;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/*====================================================Modification structures/utilisateurs validées==============================================================*/
-
-div.modif {
-  width: 15%;
-  height: 250px; 
-  background-color: #7CA0E4; 
-  margin: 15% 15% 15% 33%;
-  padding: 9%;
+	width: 60%;
 
 }
+#search {
+	background-color: #ffffff;   
+  border-style: solid;  
+  border-width: 1px;   
+  border-color: #dddddd;  
+ 
+  width: 70%;   
+  box-sizing: border-box;  
+  font-size: 20px;   
+  font-weight: normal;   
+  letter-spacing: 1px;   
+}
 
-div.retourPage{
-  border: 1px solid black;
-  display: inline-block;
-  padding: 5%;
+@media 
+only screen and (max-width: 760px) {
+	.tableau{
+		width: 100%;
+
+
+	}
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* On cache l'affichage des entetes*/
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid black }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 70%; 
+	}
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 10%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Titre
+	*/
+	
+	.td:nth-of-type(1):before { content: "Nom"; }
+	td:nth-of-type(2):before { content: "Prénom"; }
+	td:nth-of-type(3):before { content: "Date de  naissance"; }
+	.validerCompte td:nth-of-type(4):before { content: "Type"; }
+	.validerCompte td:nth-of-type(5):before { content: "Status"; }
+	.resultatsPilote td:nth-of-type(4):before { content: "Résultats"; }
+	
+	
+
 }
