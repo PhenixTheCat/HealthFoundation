@@ -16,26 +16,25 @@ $table = "faq";
  * @param string $question
  */
 
-function insertQuestion(PDO $database, string $first_name,string $last_name,string $email, $question) {
- try{
+function insertQuestion(PDO $database, string $first_name, string $last_name, string $email, $question)
+{
+  try {
 
-  $reqInsertQuestion = $database->prepare("INSERT INTO faq ('first_name', 'last_name', 'email', 'question','answer') VALUES (:first_name,:last_name,:email,:question,:answer)");
-            $data = array(
-                'first_name' => $first_name,
-                'last_name' => $last_name,
-                'email' => $email,
-                'question' => $question,
-                'answer' => null
-            );
-            $reqInsertQuestion->execute($data);
+    $reqInsertQuestion = $database->prepare("INSERT INTO faq ('first_name', 'last_name', 'email', 'question','answer') VALUES (:first_name,:last_name,:email,:question,:answer)");
+    $data = array(
+      'first_name' => $first_name,
+      'last_name' => $last_name,
+      'email' => $email,
+      'question' => $question,
+      'answer' => null
+    );
+    $reqInsertQuestion->execute($data);
 
     return true;
- }
-catch(Exception $error)
-{
-  die("Erreur lors de l'insertion de la question : ".$error->getMessage()." Vérifiez dans le code source les instructions");
-  return false;
-}   
+  } catch (Exception $error) {
+    die("Erreur lors de l'insertion de la question : " . $error->getMessage() . " Vérifiez dans le code source les instructions");
+    return false;
+  }
 }
 
 /**
@@ -44,17 +43,15 @@ catch(Exception $error)
 
  */
 
-function printQuestion(PDO $database) {
- try{   
-   $reqPrintQuestion = $database->prepare("SELECT *  FROM faq WHERE answer is null");
-   $reqPrintQuestion->execute();
-  return $reqPrintQuestion->fetchAll();
- }
- catch(Exception $error)
+function printQuestion(PDO $database)
 {
-	die("Erreur lors de l'insertion de la question : ".$error->getMessage()." Vérifiez dans le code source les instructions");
-}   
-
+  try {
+    $reqPrintQuestion = $database->prepare("SELECT *  FROM faq WHERE answer is null");
+    $reqPrintQuestion->execute();
+    return $reqPrintQuestion->fetchAll();
+  } catch (Exception $error) {
+    die("Erreur lors de l'insertion de la question : " . $error->getMessage() . " Vérifiez dans le code source les instructions");
+  }
 }
 
 
@@ -68,21 +65,18 @@ function printQuestion(PDO $database) {
  */
 
 
-function answerQuestion(PDO $database, string $answer,string $id) {
-    
-try{
-   
- $reqInsertQuestion =  $database->prepare('UPDATE faq SET answer  =? WHERE  id =?');
- $reqInsertQuestion->execute(array($answer,$id));
-     
-     return true;
-}
-catch(Exception $error)
+function answerQuestion(PDO $database, string $answer, string $id)
 {
-  die("Erreur lors de l'envoi de la réponse : ".$error->getMessage()." Vérifiez dans le code source les instructions");
-  return false;
-}
-}
 
+  try {
 
+    $reqInsertQuestion =  $database->prepare('UPDATE faq SET answer  =? WHERE  id =?');
+    $reqInsertQuestion->execute(array($answer, $id));
+
+    return true;
+  } catch (Exception $error) {
+    die("Erreur lors de l'envoi de la réponse : " . $error->getMessage() . " Vérifiez dans le code source les instructions");
+    return false;
+  }
+}
 ?>

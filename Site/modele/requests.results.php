@@ -7,9 +7,4 @@ include('requests.generiques.php');
 $table = "results";
 
 // requêtes spécifiques à la table des resultats de tests
-
-
-
-
-
 ?>

@@ -7,9 +7,4 @@ include('requests.generiques.php');
 $table = "psychotechnical_data";
 
 // requêtes spécifiques à la table des données psychotechniques
-
-
-
-
-
 ?>

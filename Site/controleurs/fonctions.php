@@ -240,3 +240,4 @@ function drawGraphics($title,$datax,$datay){
      
     
 }
+?>

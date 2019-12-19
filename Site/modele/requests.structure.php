@@ -120,8 +120,4 @@ function passStructureToInactive(PDO $database,$id){
 		return false;
 	}
 }
-
-
-
-
 ?>

@@ -15,22 +15,20 @@ $table = "resetpass";
  * @param string $mailTo
  * @param string $code
  */
-function insertInformationResetPass(PDO $database,string $mailTo,string $code) {
- try{   
-     
-    $reqResetPass = $database->prepare("INSERT INTO resetPass(email,code) VALUES (:email,:code)");
-    $data = array(
-        'email' => $mailTo,
-        'code' => $code
-    );
-
-    return $reqResetPass->execute($data);
-    
-    }
-catch(Exception $error)
+function insertInformationResetPass(PDO $database, string $mailTo, string $code)
 {
-	die("Erreur lors du chargement de l'insertion dans la table resetPass: ".$error->getMessage().' Vérifiez dans le code source les instructions');
-}
+    try {
+
+        $reqResetPass = $database->prepare("INSERT INTO resetPass(email,code) VALUES (:email,:code)");
+        $data = array(
+            'email' => $mailTo,
+            'code' => $code
+        );
+
+        return $reqResetPass->execute($data);
+    } catch (Exception $error) {
+        die("Erreur lors du chargement de l'insertion dans la table resetPass: " . $error->getMessage() . ' Vérifiez dans le code source les instructions');
+    }
 }
 /**
  * Chercher le mail du code unique
@@ -40,22 +38,20 @@ catch(Exception $error)
  */
 
 
-function codeResetPassExist(PDO $database, string $code): bool {
-    try{
-     $reqemail = $database->prepare('SELECT * FROM resetPass WHERE  code =?');
-     $reqemail ->execute(array($code));
-     if($reqemail->fetch()){
-        return true; 
-    }
-    else{
+function codeResetPassExist(PDO $database, string $code): bool
+{
+    try {
+        $reqemail = $database->prepare('SELECT * FROM resetPass WHERE  code =?');
+        $reqemail->execute(array($code));
+        if ($reqemail->fetch()) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (Exception $error) {
+        die("Erreur lors de la recherche du mail " . $error->getMessage() . ' Vérifiez dans le code source les instructions');
         return false;
     }
-    }
-catch(Exception $error)
-{
-    die("Erreur lors de la recherche du mail ".$error->getMessage().' Vérifiez dans le code source les instructions');
-    return false;
-}
 }
 
 /**
@@ -66,16 +62,15 @@ catch(Exception $error)
  */
 
 
-function searchMailResetPass(PDO $database, string $code) {
-    try{
-     $reqemail = $database->prepare('SELECT email FROM resetPass WHERE  code =?');
-     $reqemail ->execute(array($code));
-    return $reqemail->fetch(); 
-    }
-catch(Exception $error)
+function searchMailResetPass(PDO $database, string $code)
 {
-	die("Erreur lors de la recherche du mail ".$error->getMessage().' Vérifiez dans le code source les instructions');
-}
+    try {
+        $reqemail = $database->prepare('SELECT email FROM resetPass WHERE  code =?');
+        $reqemail->execute(array($code));
+        return $reqemail->fetch();
+    } catch (Exception $error) {
+        die("Erreur lors de la recherche du mail " . $error->getMessage() . ' Vérifiez dans le code source les instructions');
+    }
 }
 
 /**
@@ -86,17 +81,15 @@ catch(Exception $error)
 
 
 
-function deleteInformationResetPass(PDO $database, string $code) {
-    try{
-     $reqDelete = $database->prepare("DELETE FROM resetPass WHERE  code = '$code'");
-     $reqDelete ->execute();   
-    return true;   
-    }
-catch(Exception $error)
+function deleteInformationResetPass(PDO $database, string $code)
 {
-    die('Erreur lors de la suppression dans la table resetPass : '.$error->getMessage().' Vérifiez dans le code source les instructions');
-    return false;
-}    
-}   
-
+    try {
+        $reqDelete = $database->prepare("DELETE FROM resetPass WHERE  code = '$code'");
+        $reqDelete->execute();
+        return true;
+    } catch (Exception $error) {
+        die('Erreur lors de la suppression dans la table resetPass : ' . $error->getMessage() . ' Vérifiez dans le code source les instructions');
+        return false;
+    }
+}
 ?>
