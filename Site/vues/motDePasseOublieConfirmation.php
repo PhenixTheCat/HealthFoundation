@@ -1,30 +1,32 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Health Foundation</title>
-    <link rel="stylesheet" media="screen" href="design.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  </head>
-  <body class= "allPage">
 
-    <div class="centrer_bloc">
+<head>
+  <title>APP</title>
+  <link rel="stylesheet" media="screen" href="design.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body class="allPage">
+
+  <div class="centrer_bloc">
     <div class="nouveauMdpc">
-        <span>
-          <a class="enteteNouveauMdpc"> Nouveau mot de passe </a>
-          
-        </span>
-           
-             <h3> Votre mot de passe a bien été enregistré </h3>
+      <span>
+        <a class="enteteNouveauMdpc"> Nouveau mot de passe </a>
 
-             <a  class ="submitButtons"href="index.php?redirect=user"> Retourner à l'accueil</a>
+      </span>
 
-      </div>
+      <h3> Votre mot de passe a bien été enregistré </h3>
+
+      <a class="submitButtons" href="index.php?redirect=user"> Retourner à l'accueil</a>
+
+    </div>
   </div>
-      
 
-	  <script src="script.js"></script>
 
-  </body>
+  <script src="script.js"></script>
+
+</body>
+
 </html>

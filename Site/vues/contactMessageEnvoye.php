@@ -3,33 +3,36 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Health Foundation</title>
-    <link rel="stylesheet" media="screen" href="design.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  </head>
-  <body>
-    
-<div class="headerContact">
-    <h1 > Contact </h1>
+
+<head>
+  <title>APP</title>
+  <link rel="stylesheet" media="screen" href="design.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+  <div class="headerContact">
+    <h1> Contact </h1>
   </div>
-    <div class="centrer_bloc">
-      <div class="confirmationContact">  
+  <div class="centrer_bloc">
+    <div class="confirmationContact">
 
-        <p>Votre message a bien été envoyé! 
-  <br>
+      <p>Votre message a bien été envoyé!
         <br>
-        Vous recevrez une réponse dans 
-          les plus bref délais. 
-        </p>
-      
         <br>
-          <a href="index.php"> Retourner à l'accueil</a>
+        Vous recevrez une réponse dans
+        les plus bref délais.
+      </p>
 
-    </div> 
+      <br>
+      <a href="index.php"> Retourner à l'accueil</a>
+
     </div>
-  
-	          <script src="script.js"></script>
-  </body>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
