@@ -13,7 +13,12 @@
 
     <div class="headerContact">
         <h1>Resultats pilote</h1>
+        <img src="index.php?redirect=user&function=chartPoint">
+</br>
+      <img src="index.php?redirect=user&function=chartBar">
     </div>
+
+     
 
     <?php echo printError($error); ?>
     <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
@@ -49,7 +54,7 @@
                     <td>
                         <php><?php echo $user['birthdate']; ?></php>
                     </td>
-                    <form>
+                    
                         <td>
                             <form action="" id="showResults" method="post">
                                 <input class="editButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">

@@ -14,7 +14,10 @@
 </head>
 
 <body class="pasImage">
-
+<div class="headerContact">
+    <h1 > Résultat de <?php echo $user['last_name']." ".$user['first_name'] ?>
+    </h1>
+    </div>
 
 
     <div class="resumeResultat">

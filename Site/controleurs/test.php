@@ -95,6 +95,7 @@ switch ($function) {
 
         $vue = "resultats";
         $error = false;
+        
         break;
 
     case 'resultatsParPilote':

@@ -468,14 +468,21 @@ switch ($function) {
         }
 
         break;
-    case 'chart':
+    case 'chartPoint':
         $vue = "chart";
         $error = false;
-        drawGraphics("darta", array(1, 2, 3, 4), array(1, 2, 3, 4));
-        break;
+        drawPointGraphics("darta", array(1, 2, 3, 4), array(1, 2, 3, 4));
 
         break;
 
+        break;
+
+        case 'chartBar':
+            $vue = "chart";
+            $error = false;
+            //TODO : Ajouter les resultats des test moyens des femmes et des hommes
+            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(53,31),array(23, 32),array(13, 32),array(43, 24));
+            break;
     case 'cgu':
         // Liste des user déjà enregistrés
         $vue = "cgu";

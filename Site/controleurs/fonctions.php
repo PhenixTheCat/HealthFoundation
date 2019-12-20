@@ -15,6 +15,7 @@ require_once ('lib/jpgraph/src/jpgraph.php');
 require_once ('lib/jpgraph/src/jpgraph_log.php');
 require_once ('lib/jpgraph/src/jpgraph_line.php');
 require_once ('lib/jpgraph/src/jpgraph_scatter.php');
+require_once ('lib/jpgraph/src/jpgraph_bar.php');
 function getOS($ua = '')
 {
     if(!isset($ua)) 
@@ -219,12 +220,12 @@ function editProfil($dataToEdit,$function,$newData) {
            // }
     }
 }
-function drawGraphics($title,$datax,$datay){
+function drawPointGraphics($title,$datax,$datay){
     
      
    
      
-    $graph = new Graph(300,200);
+    $graph = new Graph(600,400);
     $graph->SetScale("linlin");
      
     $graph->img->SetMargin(40,40,40,40);        
@@ -239,5 +240,37 @@ function drawGraphics($title,$datax,$datay){
     $graph->Stroke();
      
     
+}
+
+function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4){
+    $graph = new Graph(600,400,'auto');
+    $graph->SetScale("textlin");
+
+    $graph->SetBox(false);
+    $graph->ygrid->SetFill(false);
+    $graph->xaxis->SetTickLabels(array('F','M'));
+
+    $b1plot = new BarPlot($datatest1);
+    $b2plot = new BarPlot($datatest2);
+    $b3plot = new BarPlot($datatest3);
+    $b4plot = new BarPlot($datatest4);
+
+    $gbplot = new GroupBarPlot(array($b1plot,$b2plot,$b3plot,$b4plot));
+    $graph->Add($gbplot);
+    $b1plot->SetColor("white");
+    $b1plot->SetFillColor("#cc1111");
+
+
+    $b2plot->SetColor("white");
+    $b2plot->SetFillColor("#11cccc");
+
+    $b3plot->SetColor("white");
+    $b3plot->SetFillColor("#1111cc");
+
+    $b4plot->SetColor("white");
+    $b4plot->SetFillColor("#5511cc");
+    $graph->title->Set($title);
+
+    $graph->Stroke();
 }
 ?>
