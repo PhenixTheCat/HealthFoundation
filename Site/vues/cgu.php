@@ -13,6 +13,8 @@
 </header>
 
 <body>
+<div class="mentions">
+    <span class="Mentions">
   <h1> Mentions légales, politique de confidentialité et CGU </h1>
   <p>
 
@@ -35,7 +37,12 @@
     La version actuellement en ligne de ces conditions d'utilisation est la seule opposable pendant toute la durée
     d'utilisation du site et jusqu'à ce qu'une nouvelle version la remplace.
   </p>
+</span>
+</div>
 
+
+<div class="preambule">
+  <span class="preambule">
   <h2>Préambule</h2>
   <p><b>1.1 Site (ci-après « le site »)</b></p>
   <p>
@@ -58,9 +65,14 @@
   <p>
     Le site Healthfoundation est hébergé par ___, dont le siège social est situé 10 rue des vanves,92130.
   </p>
+</span>
+</div>
 
-  <p class=" text-center"> <b>CONDITIONS GÉNÉRALES D'UTILISATION</b></p>
-  <p>
+  <div class="conditions"> <b>CONDITIONS GÉNÉRALES D'UTILISATION</b></div>
+
+
+<div class="article1">
+  <span class="article1">
     <b>ARTICLE 1 – ACCEPTATION DES CONDITIONS GÉNÉRALES D'UTILISATION</b>
   </p>
   <p>
@@ -81,7 +93,11 @@
     de chaque connexion.
   </p>
   <p>&nbsp;</p>
+</span>
+</div>
 
+<div class="article2">
+  <span class="article2">
   <p>
     <b>ARTICLE 2 – INSCRIPTION AUX SERVICES ET GESTION DES IDENTIFIANTS</b>&nbsp;</p>
   <p>
@@ -147,6 +163,12 @@
     l’Utilisateur et sous sa responsabilité exclusive. En conséquence l’Editeur ne pourra être tenu responsable de
     l'utilisation frauduleuse des Identifiants de l'Utilisateur par un tiers.</p>
   <p>
+  </span>
+</div>
+
+
+<div class="article3">
+<span class="article3">
     <b>ARTICLE 3 – ACCÈS AUX SERVICES ET SUSPENSION DES SERVICES</b>
   </p>
   <p>
@@ -170,6 +192,11 @@
     présentes, ou (iii) en cas d'opérations de maintenance. La responsabilité de l’Editeur ne peut être engagée en
     raison de ces interruptions et des conséquences qui peuvent en découler pour l’Utilisateur.</p>
   <p>
+</span>
+</div>
+
+<div class="article4">
+<span class="article4"> 
     <b>ARTICLE 4 - ENGAGEMENT DES UTILISATEURS</b>
   </p>
   <p>L'Utilisateur est informé que l'ensemble des lois et règlements en vigueur sont applicables sur Internet.</p>
@@ -251,6 +278,12 @@
   </p>
   <p>
     <p>
+</span>
+</div>
+
+
+<div class="article5">
+  <span class="article5">
       <b>ARTICLE 5 - DONNÉES&nbsp;A CARACTÈRE&nbsp;PERSONNEL ET COOKIES</b></p>
     <p><b>5.1 Données personnelles</b></p>
     <p>Lors de l’utilisation des Services par l’Utilisateur, des données à caractère personnel sont susceptibles d’être
@@ -320,6 +353,11 @@
       navigateur. Cependant, l'Utilisateur est informé que l'accès à certains services du Site pourra le cas échéant
       s'en trouver impossible ou altéré. </p>
     <p>
+</span>
+</div>
+
+<div class="article6">
+  <span class="article6">
       <b>ARTICLE 6 - LIENS HYPERTEXTES ET SITES COMMERCIAUX PARTENAIRES</b>
     </p>
     <p>
@@ -339,6 +377,11 @@
       recherchée ni au titre de la qualité et/ou des spécifications des produits et services vendus par des partenaires
       commerciaux, ni au titre des opérations de paiement effectuées sur ces sites.
     </p>
+</span>
+</div>
+
+<div class="article10">
+  <span class="article10">
     <p> <b>ARTICLE 10 - CONSERVATION, ARCHIVAGE ET CONVENTION SUR LA PREUVE </b></p>
 
     <p> <b>10.1 Conservation et archivage </b></p>
@@ -364,13 +407,18 @@
       mention « j’ai lu et j’accepte les conditions générales de Public » telle que prévue notamment au sein du
       formulaire d'inscription au compte Public, qu’à une signature manuscrite.
     </p>
+</span>
+</div>
 
+<div class="article11">
+  <span class="article11">
     <p> <b>ARTICLE 11 - LOI APPLICABLE ET JUGE COMPETENT </b></p>
 
     <p>Le non-respect par l’Utilisateur, quelle que soit sa localisation, de l’une quelconque des dispositions des CGU
       et de façon plus générale toute difficulté touchant à son exécution, son interprétation ou sa validité, sont
       soumis à la loi française et aux juridictions françaises. </p>
-
+</span>
+</div>
 
 
 </body>
