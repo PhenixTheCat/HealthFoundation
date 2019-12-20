@@ -1980,3 +1980,114 @@ table {
 
 
 }
+
+/*====================================================CGU==============================================================*/
+
+div.mentions {
+	width: 90%;
+  height: 230px; 
+  background-color: #7CA0E4; 
+  text-align: justify;
+  margin: auto;
+  padding: 1%;
+}
+
+div.preambule {
+	width: 92%;
+  height: 250px; 
+  background-color: #7CA0E4; 
+  text-align: justify;
+  margin: auto;
+  margin-top: 1%
+  padding: 1%;
+}
+
+div.conditions {
+	width: 60%;
+  height: 30px; 
+  background-color: #7CA0E4; 
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+  padding: 1%;
+}
+
+div.article1 {
+	width: 90%;
+  height: 200px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article2 {
+	width: 90%;
+  height: 650px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article3 {
+	width: 90%;
+  height: 300px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article4 {
+	width: 90%;
+  height: 1000px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article5 {
+	width: 90%;
+  height: 900px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article6 {
+	width: 90%;
+  height: 150px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article10 {
+	width: 90%;
+  height: 300px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+div.article11 {
+	width: 90%;
+  height: 80px; 
+  background-color: #7CA0E4; 
+  text-align: justify; 
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+}
