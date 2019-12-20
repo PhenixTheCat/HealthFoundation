@@ -4,7 +4,6 @@
     <div class=logoPrincipal>
         <img src="Images/AppLogo.png" class="logo" alt="Logo Health Foundation">
         <h1><a href="index.php" class="bigTitle">Application Psychotechnique pour Pilotes</a></h1>
-        <h2>"Leader européen du matériel médical."</h2>
         <!---<h2><a href="index.php" class="littleTitle">Application Psychotechnique pour Pilotes</a></h2>--->
     </div>
     <nav <?php  if(!$_SESSION['isConnected']) : ?> class="notConnectedNAV" <?php endif;?>
