@@ -33,6 +33,7 @@
         <table border="1" class="resultatPilote">
             <thead>
                 <tr>
+                     <th>Sexe </th>
                     <th>Nom </th>
                     <th>Prénom</th>
                     <th>Date de naissance</th>
@@ -45,6 +46,9 @@
 
                 <?php foreach ($userByInstructor as $user) { ?>
                 <tr>
+                <td>
+                        <php><?php echo $user['sex']; ?></php>
+                    </td>
                     <td>
                         <php><?php echo $user['last_name']; ?></php>
                     </td>
