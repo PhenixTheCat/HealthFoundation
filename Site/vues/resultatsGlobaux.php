@@ -21,7 +21,7 @@
     <div class="RésultatsGlobaux">
         <span class="Résultats globaux">
             <h1>Résultats globaux</h1>
-
+            <div class="testResults">
             <?php
 
 if ($NbreData != 0)
@@ -80,6 +80,7 @@ if ($NbreData != 0)
 ?>
         </span>
     </div>
+</div>
 
 
 

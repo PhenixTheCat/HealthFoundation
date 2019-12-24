@@ -13,7 +13,7 @@
 
     <div class="headerContact">
         <h1>Resultats pilote</h1>
-        <img src="index.php?redirect=user&function=chartPoint">
+        
 </br>
       <img src="index.php?redirect=user&function=chartBar">
     </div>

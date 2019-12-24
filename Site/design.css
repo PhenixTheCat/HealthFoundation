@@ -1522,6 +1522,9 @@ div.about {
 	margin-right: 5%;
 	margin-top: 0%;
 	text-align: center;
+	border: 1px solid #000000;
+
+
 }
 
 .resultatsParCat {
@@ -1540,7 +1543,7 @@ div.about {
 .resultatsParCat h1 {
 
 	background-image: linear-gradient(rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%), url("Images/resultats.jpg");
-	;
+	
 	opacity: 0, 2;
 	background-repeat: no-repeat;
 	padding: 5%;
@@ -1549,15 +1552,18 @@ div.about {
 	margin-bottom: 0%;
 	background-size: 100%;
 	background-position-y: center;
+
 }
 
 .resultatsParCat p {
-	background-color: white;
+
 	padding: 5%;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 0%;
 	text-align: center;
+	border: 1px solid #000000;
+
 }
 
 #gestionDuStress h1 {
@@ -1571,6 +1577,7 @@ div.about {
 	margin-bottom: 0%;
 	background-size: 100%;
 	background-position-y: center;
+
 }
 
 #tempsDeReaction h1 {
@@ -1616,6 +1623,8 @@ div.about {
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
+		border: 1px solid #000000;
+
 }
 
 #resultatenligne p {
@@ -1625,6 +1634,8 @@ div.about {
 	margin-right: 5%;
 	margin-top: 0%;
 	text-align: center;
+	border: 1px solid #000000;
+
 }
 
 #resultatenligne h1 {
@@ -1639,13 +1650,14 @@ div.about {
 	background-position-y: center;
 }
 
-.testResults p {
-	background-color: white;
+.testResults  {
 	padding: 5%;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 0%;
 	text-align: center;
+	border : solid;
+	border : 1px solid black;
 }
 
 /* Pour tout les tests */
@@ -1656,6 +1668,7 @@ div.about {
 	text-align: center;
 	padding: 1%;
 	margin: 5%;
+	
 }
 
 .GestionDuStress h1 {
@@ -1790,6 +1803,7 @@ div.about {
 	margin-right: auto;
 }
 
+
 /*=====================         Buttons de changement de page, ou submit pour fond bleu          =====================*/
 .submitButtons {
 	font-size: 20px;
@@ -1846,6 +1860,8 @@ div.about {
 	font-weight: 500;
 	transition: all 0.3s;
 }
+
+
 
 .editButtons:hover {
 	content: '';
@@ -1998,7 +2014,7 @@ div.preambule {
   background-color: #7CA0E4; 
   text-align: justify;
   margin: auto;
-  margin-top: 1%
+  margin-top: 1%;
   padding: 1%;
 }
 
@@ -2091,3 +2107,5 @@ div.article11 {
   margin-top: 1%;
   padding: 1%;
 }
+
+

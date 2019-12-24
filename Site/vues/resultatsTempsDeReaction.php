@@ -18,8 +18,10 @@
 
 
   <div class="tempsDeReaction">
-    <div class="testResults">
+
       <h1>Temps de réaction</h1>
+      <div class="testResults">
+      <img src="index.php?redirect=user&function=chartReactionTime">
       <?php
 
 if ($NbreData != 0)

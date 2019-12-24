@@ -16,8 +16,10 @@
 <body>
 
   <div class="seuilDePerception">
-    <div class="testResults">
       <h1><a href="seuilDePerception.php">Seuil de perception</a></h1>
+      <div class="testResults">
+      <img src="index.php?redirect=user&function=chartPerception">
+      
       <?php
 
 if ($NbreData != 0)

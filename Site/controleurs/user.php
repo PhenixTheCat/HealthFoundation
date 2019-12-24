@@ -14,7 +14,7 @@
 
 include('./modele/requests.user.php');
 include('./modele/requests.resetpass.php');
-
+include('./modele/requests.test.php');
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['function']) || empty($_GET['function'])) {
     $function = "accueil";
@@ -342,7 +342,8 @@ switch ($function) {
             $_SESSION['pilotId'] = $id;
             header("Location:index.php?redirect=test&function=resultatsParPilote");
         }
-
+        //getTestAVGPerGender($database,'Female',1,$_SESSION['userID']);
+        
         break;
 
     case 'modificationMotDePasse':
@@ -468,12 +469,36 @@ switch ($function) {
         }
 
         break;
-    case 'chartPoint':
+    case 'chartStress':
         $vue = "chart";
         $error = false;
-        drawPointGraphics("darta", array(1, 2, 3, 4), array(1, 2, 3, 4));
+
+
+        drawPointGraphics("Resultats du stress en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],1))['timeline'],(getTestTimeline($database,$_SESSION['pilotId'],1))['value']);
 
         break;
+
+    case 'chartTonality':
+        $vue = "chart";
+        $error = false;
+        drawPointGraphics("Resultats de la reconnaissance de tonalité en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],4)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],4)['value']);
+
+        break;
+
+    case 'chartReactionTime':
+        $vue = "chart";
+        $error = false;
+        drawPointGraphics("Resultats du temps de réaction en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],2)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],2)['value']);
+
+      
+
+        break;
+            
+    case 'chartPerception':
+        $vue = "chart";
+        $error = false;
+        drawPointGraphics("Resultats du seuil de perception en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],3)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],3)['value']);
+
 
         break;
 
@@ -481,7 +506,8 @@ switch ($function) {
             $vue = "chart";
             $error = false;
             //TODO : Ajouter les resultats des test moyens des femmes et des hommes
-            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(53,31),array(23, 32),array(13, 32),array(43, 24));
+           
+            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(getTestAVGPerGender($database,'Female',1,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',1,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',2,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',2,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',3,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',3,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',4,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',4,$_SESSION['userID'])[0]));
             break;
     case 'cgu':
         // Liste des user déjà enregistrés
