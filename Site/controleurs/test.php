@@ -14,6 +14,7 @@
 
 //include('./modele/requests.generiques.php');
 include('./modele/requests.user.php');
+include('./modele/requests.test.php');
 
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil

@@ -15,7 +15,7 @@
         <h1>Resultats pilote</h1>
         
 </br>
-      <img src="index.php?redirect=user&function=chartBar">
+      <img src="index.php?redirect=chart&function=chartBar">
     </div>
 
      

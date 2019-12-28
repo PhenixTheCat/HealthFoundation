@@ -44,3 +44,4 @@ if(isset($_GET['redirect']) && !empty($_GET['redirect'])) {
 
 // On appelle le contrôleur
 include('controleurs/' . $url . '.php');
+?>

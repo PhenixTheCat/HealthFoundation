@@ -16,9 +16,11 @@
     <div class="GestionDuStress">
         <span class="Gestion du stress">
             <h1>Gestion du stress</h1>
+            <?php echo printError($error); ?>
             <div class="testResults">
-            <img src="index.php?redirect=user&function=chartStress">
+            <img src="index.php?redirect=chart&function=chartStress">
             <?php
+            
 
 if ($NbreData != 0)
 {
@@ -76,7 +78,7 @@ if ($NbreData != 0)
 ?>
         </span>
     </div>
-</divW>
+</div>
 
 
 

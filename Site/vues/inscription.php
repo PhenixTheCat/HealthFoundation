@@ -24,16 +24,18 @@
         <a class="enteteInscription" href="index.php?redirect=user&function=inscription"> Inscription </a>
       </span>
       <fieldset>
-        <form action="" method="post">
+        <div id = "error"></div>
+        <form id = "form" action="" method="post">
 
           <label for="mail" id="email">Email</label>
-          <input type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
+          <input id = "email" type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
           <label for="mdp">Mot de passe</label>
-          <input type="password" name="mdp" id="mdp">
+          <input id ="password"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="doit contenir une lettre minuscule, une lettre majuscule,un chiffre et doit être supérieur à 8 " name="mdp">
           <br>
+         
           <label for="mdp2">Confirmation du mot de passe</label>
-          <input type="password" name="mdp2" id="mdp2">
+          <input  type="password" name="mdp2" id="mdp2">
           <br>
           <label for="codeFormateur">Code formateur</label>
           <input type="text" name="codeFormateur" id="codeFormateur"

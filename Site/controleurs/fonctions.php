@@ -185,7 +185,6 @@ function sendMail(string $email,$subject,$message)
            $mail->isSMTP();                                            // Send using SMTP
                $mail->Host       = 'smtp.free.fr';                    // Set the SMTP server to send through
                $mail->SMTPAuth   = true;    
-               $mail->SMTPDebug = 2;                               // Enable SMTP authentication
                $mail->Username   = 'health.foundation.g3c@free.fr';                     // SMTP username
                $mail->Password   = "q0fvwtpy";                               // SMTP password
                $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted

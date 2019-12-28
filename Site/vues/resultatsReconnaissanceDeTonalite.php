@@ -20,7 +20,7 @@
     <div class="reconnaissanceDeTonalite">
         <h1>Reconnaissance de tonalité</h1>
         <div class="testResults">
-        <img src="index.php?redirect=user&function=chartTonality">
+        <img src="index.php?redirect=chart&function=chartTonality">
             <?php
 
 if ($NbreData != 0)

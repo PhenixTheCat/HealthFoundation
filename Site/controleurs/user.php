@@ -72,7 +72,8 @@ switch ($function) {
         $vue = "inscription";
         $error = false;
         if (isset($_POST['inscriptionP1'])) {
-            if (isString($_POST['mail']) and isString($_POST['codeFormateur']) and isPassword($_POST['mdp']) and isPassword($_POST['mdp2'])) {
+            if (isString($_POST['mail']) and isString($_POST['codeFormateur'])){
+            if(isPassword($_POST['mdp']) and isPassword($_POST['mdp2'])) {
                 $email = $_POST['mail'];
                 $password = hashPassword($_POST['mdp']);
                 $password2 = hashPassword($_POST['mdp2']);
@@ -106,7 +107,7 @@ switch ($function) {
                                 $error = "Le code formateur est invalide";
                             }
                         } else {
-                            $error = "Vos mots de passes ne correspondent pas !";
+                            $error = "Vos mots de passes ne correspondent pas!";
                         }
                     } else {
                         $error = "Adresse mail déjà utilisée !";
@@ -114,7 +115,11 @@ switch ($function) {
                 } else {
                     $error = "Votre adresse mail n'est pas valide !";
                 }
-            } else {
+            }
+            else{
+                $error = "Votre mot de passe doit contenir plus de 8 caractères, une lettre minuscule, une lettre masjuscule et un chiffre";
+            }
+        }else {
                 $error = "Tous les champs doivent être complétés !";
             }
         }
@@ -467,48 +472,8 @@ switch ($function) {
                 header('Location:index.php?redirect=user&function=gestionDesUtilisateurs');
             }
         }
+    break;
 
-        break;
-    case 'chartStress':
-        $vue = "chart";
-        $error = false;
-
-
-        drawPointGraphics("Resultats du stress en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],1))['timeline'],(getTestTimeline($database,$_SESSION['pilotId'],1))['value']);
-
-        break;
-
-    case 'chartTonality':
-        $vue = "chart";
-        $error = false;
-        drawPointGraphics("Resultats de la reconnaissance de tonalité en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],4)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],4)['value']);
-
-        break;
-
-    case 'chartReactionTime':
-        $vue = "chart";
-        $error = false;
-        drawPointGraphics("Resultats du temps de réaction en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],2)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],2)['value']);
-
-      
-
-        break;
-            
-    case 'chartPerception':
-        $vue = "chart";
-        $error = false;
-        drawPointGraphics("Resultats du seuil de perception en fonction du temps",getTestTimeline($database,$_SESSION['pilotId'],3)['timeline'],getTestTimeline($database,$_SESSION['pilotId'],3)['value']);
-
-
-        break;
-
-        case 'chartBar':
-            $vue = "chart";
-            $error = false;
-            //TODO : Ajouter les resultats des test moyens des femmes et des hommes
-           
-            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(getTestAVGPerGender($database,'Female',1,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',1,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',2,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',2,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',3,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',3,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',4,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',4,$_SESSION['userID'])[0]));
-            break;
     case 'cgu':
         // Liste des user déjà enregistrés
         $vue = "cgu";

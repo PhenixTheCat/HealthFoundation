@@ -23,11 +23,33 @@ function getTestAVGPerGender(PDO $database,$gender,$testId,$instructorId){
 
 function getTestTimeline($database,$pilotId,$testId){
     try{
-        $request = $database->prepare("SELECT timeline,value FROM results WHERE test=(SELECT id FROM test WHERE (pilot =? && measured_data=?))");
+        $request = $database->prepare("SELECT timeline FROM results WHERE test=(SELECT id FROM test WHERE (pilot =? && measured_data=?))");
+    
+        $request->execute(array($pilotId,$testId));
+        if ($request->rowCount() > 0) {
+        return $request->fetchAll(PDO::FETCH_COLUMN, 0);}
+        else{
+            return array(null);
+        }
+    }
+
+        catch(Exception $e){
+            return array(null);
+        }
+}
+
+function getTestValue($database,$pilotId,$testId){
+    try{
+        $request = $database->prepare("SELECT value FROM results WHERE test=(SELECT id FROM test WHERE (pilot =? && measured_data=?))");
     
         $request->execute(array($pilotId,$testId));
 
-        return $request->fetchAll();}
+        if ($request->rowCount() > 0) {
+            return $request->fetchAll(PDO::FETCH_COLUMN, 0);}
+            else{
+                return array(null);
+            }
+        }
 
         catch(Exception $e){
             return array(null);
