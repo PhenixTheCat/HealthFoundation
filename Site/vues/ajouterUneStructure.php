@@ -82,7 +82,7 @@
             <option value="Cameroun">Cameroun </option>
             <option value="Canada">Canada </option>
             <option value="Canaries">&#206;les&#32;Canaries </option>
-            <option value="Cap_vert">Cap&#45;Vert </option>
+            <option value="Cap_vert">Cap&#150;Vert </option>
             <option value="Chili">Chili </option>
             <option value="Chine">Chine </option>
             <option value="Chypre">Chypre </option>
@@ -108,7 +108,7 @@
             <option value="Erythree">&#201;rythr&#233;e </option>
             <option value="Espagne">Espagne </option>
             <option value="Estonie">Estonie </option>
-            <option value="Etats_Unis">&#201;tats&#45;Unis </option>
+            <option value="Etats_Unis">&#201;tats&#150;Unis </option>
             <option value="Ethiopie">&#201;thiopie </option>
 
             <option value="Falkland">Falkland </option>
@@ -130,7 +130,7 @@
             <option value="Guatemala">Guatemala</option>
             <option value="Guernesey">Guernesey </option>
             <option value="Guinee">Guin&#233;e </option>
-            <option value="Guinee_Bissau">Guin&#233;e&#45;Bissau </option>
+            <option value="Guinee_Bissau">Guin&#233;e&#150;Bissau </option>
             <option value="Guinee_equatoriale">Guinee&#32;&#233;quatoriale </option>
             <option value="Guyana">Guyana </option>
             <option value="Guyane">Guyane </option>
@@ -213,68 +213,67 @@
 
             <option value="Oman">Oman </option>
             <option value="Ouganda">Ouganda </option>
-            <option value="Ouzbekistan">Ouzbekistan </option>
+            <option value="Ouzbekistan">Ouzb&#233;kistan </option>
 
             <option value="Pakistan">Pakistan </option>
-            <option value="Palau">Palau </option>
+            <option value="Palaos">Palaos </option>
             <option value="Palestine">Palestine </option>
             <option value="Panama">Panama </option>
-            <option value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </option>
+            <option value="Papouasie_Nouvelle_Guinee">Papouasie&#150;Nouvelle&#150;Guin&#233;e </option>
             <option value="Paraguay">Paraguay </option>
-            <option value="Pays_Bas">Pays_Bas </option>
-            <option value="Perou">Perou </option>
+            <option value="Pays_Bas">Pays&#150;Bas </option>
+            <option value="Perou">P&#233;rou </option>
             <option value="Philippines">Philippines </option>
             <option value="Pologne">Pologne </option>
-            <option value="Polynesie">Polynesie </option>
-            <option value="Porto_Rico">Porto_Rico </option>
+            <option value="Polynesie">Polyn&#233;sie </option>
+            <option value="Porto_Rico">Porto&#32;Rico </option>
             <option value="Portugal">Portugal </option>
 
             <option value="Qatar">Qatar </option>
 
-            <option value="Republique_Dominicaine">Republique_Dominicaine </option>
-            <option value="Republique_Tcheque">Republique_Tcheque </option>
-            <option value="Reunion">Reunion </option>
+            <option value="Republique_Dominicaine">R&#233;publique&#32;dominicaine </option>
+            <option value="Republique_Tcheque">R&#233;publique&#32;Tch&#232;que </option>
+            <option value="Reunion">R&#233;union </option>
             <option value="Roumanie">Roumanie </option>
-            <option value="Royaume_Uni">Royaume_Uni </option>
+            <option value="Royaume_Uni">Royaume&#150;Uni </option>
             <option value="Russie">Russie </option>
             <option value="Rwanda">Rwanda </option>
 
-            <option value="Sahara Occidental">Sahara Occidental </option>
-            <option value="Sainte_Lucie">Sainte_Lucie </option>
-            <option value="Saint_Marin">Saint_Marin </option>
-            <option value="Salomon">Salomon </option>
+            <option value="Sahara_Occidental">Sahara&#32;Occidental </option>
+            <option value="Sainte_Lucie">Sainte&#150;Lucie </option>
+            <option value="Saint_Marin">Saint&#45;Marin </option>
+            <option value="Salomon">&#206;les&#32;Salomon </option>
             <option value="Salvador">Salvador </option>
-            <option value="Samoa_Occidentales">Samoa_Occidentales</option>
-            <option value="Samoa_Americaine">Samoa_Americaine </option>
-            <option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option>
-            <option value="Senegal">Senegal </option>
+            <option value="Samoa">&#206;les&#32;Samoa</option>
+            <option value="Sao_Tome_et_Principe">Sao&#32;Tom&#233;&#150;et&#150;Principe </option>
+            <option value="Senegal">S&#233;n&#233;gal </option>
             <option value="Seychelles">Seychelles </option>
-            <option value="Sierra Leone">Sierra Leone </option>
+            <option value="Sierra Leone">Sierra&#32;Leone </option>
             <option value="Singapour">Singapour </option>
             <option value="Slovaquie">Slovaquie </option>
-            <option value="Slovenie">Slovenie</option>
+            <option value="Slovenie">Slov&#32;nie</option>
             <option value="Somalie">Somalie </option>
             <option value="Soudan">Soudan </option>
-            <option value="Sri_Lanka">Sri_Lanka </option>
-            <option value="Suede">Suede </option>
+            <option value="Sri_Lanka">Sri&#150;Lanka </option>
+            <option value="Suede">Su&#232;de </option>
             <option value="Suisse">Suisse </option>
-            <option value="Surinam">Surinam </option>
-            <option value="Swaziland">Swaziland </option>
+            <option value="Suriname">Suriname </option>
+            <option value="Eswatini">Eswatini </option>
             <option value="Syrie">Syrie </option>
 
             <option value="Tadjikistan">Tadjikistan </option>
-            <option value="Taiwan">Taiwan </option>
+            <option value="Taiwan">Ta&#239;wan </option>
             <option value="Tonga">Tonga </option>
             <option value="Tanzanie">Tanzanie </option>
             <option value="Tchad">Tchad </option>
-            <option value="Thailande">Thailande </option>
+            <option value="Thailande">Tha&#239;lande </option>
             <option value="Tibet">Tibet </option>
-            <option value="Timor_Oriental">Timor_Oriental </option>
+            <option value="Timor">Timor </option>
             <option value="Togo">Togo </option>
-            <option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
-            <option value="Tristan da cunha">Tristan de cuncha </option>
+            <option value="Trinite_et_Tobago">Trinit&#233;&#150;et&#150;Tobago </option>
+            <option value="Tristan da cunha">Tristan&#32;da&#32;cuncha </option>
             <option value="Tunisie">Tunisie </option>
-            <option value="Turkmenistan">Turmenistan </option>
+            <option value="Turkmenistan">Turm&#233;nistan </option>
             <option value="Turquie">Turquie </option>
 
             <option value="Ukraine">Ukraine </option>
@@ -282,13 +281,12 @@
 
             <option value="Vanuatu">Vanuatu </option>
             <option value="Vatican">Vatican </option>
-            <option value="Venezuela">Venezuela </option>
-            <option value="Vierges_Americaines">Vierges_Americaines </option>
-            <option value="Vierges_Britanniques">Vierges_Britanniques </option>
+            <option value="Venezuela">V&#233;n&#233;zu&#233;la </option>
+            <option value="Vierges">&#206;les&#32;Vierges </option>
             <option value="Vietnam">Vietnam </option>
 
             <option value="Wake">Wake </option>
-            <option value="Wallis et Futuma">Wallis et Futuma </option>
+            <option value="Wallis et Futuna">Wallis&#150;et&#150;Futuna </option>
 
             <option value="Yemen">Yemen </option>
             <option value="Yougoslavie">Yougoslavie </option>
