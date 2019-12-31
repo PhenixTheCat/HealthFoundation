@@ -98,7 +98,6 @@
 
 
         <div class="formulaireContact">
-            <?php echo printError($error); ?>
             <h2>Votre question n'est pas présente ?</h2>
             <form action="" method="post">
                 <label for="Nom" id="nom">Nom</label>
