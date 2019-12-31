@@ -27,11 +27,11 @@
         <div id = "error"></div>
         <form id = "form" action="" method="post">
 
-          <label for="mail" id="email">Email</label>
+          <label for="mail" id="email">E-mail</label>
           <input id = "email" type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
           <label for="mdp">Mot de passe</label>
-          <input id ="password"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="doit contenir une lettre minuscule, une lettre majuscule,un chiffre et doit être supérieur à 8 " name="mdp">
+          <input id ="password"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="doit contenir une lettre minuscule, une lettre majuscule,un chiffre et au moins 8 caractères" name="mdp">
           <br>
          
           <label for="mdp2">Confirmation du mot de passe</label>
@@ -41,7 +41,7 @@
           <input type="text" name="codeFormateur" id="codeFormateur"
             value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
           <br>
-          <input class="submitButtons" type="submit" Value="Suivant" name="inscriptionP1">
+          <input class="submitButtons" type="submit" value="Suivant" name="inscriptionP1">
         </form>
       </fieldset>
 
