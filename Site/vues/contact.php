@@ -32,11 +32,11 @@
         <label for="prenom">Prénom</label>
         <input type="text" name="prenom" placeholder="Votre prénom"
           value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>" /><br /><br />
-        <label for="mail">Adresse e-mail</label>
+        <label for="mail">Adresse email</label>
         <input type="email" name="mail" placeholder="Votre mail"
           value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
         <label for="objet">Objet</label>
-        <input type="text" name="objet" placeholder="L'objet du mail"
+        <input type="text" name="objet" placeholder="L'objet de votre message"
           value="<?php if(isset($_POST['objet'])) { echo $_POST['objet']; } ?>" /><br /><br />
         <label for="message">Votre message</label>
         <textarea name="message" rows="10" cols="55" placeholder="Votre message">
