@@ -43,58 +43,58 @@
             <option value="France" selected="selected">France </option>
 
             <option value="Afghanistan">Afghanistan </option>
-            <option value="Afrique_Centrale">Afrique_Centrale </option>
-            <option value="Afrique_du_sud">Afrique_du_Sud </option>
+            <option value="Afrique_Centrale">Afrique&#32;Centrale </option>
+            <option value="Afrique_du_sud">Afrique&#32;du&#32;Sud </option>
             <option value="Albanie">Albanie </option>
-            <option value="Algerie">Algerie </option>
+            <option value="Algerie">Alg&#233;rie </option>
             <option value="Allemagne">Allemagne </option>
             <option value="Andorre">Andorre </option>
             <option value="Angola">Angola </option>
             <option value="Anguilla">Anguilla </option>
-            <option value="Arabie_Saoudite">Arabie_Saoudite </option>
+            <option value="Arabie_Saoudite">Arabie&#32;Saoudite </option>
             <option value="Argentine">Argentine </option>
-            <option value="Armenie">Armenie </option>
+            <option value="Armenie">Arm&#233;nie </option>
             <option value="Australie">Australie </option>
             <option value="Autriche">Autriche </option>
-            <option value="Azerbaidjan">Azerbaidjan </option>
+            <option value="Azerbaidjan">Azerba&#239;djan </option>
 
             <option value="Bahamas">Bahamas </option>
             <option value="Bangladesh">Bangladesh </option>
             <option value="Barbade">Barbade </option>
-            <option value="Bahrein">Bahrein </option>
+            <option value="Bahrein">Bahre&#239;n </option>
             <option value="Belgique">Belgique </option>
             <option value="Belize">Belize </option>
-            <option value="Benin">Benin </option>
+            <option value="Benin">B&#233;nin </option>
             <option value="Bermudes">Bermudes </option>
-            <option value="Bielorussie">Bielorussie </option>
+            <option value="Bielorussie">Bi&#233;lorussie </option>
             <option value="Bolivie">Bolivie </option>
             <option value="Botswana">Botswana </option>
             <option value="Bhoutan">Bhoutan </option>
-            <option value="Boznie_Herzegovine">Boznie_Herzegovine </option>
-            <option value="Bresil">Bresil </option>
+            <option value="Boznie_Herzegovine">Boznie&#45;Herz&#233;govine </option>
+            <option value="Bresil">Br&#233;sil </option>
             <option value="Brunei">Brunei </option>
             <option value="Bulgarie">Bulgarie </option>
-            <option value="Burkina_Faso">Burkina_Faso </option>
+            <option value="Burkina_Faso">Burkina&#32;Faso </option>
             <option value="Burundi">Burundi </option>
 
-            <option value="Caiman">Caiman </option>
+            <option value="Caiman">&#206;les&#32;Ca&#239;man </option>
             <option value="Cambodge">Cambodge </option>
             <option value="Cameroun">Cameroun </option>
             <option value="Canada">Canada </option>
-            <option value="Canaries">Canaries </option>
-            <option value="Cap_vert">Cap_Vert </option>
+            <option value="Canaries">&#206;les&#32;Canaries </option>
+            <option value="Cap_vert">Cap&#45;Vert </option>
             <option value="Chili">Chili </option>
             <option value="Chine">Chine </option>
             <option value="Chypre">Chypre </option>
             <option value="Colombie">Colombie </option>
             <option value="Comores">Colombie </option>
             <option value="Congo">Congo </option>
-            <option value="Congo_democratique">Congo_democratique </option>
-            <option value="Cook">Cook </option>
-            <option value="Coree_du_Nord">Coree_du_Nord </option>
-            <option value="Coree_du_Sud">Coree_du_Sud </option>
-            <option value="Costa_Rica">Costa_Rica </option>
-            <option value="Cote_d_Ivoire">Côte_d_Ivoire </option>
+            <option value="Congo_democratique">R&#233;publique&#32;d&#233;mocratique&#32;du&#32;Congo </option>
+            <option value="Cook">&#206;les&#32;Cook </option>
+            <option value="Coree_du_Nord">Cor&#233;e&#32;du&#32;Nord </option>
+            <option value="Coree_du_Sud">Cor&#233;e&#32;du&#32;Sud </option>
+            <option value="Costa_Rica">Costa&#233;Rica </option>
+            <option value="Cote_d_Ivoire">Côte&#32;d&#39;Ivoire </option>
             <option value="Croatie">Croatie </option>
             <option value="Cuba">Cuba </option>
 
@@ -102,55 +102,55 @@
             <option value="Djibouti">Djibouti </option>
             <option value="Dominique">Dominique </option>
 
-            <option value="Egypte">Egypte </option>
-            <option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
-            <option value="Equateur">Equateur </option>
-            <option value="Erythree">Erythree </option>
+            <option value="Egypte">&#201;gypte </option>
+            <option value="Emirats_Arabes_Unis">&#201;mirats&#32;arabes&#32;unis </option>
+            <option value="Equateur">&#201;quateur </option>
+            <option value="Erythree">&#201;rythr&#233;e </option>
             <option value="Espagne">Espagne </option>
             <option value="Estonie">Estonie </option>
-            <option value="Etats_Unis">Etats_Unis </option>
-            <option value="Ethiopie">Ethiopie </option>
+            <option value="Etats_Unis">&#201;tats&#45;Unis </option>
+            <option value="Ethiopie">&#201;thiopie </option>
 
             <option value="Falkland">Falkland </option>
-            <option value="Feroe">Feroe </option>
-            <option value="Fidji">Fidji </option>
+            <option value="Feroe">F&#233;ro&#233; </option>
+            <option value="Fidji">&#206;les&#32;Fidji </option>
             <option value="Finlande">Finlande </option>
             <option value="France">France </option>
 
             <option value="Gabon">Gabon </option>
             <option value="Gambie">Gambie </option>
-            <option value="Georgie">Georgie </option>
+            <option value="Georgie">G&#233;orgie </option>
             <option value="Ghana">Ghana </option>
             <option value="Gibraltar">Gibraltar </option>
-            <option value="Grece">Grece </option>
+            <option value="Grece">Gr&#232;ce </option>
             <option value="Grenade">Grenade </option>
             <option value="Groenland">Groenland </option>
             <option value="Guadeloupe">Guadeloupe </option>
             <option value="Guam">Guam </option>
             <option value="Guatemala">Guatemala</option>
             <option value="Guernesey">Guernesey </option>
-            <option value="Guinee">Guinee </option>
-            <option value="Guinee_Bissau">Guinee_Bissau </option>
-            <option value="Guinee equatoriale">Guinee_Equatoriale </option>
+            <option value="Guinee">Guin&#233;e </option>
+            <option value="Guinee_Bissau">Guin&#233;e&#45;Bissau </option>
+            <option value="Guinee_equatoriale">Guinee&#32;&#233;quatoriale </option>
             <option value="Guyana">Guyana </option>
-            <option value="Guyane_Francaise ">Guyane_Francaise </option>
+            <option value="Guyane">Guyane </option>
 
-            <option value="Haiti">Haiti </option>
-            <option value="Hawaii">Hawaii </option>
+            <option value="Haiti">Ha&#239;ti </option>
+            <option value="Hawai">Hawa&#239; </option>
             <option value="Honduras">Honduras </option>
-            <option value="Hong_Kong">Hong_Kong </option>
+            <option value="Hong_Kong">Hong&#32;Kong </option>
             <option value="Hongrie">Hongrie </option>
 
             <option value="Inde">Inde </option>
-            <option value="Indonesie">Indonesie </option>
+            <option value="Indonesie">Indon&#233;sie </option>
             <option value="Iran">Iran </option>
-            <option value="Iraq">Iraq </option>
+            <option value="Irak">Irak </option>
             <option value="Irlande">Irlande </option>
             <option value="Islande">Islande </option>
-            <option value="Israel">Israel </option>
-            <option value="Italie">italie </option>
+            <option value="Israel">Isra&#235;l </option>
+            <option value="Italie">Italie </option>
 
-            <option value="Jamaique">Jamaique </option>
+            <option value="Jamaique">Jama&#239;que </option>
             <option value="Jan Mayen">Jan Mayen </option>
             <option value="Japon">Japon </option>
             <option value="Jersey">Jersey </option>
@@ -160,7 +160,7 @@
             <option value="Kenya">Kenya </option>
             <option value="Kirghizstan">Kirghizistan </option>
             <option value="Kiribati">Kiribati </option>
-            <option value="Koweit">Koweit </option>
+            <option value="Koweit">Kowe&#239;t </option>
 
             <option value="Laos">Laos </option>
             <option value="Lesotho">Lesotho </option>
@@ -173,7 +173,7 @@
             <option value="Lybie">Lybie </option>
 
             <option value="Macao">Macao </option>
-            <option value="Macedoine">Macedoine </option>
+            <option value="Macedoine">Mac&#233;doine </option>
             <option value="Madagascar">Madagascar </option>
             <option value="Madère">Madère </option>
             <option value="Malaisie">Malaisie </option>
