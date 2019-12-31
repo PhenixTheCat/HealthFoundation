@@ -35,9 +35,9 @@
           <th>Prénom</th>
           <!-- <th>Sexe</th> -->
           <th>Date de naissance</th>
-          <th> Type </th>
+          <th>Type </th>
           <th>Structure</th>
-          <th> Status </th>
+          <th>Statut </th>
 
           <th>Gestion</th>
         </tr>
