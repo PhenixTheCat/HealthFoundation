@@ -38,7 +38,7 @@
           <h5> <?php echo $coordonnees['first_name'];?></h5>
           <h4> Date de naissance </h4>
           <h5><?php echo $coordonnees['birthdate'];?></h5>
-          <h4> Adresse email</h4>
+          <h4> Adresse e-mail</h4>
           <h5><?php echo $coordonnees['email'];?></h5>
           <h4> Mot de passe </h4>
 
