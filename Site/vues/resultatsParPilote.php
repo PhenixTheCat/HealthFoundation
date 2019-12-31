@@ -15,7 +15,7 @@
 
 <body class="pasImage">
 <div class="headerContact">
-    <h1 > Résultat de <?php echo $user['last_name']." ".$user['first_name'] ?>
+    <h1 > Résultats de <?php echo $user['last_name']." ".$user['first_name'] ?>
     </h1>
     </div>
 
@@ -31,7 +31,7 @@
         <h3> Resultats détaillés </h3>
         <div id="gestionDuStress" >
             <h1><a href="index.php?redirect=test&function=resultatsGestionDuStress">Gestion du stress</a></h1>
-            <p>Cliquez sur cet onglet pour faire apparaître les resultats du test de la gestion du stress</p>
+            <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test de la gestion du stress</p>
         </div>
 
         <div id="reconnaissanceDeTonalite">
