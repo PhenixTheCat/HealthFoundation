@@ -30,6 +30,7 @@ if ($NbreData != 0)
           <tr>
             <th>id</th>
             <th>test</th>
+            <th>timeline</th>
             <th>valeur</th>
             <th>type</th>
             <th>unité</th>
