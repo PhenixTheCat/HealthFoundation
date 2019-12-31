@@ -115,8 +115,8 @@
                     <h3>Nos technologies de pointe</h3>
                     <div>
                         Découvrez nos technologies les
-                        plus performantes et récemment
-                        mises au jour pour vous.
+                        plus performantes et récentes,
+                        mises à jour spécialement pour vous.
                     </div>
                 </div>
                 <div class="info2">
