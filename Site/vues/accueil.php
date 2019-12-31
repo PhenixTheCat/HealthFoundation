@@ -59,7 +59,7 @@
                 </div>
                 <div class="partieMenu">
                     <img src="Images/poumon.png" class="logo" alt="Logo poumon">
-                    <div>Réalisations de tests respiratoires grâce aux examens de Bronchoscopie</div>
+                    <div>Réalisations de tests respiratoires grâce aux examens de bronchoscopie</div>
                 </div>
             </div>
             <div class="ligneMenu">
