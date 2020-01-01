@@ -1,8 +1,8 @@
-/* SIMPLE QUIZ BUILDER v.1.1 by © 2013 Luc De Droogh (http://www.ldd-soft.be) */
+
 
 if(mix==1){qst=mix(qst);}//mélanger les questions à chaque chargement si "mix" est sur 1
 if(nb_q<1){nb_q=qst.length;}//le nombre de questions à poser n'a pas été précisé dans le fichier "questions.js". Toutes les questions seront posées.
-var q=0;var br=0;var points=0;var chkd=0;var msg="";var tempo;var i=0;var z=0;var fichier_son="";var min, sec;
+var q=0;var br=0;var points=0;var chkd=0;var msg="";var tempo;var i=0;var z=0;var min, sec;
 var q_en_cours=0;
 
 function mix(tbl){
@@ -114,7 +114,7 @@ function corriger(numq){
 	if(br==1){
 		//en cas de bonne réponse
 		if(qst[numq][10]){clearTimeout(tempo);}//s'il y a un chrono, il faut l'arrêter
-		image.innerHTML="&nbsp;&nbsp;<img src='images/yes.png' alt='YES' />";
+		image.innerHTML="&nbsp;&nbsp;<img src='Images/yes.png' alt='YES' />";
 		document.getElementById("btnOK").style.display="none";
 		creer_feedback();
 		if(document.getElementById("norep")){document.getElementById("norep").style.display="none";}
@@ -130,7 +130,7 @@ function corriger(numq){
 		return false;
 	}
 	else{ //en cas de mauvaise réponse
-		image.innerHTML="&nbsp;&nbsp;<img src='images/no.png' alt='NO' />";
+		image.innerHTML="&nbsp;&nbsp;<img src='Images/no.png' alt='NO' />";
 		creer_feedback();
 		msg=document.createElement("div");
 		if(encore==1){msg.innerHTML="<div class='desole'>R\u00e9ponse incorrecte ! R\u00e9essayez !<\/div>";}
