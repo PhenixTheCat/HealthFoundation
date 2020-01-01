@@ -126,7 +126,6 @@
             <option value="Feroe">F&#233;ro&#233; </option>
             <option value="Fidji">&#206;les Fidji </option>
             <option value="Finlande">Finlande </option>
-            <option value="France">France </option>
 
             <option value="Gabon">Gabon </option>
             <option value="Gambie">Gambie </option>
