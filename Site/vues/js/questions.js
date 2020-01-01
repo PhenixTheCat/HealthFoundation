@@ -14,7 +14,7 @@ var qst=new Array();// <== NE PAS MODIFIER !!
 var n=-1;			 // <== NE PAS MODIFIER !!
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='images/4.jpg' alt='question1' class='image1' /><br/>";
+qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='Images/4.jpg' alt='question1' class='image1' /><br/>";
 qst[n][1]="8";//proposition A
 qst[n][2]="4";//proposition B
 qst[n][3]="3";//proposition C
@@ -29,7 +29,7 @@ qst[n][11]="";//document annexé
 
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='images/16.jpg' alt='question2' class='image2' /><br/>";
+qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='Images/16.jpg' alt='question2' class='image2' /><br/>";
 qst[n][1]="76";//proposition A
 qst[n][2]="16";//proposition B
 qst[n][3]="26";//proposition C
@@ -43,7 +43,7 @@ qst[n][10]="00:10";//délai pour répondre à la question
 qst[n][11]="";//document annexé
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='images/73.png' alt='question3' class='image3' /><br/>";
+qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='Images/73.png' alt='question3' class='image3' /><br/>";
 qst[n][1]="68";//proposition A
 qst[n][2]="78";//proposition B
 qst[n][3]="73";//proposition C
@@ -57,7 +57,7 @@ qst[n][10]="00:10";//délai pour répondre à la question
 qst[n][11]="";//document annexé
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='images/rien.jpg' alt='question4' class='image4' /><br/>";
+qst[n][0]="<p>Quel nombre voyez-vous ?</p><img src='Images/rien.jpg' alt='question4' class='image4' /><br/>";
 qst[n][1]="2";//proposition A
 qst[n][2]="5";//proposition B
 qst[n][3]="8";//proposition C
@@ -71,7 +71,7 @@ qst[n][10]="00:10";//délai pour répondre à la question
 qst[n][11]="";//document annexé
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Dans cette partie du test, vous allez devoir deviner ce qui se cache derri\u00e8re le st\u00e9r\u00e9ogrammes: que voyez-vous ?</p><img src='images/258.png' alt='question4' class='image5' /><br/>";
+qst[n][0]="<p>Dans cette partie du test, vous allez devoir deviner ce qui se cache derri\u00e8re le st\u00e9r\u00e9ogrammes: que voyez-vous ?</p><img src='Images/258.png' alt='question4' class='image5' /><br/>";
 qst[n][1]="trois chiffres : 2, 8, 5";
 qst[n][2]="trois chiffres 6, 7, 9";
 qst[n][3]="un chat";
@@ -85,7 +85,7 @@ qst[n][10]="01:00";
 qst[n][11]="";
 
 n++;qst[n]=new Array(12);
-qst[n][0]="<p>Dans cette partie du test, vous allez devoir deviner ce qui se cache derri\u00e8re le st\u00e9r\u00e9ogrammes: que voyez-vous ?</p><img src='images/requin.png' alt='question4' class='image6' /><br/>";
+qst[n][0]="<p>Dans cette partie du test, vous allez devoir deviner ce qui se cache derri\u00e8re le st\u00e9r\u00e9ogrammes: que voyez-vous ?</p><img src='Images/requin.png' alt='question4' class='image6' /><br/>";
 qst[n][1]="trois chiffres : 9, 10, 5";
 qst[n][2]="un requin";
 qst[n][3]="un chat";
@@ -127,91 +127,5 @@ qst[n][10]="00:20";//délai pour répondre à la question
 qst[n][11]="";//document annexé
 
 
-/*
-n++;qst[n]=new Array(12);
-qst[n][0]="<span style='color:#FFCC00'>Prenez d'abord connaissance du document (lire) et répondez ensuite à la question suivante :<\/span><br /><br />Quel est le radical du verbe 'lezen' ?";
-qst[n][1]="leez";
-qst[n][2]="lez";
-qst[n][3]="les";
-qst[n][4]="lees";
-qst[n][5]="D";
-qst[n][6]="Le -Z final doit se transformer en -S : LEES ";
-qst[n][7]="Le -Z final doit se transformer en -S et il faut doubler la voyelle : LEES.";
-qst[n][8]="Il faut doubler la voyelle : LEES.";
-qst[n][9]="Bien joué ! Le -Z final doit se transformer en -S et il faut doubler la voyelle.";
-qst[n][10]="";
-qst[n][11]="docs/radical.html";
-*/
-/*
-n++;qst[n]=new Array(12);
-qst[n][0]="";//question 6
-qst[n][1]="";
-qst[n][2]="";
-qst[n][3]="";
-qst[n][4]="";
-qst[n][5]="";
-qst[n][6]="";
-qst[n][7]="";
-qst[n][8]="";
-qst[n][9]="";
-qst[n][10]="";
-qst[n][11]="";
 
-n++;qst[n]=new Array(12);
-qst[n][0]="";//question 7
-qst[n][1]="";
-qst[n][2]="";
-qst[n][3]="";
-qst[n][4]="";
-qst[n][5]="";
-qst[n][6]="";
-qst[n][7]="";
-qst[n][8]="";
-qst[n][9]="";
-qst[n][10]="";
-qst[n][11]="";
-
-n++;qst[n]=new Array(12);
-qst[n][0]="";//question 8
-qst[n][1]="";
-qst[n][2]="";
-qst[n][3]="";
-qst[n][4]="";
-qst[n][5]="";
-qst[n][6]="";
-qst[n][7]="";
-qst[n][8]="";
-qst[n][9]="";
-qst[n][10]="";
-qst[n][11]="";
-
-n++;qst[n]=new Array(12);
-qst[n][0]="";//question 9
-qst[n][1]="";
-qst[n][2]="";
-qst[n][3]="";
-qst[n][4]="";
-qst[n][5]="";
-qst[n][6]="";
-qst[n][7]="";
-qst[n][8]="";
-qst[n][9]="";
-qst[n][10]="";
-qst[n][11]="";
-
-n++;qst[n]=new Array(12);
-qst[n][0]="";//question 10
-qst[n][1]="";
-qst[n][2]="";
-qst[n][3]="";
-qst[n][4]="";
-qst[n][5]="";
-qst[n][6]="";
-qst[n][7]="";
-qst[n][8]="";
-qst[n][9]="";
-qst[n][10]="";
-qst[n][11]="";
-*/
-// Augmenter le nombre de questions en respectant la même procédure.
 
