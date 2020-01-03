@@ -40,7 +40,7 @@
 
                             <?php if(!$_SESSION['isConnected']) : ?>
                             <form action="index.php?redirect=user&function=connexion"><button type="submit"
-                                    class="boutonTest">Connectez-vous pour passer le test en ligne</button>
+                                    class="boutonTest">Accéder au test en ligne</button>
                                 <?php endif;?>
                                 <img src="Images/AppLogo.png" class="logoApp" alt="Logo solution APP">
                             </form>
