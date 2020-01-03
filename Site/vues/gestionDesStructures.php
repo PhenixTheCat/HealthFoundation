@@ -41,12 +41,12 @@
           <th>Nom </th>
           <th>Référent</th>
           <th>Adresse</th>
-          <th> Ville </th>
+          <th>Ville </th>
           <th>Code postal</th>
           <th>Pays</th>
           <th>Numéro de telephone</th>
           <th>Code</th>
-          <th>Status</th>
+          <th>Statut</th>
           <th>Gestion</th>
 
 
@@ -76,7 +76,7 @@
               <input type="hidden" name="id" value="<?php echo $struc['id'];?>">
               <input type="submit" name="delete" value="Supprimer" /> </br>
               <input type="submit" name="generateCode" value="Générer un code" /> </br>
-              <input type="submit" name="inactive" value="Passer en inactif" /> </br>
+              <input type="submit" name="inactive" value="Marquer comme inactive" /> </br>
 
             </form>
           </td>
@@ -107,7 +107,7 @@
               <input type="hidden" name="id" value="<?php echo $struc['id'];?>">
               <input type="submit" name="delete" value="Supprimer" /> </br>
               <input type="submit" name="generateCode" value="Générer un code" /> </br>
-              <input type="submit" name="inactive" value="Passer en inactif" /> </br>
+              <input type="submit" name="inactive" value="Marquer comme incative" /> </br>
 
             </form>
           </td>
@@ -124,7 +124,7 @@
   <div class="resultatsParCat">
     </form>
 
-    <h3> Compte à valider </h3>
+    <h3> Compte(s) à valider </h3>
     <?php  if(!empty($userToValidate)) { ?>
     <table border="1" class="validerCompte">
       <thead>
@@ -133,7 +133,7 @@
           <th>Prénom</th>
           <th>Date de naissance</th>
           <th>Type</th>
-          <th>Status</th>
+          <th>Statut</th>
         </tr>
       </thead>
       <tbody>
@@ -158,7 +158,7 @@
           <td>
             <form action="" method="POST">
               <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-              <input type="submit" name="activate" value="Activer">
+              <input type="submit" name="activate" value="Valider l'inscription">
               <input type="submit" name="delete" value="Supprimer">
             </form>
 

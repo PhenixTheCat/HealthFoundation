@@ -32,12 +32,12 @@
             <input type="text" name="prenom" id="prenom" value="<?php echo $user['first_name']; ?>">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifprenom">
             <br>
-            <label for="date" id="date"> Date de naissance </label>
+            <label for="date" id="date">Date de naissance </label>
             <input type="date" name="date" id="date">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifdate">
             <br>
 
-            <label for="mail" id="email">Adresse email</label>
+            <label for="mail" id="email">Adresse e-mail</label>
             <input type="email" name="mail" id="mail" value="<?php echo $user['email']; ?>">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifmail">
 
@@ -50,7 +50,7 @@
             <input type="string" name="codePostale" id="codePostale" value="<?php echo $user['postecode']; ?>">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifcodepostal">
             <br>
-            <label for="ville" id="ville">Pays </label>
+            <label for="ville" id="ville">Ville </label>
             <input type="text" name="ville" id="ville" value="<?php echo $user['city']; ?>">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifpays">
             <br>

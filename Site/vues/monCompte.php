@@ -69,7 +69,7 @@
         </div>
     </div>
     <div id="resultatstestenligne">
-        <h3> Resultats test en ligne </h3>
+        <h3> Resultats des test en ligne </h3>
         <div id="resultatenligne">
             <h1><a href="index.php?redirect=test&function=resultats">Résultats</a></h1>
             <p>Description</p>
@@ -93,7 +93,7 @@
                     <th>Prénom</th>
                     <th>Date de naissance</th>
                     <th>Type</th>
-                    <th>Status</th>
+                    <th>Statut</th>
                 </tr>
             </thead>
             <tbody>

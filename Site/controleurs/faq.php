@@ -27,7 +27,7 @@ switch ($function) {
 
         $vue = "faq";
         $error = false;
-        $error = "laf";
+        $error = "laf";    //todo: supprimer les différentes apparitions de cette variable
         if (isset($_POST["envoi"])) {
             $error = false;
             if (isString($_POST['nom']) and isString($_POST['prenom']) and isString($_POST['mail']) and isString($_POST['message'])) {

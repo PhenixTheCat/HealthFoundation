@@ -17,7 +17,7 @@
 
 
   <div class="centrer_bloc">
-    <div class="Connexion">
+    <div class="connexion">
       <?php echo printError($error); ?>
 
       <span>

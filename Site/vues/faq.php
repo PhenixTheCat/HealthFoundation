@@ -23,7 +23,7 @@
         <div class="question">
             <button class="questionVisible"> Question 1 <i>+</i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse 1</h4>
+                <h4>Réponse </h4>
             </div>
         </div>
 
@@ -98,8 +98,7 @@
 
 
         <div class="formulaireContact">
-            <?php echo printError($error); ?>
-            <h2>Votre question n'est pas présente ?</h2>
+            <h2>Votre question n'est pas présente &#63;</h2>
             <form action="" method="post">
                 <label for="Nom" id="nom">Nom</label>
                 <input type="text" name="nom">

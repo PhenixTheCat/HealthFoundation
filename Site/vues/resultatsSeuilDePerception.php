@@ -31,14 +31,14 @@ if ($NbreData != 0)
             <th>id</th>
             <th>test</th>
             <th>timeline</th>
-            <th>value</th>
+            <th>valeur</th>
             <th>type</th>
             <th>unité</th>
             <th>date</th>
             <th>durée</th>
             <th>score</th>
             <th>banc de test</th>
-            <th>pilot</th>
+            <th>pilote</th>
             <th>instructeur</th>
             <th>capteurs</th>
           </tr>

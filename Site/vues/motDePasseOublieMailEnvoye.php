@@ -18,7 +18,7 @@
       </span>
 
 
-      <p>L'email a bien été envoyé. Veuillez vérifiez dans votre boite mail.</p>
+      <p>L'e-mail a bien été envoyé. Veuillez vérifiez dans votre boîte mail.</p>
       <a class="submitButtons" href="index.php">Retourner à l'accueil</a>
 
     </div>
