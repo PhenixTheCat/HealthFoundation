@@ -2108,4 +2108,12 @@ div.article11 {
   padding: 1%;
 }
 
+.valid {
+	color: green;
+  }
+  
+  
+.invalid {
+color: red;
+}
 

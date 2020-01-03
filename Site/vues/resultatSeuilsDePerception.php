@@ -18,7 +18,7 @@
   <div class="seuilDePerception">
       <h1><a href="seuilDePerception.php">Seuil de perception</a></h1>
       <div class="testResults">
-      <img src="index.php?redirect=chart&function=chartPerception">
+      <img src="index.php?redirect=user&function=chartPerception">
       
       <?php
 

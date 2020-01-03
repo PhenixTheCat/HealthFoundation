@@ -14,8 +14,8 @@
     <div class="headerContact">
         <h1>Resultats pilote</h1>
         
-</br>
-      <img src="index.php?redirect=chart&function=chartBar">
+    </br>
+      <img src="index.php?redirect=user&function=chartBar">
     </div>
 
      

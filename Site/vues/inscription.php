@@ -19,20 +19,29 @@
   <div class="centrer_bloc">
     <div class="inscriptionP1">
       <span>
+    
         <?php echo printError($error); ?>
         <a class="enteteInscription" href="index.php?redirect=user&function=connexion"> Connexion </a>
         <a class="enteteInscription" href="index.php?redirect=user&function=inscription"> Inscription </a>
       </span>
       <fieldset>
-        <div id = "error"></div>
+      <div id="error_msg"></div>
         <form id = "form" action="" method="post">
 
           <label for="mail" id="email">Email</label>
           <input id = "email" type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
+          <div id="message">
+            <h3>Le mot de passe doit contenir au moins:</h3>
+            <p id="letter" class="invalid">Une lettre minuscule</p>
+            <p id="capital" class="invalid">Une lettre majuscule</p>
+            <p id="number" class="invalid">Un nombre</b></p>
+            <p id="length" class="invalid">8 caractères minimum</b></p>
+          </div>
           <label for="mdp">Mot de passe</label>
           <input id ="password"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="doit contenir une lettre minuscule, une lettre majuscule,un chiffre et doit être supérieur à 8 " name="mdp">
           <br>
+
          
           <label for="mdp2">Confirmation du mot de passe</label>
           <input  type="password" name="mdp2" id="mdp2">
@@ -47,7 +56,9 @@
 
     </div>
   </div>
-  <script src="script.js"></script>
+
+
+  <script src="js/form.js"></script>
 
 </body>
 

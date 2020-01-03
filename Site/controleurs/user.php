@@ -15,6 +15,7 @@
 include('./modele/requests.user.php');
 include('./modele/requests.resetpass.php');
 include('./modele/requests.test.php');
+
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['function']) || empty($_GET['function'])) {
     $function = "accueil";
@@ -487,7 +488,48 @@ switch ($function) {
         $error = false;
         break;
 
+        case 'chartBar':
+            $vue = "chart";
+            $error = false;
+            //TODO : Ajouter les resultats des test moyens des femmes et des hommes
+           
+            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(getTestAVGPerGender($database,'Female',1,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',1,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',2,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',2,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',3,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',3,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',4,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',4,$_SESSION['userID'])[0]));
+            break;
+    case 'chartStress':
+        $vue = "chart";
+        $error = false;
 
+        if(getTestTimeline($database,$_SESSION['pilotId'],1)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],1)!=array(null)){
+        drawPointGraphics("Resultats du stress en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],1)),(getTestValue($database,$_SESSION['pilotId'],1)));}
+
+        break;
+
+    case 'chartTonality':
+        $vue = "chart";
+        $error = false;
+        if(getTestTimeline($database,$_SESSION['pilotId'],3)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],3)!=array(null)){
+        drawPointGraphics("Resultats de la reconnaissance de tonalité en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],3)),(getTestValue($database,$_SESSION['pilotId'],3)));
+        }
+        break;
+
+    case 'chartReactionTime':
+        $vue = "chart";
+        $error = false;
+        if(getTestTimeline($database,$_SESSION['pilotId'],1)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],2)!=array(null)){
+        drawPointGraphics("Resultats du temps de réaction en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],2)),(getTestValue($database,$_SESSION['pilotId'],2)));
+        }
+      
+
+        break;
+            
+    case 'chartPerception':
+        $vue = "chart";
+        $error = false;
+        if(getTestTimeline($database,$_SESSION['pilotId'],1)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],4)!=array(null)){
+        drawPointGraphics("Resultats du seuil de perception en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],4)),(getTestValue($database,$_SESSION['pilotId'],4)));
+        }
+
+        break;
 
     default:
         // si aucune fonction ne correspond au paramètre function passé en GET
