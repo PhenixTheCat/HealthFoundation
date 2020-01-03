@@ -21,6 +21,60 @@
   <div class="headerContact">
     <h1> Gestion des structures</h1>
   </div>
+  <div class="resultatsParCat">
+    </form>
+
+    <h3> Compte(s) à valider </h3>
+    <?php  if(!empty($userToValidate)) { ?>
+    <table border="1" class="validerCompte">
+      <thead>
+        <tr>
+          <th>Nom </th>
+          <th>Prénom</th>
+          <th>Date de naissance</th>
+          <th>Type</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($userToValidate as $user) { ?>
+        <tr>
+          <td>
+            <php><?php echo $user['last_name']; ?></php>
+          </td>
+          <td>
+            <php><?php echo $user['first_name']; ?></php>
+          </td>
+          <!-- <td><php><?php //echo $user['sex']; ?></php></td> -->
+          <td>
+            <php><?php echo $user['birthdate']; ?></php>
+          </td>
+          <td>
+            <php><?php echo $user['type']; ?></php>
+          </td>
+
+
+          <form></form>
+          <td>
+            <form action="" method="POST">
+              <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+              <input type="submit" name="activate" value="Valider l'inscription">
+              <input type="submit" name="delete" value="Supprimer">
+            </form>
+
+          </td>
+
+        </tr>
+
+        <?php } ?>
+        <?php }
+    else{ ?>
+        <h3>Pas d'utilisateur à valider</h3>
+
+        <?php }?>
+      </tbody>
+    </table>
+  </div>
 
   <div class="formulaireContact">
     <?php echo printError($error); ?>
@@ -104,10 +158,10 @@
           </td>
           <td>
             <form action="" id="searchUser" method="post">
-              <input type="hidden" name="id" value="<?php echo $struc['id'];?>">
-              <input type="submit" name="delete" value="Supprimer" /> </br>
-              <input type="submit" name="generateCode" value="Générer un code" /> </br>
-              <input type="submit" name="inactive" value="Marquer comme incative" /> </br>
+              <input  type="hidden" name="id" value="<?php echo $struc['id'];?>">
+              <input class="editButtons" type="submit" name="delete" value="Supprimer" /> </br>
+              <input class="editButtons" type="submit" name="generateCode" value="Générer un code" /> </br>
+              <input class="editButtons" type="submit" name="inactive" value="Passer inactif" /> </br>
 
             </form>
           </td>
@@ -121,60 +175,7 @@
     </table>
 
   </div>
-  <div class="resultatsParCat">
-    </form>
 
-    <h3> Compte(s) à valider </h3>
-    <?php  if(!empty($userToValidate)) { ?>
-    <table border="1" class="validerCompte">
-      <thead>
-        <tr>
-          <th>Nom </th>
-          <th>Prénom</th>
-          <th>Date de naissance</th>
-          <th>Type</th>
-          <th>Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach ($userToValidate as $user) { ?>
-        <tr>
-          <td>
-            <php><?php echo $user['last_name']; ?></php>
-          </td>
-          <td>
-            <php><?php echo $user['first_name']; ?></php>
-          </td>
-          <!-- <td><php><?php //echo $user['sex']; ?></php></td> -->
-          <td>
-            <php><?php echo $user['birthdate']; ?></php>
-          </td>
-          <td>
-            <php><?php echo $user['type']; ?></php>
-          </td>
-
-
-          <form></form>
-          <td>
-            <form action="" method="POST">
-              <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-              <input type="submit" name="activate" value="Valider l'inscription">
-              <input type="submit" name="delete" value="Supprimer">
-            </form>
-
-          </td>
-
-        </tr>
-
-        <?php } ?>
-        <?php }
-    else{ ?>
-        <h3>Pas d'utilisateur à valider</h3>
-
-        <?php }?>
-      </tbody>
-    </table>
-  </div>
 
   <?php endif;?>
   <script src="script.js"></script>

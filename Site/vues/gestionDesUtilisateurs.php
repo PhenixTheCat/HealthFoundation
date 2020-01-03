@@ -26,14 +26,14 @@
     <?php echo printError($error); ?>
     <form action="" id="searchUser" method="post">
       <input id="search" name="searchUser" type="text" placeholder="Rechercher" />
-      <input id="submitButtons" type="submit" name="rechercher" value="Rechercher" />
+      <input class="submitButtons" type="submit" name="rechercher" value="Rechercher" />
     </form>
     <table border="1">
       <thead>
         <tr>
+          <th>Sexe</th>
           <th>Nom </th>
           <th>Prénom</th>
-          <!-- <th>Sexe</th> -->
           <th>Date de naissance</th>
           <th>Type </th>
           <th>Structure</th>
@@ -47,9 +47,10 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
+            <td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['last_name'] ?></td>
           <td> <?php echo $user['first_name'] ?></td>
-          <!-- <td><php><?php //echo $user['sex']; ?></php></td> -->
+
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
           <td> <?php echo $user['structure'] ?></td>
@@ -73,9 +74,9 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
+        <td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['last_name'] ?></td>
           <td> <?php echo $user['first_name'] ?></td>
-          <!-- <td><php><?php //echo $user['sex']; ?></php></td> -->
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
           <td> <?php echo $user['structure'] ?></td>
@@ -87,6 +88,11 @@
               <input class="editButtons" type="submit" name="block" value="Bannir" /> </br>
 
               <input class="editButtons" type="submit" name="referent" value="Passer en référent" /> </br>
+
+              <input  type="email" name="newMail" >
+
+              <input class="editButtons" type="submit" name="email" value="Changer le mail" /> </br>
+
             </form>
           </td>
 
@@ -99,7 +105,7 @@
         ?>
       </tbody>
     </table>
-
+  </br>
   </div>
   <?php endif;?>
   <script src="script.js"></script>

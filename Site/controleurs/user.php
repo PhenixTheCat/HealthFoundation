@@ -473,6 +473,14 @@ switch ($function) {
                 header('Location:index.php?redirect=user&function=gestionDesUtilisateurs');
             }
         }
+
+        if (isset($_POST['email'])) {
+            $id = $_POST["id"];
+            $newMail= $_POST["newMail"];
+            if (changeEmail($database,$id,$newMail)) {
+                header('Location:index.php?redirect=user&function=gestionDesUtilisateurs');
+            }
+        }
     break;
 
     case 'cgu':

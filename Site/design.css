@@ -802,7 +802,7 @@ input[type=email] {
 
 /* =============       Page de connexion ============ */
 
-.Connexion {
+.connexion {
 	background-color: #7CA0E4;
 	border: 1px solid #000000;
 	width: 50%;
@@ -812,12 +812,12 @@ input[type=email] {
 	margin: auto;
 }
 
-.Connexion a:hover {
+.connexion a:hover {
 	border-bottom: 3px solid #3A79FF;
 	text-decoration: none;
 }
 
-.Connexion input[type=password],
+.connexion input[type=password],
 input[type=email] {
 	text-align: center;
 	border: none;
@@ -834,12 +834,12 @@ input[type=email] {
 	margin-bottom: 5%;
 }
 
-.Connexion label {
+.connexion label {
 	display: block;
 
 }
 
-.Connexion fieldset {
+.connexion fieldset {
 	padding: 1px;
 	text-align: center;
 	border: none;
@@ -1844,7 +1844,7 @@ div.about {
 /*=====================         Buttons pour enregistrer des modifications          =====================*/
 
 .editButtons {
-	font-size: 10px;
+	font-size: 14px;
 	overflow: hidden;
 	border: 3px solid #000000;
 	color: #000000;
@@ -1857,7 +1857,7 @@ div.about {
 	margin-top: 2%;
 	margin-bottom: 2%;
 	letter-spacing: 1px;
-	font-weight: 500;
+	font-weight: 400;
 	transition: all 0.3s;
 }
 
@@ -1877,9 +1877,12 @@ div.about {
 
 .editButtons:hover,
 .editButtons:active {
-	font-size: 12px;
+	font-size: 14px;
 	color: #000000;
 }
+
+
+
 
 .tableau {
 	background-color: transparent;

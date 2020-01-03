@@ -20,13 +20,12 @@ function insertQuestion(PDO $database, string $first_name, string $last_name, st
 {
   try {
 
-    $reqInsertQuestion = $database->prepare("INSERT INTO faq ('first_name', 'last_name', 'email', 'question','answer') VALUES (:first_name,:last_name,:email,:question,:answer)");
+    $reqInsertQuestion = $database->prepare("INSERT INTO `faq` (`id`, `first_name`, `last_name`, `email`, `question`, `answer`) VALUES (NULL, :first_name,:last_name,:email,:question, NULL)");
     $data = array(
       'first_name' => $first_name,
       'last_name' => $last_name,
       'email' => $email,
-      'question' => $question,
-      'answer' => null
+      'question' => $question
     );
     $reqInsertQuestion->execute($data);
 

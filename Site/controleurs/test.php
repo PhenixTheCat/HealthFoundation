@@ -81,7 +81,7 @@ switch ($function) {
 
     case 'resultatSeuilsDePerception':
 
-        $vue = "resultatSeuilsDePerception";
+        $vue = "resultatsSeuilDePerception";
         $error = false;
         $id = $_SESSION['pilotId'];
         if (getResultatsThresholdOfPerseption($database, $id) != array(null)) {
