@@ -1,10 +1,11 @@
 var password = document.getElementById("password");
+var passwordC = document.getElementById("mdp2");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 
-// When the user clicks on the password field, show the message box
+document.getElementById("message").style.display = "none";
 password.onfocus = function() {
   document.getElementById("message").style.display = "block";
 }
@@ -50,3 +51,16 @@ password.onkeyup = function() {
   }
 }
 
+  document.getElementById("passwordC").style.display = "none";
+
+  
+
+passwordC.onkeyup = function(){
+  if(password.value==passwordC.value){
+    document.getElementById("passwordC").style.display = "none";
+
+}
+else{
+  document.getElementById("passwordC").style.display = "block";
+}
+}

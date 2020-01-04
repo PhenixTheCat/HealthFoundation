@@ -18,14 +18,14 @@
 
   <div class="centrer_bloc">
     <div class="inscriptionP1">
-      <span>
+      <span id = "error">
     
         <?php echo printError($error); ?>
         <a class="enteteInscription" href="index.php?redirect=user&function=connexion"> Connexion </a>
         <a class="enteteInscription" href="index.php?redirect=user&function=inscription"> Inscription </a>
       </span>
       <fieldset>
-      <div id="error_msg"></div>
+
         <form id = "form" action="" method="post">
 
           <label for="mail" id="email">E-mail</label>
@@ -41,16 +41,18 @@
           <label for="mdp">Mot de passe</label>
           <input id ="password"  type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="doit contenir une lettre minuscule, une lettre majuscule,un chiffre et au moins 8 caractères" name="mdp">
           <br>
+        
 
-         
           <label for="mdp2">Confirmation du mot de passe</label>
-          <input  type="password" name="mdp2" id="mdp2">
+          <input type="password" name="mdp2" id="mdp2">
+          <br>
+          <span id='passwordC' class='invalid'> Les mots de passe ne correspondent pas !</span>
           <br>
           <label for="codeFormateur">Code formateur</label>
           <input type="text" name="codeFormateur" id="codeFormateur"
             value="<?php if(isset($_POST['codeFormateur'])) { echo $_POST['codeFormateur']; } ?>">
           <br>
-          <input class="submitButtons" type="submit" value="Suivant" name="inscriptionP1">
+          <input class="submitButtons" type="submit" value="Suivant" id="submit" name="inscriptionP1">
         </form>
       </fieldset>
 
@@ -59,7 +61,7 @@
 
 
   <script src="js/form.js"></script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
