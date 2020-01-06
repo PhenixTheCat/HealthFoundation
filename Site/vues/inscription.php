@@ -29,7 +29,7 @@
         <form id = "form" action="" method="post">
 
           <label for="mail" id="email">E-mail</label>
-          <input id = "email" type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
+          <input id = "email" type="email" name="mail" id="mail" pattern="^[0-9a-z._-]+@{1}[0-9a-z.-]{2,}[.]{1}[a-z]{2,5}$" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
           <div id="message">
             <h3>Le mot de passe doit contenir au moins:</h3>

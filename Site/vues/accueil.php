@@ -26,24 +26,24 @@
                 <h2>"A LEGACY OF EXCELLENCE"</h2>
                 <?php //Si l'utilisateur est connecté
                     if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
-                <form action="index.php?redirect=user&function=gestionDesUtilisateurs"><button type="submit"
-                        class="boutonTest">Gestion des utilisateurs</button>
-                    <?php endif;?>
-                    <?php if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
-                    <form action="index.php?redirect=user&function=resultatsPilote"><button type="submit"
-                            class="boutonTest">Consulter les résulats des pilotes</button>
+                    <a  class ="boutonTest "href="index.php?redirect=user&function=gestionDesUtilisateurs" > Gestion des utilisateurs</a>
+                <?php endif;?>
+                <?php if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
+                    <a  class ="boutonTest "href="index.php?redirect=user&function=resultatsPilote" > Consulter les résulats des pilotes</a>
+
                         <?php endif;?>
                         <?php if($_SESSION['isConnected']&& $_SESSION['userType'] == "Pilot") : ?>
-                        <form action="index.php?redirect=user&function=testEnLigne"><button type="submit"
-                                class="boutonTest">Consulter les résulats des pilotes</button>
+                            <a  class ="boutonTest" href="index.php?redirect=user&function=testEnLigne" > Passer le test en ligne</a>
+
+                
                             <?php endif;?>
 
                             <?php if(!$_SESSION['isConnected']) : ?>
-                            <form action="index.php?redirect=user&function=connexion"><button type="submit"
-                                    class="boutonTest">Accéder au test en ligne</button>
-                                <?php endif;?>
+                                <a  class ="boutonTest "href="index.php?redirect=user&function=connexion" > Connectez vous pour accéder au test en ligne</a>
+
+                            <?php endif;?>
                                 <img src="Images/AppLogo.png" class="logoApp" alt="Logo solution APP">
-                            </form>
+                           
             </div>
 
         </div>

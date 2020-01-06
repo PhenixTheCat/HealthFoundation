@@ -4,7 +4,7 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
-
+var email = document.getElementById("mail");
 document.getElementById("message").style.display = "none";
 password.onfocus = function() {
   document.getElementById("message").style.display = "block";
@@ -64,3 +64,6 @@ else{
   document.getElementById("passwordC").style.display = "block";
 }
 }
+
+
+

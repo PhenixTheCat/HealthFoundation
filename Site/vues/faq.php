@@ -21,23 +21,23 @@
     <div class="faq">
         <h2> Les questions souvent posées</h2>
         <div class="question">
-            <button class="questionVisible"> Question 1 <i>+</i> </button>
+            <button class="questionVisible"> Qu'est-ce qu'un test psychotechnique ? <i>+</i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Ensemble des tests permettant de mesurer les aptitudes d'un individu, utilisés pour l'orientation et la sélection professionnelles. (Larousse) </h4>
             </div>
         </div>
 
         <div class="question">
-            <button class="questionVisible"> Question 2 <i>+</i> </button>
+            <button class="questionVisible"> Question <i>+</i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4> </h4>
             </div>
         </div>
 
         <div class="question">
-            <button class="questionVisible"> Question 3 <i>+</i> </button>
+            <button class="questionVisible"> Comment accéder à mes résultats?<i>+</i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Il faut se connecter puis vous aurez accès a vos résultats  </h4>
             </div>
         </div>
 
