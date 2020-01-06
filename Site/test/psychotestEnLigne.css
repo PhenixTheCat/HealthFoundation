@@ -1,0 +1,143 @@
+/* ==========  FEUILLE DE STYLE ACCOMPAGNANT LE SCRIPT "SIMPLE QUIZ BUILDER"  ================= */
+
+/* === NOIR === */
+
+img.image1{
+	vertical-align:middle;
+	padding-left:33%;
+}
+img.image2{
+	vertical-align:middle;
+	padding-left:33%;
+}
+img.image3{
+	vertical-align:middle;
+	padding-left:5%;
+}
+img.image4{
+	vertical-align:middle;
+	padding-left:35%;
+}
+
+p{
+	text-align: center;
+}
+body{
+	font:normal 10pt verdana;
+	color:#000;
+	background-color:#FFF;
+}
+#titre, #instructions, #questions, #copyr{
+	width:650px;
+	margin:2px auto;
+	border:groove 6px rgb(173, 132, 238);
+	padding:15px;
+}
+#titre{
+	margin-top:20px;
+	font:bold 18pt arial;
+	color:#000;
+	text-align:center;
+}
+#author{
+	font:normal 8pt arial;
+	color:#000;
+}
+#instructions{
+	font:bold 12pt arial;
+	color:#000;
+	font-style:italic;
+	text-align:center;
+}
+.num{
+	font:bold 14pt arial;
+	color:#000;
+}
+.qust{
+	
+	display: inline-grid;
+	font:bold 12pt arial;
+	color:#000;
+}
+.propo{
+	
+	font-style:italic;
+	color:black;
+}
+form{
+	border-bottom:outset 2px black;
+}
+.ok{
+	text-align:center;
+}
+.bouton{
+	width:150px;
+	height:24px;
+	font:bold 12pt verdana,arial;
+	background-color:aliceblue;
+	color:black;
+	border:outset 2px black;
+}
+.bouton:hover{
+	background-color:#ccc;
+	color:#000;
+	border:inset 2px black;
+}
+.bravo, .desole{
+	font:bold 20pt verdana;
+	color:lime;
+	text-align:center;
+}
+.desole{color:red;}
+.score{
+	text-align:center;
+	font:bold 14pt arial;
+	color:#000;
+	border:dashed 1px rgb(173, 132, 238);
+	padding:5px 0px;
+}
+.noreponse{
+	text-align:center;
+	font:bold 9pt arial,verdana;
+	color:red;
+}
+#comment{
+	margin-top:10px;
+	text-align:left;
+	font:normal 9pt arial;
+	color:#000;
+	border:dashed 1px rgb(173, 132, 238);
+	padding:8px 5px;
+}
+.info{
+	border:none;
+	vertical-align:middle;
+	margin-right:10px;
+}
+#copyr{
+	text-align:center;
+	border:none;
+	padding:0px;
+	font:normal 8pt verdana,arial;
+	color:#000;
+}
+#copyr a{
+	text-decoration:underline;
+	color:#000;
+	font-weight:bold;
+	letter-spacing:2px;
+}
+#copyr a:hover{
+	text-decoration:underline;
+	color:red;
+}
+#chrono{
+	margin-left:20px;
+	font:bold 12pt arial;
+	color:#000;
+	background-color:transparent;
+	padding:3px;
+	border:solid 1px rgb(173, 132, 238);
+	text-align:center;
+}
+img, object  {vertical-align:middle;}
