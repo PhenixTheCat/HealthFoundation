@@ -60,7 +60,7 @@
         <div class="question">
             <button class="questionVisible"> Comment puis-je obtenir mon code formateur afin de finaliser mon inscription ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Pour obtenir votre code formateur et disposer d'un compte sur notre site internet, veuillez directement contacter votre institut de prise en charge. </h4>
+                <h4>Pour obtenir votre code formateur et disposer d'un compte sur notre site internet, veuillez directement contacter votre formateur. </h4>
             </div>
         </div>
 
