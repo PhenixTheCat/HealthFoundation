@@ -21,75 +21,75 @@
     <div class="faq">
         <h2> Les questions souvent posées</h2>
         <div class="question">
-            <button class="questionVisible"> Qu'est-ce qu'un test psychotechnique ? <i>+</i> </button>
+            <button class="questionVisible"> Qu'est-ce qu'un test psychotechnique ? <i></i> </button>
             <div class="ReponseQuestion">
                 <h4>Ensemble des tests permettant de mesurer les aptitudes d'un individu, utilisés pour l'orientation et la sélection professionnelles. (Larousse) </h4>
             </div>
         </div>
 
         <div class="question">
-            <button class="questionVisible"> Question <i>+</i> </button>
+            <button class="questionVisible"> Qu'est-ce que le Pilotest en ligne ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4> </h4>
+                <h4>Il s'agit d'une série de tests sous forme de QCM permettant d'évaluer le candidat sur son acuité visuelle et son raisonnement logique. </h4>
             </div>
         </div>
 
         <div class="question">
-            <button class="questionVisible"> Comment accéder à mes résultats?<i>+</i> </button>
+            <button class="questionVisible"> Comment accéder à mes résultats ?<i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Il faut se connecter puis vous aurez accès a vos résultats  </h4>
+                <h4>Il faut se connecter puis vous aurez accès à votre page personnelle avec une rubrique comportant vos résultats.  </h4>
             </div>
         </div>
 
         <div class="question">
-            <button class="questionVisible"> Question 4 <i>+</i> </button>
+            <button class="questionVisible"> Comment puis-je contacter votre entreprise ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
-            </div>
-        </div>
-
-
-        <div class="question">
-            <button class="questionVisible"> Question 5 <i>+</i> </button>
-            <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Il suffit de se rendre sur la fiche "Contact" en pied de page, puis de la remplir. </h4>
             </div>
         </div>
 
 
         <div class="question">
-            <button class="questionVisible"> Question 6 <i>+</i> </button>
+            <button class="questionVisible"> Comment puis-je obtenir plus d'informations sur votre entreprise et votre produit ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Toutes nos informations complémentaires sur notre fonctionnement et notre produit sont disponibles dans la page "À propos" située en tête de page. </h4>
             </div>
         </div>
 
 
         <div class="question">
-            <button class="questionVisible"> Question 7 <i>+</i> </button>
+            <button class="questionVisible"> Comment puis-je obtenir mon code formateur afin de finaliser mon inscription ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Pour obtenir votre code formateur et disposer d'un compte sur notre site internet, veuillez directement contacter votre formateur. </h4>
             </div>
         </div>
 
 
         <div class="question">
-            <button class="questionVisible"> Question 8 <i>+</i> </button>
+            <button class="questionVisible"> Puis-je repasser le Pilotest en ligne en cas d'échec ? <i></i> </button>
             <div class="ReponseQuestion">
-                <h4>Réponse </h4>
+                <h4>Suite à la création de votre compte sur notre site internet, vous aurez accès au Pilotest en ligne et ne pourrez le passer qu'une seule fois. Vos résultats à l'issue de votre première tentative seront donc définitifs ! </h4>
             </div>
         </div>
 
 
         <div class="question">
-            <button class="questionVisible"> Question 9 <i>+</i> </button>
+            <button class="questionVisible"> Question 8 <i></i> </button>
             <div class="ReponseQuestion">
                 <h4>Réponse </h4>
             </div>
         </div>
 
+
         <div class="question">
-            <button class="questionVisible"> Question 10 <i>+</i> </button>
+            <button class="questionVisible"> Question 9 <i></i> </button>
+            <div class="ReponseQuestion">
+                <h4>Réponse </h4>
+            </div>
+        </div>
+
+        <div class="question">
+            <button class="questionVisible"> Question 10 <i></i> </button>
             <div class="ReponseQuestion">
                 <h4>Réponse </h4>
             </div>
