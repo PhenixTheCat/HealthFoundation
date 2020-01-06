@@ -1,0 +1,4 @@
+Options +FollowSymlinks 
+RewriteEngine on 
+RewriteRule ^([_0-9a-z-]+)/([_0-9a-z-]+)$  index.php?redirect=$1&function=$2 [L]
+

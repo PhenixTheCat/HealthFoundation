@@ -315,7 +315,7 @@ switch ($function) {
         //Générer un code unique ?
 
         if (isset($_POST["changeCodeInstructor"])) {
-            $uniqInstructorCode = uniqid(6);
+            $uniqInstructorCode = uniqid("inst");
             changeCode($database, $_SESSION['userID'], $uniqInstructorCode);
             header("Location:index.php?redirect=user&function=monCompte");
         }

@@ -56,7 +56,7 @@ switch ($function) {
         }
         if (isset($_POST['generateCode'])) {
             $id = $_POST['id'];
-            $code = uniqid();
+            $code = uniqid("struc");
             if (changeCodeStructure($database, $id, $code)) {
                 header('Location:index.php?redirect=structure&function=gestionDesStructures');
             } else {
@@ -103,7 +103,7 @@ switch ($function) {
                 $postcode = $_POST['postcode'];
                 $country = $_POST['country'];
                 $phoneNumber = $_POST['phoneNumber'];
-                $code = uniqid();
+                $code = uniqid("struc");
                 $data = array($name, $address, $city, $postcode, $country, $phoneNumber, $code);
                 if (insertStructure($database, $data)) {
                     header('Location:index.php?redirect=structure&function=gestionDesStructures');
