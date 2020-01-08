@@ -59,7 +59,7 @@ if ($NbreData != 0)
                         <td><?php echo $row['unit']; ?></td>
                         <td><?php echo $row['date']; ?></td>
                         <td><?php echo $row['duration']; ?></td>
-                        <td><?php echo $row['score']; ?></td>
+                        <td><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
                         <td><?php echo $row['testbed']; ?></td>
                         <td><?php echo $row['pilot']; ?></td>
                         <td><?php echo $row['instructor']; ?></td>
@@ -80,10 +80,8 @@ if ($NbreData != 0)
     </div>
 </div>
 
-
-
-
-    <script src="script.js"></script>
+<script src="js/form.js"></script>
+<script src="script.js"></script>
 
 </body>
 
