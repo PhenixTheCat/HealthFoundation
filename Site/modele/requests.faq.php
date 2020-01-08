@@ -16,16 +16,17 @@ $table = "faq";
  * @param string $question
  */
 
-function insertQuestion(PDO $database, string $first_name, string $last_name, string $email, $question)
+function insertQuestion(PDO $database, string $first_name, string $last_name, string $email, $question,$answer)
 {
   try {
 
-    $reqInsertQuestion = $database->prepare("INSERT INTO `faq` (`id`, `first_name`, `last_name`, `email`, `question`, `answer`) VALUES (NULL, :first_name,:last_name,:email,:question, NULL)");
+    $reqInsertQuestion = $database->prepare("INSERT INTO `faq` (`id`, `first_name`, `last_name`, `email`, `question`, `answer`) VALUES (NULL, :first_name,:last_name,:email,:question,:answer)");
     $data = array(
       'first_name' => $first_name,
       'last_name' => $last_name,
       'email' => $email,
-      'question' => $question
+      'question' => $question,
+      'answer' => $answer
     );
     $reqInsertQuestion->execute($data);
 
@@ -78,4 +79,21 @@ function answerQuestion(PDO $database, string $answer, string $id)
     return false;
   }
 }
+
+
+function printAllQuestions(PDO $database){
+
+  try
+  {
+    $requser = $database->prepare("SELECT * FROM faq where visible=1 ");
+    $requser->execute();
+    return $requser->fetchAll();
+    
+  }
+  catch(Exception $e)
+  {
+    return array(null);
+  }
+}
+
 ?>

@@ -19,14 +19,32 @@
     </div>
 
     <div class="faq">
+    <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
+        <h2> Ajouter une question</h2>
+        <form> 
+            
+        <label for="question">Question</label>
+        </br>
+            <input type="text" name="question">
+</br>
+            <label for="answer">Réponse</label>
+            </br>
+            <input type="text" name="answer">
+            </br>
+
+           <input class="submitButtons" type="submit" value="Ajouter" name="addQuestion">
+           <?php endif;?>
+        </form>
         <h2> Les questions souvent posées</h2>
+        <?php foreach ($questions as $ans) { ?>
         <div class="question">
-            <button class="questionVisible"> Qu'est-ce qu'un test psychotechnique ? <i></i> </button>
+            <button class="questionVisible"> <?php echo $ans['question']; ?></button>
             <div class="ReponseQuestion">
-                <h4>Ensemble des tests permettant de mesurer les aptitudes d'un individu, utilisés pour l'orientation et la sélection professionnelles. (Larousse) </h4>
+                <h4><?php echo $ans['answer']; ?> </h4>
             </div>
         </div>
-
+        <?php } ?>
+        <!--
         <div class="question">
             <button class="questionVisible"> Qu'est-ce que le Pilotest en ligne ? <i></i> </button>
             <div class="ReponseQuestion">
@@ -95,7 +113,7 @@
             </div>
         </div>
 
-
+        -->
 
         <div class="formulaireContact">
             <h2>Votre question n'est pas présente &#63;</h2>

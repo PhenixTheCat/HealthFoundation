@@ -27,7 +27,14 @@ switch ($function) {
 
         $vue = "faq";
         $error = false;
-        $error = "laf";    //todo: supprimer les différentes apparitions de cette variable
+        if(isset($_POST['addQuestion'])){
+            if(isString($_POST['question'])&&isString($_POST['answer'])){
+                $question=$_POST['question'];
+                $question=$_POST['answer'];
+                insertQuestion($database, "", "", "", $question,$answer);
+            }
+        }
+        $questions= printAllQuestions($database);
         if (isset($_POST["envoi"])) {
             $error = false;
             if (isString($_POST['nom']) and isString($_POST['prenom']) and isString($_POST['message'])) {
@@ -37,7 +44,7 @@ switch ($function) {
                 $question = $_POST['message'];
 
                 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    insertQuestion($database, $first_name, $last_name, $email, $question);
+                    insertQuestion($database, $first_name, $last_name, $email, $question,NULL);
                     $error = "Question envoyée<br />";
                 } else {
                     $error = "Adresse mail non valide";
