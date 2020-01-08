@@ -390,11 +390,11 @@ switch ($function) {
         $user = getUserInfo($database, $_SESSION['userID']);
         $error = false;
         if (isset($_POST['modifnom'])) {
-            editProfil($_POST['modifnom'], changeFirstName($database, $_SESSION['userID'], $_POST['nom']), $_POST['nom']);
+            editProfil($_POST['modifnom'], changeLastName($database, $_SESSION['userID'], $_POST['nom']), $_POST['nom']);
         }
         if (isset($_POST['modifprenom'])) {
 
-            editProfil($_POST['modifprenom'], changeLastName($database, $_SESSION['userID'], $_POST['prenom']), $_POST['prenom']);
+            editProfil($_POST['modifprenom'], changeFirstName($database, $_SESSION['userID'], $_POST['prenom']), $_POST['prenom']);
         }
         if (isset($_POST['modifdate'])) {
             editProfil($_POST['modifdate'], changeBirthDate($database, $_SESSION['userID'], $_POST['date']), $_POST['date']);

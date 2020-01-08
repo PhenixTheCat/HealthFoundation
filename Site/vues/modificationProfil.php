@@ -33,7 +33,7 @@
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifprenom">
             <br>
             <label for="date" id="date">Date de naissance </label>
-            <input type="date" name="date" id="date">
+            <input type="date"  max="1999-01-01" min="1980-01-01" name="date" id="date">
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifdate">
             <br>
 

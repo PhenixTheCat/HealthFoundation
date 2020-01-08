@@ -37,7 +37,7 @@
           <input type="text" name="prenom" id="prenom">
           <br>
           <label for="date" id="date">Date de naissance <span class="etoile"> * </span> </label>
-          <input type="date" name="date" id="date">
+          <input type="date"  max="1999-01-01" min="1980-01-01" name="date" id="date">
           <br>
           <label for="adressePostale" id="adressePostale">Adresse postale</label>
           <input type="text" name="adressePostale" id="adressePostale">
