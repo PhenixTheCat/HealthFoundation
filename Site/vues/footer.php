@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<div class="fondGris"></div>
 <footer id="footer">
 	<link rel="stylesheet" media="screen" href="design.css" />
 
