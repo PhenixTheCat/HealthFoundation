@@ -211,7 +211,7 @@ function sendMail(string $email,$subject,$message)
     
            
 }
-function editProfil($dataToEdit,$function,$newData) {
+function editProfil($dataToEdit,$function) {
     if(isset($dataToEdit)){ 
         //if(isString($newData)|| is_int($newData)){
         $function;

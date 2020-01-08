@@ -390,37 +390,37 @@ switch ($function) {
         $user = getUserInfo($database, $_SESSION['userID']);
         $error = false;
         if (isset($_POST['modifnom'])) {
-            editProfil($_POST['modifnom'], changeLastName($database, $_SESSION['userID'], $_POST['nom']), $_POST['nom']);
+            editProfil($_POST['modifnom'], changeLastName($database, $_SESSION['userID'], $_POST['nom']));
         }
         if (isset($_POST['modifprenom'])) {
 
-            editProfil($_POST['modifprenom'], changeFirstName($database, $_SESSION['userID'], $_POST['prenom']), $_POST['prenom']);
+            editProfil($_POST['modifprenom'], changeFirstName($database, $_SESSION['userID'], $_POST['prenom']));
         }
         if (isset($_POST['modifdate'])) {
-            editProfil($_POST['modifdate'], changeBirthDate($database, $_SESSION['userID'], $_POST['date']), $_POST['date']);
+            editProfil($_POST['modifdate'], changeBirthDate($database, $_SESSION['userID'], $_POST['date']));
         }
         if (isset($_POST['modifemail'])) {
 
-            editProfil($_POST['modifemail'], changeEmail($database, $_SESSION['userID'], $_POST['email']), $_POST['email']);
+            editProfil($_POST['modifemail'], changeEmail($database, $_SESSION['userID'], $_POST['email']));
         }
         if (isset($_POST['modifadresse'])) {
-            editProfil($_POST['modifadresse'], changeAddress($database, $_SESSION['userID'], $_POST['adressePostale']), $_POST['adressePostale']);
+            editProfil($_POST['modifadresse'], changeAddress($database, $_SESSION['userID'], $_POST['adressePostale']));
         }
         if (isset($_POST['modifcodepostal'])) {
 
-            editProfil($_POST['modifcodepostal'], changePostCode($database, $_SESSION['userID'], $_POST['codePostale']), $_POST['codePostale']);
+            editProfil($_POST['modifcodepostal'], changePostCode($database, $_SESSION['userID'], $_POST['codePostale']));
         }
         if (isset($_POST['modifville'])) {
-            editProfil($_POST['modifville'], changeCity($database, $_SESSION['userID'], $_POST['ville']), $_POST['ville']);
+            editProfil($_POST['modifville'], changeCity($database, $_SESSION['userID'], $_POST['ville']));
         }
         if (isset($_POST['modifpays'])) {
 
-            editProfil($_POST['modifpays'], changeCountry($database, $_SESSION['userID'], $_POST['pays']), $_POST['pays']);
+            editProfil($_POST['modifpays'], changeCountry($database, $_SESSION['userID'], $_POST['pays']));
         }
 
         if (isset($_POST['modifnumero'])) {
 
-            editProfil($_POST['modifnumero'], changePhoneNumber($database, $_SESSION['userID'], $_POST['numeroDeTelephone']), $_POST['numeroDeTelephone']);
+            editProfil($_POST['modifnumero'], changePhoneNumber($database, $_SESSION['userID'], $_POST['numeroDeTelephone']));
         }
 
 
