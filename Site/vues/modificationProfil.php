@@ -319,6 +319,7 @@
 
 
 </select>
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifpays">
             <br>
             <label for="numeroDeTelephone" id="numeroDeTelephone">Numéro de téléphone</label>
