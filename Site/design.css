@@ -93,6 +93,7 @@ body {
 	background-attachment: scroll;
 	width: 100%;
 	margin: 0;
+	margin-bottom: 5%;
 }
 
 .pasImage {
@@ -799,6 +800,7 @@ input[type=email] {
 	border-bottom: 1px solid black;
 	width: 50%;
 	margin: 5%;
+	font-size: medium;
 }
 
 .enteteInscription:hover {
@@ -1033,6 +1035,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 50%;
 	margin: 5%;
+	font-size: medium;
 }
 
 .pageInscriptionSuite label {
@@ -1057,16 +1060,25 @@ input[type=string] {
 	font-style: large;
 	width: 50%;
 	margin: 5%;
-	padding: 0 38%;
+	font-size: medium;
+	
 
 }
 
-
+select#pays{
+	margin-bottom: 5%;
+	font-size: medium;
+}
 .etoile {
 	color: red;
 
 }
+.pageInscriptionSuite input[type=radio] {
 
+	margin: 3%;
+	
+
+}
 
 /*=========== Confirmation inscription ===============*/
 .confirmationInscription {
@@ -1338,6 +1350,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=password] {
@@ -1347,6 +1360,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=email] {
@@ -1356,6 +1370,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=string] {
@@ -1365,6 +1380,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=date] {
@@ -1374,6 +1390,7 @@ input[type=string] {
 
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 	
 }
 div.datetimebox{

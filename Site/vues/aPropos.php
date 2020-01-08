@@ -15,7 +15,7 @@
 
 
   <div class="headerContact">
-    <h1> A propos </h1>
+    <h1> À propos </h1>
   </div>
 
   <div class="about">

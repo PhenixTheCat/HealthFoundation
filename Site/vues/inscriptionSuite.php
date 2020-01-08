@@ -50,7 +50,7 @@
           <br>
           <label for="pays" id="pays">Pays <span class="etoile"> * </span> </label>
 
-          <select name="pays">
+          <select name="pays" id="pays">
             <option value="France" selected="selected">France </option>
 
             <option value="Afghanistan">Afghanistan </option>
