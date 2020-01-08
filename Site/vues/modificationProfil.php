@@ -26,32 +26,39 @@
             <h3> Informations détaillés </h3>
             <label for="nom" id="nom">Nom </label>
             <input type="text" name="nom" id="nom" value="<?php echo $user['last_name']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifnom">
             <br>
             <label for="prenom" id="prenom">Prénom </label>
             <input type="text" name="prenom" id="prenom" value="<?php echo $user['first_name']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifprenom">
             <br>
             <label for="date"  >Date de naissance </label>
             <input type="date"  max="1999-01-01" min="1980-01-01" value="<?php echo $user['birthdate']; ?>" name="date" >
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifdate">
             <br>
 
             <label for="email" id="email">Adresse e-mail</label>
             <input type="email" name="email" id="mail" value="<?php echo $user['email']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifemail">
 
             <br>
             <label for="adressePostale" id="adressePostale">Adresse postale</label>
             <input type="text" name="adressePostale" id="adressePostale" value="<?php echo $user['adress']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifadresse">
             <br>
             <label for="codePostal" id="codePostal">Code postal</label>
             <input type="string" name="codePostale" id="codePostale" value="<?php echo $user['postecode']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifcodepostal">
             <br>
             <label for="ville" id="ville">Ville </label>
             <input type="text" name="ville" id="ville" value="<?php echo $user['city']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifville">
             <br>
             <label for="pays" id="pays">Pays </label>
@@ -317,6 +324,7 @@
             <label for="numeroDeTelephone" id="numeroDeTelephone">Numéro de téléphone</label>
             <input type="string" name="numeroDeTelephone" id="numeroDeTelephone"
               value="<?php echo $user['phone_number']; ?>">
+            <br>
             <input class="editButtons" type="submit" Value="Enregistrer" name="modifnumero">
             <br>
 
