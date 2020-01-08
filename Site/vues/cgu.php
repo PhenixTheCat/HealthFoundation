@@ -151,11 +151,11 @@
   <p>
     L'Utilisateur peut alors :
   </p>
-  <ul>
-    <li>Soit solliciter le remplacement de ses Identifiants lorsqu'il existe un risque que ceux-ci soient utilisés par
-      un tiers ;</li>
-    <li>Soit solliciter la restitution sécurisée de ses Identifiants.</li>
-  </ul>
+    
+    Soit solliciter le remplacement de ses Identifiants lorsqu'il existe un risque que ceux-ci soient utilisés par
+    un tiers ;</br>
+    Soit solliciter la restitution sécurisée de ses Identifiants.
+  
   <p>
     Chaque Utilisateur est en conséquence seul responsable de l’utilisation du ou des Service(s) faite sous son
     identification. Toute connexion ou transmission de données effectuée en utilisant les Identifiants sera réputée
@@ -207,18 +207,16 @@
     Foundation donne accès, tout Utilisateur s’engage tant à l’égard de l’Editeur que des autres Utilisateurs inscrits
     et de manière
     générale auprès de tout tiers, à :</p>
-  <ul>
-    <li>Fournir des données exactes, actualisées, vraies, complètes ;</li>
-    <li>Ne pas fournir de données erronées, obsolètes ;</li>
-    <li>Ne pas usurper, en tout ou partie, l’identité, le titre ou la qualité d’un tiers ;</li>
-    <li>Respecter la gestion des accès et en particulier ne pas masquer sa véritable identité en se connectant sous les
-      paramètres personnels d'un autre Utilisateur ;</li>
-    <li>Garder confidentiels ses Identifiants et ne pas les dévoiler à des tiers ;</li>
-    <li>Avertir l’Editeur de tous les dysfonctionnements logiques et techniques qu’il pourrait constater et toutes les
-      anomalies qu’il pourrait découvrir, telles en particulier les intrusions non autorisées au sein de son compte
-      Health Foundation.
-    </li>
-  </ul>
+  
+    Fournir des données exactes, actualisées, vraies, complètes ;</br>
+    Ne pas fournir de données erronées, obsolètes ;</br>
+    Ne pas usurper, en tout ou partie, l’identité, le titre ou la qualité d’un tiers ;</br>
+    Respecter la gestion des accès et en particulier ne pas masquer sa véritable identité en se connectant sous les
+    paramètres personnels d'un autre Utilisateur ;</br>
+    Garder confidentiels ses Identifiants et ne pas les dévoiler à des tiers ;</br>
+    Avertir l’Editeur de tous les dysfonctionnements logiques et techniques qu’il pourrait constater et toutes les
+    anomalies qu’il pourrait découvrir, telles en particulier les intrusions non autorisées au sein de son compte
+    Health Foundation.
 
   <p>En cas de non-respect des principes énoncés ci-dessus, l’Editeur se réserve la possibilité de suspendre ou refuser
     l’accès, sans préavis ni indemnité, de façon temporaire ou définitive, à tout ou partie des Services.</p>
@@ -245,30 +243,29 @@
   <p>L’Utilisateur s’engage tant à l’égard de l’Editeur, que des autres Utilisateurs et de manière générale de tout
     tiers, à respecter de manière inconditionnelle l'ensemble de la législation applicable, et plus particulièrement :
   </p>
-  <ul>
-    <li>Le droit de la propriété intellectuelle applicables aux créations, aux logiciels, aux textes, aux bases de
-      données, aux images de toute nature ;</li>
-    <li>La loi Informatique, Fichiers et Libertés en matière de protection des personnes à l’égard des traitements de
-      données à caractère personnel ;</li>
-    <li>Le dispositif légal de protection de la fraude informatique.</li>
-  </ul>
+  
+    Le droit de la propriété intellectuelle applicables aux créations, aux logiciels, aux textes, aux bases de
+    données, aux images de toute nature ;</br>
+    La loi Informatique, Fichiers et Libertés en matière de protection des personnes à l’égard des traitements de
+    données à caractère personnel ;</br>
+    Le dispositif légal de protection de la fraude informatique.</br>
+
   <p>En conséquence, tout Utilisateur inscrit s’interdit tant à l’égard de l’Editeur, que des autres Utilisateurs
     inscrits et de manière générale de tout tiers :</p>
-  <ul>
-    <li>De diffuser des propos diffamatoires, abusifs, harcelant ou menaçant quiconque, ou en violation des droits
-      d’autrui ;</li>
-    <li>De faire l’apologie des crimes contre l’humanité, d’inciter à la haine raciale ou à la pédophilie ;</li>
-    <li>De créer une fausse identité ou usurper l’identité d’un tiers ;</li>
-    <li>De transmettre des virus, un cheval de Troie, des bombes logiques ou tout autre programme nuisible ou
-      destructeur ;</li>
-    <li>D’entraver les Services associés au compte Health Foundation ;</li>
-    <li>De reproduire et/ou utiliser la marque, la dénomination sociale, le logo ou tout signe distinctif et de manière
-      générale toute donnée de quelque nature qu’elle soit, rédactionnelle, graphique ou autre de l’Editeur, d’un autre
-      Utilisateur ou
-      d’un tiers ;</li>
-    <li>De procéder ou même de tenter une intrusion du sein du Site ou du système d’information d’administration du Site
-      ou de modifier, totalement ou partiellement les éléments qui y sont contenus.</li>
-  </ul>
+
+    De diffuser des propos diffamatoires, abusifs, harcelant ou menaçant quiconque, ou en violation des droits
+      d’autrui ;</br>
+    De faire l’apologie des crimes contre l’humanité, d’inciter à la haine raciale ou à la pédophilie ;</br>
+    De créer une fausse identité ou usurper l’identité d’un tiers ;</br>
+    De transmettre des virus, un cheval de Troie, des bombes logiques ou tout autre programme nuisible ou
+    destructeur ;</br>
+    D’entraver les Services associés au compte Health Foundation ;</br>
+    De reproduire et/ou utiliser la marque, la dénomination sociale, le logo ou tout signe distinctif et de manière
+    générale toute donnée de quelque nature qu’elle soit, rédactionnelle, graphique ou autre de l’Editeur, d’un autre
+    Utilisateur ou d’un tiers ;</br>
+    De procéder ou même de tenter une intrusion du sein du Site ou du système d’information d’administration du Site
+    ou de modifier, totalement ou partiellement les éléments qui y sont contenus.</br>
+
   <p>
     L’Utilisateur s’engage le cas échéant à indemniser l’Editeur de tout préjudice directement ou indirectement lié au
     non-respect de ces garanties.
