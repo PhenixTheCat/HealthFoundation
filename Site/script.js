@@ -1,3 +1,4 @@
+/*
 var body = document.body;
 var bodyHeight = Math.max(body.scrollHeight, body.offsetHeight);
 var html = document.documentElement;
@@ -36,3 +37,4 @@ if (document.getElementById("footer").classList.contains('footerBloque')) {
 
 
 }
+*/
