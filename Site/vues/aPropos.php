@@ -57,7 +57,7 @@
 
   <div class="imageProduit">
     <span class="Image produit">
-      <img src="Images/capteur.jpg" class="capteur" alt="Photo capteurs">
+      <img src="Images/capteur2.jpg" class="capteur" alt="Photo capteurs">
     </span>
   </div>
 
