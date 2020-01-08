@@ -800,6 +800,7 @@ input[type=email] {
 	border-bottom: 1px solid black;
 	width: 50%;
 	margin: 5%;
+	font-size: medium;
 }
 
 .enteteInscription:hover {
@@ -1349,6 +1350,7 @@ select#pays{
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=password] {
@@ -1358,6 +1360,7 @@ select#pays{
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=email] {
@@ -1367,6 +1370,7 @@ select#pays{
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=string] {
@@ -1376,6 +1380,7 @@ select#pays{
 	border-bottom: 1px solid black;
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 }
 
 .piloteModifMdpp input[type=date] {
@@ -1385,6 +1390,7 @@ select#pays{
 
 	width: 300px;
 	margin: 15px;
+	font-size: medium;
 	
 }
 div.datetimebox{
