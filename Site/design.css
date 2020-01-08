@@ -1337,7 +1337,7 @@ input[type=string] {
 	background-color: transparent;
 	border-bottom: 1px solid black;
 	width: 300px;
-	margin: 30px;
+	margin: 15px;
 }
 
 .piloteModifMdpp input[type=password] {
@@ -1346,7 +1346,7 @@ input[type=string] {
 	background-color: transparent;
 	border-bottom: 1px solid black;
 	width: 300px;
-	margin: 30px;
+	margin: 15px;
 }
 
 .piloteModifMdpp input[type=email] {
@@ -1355,7 +1355,7 @@ input[type=string] {
 	background-color: transparent;
 	border-bottom: 1px solid black;
 	width: 300px;
-	margin: 30px;
+	margin: 15px;
 }
 
 .piloteModifMdpp input[type=string] {
@@ -1364,7 +1364,7 @@ input[type=string] {
 	background-color: transparent;
 	border-bottom: 1px solid black;
 	width: 300px;
-	margin: 30px;
+	margin: 15px;
 }
 
 .piloteModifMdpp input[type=date] {
@@ -1373,8 +1373,11 @@ input[type=string] {
 	background-color: transparent;
 
 	width: 300px;
-	margin: 30px;
-	padding: 0 37%;
+	margin: 15px;
+	
+}
+div.datetimebox{
+	text-align: center;
 }
 
 .piloteModifMdpp label {
@@ -1892,8 +1895,8 @@ div.titreProduit {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	margin-top: 0%;
+	margin-bottom: 7%;
 	letter-spacing: 1px;
 	font-weight: 400;
 	transition: all 0.3s;
