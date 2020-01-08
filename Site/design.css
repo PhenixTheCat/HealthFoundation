@@ -1034,6 +1034,7 @@ input[type=string] {
 	border-bottom: 1px solid black;
 	width: 50%;
 	margin: 5%;
+	font-size: medium;
 }
 
 .pageInscriptionSuite label {
@@ -1058,12 +1059,14 @@ input[type=string] {
 	font-style: large;
 	width: 50%;
 	margin: 5%;
+	font-size: medium;
 	
 
 }
 
 select#pays{
 	margin-bottom: 5%;
+	font-size: medium;
 }
 .etoile {
 	color: red;
