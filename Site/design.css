@@ -1451,21 +1451,42 @@ input[type=string] {
 
 /*==================    A propos ================= */
 
-div.produit {
-	width: 35%;
-	height: 425px;
-	background-color: #7CA0E4;
-	margin: 5% 50% 5% 50%;
-	padding: 3%;
+div.about p{
 	text-align: justify;
 }
 
+div.produit {
+  width: 35%;
+  height: 325px; 
+  background-color: #7CA0E4; 
+  margin: 4% 30% 5% 50%;
+  padding: 2%;
+  text-align: justify;
+}
+
 div.imageProduit {
-	margin: -38% 55% 10% 20%;
+  margin : -31.8% 35% 10% 10%;
+}
+
+div.about h3 {
+	text-align: center;
 }
 
 div.about {
-	text-align: center;
+  width: 50%;
+  height: 500px;
+  background-color: #7CA0E4;
+  margin:auto;
+  padding: 3%;
+}
+
+div.titreProduit {
+  text-align: center;
+  width: 15%;
+  height: 25px;
+  background-color: #7CA0E4;
+  margin: auto;
+  padding:auto;
 }
 
 
