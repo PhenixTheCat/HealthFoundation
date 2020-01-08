@@ -1058,16 +1058,23 @@ input[type=string] {
 	font-style: large;
 	width: 50%;
 	margin: 5%;
-	padding: 0 38%;
+	
 
 }
 
-
+select#pays{
+	margin-bottom: 5%;
+}
 .etoile {
 	color: red;
 
 }
+.pageInscriptionSuite input[type=radio] {
 
+	margin: 3%;
+	
+
+}
 
 /*=========== Confirmation inscription ===============*/
 .confirmationInscription {
