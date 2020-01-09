@@ -84,7 +84,7 @@ if ($NbreData != 0)
 
 
 
-<script src="js/form.js"></script>
+<script src="vues/js/form.js"></script>
 <script src="script.js"></script>
 
 </body>

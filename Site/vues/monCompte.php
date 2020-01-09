@@ -132,13 +132,7 @@
         <h3>Aucun utilisateur à valider</h3>
         <?php  } ?>
     </div>
-    <div class="resultatsParCat">
-        <h3> Répondre aux questions de la FAQ </h3>
 
-        <a href="index.php?redirect=faq&function=faqReponse">Cliquer ici pour répondre aux questions de la FAQ</a>
-
-
-    </div>
     <div class="resultatsParCat">
         <h3>Générer un code unique </h3>
         <?php foreach ($data as $user) { ?>

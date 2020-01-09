@@ -16,7 +16,7 @@ include('./modele/requests.faq.php');
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['function']) || empty($_GET['function'])) {
-    $function = "accueil";
+    $function = "faq";
 } else {
     $function = $_GET['function'];
 }
@@ -31,7 +31,7 @@ switch ($function) {
             if(isString($_POST['question'])&&isString($_POST['answer'])){
                 $question=$_POST['question'];
                 $question=$_POST['answer'];
-                insertQuestion($database, "", "", "", $question,$answer);
+                insertQuestion($database, "", "", "", $question,$answer,1);
             }
         }
         $questions= printAllQuestions($database);
@@ -44,7 +44,7 @@ switch ($function) {
                 $question = $_POST['message'];
 
                 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    insertQuestion($database, $first_name, $last_name, $email, $question,NULL);
+                    insertQuestion($database, $first_name, $last_name, $email, $question,NULL,0);
                     $error = "Question envoyée<br />";
                 } else {
                     $error = "Adresse mail non valide";
@@ -52,6 +52,14 @@ switch ($function) {
             } else {
                 $error = "Tous les champs doivent être remplis";
             }
+        }
+
+        if (isset($_POST["deleteFaq"])) {
+            $id =$_POST['id'];
+            if(deleteQuestion($database,$id)){
+                header("Location: index.php?redirect=faq");
+            }
+
         }
         break;
 

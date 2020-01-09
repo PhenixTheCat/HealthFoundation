@@ -16,17 +16,18 @@ $table = "faq";
  * @param string $question
  */
 
-function insertQuestion(PDO $database, string $first_name, string $last_name, string $email, $question,$answer)
+function insertQuestion(PDO $database, string $first_name, string $last_name, string $email, string $question,$answer,$visible)
 {
   try {
 
-    $reqInsertQuestion = $database->prepare("INSERT INTO `faq` (`id`, `first_name`, `last_name`, `email`, `question`, `answer`) VALUES (NULL, :first_name,:last_name,:email,:question,:answer)");
+    $reqInsertQuestion = $database->prepare("INSERT INTO `faq` (`id`, `first_name`, `last_name`, `email`, `question`, `answer`,`visible`) VALUES (NULL, :first_name,:last_name,:email,:question,:answer,:visible)");
     $data = array(
       'first_name' => $first_name,
       'last_name' => $last_name,
       'email' => $email,
       'question' => $question,
-      'answer' => $answer
+      'answer' => $answer,
+      'visible' => $visible
     );
     $reqInsertQuestion->execute($data);
 
@@ -93,6 +94,20 @@ function printAllQuestions(PDO $database){
   catch(Exception $e)
   {
     return array(null);
+  }
+}
+
+function deleteQuestion(PDO $database,$id){
+  try
+  {
+    $requser = $database->prepare("DELETE FROM faq where id=?");
+    $requser->execute(array($id));
+    return true;
+    
+  }
+  catch(Exception $e)
+  {
+    return false;
   }
 }
 

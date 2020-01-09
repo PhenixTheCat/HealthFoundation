@@ -21,7 +21,7 @@
     <div class="faq">
     <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
         <h2> Ajouter une question</h2>
-        <form> 
+        <form method="POST"> 
             
         <label for="question">Question</label>
         </br>
@@ -43,7 +43,24 @@
                 <h4><?php echo $ans['answer']; ?> </h4>
             </div>
         </div>
+        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
+
+    <form action="" method="POST" >
+        <input type="hidden" name="id" value="<?php  echo $ans['id'];?>">
+    <input class="editButtons" type="submit" name="deleteFaq" value="Supprimer">
+    </form>
+    <?php endif;?>
         <?php } ?>
+        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Pilot") : ?>
+
+        <div class="resultatsParCat">
+        <h3> Répondre aux questions de la FAQ </h3>
+
+        <a href="index.php?redirect=faq&function=faqReponse">Cliquer ici pour répondre aux questions de la FAQ</a>
+        
+
+    </div>
+    <?php endif;?>
         <!--
         <div class="question">
             <button class="questionVisible"> Qu'est-ce que le Pilotest en ligne ? <i></i> </button>
@@ -114,6 +131,7 @@
         </div>
 
         -->
+        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Pilot") : ?>
 
         <div class="formulaireContact">
             <h2>Votre question n'est pas présente &#63;</h2>
@@ -131,7 +149,7 @@
                 <input class="submitButtons" name="envoi" type="submit" Value="Envoyer" id="envoi">
             </form>
         </div>
-
+        <?php endif;?>
     </div>
 
 
