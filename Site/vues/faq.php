@@ -131,7 +131,6 @@
         </div>
 
         -->
-        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Pilot") : ?>
 
         <div class="formulaireContact">
             <h2>Votre question n'est pas présente &#63;</h2>
@@ -149,7 +148,6 @@
                 <input class="submitButtons" name="envoi" type="submit" Value="Envoyer" id="envoi">
             </form>
         </div>
-        <?php endif;?>
     </div>
 
 
