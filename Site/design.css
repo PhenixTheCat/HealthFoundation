@@ -788,6 +788,7 @@ div.menuBas>a#footerButton {
 	background-color: #7CA0E4;
 	display: inline-block;
 	vertical-align: middle;
+        border-bottom:3px solid #7CA0E4;
 }
 
 
