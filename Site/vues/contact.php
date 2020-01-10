@@ -27,19 +27,19 @@
       <?php echo printError($error); ?>
       <form action="" method="post">
         <label for="Nom" id="nom">Nom</label>
-        <input type="text" name="nom" placeholder="Votre nom"
+        <input type="text" name="nom" 
           value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />
         <label for="prenom">Prénom</label>
-        <input type="text" name="prenom" placeholder="Votre prénom"
+        <input type="text" name="prenom" 
           value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>" /><br /><br />
         <label for="mail">Adresse email</label>
-        <input type="email" name="mail" placeholder="Votre mail"
+        <input type="email" name="mail"
           value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
         <label for="objet">Objet</label>
-        <input type="text" name="objet" placeholder="L'objet de votre message"
+        <input type="text" name="objet"
           value="<?php if(isset($_POST['objet'])) { echo $_POST['objet']; } ?>" /><br /><br />
         <label for="message">Votre message</label>
-        <textarea name="message" rows="10" cols="55" placeholder="Votre message">
+        <textarea name="message" rows="10" cols="55" >
         <?php if(isset($_POST['message'])) { echo $_POST['message']; } ?>
     </textarea>
         <input class="submitButtons" type="submit" Value="Envoyer" id="envoi">

@@ -33,8 +33,16 @@
             </br>
 
            <input class="submitButtons" type="submit" value="Ajouter" name="addQuestion">
+           <div class="resultatsParCat">
+        <h3> Répondre aux questions de la FAQ </h3>
+
+        <a href="index.php?redirect=faq&function=faqReponse">Cliquer ici pour répondre aux questions de la FAQ</a>
+        
+
+    </div>
            <?php endif;?>
         </form>
+        
         <h2> Les questions souvent posées</h2>
         <?php foreach ($questions as $ans) { ?>
         <div class="question">
@@ -53,13 +61,7 @@
         <?php } ?>
         <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Pilot") : ?>
 
-        <div class="resultatsParCat">
-        <h3> Répondre aux questions de la FAQ </h3>
-
-        <a href="index.php?redirect=faq&function=faqReponse">Cliquer ici pour répondre aux questions de la FAQ</a>
         
-
-    </div>
     <?php endif;?>
         <!--
         <div class="question">
@@ -133,7 +135,7 @@
         -->
 
         <div class="formulaireContact">
-            <h2>Votre question n'est pas présente &#63;</h2>
+            <h2>Votre question n'est pas présente?</h2>
             <form action="" method="post">
                 <label for="Nom" id="nom">Nom</label>
                 <input type="text" name="nom">

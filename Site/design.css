@@ -792,7 +792,7 @@ div.menuBas>a#footerButton {
 }
 
 
-.inscriptionP1 input[type=text],
+input[type=text],
 input[type=password],
 input[type=email] {
 	text-align: center;
@@ -808,10 +808,7 @@ input[type=email] {
 	border-bottom: 3px solid #3A79FF;
 }
 
-.inscriptionP1 label {
-	display: block;
 
-}
 
 .inscriptionP1 fieldset {
 
@@ -837,7 +834,7 @@ input[type=email] {
 	text-decoration: none;
 }
 
-.connexion input[type=password],
+input[type=password],
 input[type=email] {
 	text-align: center;
 	border: none;
@@ -854,10 +851,7 @@ input[type=email] {
 	margin-bottom: 5%;
 }
 
-.connexion label {
-	display: block;
 
-}
 
 .connexion fieldset {
 	padding: 1px;
@@ -881,20 +875,7 @@ input[type=email] {
 }
 
 
-.motDePasseOublie input[type=email] {
-	text-align: center;
-	border: none;
-	background-color: transparent;
-	border-bottom: 1px solid black;
-	width: 300px;
-	margin: 30px;
-}
 
-.motDePasseOublie label {
-	display: block;
-	font-weight: bold;
-
-}
 
 .motDePasseOublie fieldset {
 	padding: 1px;
@@ -945,10 +926,6 @@ input[type=email] {
 	margin-right: auto;
 }
 
-.formulaireContact label {
-	display: block;
-
-}
 
 /*Ici, la liste des input.*/
 
@@ -958,23 +935,6 @@ input[type=email] {
 	margin-right: 20%;
 }
 
-.formulaireContact input[type=text],
-input[type=email] {
-	border: none;
-	background-color: transparent;
-	border-bottom: 1px solid black;
-	width: 60%;
-	margin: 30px;
-}
-
-
-.formulaireContact input[type=password] {
-	border: none;
-	background-color: transparent;
-	border-bottom: 1px solid black;
-	width: 300px;
-	margin: 30px;
-}
 
 
 
@@ -1028,7 +988,6 @@ input[type=email] {
 }
 
 
-.pageInscriptionSuite input[type=text],
 input[type=string] {
 	text-align: center;
 	border: none;
@@ -1039,11 +998,6 @@ input[type=string] {
 	font-size: medium;
 }
 
-.pageInscriptionSuite label {
-	display: block;
-	font-weight: bold;
-
-}
 
 .pageInscriptionSuite fieldset {
 	padding: 1px;
@@ -1051,8 +1005,7 @@ input[type=string] {
 	border: none;
 }
 
-
-.pageInscriptionSuite input[type=date] {
+ input[type=date] {
 
 	font-style: large;
 	text-align: center;
@@ -1180,7 +1133,7 @@ select#pays{
 	margin: 30px;
 }
 
-.nouveauMdp label {
+label {
 	display: block;
 	font-weight: bold;
 
@@ -1218,11 +1171,7 @@ select#pays{
 	margin: auto;
 }
 
-.nouveauMdp label {
-	display: block;
-	font-weight: bold;
 
-}
 
 .nouveauMdpc fieldset {
 	padding: 1px;
@@ -1265,11 +1214,7 @@ select#pays{
 	margin: 30px;
 }
 
-.piloteModiMdp label {
-	display: block;
-	font-weight: bold;
 
-}
 
 .piloteModiMdp fieldset {
 	padding: 1px;
@@ -1303,11 +1248,7 @@ select#pays{
 	margin: auto;
 }
 
-.piloteModiMdpv label {
-	display: block;
-	font-weight: bold;
 
-}
 
 .piloteModiMdpv fieldset {
 	padding: 1px;
@@ -1398,13 +1339,7 @@ div.datetimebox{
 	text-align: center;
 }
 
-.piloteModifMdpp label {
-	display: block;
-	font-weight: bold;
-	text-align: center;
 
-
-}
 
 .piloteModifMdpp fieldset {
 	padding: 1px;
@@ -1442,13 +1377,7 @@ div.datetimebox{
 
 
 
-.adminCp label {
-	display: block;
-	font-weight: bold;
-	text-align: center;
 
-
-}
 
 .adminCp fieldset {
 	padding: 1px;
