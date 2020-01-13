@@ -184,7 +184,7 @@ switch ($function) {
         Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/index.php?redirect=user&function=inscriptionCompteValide&code=$code dans votre navigateur
             ";
                     if (sendMail($email, "Inscription validation", $message)) {
-                        header("Location : index.php?redirect=user&function=inscriptionMailEnvoye");
+                        header("Location:index.php?redirect=user&function=inscriptionMailEnvoye");
                     } else {
                         $error = "Le mail n'a pas pu être envoyé";
                     }
@@ -201,12 +201,6 @@ switch ($function) {
         $vue = "inscriptionMailEnvoye";
         $error = false;
 
-
-        if (!isset($_GET["code"])) {
-            exit(header("Location:index.php?redirect=user"));
-        }
-        $code = $_GET["code"];
-        mailValidated($database, $code);
 
         break;
 
