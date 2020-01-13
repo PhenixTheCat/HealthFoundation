@@ -24,11 +24,11 @@
         <form method="POST"> 
             
         <label for="question">Question</label>
-        </br>
+
             <input type="text" name="question">
-</br>
+
             <label for="answer">Réponse</label>
-            </br>
+
             <input type="text" name="answer">
             </br>
 
