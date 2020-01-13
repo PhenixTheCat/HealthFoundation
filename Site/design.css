@@ -228,16 +228,12 @@ li a {
 	width: 800px;
 }
 
-@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 1315px) {
 	.logoPrincipal {
 		margin: auto;
 	}
 
-	nav#menu {
-            width:1000px;
-            margin:auto;
-        }
-        nav#menu.adminNAV {
+	nav#menu{
             margin: auto;
             width: 100%;
         }
@@ -257,9 +253,19 @@ li a {
 		width: 50%;
 	}
 }
-@media only screen and (max-width: 1315px) {
-    nav#menu{
-        width:100%;
+@media only screen and (max-width: 1620px) {
+    .adminNAV{
+        width: 39%;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .instructorNAV{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .connectedNAV{
+        width: 40%;
     }
 }
 
