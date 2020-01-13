@@ -1481,7 +1481,55 @@ div.titreProduit {
   margin: auto;
   padding:auto;
 }
-
+@media only screen and (max-width: 770px) {
+    div.about{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+        padding:0;
+        border-right:none;
+        border-left:none;
+    }
+    div.about>p{
+        padding:1%;
+    }
+    
+    div.encadreProduit{
+        width:100%;
+        padding:0;
+        border-right:none;
+        border-left:none;
+    }
+}
+@media only screen and (max-width: 1380px) {
+    div.produit{
+        top:10%;
+    }
+    
+}
+@media only screen and (max-width: 1150px) {
+    div.produit{
+        padding-top:0;
+    }
+}
+@media only screen and (max-width: 1090px) {
+    
+    div.produit{
+        position:inherit;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    div.encadreProduit img{
+        width: 70%;
+        margin: auto;
+        display: block;
+    }
+    div.produit{
+        margin: auto;
+        display: block;
+    }
+}
 /*=============     Mon compte ================== */
 
 
