@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <div class="fondGris"></div>
+    <div class="specialTest"></div>
 <footer id="footer">
 	<link rel="stylesheet" media="screen" href="design.css" />
 
