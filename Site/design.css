@@ -1420,20 +1420,33 @@ div.datetimebox{
 }
 
 
-
 /*==================    A propos ================= */
 
 div.about p{
 	text-align: justify;
 }
-
-div.produit {
-  width: 35%;
-  height: 325px; 
-  background-color: #7CA0E4; 
-  margin: 4% 30% 5% 50%;
+.encadreProduit{
+    width:70%;
+    margin:auto;
+    padding: 0 2% 1% 2%;
+    border: 5px solid black;
+    position:relative;
+    margin-bottom: 1%;
+}
+div.encadreProduit img{
+    box-shadow: 0 0 6px 0 white;
+    width:40%;
+}
+div.produit {    
+    width: 55%;
+  /*height: 325px; */
+  /*background-color: #7CA0E4; 
+  margin: 4% 30% 5% 50%;*/
   padding: 2%;
   text-align: justify;
+  display: inline-block;
+      position: absolute;
+    top: 20%;
 }
 
 div.imageProduit {
@@ -1446,22 +1459,22 @@ div.about h3 {
 
 div.about {
   width: 50%;
-  height: 500px;
-  background-color: #7CA0E4;
+  /*height: 500px;*/
+  /*background-color: #7CA0E4;*/
   margin:auto;
-  padding: 3%;
+    padding: 0 2% 1% 2%;
+    border: 5px solid black;
+    margin-bottom: 2%;
 }
 
 div.titreProduit {
   text-align: center;
-  width: 15%;
+  /*width: 15%;
   height: 25px;
-  background-color: #7CA0E4;
+  background-color: #7CA0E4;*/
   margin: auto;
   padding:auto;
 }
-
-
 
 /*=============     Mon compte ================== */
 
