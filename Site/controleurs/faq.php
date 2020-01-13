@@ -57,7 +57,7 @@ switch ($function) {
         if (isset($_POST["deleteFaq"])) {
             $id =$_POST['id'];
             if(deleteQuestion($database,$id)){
-                header("Location: index.php?redirect=faq");
+                header("Location:index.php?redirect=faq");
             }
 
         }
@@ -76,7 +76,7 @@ switch ($function) {
                 if (answerQuestion($database, $answer, $id)) {
                     $email = $_POST['email'];
                     sendMail($email, 'FAQ - Réponse', $answer);
-                    header("Location: index.php?redirect=faq&function=faqReponse");
+                    header("Location:index.php?redirect=faq&function=faqReponse");
                 }
             } else {
                 $error = "Vous ne pouvez pas envoyer une réponse vide!";

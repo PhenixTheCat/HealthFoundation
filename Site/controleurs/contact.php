@@ -41,7 +41,7 @@ switch ($function) {
                 $objet = $_POST['objet'];
                 $message = $_POST['message'];
                 if (receiveMail($email, $nom, $prenom, $email, $objet)) {
-                    header('Location:index.php?redirect=contact&function=contactMessageEnvoye"');
+                    header("Location:index.php?redirect=contact&function=contactMessageEnvoye");
                 } else {
                     $error = "Le mail n'a pas été envoyé";
                 }

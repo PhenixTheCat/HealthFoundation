@@ -27,7 +27,7 @@
       </p>
 
       <br>
-      <a href="index.php"> Retourner à l'accueil</a>
+      <a classe="submitButtons" href="index.php"> Retourner à l'accueil</a>
 
     </div>
   </div>
