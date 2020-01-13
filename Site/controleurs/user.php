@@ -139,8 +139,8 @@ switch ($function) {
         if (isset($_POST['inscriptionSuite'])) {
             if (isString($_POST['nom']) && isString($_POST['prenom']) && isString($_POST['date']) && isString($_POST['codePostal'])) {
                 $sex = $_POST['sex'];
-                $firstName = $_POST['nom'];
-                $lastName = $_POST['prenom'];
+                $firstName = $_POST['prenom'];
+                $lastName = $_POST['nom'];
                 $birthdate = $_POST['date'];
                 if (!empty($_POST['adressePostale'])) {
                     $address = $_POST['adressePostale']; // Champ optionnel
