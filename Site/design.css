@@ -228,16 +228,19 @@ li a {
 	width: 800px;
 }
 
-@media only screen and (max-width: 1315px) {
+@media only screen and (max-width: 1620px) {
 	.logoPrincipal {
 		margin: auto;
 	}
 
 	nav#menu {
-		margin: auto;
-		width: 100%;
-	}
-
+            width:1000px;
+            margin:auto;
+        }
+        nav#menu.adminNAV {
+            margin: auto;
+            width: 100%;
+        }
 	.connectedrightUL {
 		width: 50%;
 	}
@@ -253,6 +256,11 @@ li a {
 	.adminLeftUL {
 		width: 50%;
 	}
+}
+@media only screen and (max-width: 1315px) {
+    nav#menu{
+        width:100%;
+    }
 }
 
 
