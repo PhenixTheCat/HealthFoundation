@@ -56,8 +56,8 @@
 
 
         <div class=" logoLangue">
-            <a href="index.php"><img src="Images/logoAnglais.jpg" class="logo" alt="Passer site en anglais"></a>
-            <a href="index.php"><img src="Images/logoFrance.jpg" class="logo" alt="Passer site en francais"></a>
+            <a href="index.php?lang=en"><img src="Images/logoAnglais.jpg" class="logo" alt="Passer site en anglais"></a>
+            <a href="index.php?lang=fr"><img src="Images/logoFrance.jpg" class="logo" alt="Passer site en francais"></a>
         </div>
     </nav>
 
