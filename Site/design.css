@@ -817,7 +817,7 @@ input[type=email] {
 	background-color: transparent;
 	border-bottom: 1px solid black;
 	width: 50%;
-	margin: 5%;
+	margin: 1%;
 	font-size: medium;
 }
 
@@ -1916,7 +1916,7 @@ div.titreProduit {
 	color: #000000;
 	background: none;
 	cursor: pointer;
-	padding: 1% 2%;
+
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
@@ -2063,6 +2063,50 @@ table {
 	}
 
 
+
+}
+
+.gestionButtons{
+	background: none;
+	border: none;
+	font-size: medium;
+
+}
+.gestionButtons:hover{
+	border-bottom: 3px solid #3A79FF;
+}
+
+.formulaireRecherche{
+	text-align: center;
+}
+
+.multiCritereRadio{
+
+	text-align: center;
+
+
+}
+.multiCritereRadio label{
+
+	display: inline;
+
+
+}
+.criteriaSearch{
+	text-align: center;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid black;
+	width: 50%;
+	font-size: medium;
+	margin: 0%;
+	padding: 0%;
+}
+
+.criteriasButton{
+	background: none;
+	border:1px solid black;
+	font-size: medium;
 
 }
 

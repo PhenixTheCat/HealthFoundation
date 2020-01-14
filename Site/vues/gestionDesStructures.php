@@ -159,9 +159,9 @@
           <td>
             <form action="" id="searchUser" method="post">
               <input  type="hidden" name="id" value="<?php echo $struc['id'];?>">
-              <input class="editButtons" type="submit" name="delete" value="Supprimer" /> </br>
-              <input class="editButtons" type="submit" name="generateCode" value="Générer un code" /> </br>
-              <input class="editButtons" type="submit" name="inactive" value="Passer inactif" /> </br>
+              <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
+              <input class="gestionButtons" type="submit" name="generateCode" value="Générer un code" /> </br>
+              <input class="gestionButtons" type="submit" name="inactive" value="Passer inactif" /> </br>
 
             </form>
           </td>

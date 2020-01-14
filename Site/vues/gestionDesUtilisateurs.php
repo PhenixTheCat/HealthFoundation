@@ -137,10 +137,11 @@ else{
     <?php echo printError($error); ?>
 	<div class="formulaireRecherche">  
 		<form action=""  method="post" >
+			<div class="criterias">
 		<script>showCriterias(0,1,true,0);</script>
-
+		</div>
 		<div id="Criterias" class = "Criterias"><b></b></div>
-		<button type = "submit" value = "Research" name="Research">Rechercher</button>
+		<button class ="submitButtons" type="submit" value = "Research" name="Research">Rechercher</button>
 		</form>
 		<table border="1">	
 		  <thead>
@@ -161,21 +162,21 @@ else{
         <?php foreach ($users as $user) { ?>
 
         <tr>
-            <td><php><?php echo $user['sex']; ?></php></td>
+           
           <td> <?php echo $user['last_name'] ?></td>
           <td> <?php echo $user['first_name'] ?></td>
-
+		  <td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structure'] ?></td>
+          <td> <?php echo $user['structureName'] ?></td>
           <td> <?php echo $user['status'] ?></td>
           <td>
             <form action="" id="searchUser" method="post">
               <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 
-              <input class="editButtons" type="submit" name="delete" value="Supprimer" /> </br>
-              <input class="editButtons" type="submit" name="block" value="Bannir" /> </br>
-              <input class="editButtons" type="submit" name="referent" value="Passer en référent" /> </br>
+              <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
+              <input class="gestionButtons" type="submit" name="block" value="Bannir" /> </br>
+              <input class="gestionButtons" type="submit" name="referent" value="Passer en référent" /> </br>
             </form>
           </td>
         </tr>
@@ -188,24 +189,25 @@ else{
         <?php foreach ($users as $user) { ?>
 
         <tr>
-        <td><php><?php echo $user['sex']; ?></php></td>
+       
           <td> <?php echo $user['last_name'] ?></td>
-          <td> <?php echo $user['first_name'] ?></td>
+		  <td> <?php echo $user['first_name'] ?></td>
+		  <td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structure'] ?></td>
+          <td> <?php echo $user['structureName'] ?></td>
           <td> <?php echo $user['status'] ?></td>
           <td>
             <form action="" id="searchUser" method="post">
-              <input class="editButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">
-              <input class="editButtons" type="submit" name="delete" value="Supprimer" /> </br>
-              <input class="editButtons" type="submit" name="block" value="Bannir" /> </br>
+              <input class="gestionButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">
+              <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
+              <input class="gestionButtons" type="submit" name="block" value="Bannir" /> </br>
 
-              <input class="editButtons" type="submit" name="referent" value="Passer en référent" /> </br>
+              <input class="gestionButtons" type="submit" name="referent" value="Passer en référent" /> </br>
 
               <input  type="email" name="newMail" >
 
-              <input class="editButtons" type="submit" name="email" value="Changer le mail" /> </br>
+              <input class="gestionButtons" type="submit" name="email" value="Changer le mail" /> </br>
 
             </form>
           </td>
