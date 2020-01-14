@@ -430,51 +430,59 @@ switch ($function) {
     case 'gestionDesUtilisateurs':
         $vue = "gestionDesUtilisateurs";
         $error = false;
-        if (isset($_POST['rechercher'])) {
-            if (isString($_POST['searchUser'])) {
-                $search = $_POST['searchUser'];
-                $users = searchUserByName($database, $search);
-            } else {
-                $error = "Rentrez le nom de famille ou le prénom d'un utilisateur!";
+			
+			if(!isset($_SESSION["nbCriteria"]))
+			{
+				$_SESSION["nbCriteria"] = 1;
+			}
+			
+					
+			
+            
+            
+            //$id = $_POST["id"]; 
+            if(isset($_POST['delete'])){
+               
+           if(deleteUser($database,$id)){
+               header("Location : index.php?redirect=user&function=gestionDesUtilisateurs");
+           }
+           else{
+               $error = "L'utilisateur n'a pas pu être supprimé!";
+           }
+            
+         }
+         
+         if(isset($_POST['banned'])){
+            if(banUser($database,$id)){
+                header("Location : index.php?redirect=user&function=gestionDesUtilisateurs");
             }
-        } else {
-            if (getUser($database) != array(null)) {
-                $users = getUser($database);
-            }
-        }
-
-        if (isset($_POST['delete'])) {
-            $id = $_POST["id"];
-            if (deleteUser($database, $id)) {
-                header("Location:index.php?redirect=user&function=gestionDesUtilisateurs");
-            } else {
-                $error = "L'utilisateur n'a pas pu être supprimé!";
-            }
-        }
-
-        if (isset($_POST['block'])) {
-            $id = $_POST["id"];
-            if (banUser($database, $id)) {
-                header("Location:index.php?redirect=user&function=gestionDesUtilisateurs");
-            } else {
+            else{
                 $error = "L'utilisateur n'a pas pu être banni!";
             }
         }
 
-        if (isset($_POST['referent'])) {
-            $id = $_POST["id"];
-            if (passUserToReferent($database, $id)) {
-                header('Location:index.php?redirect=user&function=gestionDesUtilisateurs');
+        if(isset($_POST['instructor'])){
+            
+            $count = count($_POST['instructor']);
+            for ($i = 0; $i < $count; $i++){
+                $code =$_POST['instructorCode'][$i];
+                $idsToInstructor = $_POST['instructor'][$i];
+        
+           $requete = $bdd->prepare("UPDATE user SET code = '$code' WHERE id = '$idsToInstructor' ");
+           $requete->execute();
             }
         }
-
-        if (isset($_POST['email'])) {
-            $id = $_POST["id"];
-            $newMail= $_POST["newMail"];
-            if (changeEmail($database,$id,$newMail)) {
-                header('Location:index.php?redirect=user&function=gestionDesUtilisateurs');
+        if(isset($_POST['referent'])){    
+            $count = count($_POST['referent']);
+            $uniqId = [];
+            for ($i = 0; $i < $count; $i++){
+                $idsToReferent = $_POST['referent'][$i];
+            $requete = $bdd->prepare("UPDATE structure SET referent = '$idsToReferent' WHERE id = (SELECT structure from user WHERE id = '$idsToReferent') ");
+            $requete->execute();
             }
         }
+            
+        
     break;
 
     case 'cgu':

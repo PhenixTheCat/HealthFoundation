@@ -272,4 +272,19 @@ function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4){
 
     $graph->Stroke();
 }
+
+/*************************************
+Fonction : multiCriteriaResearch
+----------------------------------------------
+  @Desc    : Est appelée en appuyant sur le bouton recherche, et réalise la recherche
+  @Param   : 
+  @Return  : (array) résultat de la recherche
+*/
+function multiCriteriaResearch($database) : array
+{
+	//Execution de la requête
+	$data = multiCriteriaRequest($database);
+	
+	return $data;
+}
 ?>
