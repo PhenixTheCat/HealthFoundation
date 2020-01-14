@@ -1,6 +1,6 @@
-/* ==========  FEUILLE DE STYLE ACCOMPAGNANT LE SCRIPT "SIMPLE QUIZ BUILDER"  ================= */
+/* ========== css du psychotestEnLigne  ================= */
 
-/* === NOIR === */
+
 
 img.image1{
 	vertical-align:middle;
@@ -140,4 +140,14 @@ form{
 	border:solid 1px rgb(173, 132, 238);
 	text-align:center;
 }
-img, object  {vertical-align:middle;}
+img, object  {
+	vertical-align:middle;
+}
+
+div#main{
+	display: block;
+	margin: auto;
+}
+
+
+
