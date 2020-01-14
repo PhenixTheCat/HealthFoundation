@@ -1,31 +1,6 @@
 <?php
 
-$_SESSION["firstLoad"] = "true";
 
-if(isset($_POST['Research']))
-{
-	$_SESSION["firstLoad"] = "false";
-	
-	for($i = 0; $i<$_SESSION['nbCriteria'];$i++)
-	{
-		$_SESSION['criteriaText'][$i] = $_POST['Text'.$i];
-		if(isset($_POST[$i]))
-		{
-			$_SESSION['criteriaType'][$i] = $_POST[$i];
-		}
-		
-	}
-	
-	$users = multiCriteriaResearch($database);
-
-}
-else{
-	if(getUser($database)!=array(null))
-	{	
-		$users = getUser($database);
-
-	}
-}
 
 
 ?>
@@ -145,9 +120,9 @@ else{
 		<table border="1">	
 		  <thead>
 			<tr>
-			  <th>Nom </th>
-			  <th>Prénom</th>
 			  <th>Sexe</th>
+			  <th>Nom </th>
+			  <th>Prénom</th>  
 			  <th>Date de naissance</th>
 			  <th>Type </th>
 			  <th>Structure</th>
@@ -167,7 +142,7 @@ else{
 
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structure'] ?></td>
+          <td> <?php echo $user['structureName'] ?></td>
           <td> <?php echo $user['status'] ?></td>
           <td>
             <form action="" id="searchUser" method="post">
@@ -193,7 +168,7 @@ else{
           <td> <?php echo $user['first_name'] ?></td>
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structure'] ?></td>
+          <td> <?php echo $user['structureName'] ?></td>
           <td> <?php echo $user['status'] ?></td>
           <td>
             <form action="" id="searchUser" method="post">
