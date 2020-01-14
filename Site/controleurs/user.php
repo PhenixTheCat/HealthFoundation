@@ -289,11 +289,6 @@ switch ($function) {
         $vue = "motDePasseOublieConfirmation";
         $error = false;
         break;
-		
-    case 'psychotestEnLigne':
-        $vue = "psychotestEnLigne";
-        $error = false;
-        break;
 
     case 'monCompte':
         $vue = "monCompte";
@@ -440,7 +435,32 @@ switch ($function) {
 			{
 				$_SESSION["nbCriteria"] = 1;
 			}
+			$_SESSION["firstLoad"] = "true";
+
+		if(isset($_POST['Research']))
+		{
+			$_SESSION["firstLoad"] = "false";
 			
+			for($i = 0; $i<$_SESSION['nbCriteria'];$i++)
+			{
+				$_SESSION['criteriaText'][$i] = $_POST['Text'.$i];
+				if(isset($_POST[$i]))
+				{
+					$_SESSION['criteriaType'][$i] = $_POST[$i];
+				}
+				
+			}
+			
+			$users = multiCriteriaResearch($database);
+
+		}
+		else{
+			if(getUser($database)!=array(null))
+			{	
+				$users = getUser($database);
+
+			}
+		}
 					
 			
             
