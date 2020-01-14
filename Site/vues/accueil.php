@@ -33,7 +33,7 @@
 
                         <?php endif;?>
                         <?php if($_SESSION['isConnected']&& $_SESSION['userType'] == "Pilot") : ?>
-                            <a  class ="boutonTest" href="index.php?redirect=user&function=testEnLigne" > Passer le test en ligne</a>
+                            <a  class ="boutonTest" href="index.php?redirect=user&function=psychotestEnLigne" > Passer le test en ligne</a>
 
                 
                             <?php endif;?>
