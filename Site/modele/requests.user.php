@@ -786,7 +786,7 @@ function multiCriteriaRequest(PDO $database) : array
 		$criteriaType = $_SESSION['criteriaType'];
 		
 		//Ecriture de la requête
-		$requestText="SELECT * FROM user";
+		$requestText="SELECT user.*,structure.name AS structureName FROM user INNER JOIN structure where user.structure = structure.id";
 		
 		//Comptage du nombre de critère non vide
 		$effectiveCriteria = 0;
@@ -801,7 +801,7 @@ function multiCriteriaRequest(PDO $database) : array
 		//Ecriture de la requête
 		if($effectiveCriteria >= 1)
 		{
-			$requestText .= " WHERE ";
+			$requestText .= " AND ";
 			$criteriaDone = 0;
 			for($i=0;$i<$nbCriteria;$i++)
 			{
@@ -826,7 +826,7 @@ function multiCriteriaRequest(PDO $database) : array
 							$criteriaDone++;
 							break;
 						case "Structure":
-							$requestText .= "(structure like '%$criteriaText[$i]%')";
+							$requestText .= "(name like '%$criteriaText[$i]%')";
 							$criteriaDone++;
 							break;
 					}
