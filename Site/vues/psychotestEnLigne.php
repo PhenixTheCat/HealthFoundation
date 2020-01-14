@@ -1,5 +1,6 @@
 
 <?php
+/*
 session_start();
 include('osQuery.php');
 try{
@@ -61,8 +62,8 @@ if(!isset($_SESSION['isConnected']))
   
 	
 	<link rel="stylesheet" type="text/css" href="psychotestEnLigne.css" />
-	<script type="text/javascript" src="js/questions.js"></script>
-    <script type="text/javascript" src="js/sqb.js"></script>
+	<script type="text/javascript" src="vues/js/questions.js"></script>
+    <script type="text/javascript" src="vues/js/sqb.js"></script>
   </head>
 
 
@@ -74,7 +75,7 @@ if(!isset($_SESSION['isConnected']))
     </div>
 	
 
-  <script src="script.js"></script> 
+  
   </body>
   
 </html>
