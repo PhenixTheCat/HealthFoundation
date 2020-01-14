@@ -769,8 +769,88 @@ function passUserToReferent(PDO $database,int $id){
 			{
 				return false;
 			}
+}
+/**
+ * Lance la recherche multicritère avec les critères dans les variables de session
+ * @param PDO $database : Base de donnée (health_foundation.sql)
+ * @return bool : Retourne true si la requete a réussi, false si elle a échoué
+ */
+function multiCriteriaRequest(PDO $database) : array
+{
+	try
+	{
+		
+		//importation des variables de session
+		$nbCriteria = $_SESSION['nbCriteria'];
+		$criteriaText = $_SESSION['criteriaText'];
+		$criteriaType = $_SESSION['criteriaType'];
+		
+		//Ecriture de la requête
+		$requestText="SELECT * FROM user";
+		
+		//Comptage du nombre de critère non vide
+		$effectiveCriteria = 0;
+		for($i=0;$i<$nbCriteria;$i++)
+		{
+			if(!empty($criteriaType[$i]) && !empty($criteriaText[$i]))
+			{
+				$effectiveCriteria++;
+			}
 		}
-
+		
+		//Ecriture de la requête
+		if($effectiveCriteria >= 1)
+		{
+			$requestText .= " WHERE ";
+			$criteriaDone = 0;
+			for($i=0;$i<$nbCriteria;$i++)
+			{
+				if(!empty($criteriaType[$i]) && !empty($criteriaText[$i]))
+				{
+					switch($criteriaType[$i])
+					{
+						case "Name":
+							$requestText .= "(last_name like '%$criteriaText[$i]%' ||first_name like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Type":
+							$requestText .= "(type like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "City":
+							$requestText .= "(city like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Country":
+							$requestText .= "(country like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Structure":
+							$requestText .= "(structure like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+					}
+					if($criteriaDone != $effectiveCriteria)
+					{
+						$requestText .= " AND ";
+					}
+					
+					
+				}
+				
+			}
+		}
+		$requestText .= " ORDER BY last_name ";
+		
+		$request = $database->prepare($requestText);
+		$request->execute();
+		return $request->fetchAll();
+	}
+	catch(Exception $e)
+	{
+		return array();
+	}
+}
 
 
 
