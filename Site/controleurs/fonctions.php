@@ -287,4 +287,12 @@ function multiCriteriaResearch($database) : array
 	
 	return $data;
 }
+
+function multiCriteriaResearchStructure($database) : array
+{
+	//Execution de la requête
+	$data = multiCriteriaRequestStructure($database);
+	
+	return $data;
+}
 ?>
