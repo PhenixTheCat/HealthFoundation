@@ -145,8 +145,8 @@
           <td>
             <form action="" method="POST">
               <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-              <input type="submit" name="activate" value="Valider l'inscription">
-              <input type="submit" name="delete" value="Supprimer">
+              <input class="gestionButtons" type="submit" name="activate" value="Valider l'inscription">
+              <input class="gestionButtons" type="submit" name="delete" value="Supprimer">
             </form>
 
           </td>
