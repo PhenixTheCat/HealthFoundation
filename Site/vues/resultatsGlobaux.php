@@ -21,7 +21,9 @@
     <div class="RésultatsGlobaux">
         <span class="Résultats globaux">
             <h1>Résultats globaux</h1>
+            <?php echo printError($error); ?>
             <div class="testResults">
+            <img src="index.php?redirect=user&function=chartStress">
             <?php
 
 if ($NbreData != 0)
