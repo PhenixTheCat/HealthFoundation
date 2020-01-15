@@ -431,11 +431,11 @@ switch ($function) {
         $vue = "gestionDesUtilisateurs";
         $error = false;
 			
-			if(!isset($_SESSION["nbCriteria"]))
-			{
-				$_SESSION["nbCriteria"] = 1;
-			}
-			$_SESSION["firstLoad"] = "true";
+		if(!isset($_SESSION["nbCriteria"]))
+		{
+			$_SESSION["nbCriteria"] = 1;
+		}
+		$_SESSION["firstLoad"] = "true";
 
 		if(isset($_POST['Research']))
 		{
@@ -457,7 +457,7 @@ switch ($function) {
 		else{
 			if(getUser($database)!=array(null))
 			{	
-				$users = getUser($database);
+				$users = multiCriteriaResearch($database);
 
 			}
 		}
