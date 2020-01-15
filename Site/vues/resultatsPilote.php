@@ -61,8 +61,8 @@
                     
                         <td>
                             <form action="" id="showResults" method="post">
-                                <input class="editButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">
-                                <input class="editButtons" type="submit" name="results" value="Résultats" /> </br>
+                                <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                                <input class="gestionButtons" type="submit" name="results" value="Page de résultats" /> </br>
                             </form>
                         </td>
                 </tr>
