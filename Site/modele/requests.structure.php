@@ -24,7 +24,7 @@ catch(Exception $error)
 
 function insertStructure(PDO $database,array $data){
     try{
-    $reqStructure = $database->prepare("INSERT INTO `structure`(`id`, `name`, `referent`, `address`, `city`, `postcode`, `country`, `phone_number`, `code`,`status`) VALUES (0,?,NULL,?,?,?,?,?,?,'Active')");
+    $reqStructure = $database->prepare("INSERT INTO `structure`(`id`, `name`, `referent`, `address`, `city`, `postcode`, `country`, `phone_number`, `code`) VALUES (0,?,NULL,?,?,?,?,?,?,'Active')");
     $reqStructure->execute($data);
     return true;
         }
@@ -120,4 +120,87 @@ function passStructureToInactive(PDO $database,$id){
 		return false;
 	}
 }
+
+/**
+ * Lance la recherche multicritère avec les critères dans les variables de session
+ * @param PDO $database : Base de donnée (health_foundation.sql)
+ * @return array : Retourne le resultat de la recherche
+ */
+function multiCriteriaRequestStructure(PDO $database) : array
+{
+	try
+	{
+		
+		//importation des variables de session
+		$nbCriteria = $_SESSION['nbCriteriaStructure'];
+		$criteriaText = $_SESSION['criteriaTextStructure'];
+		$criteriaType = $_SESSION['criteriaTypeStructure'];
+		
+		//Ecriture de la requête
+		$requestText="SELECT structure.*,user.last_name,user.first_name FROM `structure`,user WHERE structure.referent=user.id";
+		
+		//Comptage du nombre de critère non vide
+		$effectiveCriteria = 0;
+		for($i=0;$i<$nbCriteria;$i++)
+		{
+			if(!empty($criteriaType[$i]) && !empty($criteriaText[$i]))
+			{
+				$effectiveCriteria++;
+			}
+		}
+		
+		//Ecriture de la requête
+		if($effectiveCriteria >= 1)
+		{
+			$requestText .= " AND ";
+			$criteriaDone = 0;
+			for($i=0;$i<$nbCriteria;$i++)
+			{
+				if(!empty($criteriaType[$i]) && !empty($criteriaText[$i]))
+				{
+					switch($criteriaType[$i])
+					{
+						case "Name":
+							$requestText .= "(name like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Referent":
+							$requestText .= "(last_name like '%$criteriaText[$i]%' ||first_name like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Postcode":
+							$requestText .= "(postcode like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "City":
+							$requestText .= "(city like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+						case "Country":
+							$requestText .= "(country like '%$criteriaText[$i]%')";
+							$criteriaDone++;
+							break;
+					}
+					if($criteriaDone != $effectiveCriteria)
+					{
+						$requestText .= " AND ";
+					}
+					
+					
+				}
+				
+			}
+		}
+		$requestText .= " ORDER BY last_name ";
+		
+		$request = $database->prepare($requestText);
+		$request->execute();
+		return $request->fetchAll();
+	}
+	catch(Exception $e)
+	{
+		return array();
+	}
+}
+
 ?>
