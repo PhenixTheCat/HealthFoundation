@@ -1,5 +1,5 @@
 <?php
-/* Page qui affiche les résultats des différents tests */
+/* Page qui affiche les résultats du psychoteste en ligne */
 
 ?>
 
@@ -28,18 +28,15 @@ if ($NbreData != 0)
         <thead>
           <tr>
             <th>id</th>
-            <th>test</th>
-            <th>timeline</th>
-            <th>value</th>
-            <th>type</th>
-            <th>unité</th>
             <th>date</th>
             <th>durée</th>
             <th>score</th>
             <th>banc de test</th>
+            <th>données mesurées</th>
             <th>pilot</th>
             <th>instructeur</th>
-            <th>capteurs</th>
+            <th>capteur</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -51,18 +48,16 @@ if ($NbreData != 0)
 ?>
           <tr>
             <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['test']; ?></td>
-            <td><?php echo $row['timeline']; ?></td>
-            <td><?php echo $row['value']; ?></td>
-            <td><?php echo $row['type']; ?></td>
-            <td><?php echo $row['unit']; ?></td>
             <td><?php echo $row['date']; ?></td>
             <td><?php echo $row['duration']; ?></td>
             <td><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
             <td><?php echo $row['testbed']; ?></td>
+            <td><?php echo $row['measured_data']; ?></td>
             <td><?php echo $row['pilot']; ?></td>
+           
             <td><?php echo $row['instructor']; ?></td>
             <td><?php echo $row['sensor']; ?></td>
+
           </tr>
           <?php
     } // fin foreach
@@ -83,7 +78,6 @@ if ($NbreData != 0)
 
 
 <script src="js/form.js"></script>
-<script src="script.js"></script>
 
  
 
