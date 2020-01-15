@@ -455,11 +455,9 @@ switch ($function) {
 
 		}
 		else{
-			if(multiCriteriaResearch($database)!=array(null))
-			{	
+
 				$users = multiCriteriaResearch($database);
 
-			}
 		}
 					
 			
