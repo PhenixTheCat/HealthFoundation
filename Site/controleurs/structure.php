@@ -35,6 +35,13 @@ switch ($function) {
         $vue = "gestionDesStructures";
         $error = false;
 		
+		if(!isset($_SESSION["nbCriteriaStructure"]))
+		{
+			$_SESSION["nbCriteriaStructure"] = 1;
+		}
+		$_SESSION["firstLoad"] = "true";
+
+		
         if(isset($_POST['Research']))
 		{
 			$_SESSION["firstLoadStructure"] = "false";
@@ -53,11 +60,8 @@ switch ($function) {
 
 		}
 		else{
-			if(getUser($database)!=array(null))
-			{	
 				$structures = multiCriteriaResearchStructure($database);
 
-			}
 		}
 		
 		

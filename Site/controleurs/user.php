@@ -290,6 +290,11 @@ switch ($function) {
         $error = false;
         break;
 
+case 'psychotestEnLigne':
+        $vue = "psychotestEnLigne";
+        $error = false;
+        break;
+		
     case 'monCompte':
         $vue = "monCompte";
         $error = false;
@@ -455,11 +460,9 @@ switch ($function) {
 
 		}
 		else{
-			if(multiCriteriaResearch($database)!=array(null))
-			{	
+
 				$users = multiCriteriaResearch($database);
 
-			}
 		}
 					
 			

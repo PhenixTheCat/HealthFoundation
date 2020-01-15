@@ -132,9 +132,33 @@ function multiCriteriaRequestStructure(PDO $database) : array
 	{
 		
 		//importation des variables de session
-		$nbCriteria = $_SESSION['nbCriteriaStructure'];
-		$criteriaText = $_SESSION['criteriaTextStructure'];
-		$criteriaType = $_SESSION['criteriaTypeStructure'];
+		
+		
+		//importation des variables de session
+		if(isset($_SESSION['nbCriteriaStructure']))
+		{
+			$nbCriteria = $_SESSION['nbCriteriaStructure'];
+		}
+		else
+		{
+			$nbCriteria = 0;
+		}
+		if(isset($_SESSION['criteriaTextStructure']))
+		{
+			$criteriaText = $_SESSION['criteriaTextStructure'];
+		}
+		else
+		{
+			$criteriaText = array();
+		}
+		if(isset($_SESSION['criteriaTypeStructure']))
+		{
+			$criteriaType = $_SESSION['criteriaTypeStructure'];
+		}
+		else
+		{
+			$criteriaType = array();
+		}
 		
 		//Ecriture de la requête
 		$requestText="SELECT structure.*,user.last_name,user.first_name FROM `structure`,user WHERE structure.referent=user.id";
