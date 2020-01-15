@@ -35,9 +35,9 @@ switch ($function) {
         $vue = "gestionDesStructures";
         $error = false;
 		
-		if(!isset($_SESSION["nbCriteria"]))
+		if(!isset($_SESSION["nbCriteriaStructure"]))
 		{
-			$_SESSION["nbCriteria"] = 1;
+			$_SESSION["nbCriteriaStructure"] = 1;
 		}
 		$_SESSION["firstLoad"] = "true";
 
