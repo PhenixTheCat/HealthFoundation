@@ -92,11 +92,17 @@ switch ($function) {
         }
         break;
 
-    case 'resultats':
+    case 'resultatsPsychotesteEnLigne':
 
-        $vue = "resultats";
+        $vue = "resultatsPsychotesteEnLigne";
         $error = false;
-        
+        $id = $_SESSION['pilotId'];
+        if (getResultatsPsychotestEnLigne($database, $id) != array(null)) {
+            $rowAll = getResultatsPsychotestEnLigne($database, $id);
+            $NbreData = 1;
+        } else {
+            $NbreData = 0;
+        }
         break;
 
     case 'resultatsParPilote':
