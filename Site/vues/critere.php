@@ -11,6 +11,15 @@ $selectedCriteria = $_POST["selectedCriteria"];
 //actualise le nombre de critères
 $_SESSION["nbCriteria"] += $value;
 
+if(!isset($_SESSION['criteriaText'][0]))
+{
+	$_SESSION['criteriaText'][0] = "";
+}
+if(!isset($_SESSION['criteriaType'][0]))
+{
+	$_SESSION['criteriaType'][0] = "";
+}
+
 if($_SESSION["nbCriteria"]<=0)
 {
 	$_SESSION["nbCriteria"] = 1;
