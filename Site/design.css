@@ -1667,6 +1667,18 @@ div.titreProduit {
 	margin-right: 5%;
 	margin-bottom: 0%;
 }
+#seuilDePerception p {
+	background-color: white;
+}	
+#tempsDeReaction p {
+	background-color: white;
+}
+#reconnaissanceDeTonalite p {
+	background-color: white;
+}
+#gestionDuStress p {
+	background-color: white;
+}
 
 #reconnaissanceDeTonalite h1 {
 	background-image: linear-gradient(rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%), url("Images/tonalite.jpg");
