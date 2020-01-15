@@ -19,7 +19,7 @@
 
   <div class="tempsDeReaction">
 
-      <h1>Temps de réaction</h1>
+      <h1><?php echo _("Temps de réaction");?></h1>
       <div class="testResults">
       <img src="index.php?redirect=user&function=chartReactionTime">
       <?php
@@ -30,19 +30,19 @@ if ($NbreData != 0)
       <table border="1">
         <thead>
           <tr>
-            <th>id</th>
-            <th>test</th>
-            <th>timeline</th>
-            <th>value</th>
-            <th>type</th>
-            <th>unité</th>
-            <th>date</th>
-            <th>durée</th>
-            <th>score</th>
-            <th>banc de test</th>
-            <th>pilot</th>
-            <th>instructeur</th>
-            <th>capteurs</th>
+            <th><?php echo _("id");?></th>
+            <th><?php echo _("test");?></th>
+            <th><?php echo _("timeline");?></th>
+            <th><?php echo _("value");?></th>
+            <th><?php echo _("type");?></th>
+            <th><?php echo _("unité");?></th>
+            <th><?php echo _("date");?></th>
+            <th><?php echo _("durée");?></th>
+            <th><?php echo _("score");?></th>
+            <th><?php echo _("banc de test");?></th>
+            <th><?php echo _("pilot");?></th>
+            <th><?php echo _("instructeur");?></th>
+            <th><?php echo _("capteurs");?></th>
           </tr>
         </thead>
         <tbody>
@@ -74,7 +74,7 @@ if ($NbreData != 0)
       </table>
       <?php
 } else { ?>
-      <a> pas de données à afficher </a>
+      <a> <?php echo _("pas de données à afficher");?> </a>
       <?php
 }
 ?>

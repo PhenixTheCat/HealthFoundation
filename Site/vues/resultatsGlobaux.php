@@ -20,11 +20,8 @@
 
     <div class="RésultatsGlobaux">
         <span class="Résultats globaux">
-            <h1>Résultats globaux</h1>
-            <?php echo printError($error); ?>
+            <h1><?php echo _("Résultats globaux");?></h1>
             <div class="testResults">
-            <img src="index.php?redirect=user&function=chartStress">
-                <p> L'ID du test temps de réaction est 1.</br>L'ID du test gestion du stress est 2.</br>L'ID du test de reconnaissance de tonalité est 3.</br>L'ID du test seuil de perception est 4.</br>l'ID du psychoteste en ligne est 5.</br> </p>
             <?php
 
 if ($NbreData != 0)
@@ -33,19 +30,19 @@ if ($NbreData != 0)
             <table border="1">
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>test</th>
-                        <th>timeline</th>
-                        <th>value</th>
-                        <th>type</th>
-                        <th>unité</th>
-                        <th>date</th>
-                        <th>durée</th>
-                        <th>score</th>
-                        <th>banc de test</th>
-                        <th>pilot</th>
-                        <th>instructeur</th>
-                        <th>capteurs</th>
+                        <th><?php echo _("id");?></th>
+                        <th><?php echo _("test");?></th>
+                        <th><?php echo _("timeline");?></th>
+                        <th><?php echo _("value");?></th>
+                        <th><?php echo _("type");?></th>
+                        <th><?php echo _("unité");?></th>
+                        <th><?php echo _("date");?></th>
+                        <th><?php echo _("durée");?></th>
+                        <th><?php echo _("score");?></th>
+                        <th><?php echo _("banc de test");?></th>
+                        <th><?php echo _("pilot");?></th>
+                        <th><?php echo _("instructeur");?></th>
+                        <th><?php echo _("capteurs");?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,7 +74,7 @@ if ($NbreData != 0)
             </table>
             <?php
 } else { ?>
-            <a> pas de données à afficher </a>
+            <a><?php echo _(" pas de données à afficher ");?></a>
             <?php
 }
 ?>

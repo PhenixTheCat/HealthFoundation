@@ -1,0 +1,2841 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-01-15 19:06+0100\n"
+"PO-Revision-Date: 2020-01-15 19:08+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../../vues\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"Last-Translator: \n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: 404.php\n"
+"X-Poedit-SearchPath-1: accueil.php\n"
+"X-Poedit-SearchPath-2: adminCompte.php\n"
+"X-Poedit-SearchPath-3: ajouterUneStructure.php\n"
+"X-Poedit-SearchPath-4: aPropos.php\n"
+"X-Poedit-SearchPath-5: cgu.php\n"
+"X-Poedit-SearchPath-6: chart.php\n"
+"X-Poedit-SearchPath-7: connexion.php\n"
+"X-Poedit-SearchPath-8: contact.php\n"
+"X-Poedit-SearchPath-9: contactMessageEnvoye.php\n"
+"X-Poedit-SearchPath-10: critere.php\n"
+"X-Poedit-SearchPath-11: faq.php\n"
+"X-Poedit-SearchPath-12: faqReponse.php\n"
+"X-Poedit-SearchPath-13: fonctions.php\n"
+"X-Poedit-SearchPath-14: footer.php\n"
+"X-Poedit-SearchPath-15: gestionDesStructures.php\n"
+"X-Poedit-SearchPath-16: gestionDesUtilisateurs.php\n"
+"X-Poedit-SearchPath-17: header.php\n"
+"X-Poedit-SearchPath-18: inscription.php\n"
+"X-Poedit-SearchPath-19: inscriptionCompteValide.php\n"
+"X-Poedit-SearchPath-20: inscriptionMailEnvoye.php\n"
+"X-Poedit-SearchPath-21: inscriptionSuite.php\n"
+"X-Poedit-SearchPath-22: modificationMotDePasse.php\n"
+"X-Poedit-SearchPath-23: modificationProfil.php\n"
+"X-Poedit-SearchPath-24: modificationValide.php\n"
+"X-Poedit-SearchPath-25: monCompte.php\n"
+"X-Poedit-SearchPath-26: motDePasseOublie.php\n"
+"X-Poedit-SearchPath-27: motDePasseOublieConfirmation.php\n"
+"X-Poedit-SearchPath-28: motDePasseOublieMailEnvoye.php\n"
+"X-Poedit-SearchPath-29: motDePasseOublieNouveauMotDePasse.php\n"
+"X-Poedit-SearchPath-30: psychotestEnLigne.php\n"
+"X-Poedit-SearchPath-31: resultats.php\n"
+"X-Poedit-SearchPath-32: resultatsGestionDuStress.php\n"
+"X-Poedit-SearchPath-33: resultatsGlobaux.php\n"
+"X-Poedit-SearchPath-34: resultatsParPilote.php\n"
+"X-Poedit-SearchPath-35: resultatsPilote.php\n"
+"X-Poedit-SearchPath-36: resultatsReconnaissanceDeTonalite.php\n"
+"X-Poedit-SearchPath-37: resultatsSeuilDePerception.php\n"
+"X-Poedit-SearchPath-38: resultatsTempsDeReaction.php\n"
+"X-Poedit-SearchPath-39: js/form.js\n"
+"X-Poedit-SearchPath-40: js/questions.js\n"
+"X-Poedit-SearchPath-41: js/sqb.js\n"
+
+#: 404.php:22
+msgid "La page que vous cherchez n'existe pas"
+msgstr ""
+
+#: aPropos.php:18
+msgid " A propos "
+msgstr " About us "
+
+#: aPropos.php:22
+msgid " Qui sommes-nous ? "
+msgstr ""
+
+#: aPropos.php:23
+msgid ""
+" Health Foundation est une SAS pluripersonnelle spécialisée le domaine "
+"médical, fondée le 24 septembre 2017, au\n"
+"      capital encore non référencé. Notre siège social est situé au 28, rue "
+"Notre-Dame-des-Champs, 75006 Paris (salle\n"
+"      L313 du campus Notre-Dame-des-Champs de l'ISEP). "
+msgstr ""
+
+#: aPropos.php:26
+msgid " Que faisons-nous ? "
+msgstr ""
+
+#: aPropos.php:27
+msgid ""
+" Health Foundation conçoit et fournit des produits à la pointe de la "
+"technologie médicale permettant de répondre\n"
+"      aux besoins des cabinets médicaux, des hôpitaux, des compagnies "
+"aériennes et militaires. Aujourd'hui leader\n"
+"      européen dans la production de matériel &#34;High-Tech&#34; médical, "
+"Health Foundation réalise certaines exportations à\n"
+"      l'étranger pour répondre aux demandes des entreprises internationales. "
+msgstr ""
+
+#: aPropos.php:31
+msgid " Notre credo"
+msgstr ""
+
+#: aPropos.php:32
+msgid ""
+"“A Legacy of Excellence” Lors de sa création, ses co-fondateurs sortaient "
+"tout juste de l'ISEP, nommément CHEN\n"
+"      Eva, responsable technique, DALUZ Mattéo, chef de projet, ESTRIBEAU "
+"Elias, coordinateur, NORA Ariel, responsable\n"
+"      communication, PHAM Jonathan, designer technique et moi-même, BAIN "
+"Maë, directrice générale."
+msgstr ""
+
+#: aPropos.php:35
+msgid " Nos investisseurs"
+msgstr ""
+
+#: aPropos.php:36
+msgid ""
+"Nos investisseurs sont aujourd’hui : l'État, à travers les aides financières "
+"fournies par le Ministère des\n"
+"      Affaires Sociales et de la Santé, et l'ISEP, qui nous fournit le "
+"matériel et nous accompagne pendant la mise en\n"
+"      place de notre projet. "
+msgstr ""
+
+#: aPropos.php:44
+msgid " Notre produit"
+msgstr ""
+
+#: aPropos.php:47
+msgid "Photo capteurs"
+msgstr ""
+
+#: aPropos.php:50
+msgid ""
+"Nos capteurs de dernière technologie, munis d'un électrocardiogramme (ECG) "
+"permettent d'enregistrer l'activité cardiaque du patient.\n"
+"               En effet, ces capteurs sont basés sur la mesure des courants "
+"électriques qui traversent l'organe à chacune de ses contractions. Le "
+"produit\n"
+"               se présente sous la forme d'une pince électrode (ou capteur) "
+"qui est placées sur le doigt du patient et directement reliées à l'appareil "
+"d'enregistrement. \n"
+"               Par la suite, l'électrode va pouvoir capter des champs "
+"électriques produits par le coeur et décrire son activité en temps réel."
+msgstr ""
+
+#: aPropos.php:54
+msgid ""
+"D'autre part, nos capteurs sont équipés de mini capteurs à microfluides "
+"permettant de relever et d'analyser la transpiration du patient. La mise "
+"au \n"
+"               point de ce tout nouveau type de capteur permet aujourd'hui "
+"aux équipes médicales de contrôler l'état d'un patient afin de déceler des "
+"maladies cardiovasculaires,\n"
+"               des diabètes ou d'autre pathologies de ce genre, mais "
+"également de mesurer l'état de stress et d'anxitété d'une personne."
+msgstr ""
+
+#: accueil.php:24
+msgid "Fond d'accueil"
+msgstr ""
+
+#: accueil.php:26
+msgid "&#34;A LEGACY OF EXCELLENCE&#34;"
+msgstr ""
+
+#: accueil.php:29 gestionDesUtilisateurs.php:108
+msgid " Gestion des utilisateurs"
+msgstr ""
+
+#: accueil.php:32
+msgid "Consulter les résulats des pilotes"
+msgstr ""
+
+#: accueil.php:36
+msgid " Passer le test en ligne"
+msgstr ""
+
+#: accueil.php:42
+msgid "Connectez vous pour accéder au test en ligne"
+msgstr ""
+
+#: accueil.php:45
+msgid "Logo solution APP"
+msgstr ""
+
+#: accueil.php:53
+msgid "Nos services"
+msgstr ""
+
+#: accueil.php:57
+msgid "Logo coeur"
+msgstr ""
+
+#: accueil.php:58
+msgid "Réalisations de tests du rythme cardiaque grâce aux électrodes"
+msgstr ""
+
+#: accueil.php:61
+msgid "Logo poumon"
+msgstr ""
+
+#: accueil.php:62
+msgid "Réalisations de tests respiratoires grâce aux examens de bronchoscopie"
+msgstr ""
+
+#: accueil.php:67
+msgid "Logo oeil"
+msgstr ""
+
+#: accueil.php:68
+msgid ""
+"Réalisations de tests d’acuité visuelle grâce à l’OCULUS Binoptometer 4P"
+msgstr ""
+
+#: accueil.php:71
+msgid "Logo oreille"
+msgstr ""
+
+#: accueil.php:72
+msgid ""
+"Réalisations de tests auditifs grâce aux examens d’otoscopie et d’audiométrie"
+msgstr ""
+
+#: accueil.php:79
+msgid "Actualités"
+msgstr ""
+
+#: accueil.php:83
+msgid "Notre environnement"
+msgstr ""
+
+#: accueil.php:85
+msgid ""
+"Parcourez nos plus grands sites de productions ainsi que nos laboratoires de "
+"tests et\n"
+"                        simulations."
+msgstr ""
+
+#: accueil.php:90
+msgid "Nos collaborateurs"
+msgstr ""
+
+#: accueil.php:92
+msgid ""
+"Des équipes de techniciens, ingénieurs,\n"
+"                        et médecins experts collaborent chaque jour pour "
+"répondre à vos besoins."
+msgstr ""
+
+#: accueil.php:99
+msgid "Nos investisseurs"
+msgstr ""
+
+#: accueil.php:101
+msgid "Le ministère des Armées et L'ISEP se sont engagés à nos côtés."
+msgstr ""
+
+#: accueil.php:105
+msgid "Notre design"
+msgstr ""
+
+#: accueil.php:107
+msgid ""
+"Chacun de nos produits est\n"
+"                        conçu dans un design unique\n"
+"                        et purement ergonomique."
+msgstr ""
+
+#: accueil.php:115
+msgid "Nos technologies de pointe"
+msgstr ""
+
+#: accueil.php:117
+msgid ""
+"Découvrez nos technologies les\n"
+"                        plus performantes et récentes,\n"
+"                        mises à jour spécialement pour vous."
+msgstr ""
+
+#: accueil.php:123
+msgid "Nos produits à venir"
+msgstr ""
+
+#: accueil.php:125
+msgid ""
+"Restez informés de nos futurs produits\n"
+"                        lors de nos prochaines conférences\n"
+"                        et présentations ."
+msgstr ""
+
+#: adminCompte.php:23 modificationMotDePasse.php:19 modificationProfil.php:16
+#: modificationValide.php:19
+msgid " Mon compte "
+msgstr ""
+
+#: adminCompte.php:33 modificationProfil.php:26 monCompte.php:21
+msgid " Informations détaillés "
+msgstr ""
+
+#: adminCompte.php:35 monCompte.php:23
+msgid " Nom "
+msgstr ""
+
+#: adminCompte.php:37 monCompte.php:25
+msgid " Prénom "
+msgstr ""
+
+#: adminCompte.php:39 monCompte.php:27
+msgid " Date de naissance "
+msgstr ""
+
+#: adminCompte.php:41
+msgid " Adresse e-mail"
+msgstr ""
+
+#: adminCompte.php:43 monCompte.php:32
+msgid " Mot de passe "
+msgstr ""
+
+#: adminCompte.php:47 monCompte.php:34
+msgid "Modifier le mot de passe "
+msgstr ""
+
+#: adminCompte.php:48 monCompte.php:22
+msgid " Modifier le profil"
+msgstr ""
+
+#: ajouterUneStructure.php:19
+msgid " Ajouter une structure"
+msgstr ""
+
+#: ajouterUneStructure.php:30
+msgid "Nom de la structure"
+msgstr ""
+
+#: ajouterUneStructure.php:33 gestionDesStructures.php:97
+msgid "Adresse"
+msgstr ""
+
+#: ajouterUneStructure.php:36 critere.php:94 inscriptionSuite.php:49
+msgid "Ville"
+msgstr ""
+
+#: ajouterUneStructure.php:39 gestionDesStructures.php:99
+#: modificationProfil.php:54
+msgid "Code postal"
+msgstr ""
+
+#: ajouterUneStructure.php:44 inscriptionSuite.php:56 modificationProfil.php:68
+msgid "France "
+msgstr ""
+
+#: ajouterUneStructure.php:45 inscriptionSuite.php:57 modificationProfil.php:69
+msgid "Afghanistan "
+msgstr ""
+
+#: ajouterUneStructure.php:46 inscriptionSuite.php:58 modificationProfil.php:70
+msgid "Afrique Centrale "
+msgstr ""
+
+#: ajouterUneStructure.php:47 inscriptionSuite.php:59 modificationProfil.php:71
+msgid "Afrique du Sud "
+msgstr ""
+
+#: ajouterUneStructure.php:48 inscriptionSuite.php:60 modificationProfil.php:72
+msgid "Albanie "
+msgstr ""
+
+#: ajouterUneStructure.php:49 inscriptionSuite.php:61 modificationProfil.php:73
+msgid "Algérie "
+msgstr ""
+
+#: ajouterUneStructure.php:50 inscriptionSuite.php:62 modificationProfil.php:74
+msgid "Allemagne "
+msgstr ""
+
+#: ajouterUneStructure.php:51 inscriptionSuite.php:63 modificationProfil.php:75
+msgid "Andorre "
+msgstr ""
+
+#: ajouterUneStructure.php:52 inscriptionSuite.php:64 modificationProfil.php:76
+msgid "Angola "
+msgstr ""
+
+#: ajouterUneStructure.php:53 inscriptionSuite.php:65 modificationProfil.php:77
+msgid "Anguilla "
+msgstr ""
+
+#: ajouterUneStructure.php:54 inscriptionSuite.php:66 modificationProfil.php:78
+msgid "Arabie Saoudite "
+msgstr ""
+
+#: ajouterUneStructure.php:55 inscriptionSuite.php:67 modificationProfil.php:79
+msgid "Argentine "
+msgstr ""
+
+#: ajouterUneStructure.php:56 inscriptionSuite.php:68 modificationProfil.php:80
+msgid "Arménie "
+msgstr ""
+
+#: ajouterUneStructure.php:57 inscriptionSuite.php:69 modificationProfil.php:81
+msgid "Australie "
+msgstr ""
+
+#: ajouterUneStructure.php:58 inscriptionSuite.php:70 modificationProfil.php:82
+msgid "Autriche "
+msgstr ""
+
+#: ajouterUneStructure.php:59 inscriptionSuite.php:71 modificationProfil.php:83
+msgid "Azerbaïdjan "
+msgstr ""
+
+#: ajouterUneStructure.php:61 inscriptionSuite.php:73 modificationProfil.php:85
+msgid "Bahamas "
+msgstr ""
+
+#: ajouterUneStructure.php:62 inscriptionSuite.php:74 modificationProfil.php:86
+msgid "Bangladesh "
+msgstr ""
+
+#: ajouterUneStructure.php:63 inscriptionSuite.php:75 modificationProfil.php:87
+msgid "Barbade "
+msgstr ""
+
+#: ajouterUneStructure.php:64 inscriptionSuite.php:76 modificationProfil.php:88
+msgid "Bahreïn "
+msgstr ""
+
+#: ajouterUneStructure.php:65 inscriptionSuite.php:77 modificationProfil.php:89
+msgid "Belgique "
+msgstr ""
+
+#: ajouterUneStructure.php:66 inscriptionSuite.php:78 modificationProfil.php:90
+msgid "Belize "
+msgstr ""
+
+#: ajouterUneStructure.php:67 inscriptionSuite.php:79 modificationProfil.php:91
+msgid "Bénin "
+msgstr ""
+
+#: ajouterUneStructure.php:68 inscriptionSuite.php:80 modificationProfil.php:92
+msgid "Bermudes "
+msgstr ""
+
+#: ajouterUneStructure.php:69 inscriptionSuite.php:81 modificationProfil.php:93
+msgid "Biélorussie "
+msgstr ""
+
+#: ajouterUneStructure.php:70 inscriptionSuite.php:82 modificationProfil.php:94
+msgid "Bolivie "
+msgstr ""
+
+#: ajouterUneStructure.php:71 inscriptionSuite.php:83 modificationProfil.php:95
+msgid "Botswana "
+msgstr ""
+
+#: ajouterUneStructure.php:72 inscriptionSuite.php:84 modificationProfil.php:96
+msgid "Bhoutan "
+msgstr ""
+
+#: ajouterUneStructure.php:73 inscriptionSuite.php:85 modificationProfil.php:97
+msgid "Boznie-Herzégovine "
+msgstr ""
+
+#: ajouterUneStructure.php:74 inscriptionSuite.php:86 modificationProfil.php:98
+msgid "Brésil "
+msgstr ""
+
+#: ajouterUneStructure.php:75 inscriptionSuite.php:87 modificationProfil.php:99
+msgid "Brunei "
+msgstr ""
+
+#: ajouterUneStructure.php:76 inscriptionSuite.php:88
+#: modificationProfil.php:100
+msgid "Bulgarie "
+msgstr ""
+
+#: ajouterUneStructure.php:77 inscriptionSuite.php:89
+#: modificationProfil.php:101
+msgid "Burkina Faso "
+msgstr ""
+
+#: ajouterUneStructure.php:78 inscriptionSuite.php:90
+#: modificationProfil.php:102
+msgid "Burundi "
+msgstr ""
+
+#: ajouterUneStructure.php:80 inscriptionSuite.php:92
+#: modificationProfil.php:104
+msgid "Îles Caïman "
+msgstr ""
+
+#: ajouterUneStructure.php:81 inscriptionSuite.php:93
+#: modificationProfil.php:105
+msgid "Cambodge "
+msgstr ""
+
+#: ajouterUneStructure.php:82 inscriptionSuite.php:94
+#: modificationProfil.php:106
+msgid "Cameroun "
+msgstr ""
+
+#: ajouterUneStructure.php:83 inscriptionSuite.php:95
+#: modificationProfil.php:107
+msgid "Canada "
+msgstr ""
+
+#: ajouterUneStructure.php:84 inscriptionSuite.php:96
+#: modificationProfil.php:108
+msgid "Îles Canaries "
+msgstr ""
+
+#: ajouterUneStructure.php:85 inscriptionSuite.php:97
+#: modificationProfil.php:109
+msgid "Cap-Vert "
+msgstr ""
+
+#: ajouterUneStructure.php:86 inscriptionSuite.php:98
+#: modificationProfil.php:110
+msgid "Chili "
+msgstr ""
+
+#: ajouterUneStructure.php:87 inscriptionSuite.php:99
+#: modificationProfil.php:111
+msgid "Chine "
+msgstr ""
+
+#: ajouterUneStructure.php:88 inscriptionSuite.php:100
+#: modificationProfil.php:112
+msgid "Chypre "
+msgstr ""
+
+#: ajouterUneStructure.php:89 ajouterUneStructure.php:90
+#: inscriptionSuite.php:101 inscriptionSuite.php:102 modificationProfil.php:113
+#: modificationProfil.php:114
+msgid "Colombie "
+msgstr ""
+
+#: ajouterUneStructure.php:91 inscriptionSuite.php:103
+#: modificationProfil.php:115
+msgid "Congo "
+msgstr ""
+
+#: ajouterUneStructure.php:92 inscriptionSuite.php:104
+#: modificationProfil.php:116
+msgid "République démocratique du Congo "
+msgstr ""
+
+#: ajouterUneStructure.php:93 inscriptionSuite.php:105
+#: modificationProfil.php:117
+msgid "Îles Cook "
+msgstr ""
+
+#: ajouterUneStructure.php:94 inscriptionSuite.php:106
+#: modificationProfil.php:118
+msgid "Corée du Nord "
+msgstr ""
+
+#: ajouterUneStructure.php:95 inscriptionSuite.php:107
+#: modificationProfil.php:119
+msgid "Corée du Sud "
+msgstr ""
+
+#: ajouterUneStructure.php:96 inscriptionSuite.php:108
+#: modificationProfil.php:120
+msgid "Costa Rica "
+msgstr ""
+
+#: ajouterUneStructure.php:97 inscriptionSuite.php:109
+#: modificationProfil.php:121
+msgid "Côte d'Ivoire "
+msgstr ""
+
+#: ajouterUneStructure.php:98 inscriptionSuite.php:110
+#: modificationProfil.php:122
+msgid "Croatie "
+msgstr ""
+
+#: ajouterUneStructure.php:99 inscriptionSuite.php:111
+#: modificationProfil.php:123
+msgid "Cuba "
+msgstr ""
+
+#: ajouterUneStructure.php:101 inscriptionSuite.php:113
+#: modificationProfil.php:125
+msgid "Danemark "
+msgstr ""
+
+#: ajouterUneStructure.php:102 inscriptionSuite.php:114
+#: modificationProfil.php:126
+msgid "Djibouti "
+msgstr ""
+
+#: ajouterUneStructure.php:103 inscriptionSuite.php:115
+#: modificationProfil.php:127
+msgid "Dominique "
+msgstr ""
+
+#: ajouterUneStructure.php:105 inscriptionSuite.php:117
+#: modificationProfil.php:129
+msgid "Égypte "
+msgstr ""
+
+#: ajouterUneStructure.php:106 inscriptionSuite.php:118
+#: modificationProfil.php:130
+msgid "Émirats arabes unis "
+msgstr ""
+
+#: ajouterUneStructure.php:107 inscriptionSuite.php:119
+#: modificationProfil.php:131
+msgid "Équateur "
+msgstr ""
+
+#: ajouterUneStructure.php:108 inscriptionSuite.php:120
+#: modificationProfil.php:132
+msgid "Érythrée "
+msgstr ""
+
+#: ajouterUneStructure.php:109 inscriptionSuite.php:121
+#: modificationProfil.php:133
+msgid "Espagne "
+msgstr ""
+
+#: ajouterUneStructure.php:110 inscriptionSuite.php:122
+#: modificationProfil.php:134
+msgid "Estonie "
+msgstr ""
+
+#: ajouterUneStructure.php:111 inscriptionSuite.php:123
+#: modificationProfil.php:135
+msgid "États Unis "
+msgstr ""
+
+#: ajouterUneStructure.php:112 inscriptionSuite.php:124
+#: modificationProfil.php:136
+msgid "Éthiopie "
+msgstr ""
+
+#: ajouterUneStructure.php:114 inscriptionSuite.php:126
+#: modificationProfil.php:138
+msgid "Falkland "
+msgstr ""
+
+#: ajouterUneStructure.php:115 inscriptionSuite.php:127
+#: modificationProfil.php:139
+msgid "Féroé "
+msgstr ""
+
+#: ajouterUneStructure.php:116 inscriptionSuite.php:128
+#: modificationProfil.php:140
+msgid "Îles Fidji "
+msgstr ""
+
+#: ajouterUneStructure.php:117 inscriptionSuite.php:129
+#: modificationProfil.php:141
+msgid "Finlande "
+msgstr ""
+
+#: ajouterUneStructure.php:119 inscriptionSuite.php:131
+#: modificationProfil.php:143
+msgid "Gabon "
+msgstr ""
+
+#: ajouterUneStructure.php:120 inscriptionSuite.php:132
+#: modificationProfil.php:144
+msgid "Gambie "
+msgstr ""
+
+#: ajouterUneStructure.php:121 inscriptionSuite.php:133
+#: modificationProfil.php:145
+msgid "Géorgie "
+msgstr ""
+
+#: ajouterUneStructure.php:122 inscriptionSuite.php:134
+#: modificationProfil.php:146
+msgid "Ghana "
+msgstr ""
+
+#: ajouterUneStructure.php:123 inscriptionSuite.php:135
+#: modificationProfil.php:147
+msgid "Gibraltar "
+msgstr ""
+
+#: ajouterUneStructure.php:124 inscriptionSuite.php:136
+#: modificationProfil.php:148
+msgid "Grèce "
+msgstr ""
+
+#: ajouterUneStructure.php:125 inscriptionSuite.php:137
+#: modificationProfil.php:149
+msgid "Grenade "
+msgstr ""
+
+#: ajouterUneStructure.php:126 inscriptionSuite.php:138
+#: modificationProfil.php:150
+msgid "Groenland "
+msgstr ""
+
+#: ajouterUneStructure.php:127 inscriptionSuite.php:139
+#: modificationProfil.php:151
+msgid "Guadeloupe "
+msgstr ""
+
+#: ajouterUneStructure.php:128 inscriptionSuite.php:140
+#: modificationProfil.php:152
+msgid "Guam "
+msgstr ""
+
+#: ajouterUneStructure.php:129 inscriptionSuite.php:141
+#: modificationProfil.php:153
+msgid "Guatemala "
+msgstr ""
+
+#: ajouterUneStructure.php:130 inscriptionSuite.php:142
+#: modificationProfil.php:154
+msgid "Guernesey "
+msgstr ""
+
+#: ajouterUneStructure.php:131 inscriptionSuite.php:143
+#: modificationProfil.php:155
+msgid "Guinée "
+msgstr ""
+
+#: ajouterUneStructure.php:132 inscriptionSuite.php:144
+#: modificationProfil.php:156
+msgid "Guinée Bissau "
+msgstr ""
+
+#: ajouterUneStructure.php:133 inscriptionSuite.php:145
+#: modificationProfil.php:157
+msgid "Guinee ;équatoriale "
+msgstr ""
+
+#: ajouterUneStructure.php:134 inscriptionSuite.php:146
+#: modificationProfil.php:158
+msgid "Guyana "
+msgstr ""
+
+#: ajouterUneStructure.php:135 inscriptionSuite.php:147
+#: modificationProfil.php:159
+msgid "Guyane "
+msgstr ""
+
+#: ajouterUneStructure.php:137 inscriptionSuite.php:149
+#: modificationProfil.php:161
+msgid "Haïti "
+msgstr ""
+
+#: ajouterUneStructure.php:138 inscriptionSuite.php:150
+#: modificationProfil.php:162
+msgid "Hawaï "
+msgstr ""
+
+#: ajouterUneStructure.php:139 inscriptionSuite.php:151
+#: modificationProfil.php:163
+msgid "Honduras "
+msgstr ""
+
+#: ajouterUneStructure.php:140 inscriptionSuite.php:152
+#: modificationProfil.php:164
+msgid "Hong Kong "
+msgstr ""
+
+#: ajouterUneStructure.php:141 inscriptionSuite.php:153
+#: modificationProfil.php:165
+msgid "Hongrie "
+msgstr ""
+
+#: ajouterUneStructure.php:143 inscriptionSuite.php:155
+#: modificationProfil.php:167
+msgid "Inde "
+msgstr ""
+
+#: ajouterUneStructure.php:144 inscriptionSuite.php:156
+#: modificationProfil.php:168
+msgid "Indonésie "
+msgstr ""
+
+#: ajouterUneStructure.php:145 inscriptionSuite.php:157
+#: modificationProfil.php:169
+msgid "Iran "
+msgstr ""
+
+#: ajouterUneStructure.php:146 inscriptionSuite.php:158
+#: modificationProfil.php:170
+msgid "Irak "
+msgstr ""
+
+#: ajouterUneStructure.php:147 inscriptionSuite.php:159
+#: modificationProfil.php:171
+msgid "Irlande "
+msgstr ""
+
+#: ajouterUneStructure.php:148 inscriptionSuite.php:160
+#: modificationProfil.php:172
+msgid "Islande "
+msgstr ""
+
+#: ajouterUneStructure.php:149 inscriptionSuite.php:161
+#: modificationProfil.php:173
+msgid "Israël "
+msgstr ""
+
+#: ajouterUneStructure.php:150 inscriptionSuite.php:162
+#: modificationProfil.php:174
+msgid "Italie "
+msgstr ""
+
+#: ajouterUneStructure.php:152 inscriptionSuite.php:164
+#: modificationProfil.php:176
+msgid "Jamaïque "
+msgstr ""
+
+#: ajouterUneStructure.php:153 inscriptionSuite.php:165
+#: modificationProfil.php:177
+msgid "Jan Mayen "
+msgstr ""
+
+#: ajouterUneStructure.php:154 inscriptionSuite.php:166
+#: modificationProfil.php:178
+msgid "Japon "
+msgstr ""
+
+#: ajouterUneStructure.php:155 inscriptionSuite.php:167
+#: modificationProfil.php:179
+msgid "Jersey "
+msgstr ""
+
+#: ajouterUneStructure.php:156 inscriptionSuite.php:168
+#: modificationProfil.php:180
+msgid "Jordanie "
+msgstr ""
+
+#: ajouterUneStructure.php:158 inscriptionSuite.php:170
+#: modificationProfil.php:182
+msgid "Kazakhstan "
+msgstr ""
+
+#: ajouterUneStructure.php:159 inscriptionSuite.php:171
+#: modificationProfil.php:183
+msgid "Kenya "
+msgstr ""
+
+#: ajouterUneStructure.php:160 inscriptionSuite.php:172
+#: modificationProfil.php:184
+msgid "Kirghizistan "
+msgstr ""
+
+#: ajouterUneStructure.php:161 inscriptionSuite.php:173
+#: modificationProfil.php:185
+msgid "Kiribati "
+msgstr ""
+
+#: ajouterUneStructure.php:162 inscriptionSuite.php:174
+#: modificationProfil.php:186
+msgid "Koweït "
+msgstr ""
+
+#: ajouterUneStructure.php:164 inscriptionSuite.php:176
+#: modificationProfil.php:188
+msgid "Laos "
+msgstr ""
+
+#: ajouterUneStructure.php:165 inscriptionSuite.php:177
+#: modificationProfil.php:189
+msgid "Lesotho "
+msgstr ""
+
+#: ajouterUneStructure.php:166 inscriptionSuite.php:178
+#: modificationProfil.php:190
+msgid "Lettonie "
+msgstr ""
+
+#: ajouterUneStructure.php:167 inscriptionSuite.php:179
+#: modificationProfil.php:191
+msgid "Liban "
+msgstr ""
+
+#: ajouterUneStructure.php:168 inscriptionSuite.php:180
+#: modificationProfil.php:192
+msgid "Liberia "
+msgstr ""
+
+#: ajouterUneStructure.php:169 inscriptionSuite.php:181
+#: modificationProfil.php:193
+msgid "Liechtenstein "
+msgstr ""
+
+#: ajouterUneStructure.php:170 inscriptionSuite.php:182
+#: modificationProfil.php:194
+msgid "Lituanie "
+msgstr ""
+
+#: ajouterUneStructure.php:171 inscriptionSuite.php:183
+#: modificationProfil.php:195
+msgid "Luxembourg "
+msgstr ""
+
+#: ajouterUneStructure.php:172 inscriptionSuite.php:184
+#: modificationProfil.php:196
+msgid "Lybie "
+msgstr ""
+
+#: ajouterUneStructure.php:174 inscriptionSuite.php:186
+#: modificationProfil.php:198
+msgid "Macao "
+msgstr ""
+
+#: ajouterUneStructure.php:175 inscriptionSuite.php:187
+#: modificationProfil.php:199
+msgid "Macédoine "
+msgstr ""
+
+#: ajouterUneStructure.php:176 inscriptionSuite.php:188
+#: modificationProfil.php:200
+msgid "Madagascar "
+msgstr ""
+
+#: ajouterUneStructure.php:177 inscriptionSuite.php:189
+#: modificationProfil.php:201
+msgid "Madère "
+msgstr ""
+
+#: ajouterUneStructure.php:178 inscriptionSuite.php:190
+#: modificationProfil.php:202
+msgid "Malaisie "
+msgstr ""
+
+#: ajouterUneStructure.php:179 inscriptionSuite.php:191
+#: modificationProfil.php:203
+msgid "Malawi "
+msgstr ""
+
+#: ajouterUneStructure.php:180 inscriptionSuite.php:192
+#: modificationProfil.php:204
+msgid "Maldives "
+msgstr ""
+
+#: ajouterUneStructure.php:181 inscriptionSuite.php:193
+#: modificationProfil.php:205
+msgid "Mali "
+msgstr ""
+
+#: ajouterUneStructure.php:182 inscriptionSuite.php:194
+#: modificationProfil.php:206
+msgid "Malte "
+msgstr ""
+
+#: ajouterUneStructure.php:183 inscriptionSuite.php:195
+#: modificationProfil.php:207
+msgid "Man "
+msgstr ""
+
+#: ajouterUneStructure.php:184 inscriptionSuite.php:196
+#: modificationProfil.php:208
+msgid "Îles Mariannes"
+msgstr ""
+
+#: ajouterUneStructure.php:185 inscriptionSuite.php:197
+#: modificationProfil.php:209
+msgid "Mariannes du Nord "
+msgstr ""
+
+#: ajouterUneStructure.php:186 inscriptionSuite.php:198
+#: modificationProfil.php:210
+msgid "Maroc "
+msgstr ""
+
+#: ajouterUneStructure.php:187 inscriptionSuite.php:199
+#: modificationProfil.php:211
+msgid "Îles Marshall "
+msgstr ""
+
+#: ajouterUneStructure.php:188 inscriptionSuite.php:200
+#: modificationProfil.php:212
+msgid "Martinique "
+msgstr ""
+
+#: ajouterUneStructure.php:189 inscriptionSuite.php:201
+#: modificationProfil.php:213
+msgid "Îles Maurice "
+msgstr ""
+
+#: ajouterUneStructure.php:190 inscriptionSuite.php:202
+#: modificationProfil.php:214
+msgid "Mauritanie "
+msgstr ""
+
+#: ajouterUneStructure.php:191 inscriptionSuite.php:203
+#: modificationProfil.php:215
+msgid "Mayotte "
+msgstr ""
+
+#: ajouterUneStructure.php:192 inscriptionSuite.php:204
+#: modificationProfil.php:216
+msgid "Mexique "
+msgstr ""
+
+#: ajouterUneStructure.php:193 inscriptionSuite.php:205
+#: modificationProfil.php:217
+msgid "Micronésie "
+msgstr ""
+
+#: ajouterUneStructure.php:194 inscriptionSuite.php:206
+#: modificationProfil.php:218
+msgid "Îles Midway "
+msgstr ""
+
+#: ajouterUneStructure.php:195 inscriptionSuite.php:207
+#: modificationProfil.php:219
+msgid "Moldavie "
+msgstr ""
+
+#: ajouterUneStructure.php:196 inscriptionSuite.php:208
+#: modificationProfil.php:220
+msgid "Monaco "
+msgstr ""
+
+#: ajouterUneStructure.php:197 inscriptionSuite.php:209
+#: modificationProfil.php:221
+msgid "Mongolie "
+msgstr ""
+
+#: ajouterUneStructure.php:198 inscriptionSuite.php:210
+#: modificationProfil.php:222
+msgid "Montserrat "
+msgstr ""
+
+#: ajouterUneStructure.php:199 inscriptionSuite.php:211
+#: modificationProfil.php:223
+msgid "Mozambique "
+msgstr ""
+
+#: ajouterUneStructure.php:201 inscriptionSuite.php:213
+#: modificationProfil.php:225
+msgid "Namibie "
+msgstr ""
+
+#: ajouterUneStructure.php:202 inscriptionSuite.php:214
+#: modificationProfil.php:226
+msgid "Nauru "
+msgstr ""
+
+#: ajouterUneStructure.php:203 inscriptionSuite.php:215
+#: modificationProfil.php:227
+msgid "Népal "
+msgstr ""
+
+#: ajouterUneStructure.php:204 inscriptionSuite.php:216
+#: modificationProfil.php:228
+msgid "Nicaragua "
+msgstr ""
+
+#: ajouterUneStructure.php:205 inscriptionSuite.php:217
+#: modificationProfil.php:229
+msgid "Niger "
+msgstr ""
+
+#: ajouterUneStructure.php:206 inscriptionSuite.php:218
+#: modificationProfil.php:230
+msgid "Nigeria "
+msgstr ""
+
+#: ajouterUneStructure.php:207 inscriptionSuite.php:219
+#: modificationProfil.php:231
+msgid "Niue "
+msgstr ""
+
+#: ajouterUneStructure.php:208 inscriptionSuite.php:220
+#: modificationProfil.php:232
+msgid "Norfolk "
+msgstr ""
+
+#: ajouterUneStructure.php:209 inscriptionSuite.php:221
+#: modificationProfil.php:233
+msgid "Norvège "
+msgstr ""
+
+#: ajouterUneStructure.php:210 inscriptionSuite.php:222
+#: modificationProfil.php:234
+msgid "Nouvelle-Calédonie "
+msgstr ""
+
+#: ajouterUneStructure.php:211 inscriptionSuite.php:223
+#: modificationProfil.php:235
+msgid "Nouvelle-Zélande "
+msgstr ""
+
+#: ajouterUneStructure.php:213 inscriptionSuite.php:225
+#: modificationProfil.php:237
+msgid "Oman "
+msgstr ""
+
+#: ajouterUneStructure.php:214 inscriptionSuite.php:226
+#: modificationProfil.php:238
+msgid "Ouganda "
+msgstr ""
+
+#: ajouterUneStructure.php:215 inscriptionSuite.php:227
+#: modificationProfil.php:239
+msgid "Ouzbékistan "
+msgstr ""
+
+#: ajouterUneStructure.php:217 inscriptionSuite.php:229
+#: modificationProfil.php:241
+msgid "Pakistan "
+msgstr ""
+
+#: ajouterUneStructure.php:218 inscriptionSuite.php:230
+#: modificationProfil.php:242
+msgid "Palaos "
+msgstr ""
+
+#: ajouterUneStructure.php:219 inscriptionSuite.php:231
+#: modificationProfil.php:243
+msgid "Palestine "
+msgstr ""
+
+#: ajouterUneStructure.php:220 inscriptionSuite.php:232
+#: modificationProfil.php:244
+msgid "Panama "
+msgstr ""
+
+#: ajouterUneStructure.php:221 inscriptionSuite.php:233
+#: modificationProfil.php:245
+msgid "Papouasie Nouvelle Guinée "
+msgstr ""
+
+#: ajouterUneStructure.php:222 inscriptionSuite.php:234
+#: modificationProfil.php:246
+msgid "Paraguay "
+msgstr ""
+
+#: ajouterUneStructure.php:223 inscriptionSuite.php:235
+#: modificationProfil.php:247
+msgid "Pays Bas "
+msgstr ""
+
+#: ajouterUneStructure.php:224 inscriptionSuite.php:236
+#: modificationProfil.php:248
+msgid "Pérou "
+msgstr ""
+
+#: ajouterUneStructure.php:225 inscriptionSuite.php:237
+#: modificationProfil.php:249
+msgid "Philippines "
+msgstr ""
+
+#: ajouterUneStructure.php:226 inscriptionSuite.php:238
+#: modificationProfil.php:250
+msgid "Pologne "
+msgstr ""
+
+#: ajouterUneStructure.php:227 inscriptionSuite.php:239
+#: modificationProfil.php:251
+msgid "Polynésie "
+msgstr ""
+
+#: ajouterUneStructure.php:228 inscriptionSuite.php:240
+#: modificationProfil.php:252
+msgid "Porto Rico "
+msgstr ""
+
+#: ajouterUneStructure.php:229 inscriptionSuite.php:241
+#: modificationProfil.php:253
+msgid "Portugal "
+msgstr ""
+
+#: ajouterUneStructure.php:231 inscriptionSuite.php:243
+#: modificationProfil.php:255
+msgid "Qatar "
+msgstr ""
+
+#: ajouterUneStructure.php:233 inscriptionSuite.php:245
+#: modificationProfil.php:257
+msgid "République dominicaine "
+msgstr ""
+
+#: ajouterUneStructure.php:234 inscriptionSuite.php:246
+#: modificationProfil.php:258
+msgid "République Tchèque "
+msgstr ""
+
+#: ajouterUneStructure.php:235 inscriptionSuite.php:247
+#: modificationProfil.php:259
+msgid "Réunion "
+msgstr ""
+
+#: ajouterUneStructure.php:236 inscriptionSuite.php:248
+#: modificationProfil.php:260
+msgid "Roumanie "
+msgstr ""
+
+#: ajouterUneStructure.php:237 inscriptionSuite.php:249
+#: modificationProfil.php:261
+msgid "Royaume Uni "
+msgstr ""
+
+#: ajouterUneStructure.php:238 inscriptionSuite.php:250
+#: modificationProfil.php:262
+msgid "Russie "
+msgstr ""
+
+#: ajouterUneStructure.php:239 inscriptionSuite.php:251
+#: modificationProfil.php:263
+msgid "Rwanda "
+msgstr ""
+
+#: ajouterUneStructure.php:241 inscriptionSuite.php:253
+#: modificationProfil.php:265
+msgid "Sahara Occidental "
+msgstr ""
+
+#: ajouterUneStructure.php:242 inscriptionSuite.php:254
+#: modificationProfil.php:266
+msgid "Sainte Lucie "
+msgstr ""
+
+#: ajouterUneStructure.php:243 inscriptionSuite.php:255
+#: modificationProfil.php:267
+msgid "Saint-Marin "
+msgstr ""
+
+#: ajouterUneStructure.php:244 inscriptionSuite.php:256
+#: modificationProfil.php:268
+msgid "Îles Salomon "
+msgstr ""
+
+#: ajouterUneStructure.php:245 inscriptionSuite.php:257
+#: modificationProfil.php:269
+msgid "Salvador "
+msgstr ""
+
+#: ajouterUneStructure.php:246 inscriptionSuite.php:258
+#: modificationProfil.php:270
+msgid "Îles Samoa"
+msgstr ""
+
+#: ajouterUneStructure.php:247 inscriptionSuite.php:259
+#: modificationProfil.php:271
+msgid "Sao Tomé et Principe "
+msgstr ""
+
+#: ajouterUneStructure.php:248 inscriptionSuite.php:260
+#: modificationProfil.php:272
+msgid "Sénégal "
+msgstr ""
+
+#: ajouterUneStructure.php:249 inscriptionSuite.php:261
+#: modificationProfil.php:273
+msgid "Seychelles "
+msgstr ""
+
+#: ajouterUneStructure.php:250 inscriptionSuite.php:262
+#: modificationProfil.php:274
+msgid "Sierra Leone "
+msgstr ""
+
+#: ajouterUneStructure.php:251 inscriptionSuite.php:263
+#: modificationProfil.php:275
+msgid "Singapour "
+msgstr ""
+
+#: ajouterUneStructure.php:252 inscriptionSuite.php:264
+#: modificationProfil.php:276
+msgid "Slovaquie "
+msgstr ""
+
+#: ajouterUneStructure.php:253 inscriptionSuite.php:265
+#: modificationProfil.php:277
+msgid "Slov nie"
+msgstr ""
+
+#: ajouterUneStructure.php:254 inscriptionSuite.php:266
+#: modificationProfil.php:278
+msgid "Somalie "
+msgstr ""
+
+#: ajouterUneStructure.php:255 inscriptionSuite.php:267
+#: modificationProfil.php:279
+msgid "Soudan "
+msgstr ""
+
+#: ajouterUneStructure.php:256 inscriptionSuite.php:268
+#: modificationProfil.php:280
+msgid "Sri Lanka "
+msgstr ""
+
+#: ajouterUneStructure.php:257 inscriptionSuite.php:269
+#: modificationProfil.php:281
+msgid "Suède "
+msgstr ""
+
+#: ajouterUneStructure.php:258 inscriptionSuite.php:270
+#: modificationProfil.php:282
+msgid "Suisse "
+msgstr ""
+
+#: ajouterUneStructure.php:259 inscriptionSuite.php:271
+#: modificationProfil.php:283
+msgid "Suriname "
+msgstr ""
+
+#: ajouterUneStructure.php:260 inscriptionSuite.php:272
+#: modificationProfil.php:284
+msgid "Eswatini "
+msgstr ""
+
+#: ajouterUneStructure.php:261 inscriptionSuite.php:273
+#: modificationProfil.php:285
+msgid "Syrie "
+msgstr ""
+
+#: ajouterUneStructure.php:263 inscriptionSuite.php:275
+#: modificationProfil.php:287
+msgid "Tadjikistan "
+msgstr ""
+
+#: ajouterUneStructure.php:264 inscriptionSuite.php:276
+#: modificationProfil.php:288
+msgid "Taïwan "
+msgstr ""
+
+#: ajouterUneStructure.php:265 inscriptionSuite.php:277
+#: modificationProfil.php:289
+msgid "Tonga "
+msgstr ""
+
+#: ajouterUneStructure.php:266 inscriptionSuite.php:278
+#: modificationProfil.php:290
+msgid "Tanzanie "
+msgstr ""
+
+#: ajouterUneStructure.php:267 inscriptionSuite.php:279
+#: modificationProfil.php:291
+msgid "Tchad "
+msgstr ""
+
+#: ajouterUneStructure.php:268 inscriptionSuite.php:280
+#: modificationProfil.php:292
+msgid "Thaïlande "
+msgstr ""
+
+#: ajouterUneStructure.php:269 inscriptionSuite.php:281
+#: modificationProfil.php:293
+msgid "Tibet "
+msgstr ""
+
+#: ajouterUneStructure.php:270 inscriptionSuite.php:282
+#: modificationProfil.php:294
+msgid "Timor "
+msgstr ""
+
+#: ajouterUneStructure.php:271 inscriptionSuite.php:283
+#: modificationProfil.php:295
+msgid "Togo "
+msgstr ""
+
+#: ajouterUneStructure.php:272 inscriptionSuite.php:284
+#: modificationProfil.php:296
+msgid "Trinité et Tobago "
+msgstr ""
+
+#: ajouterUneStructure.php:273 inscriptionSuite.php:285
+#: modificationProfil.php:297
+msgid "Tristan da cuncha "
+msgstr ""
+
+#: ajouterUneStructure.php:274 inscriptionSuite.php:286
+#: modificationProfil.php:298
+msgid "Tunisie "
+msgstr ""
+
+#: ajouterUneStructure.php:275 inscriptionSuite.php:287
+#: modificationProfil.php:299
+msgid "Turkménistan "
+msgstr ""
+
+#: ajouterUneStructure.php:276 inscriptionSuite.php:288
+#: modificationProfil.php:300
+msgid "Turquie "
+msgstr ""
+
+#: ajouterUneStructure.php:278 inscriptionSuite.php:290
+#: modificationProfil.php:302
+msgid "Ukraine "
+msgstr ""
+
+#: ajouterUneStructure.php:279 inscriptionSuite.php:291
+#: modificationProfil.php:303
+msgid "Uruguay "
+msgstr ""
+
+#: ajouterUneStructure.php:281 inscriptionSuite.php:293
+#: modificationProfil.php:305
+msgid "Vanuatu "
+msgstr ""
+
+#: ajouterUneStructure.php:282 inscriptionSuite.php:294
+#: modificationProfil.php:306
+msgid "Vatican "
+msgstr ""
+
+#: ajouterUneStructure.php:283 inscriptionSuite.php:295
+#: modificationProfil.php:307
+msgid "Vénézuéla "
+msgstr ""
+
+#: ajouterUneStructure.php:284 inscriptionSuite.php:296
+#: modificationProfil.php:308
+msgid "Îles Vierges "
+msgstr ""
+
+#: ajouterUneStructure.php:285 inscriptionSuite.php:297
+#: modificationProfil.php:309
+msgid "Vietnam "
+msgstr ""
+
+#: ajouterUneStructure.php:287 inscriptionSuite.php:299
+#: modificationProfil.php:311
+msgid "Wake "
+msgstr ""
+
+#: ajouterUneStructure.php:288 inscriptionSuite.php:300
+#: modificationProfil.php:312
+msgid "Wallis et Futuna "
+msgstr ""
+
+#: ajouterUneStructure.php:290 inscriptionSuite.php:302
+#: modificationProfil.php:314
+msgid "Yemen "
+msgstr ""
+
+#: ajouterUneStructure.php:291 inscriptionSuite.php:303
+#: modificationProfil.php:315
+msgid "Yougoslavie "
+msgstr ""
+
+#: ajouterUneStructure.php:293 inscriptionSuite.php:305
+#: modificationProfil.php:317
+msgid "Zambie "
+msgstr ""
+
+#: ajouterUneStructure.php:294 inscriptionSuite.php:306
+#: modificationProfil.php:318
+msgid "Zimbabwe "
+msgstr ""
+
+#: cgu.php:18
+msgid " Mentions légales, politique de confidentialité et CGU "
+msgstr ""
+
+#: cgu.php:22
+msgid ""
+"La société Health Foundation, soucieuse des droits des individus, notamment "
+"au regard des traitements automatisés\n"
+"    et dans une volonté de transparence avec ses clients, a mis en place une "
+"politique reprenant l’ensemble de ces\n"
+"    traitements, des\n"
+"    finalités poursuivies par ces derniers ainsi que des moyens d’actions à "
+"la disposition des individus afin qu’ils\n"
+"    puissent au mieux exercer leurs droits. "
+msgstr ""
+
+#: cgu.php:27
+msgid ""
+"Pour toute information complémentaire sur la protection des données "
+"personnelles, nous vous invitons à consulter le\n"
+"    site : "
+msgstr ""
+
+#: cgu.php:28
+msgid "https://www.cnil.fr"
+msgstr ""
+
+#: cgu.php:33
+msgid ""
+"La poursuite de la navigation sur ce site vaut acceptation sans réserve des "
+"dispositions et conditions d'utilisation\n"
+"    qui suivent."
+msgstr ""
+
+#: cgu.php:37
+msgid ""
+"La version actuellement en ligne de ces conditions d'utilisation est la "
+"seule opposable pendant toute la durée\n"
+"    d'utilisation du site et jusqu'à ce qu'une nouvelle version la remplace."
+msgstr ""
+
+#: cgu.php:46
+msgid "Préambule"
+msgstr ""
+
+#: cgu.php:47
+msgid "1.1 Site (ci-après « le site »)"
+msgstr ""
+
+#: cgu.php:51
+msgid "Health Foundation"
+msgstr ""
+
+#: cgu.php:55
+msgid "1.2 Administrateur (ci-après « l'Administrateur »)"
+msgstr ""
+
+#: cgu.php:59
+msgid ""
+"Health Foundation, une Start up, au capital de ____ euros dont le siège "
+"social est situé 10 rue des vanves,92130,\n"
+"    Issy-Les-Moulineaux représenté par BAIN Maë, en sa qualité de directrice "
+"générale."
+msgstr ""
+
+#: cgu.php:64
+msgid "1.3 Hébergeur (ci-après « l'hébergeur »)"
+msgstr ""
+
+#: cgu.php:66
+msgid ""
+"Le site Healthfoundation est hébergé par ___, dont le siège social est situé "
+"10 rue des vanves,92130."
+msgstr ""
+
+#: cgu.php:71
+msgid "CONDITIONS GÉNÉRALES D'UTILISATION"
+msgstr ""
+
+#: cgu.php:76
+msgid "ARTICLE 1 – ACCEPTATION DES CONDITIONS GÉNÉRALES D'UTILISATION"
+msgstr ""
+
+#: cgu.php:79
+msgid ""
+"L'Utilisateur est présumé connaître et accepter, sans réserve, l'ensemble "
+"des CGU du seul fait de sa connexion au\n"
+"    Site ou utilisation des Services, quels que soient les terminaux "
+"numériques de réception utilisés."
+msgstr ""
+
+#: cgu.php:84
+msgid ""
+"L'Utilisateur est invité à ne pas se connecter au Site ni utiliser les "
+"Services s'il n'accepte pas tout ou partie\n"
+"    des documents visés ci-dessus."
+msgstr ""
+
+#: cgu.php:88
+msgid ""
+"L’Administrateur peut à tout moment modifier les termes des CGU. "
+"L’Utilisateur est expressément informé que la version en\n"
+"    vigueur est celle qui est mise en ligne à l’adresse URL "
+msgstr ""
+
+#: cgu.php:90
+msgid ""
+" à la date de son accès à l’un\n"
+"    quelconque des Services, ce que l’Utilisateur reconnaît et accepte sans "
+"restriction, s’engageant à s’y référer\n"
+"    systématiquement lors\n"
+"    de chaque connexion."
+msgstr ""
+
+#: cgu.php:102
+msgid "ARTICLE 2 – INSCRIPTION AUX SERVICES ET GESTION DES IDENTIFIANTS "
+msgstr ""
+
+#: cgu.php:104
+msgid "2.1 Modalités d’inscription aux Services"
+msgstr ""
+
+#: cgu.php:106
+msgid ""
+"L’accès à certains Services est conditionné à l’inscription au site www."
+"health.foundation.com (ci-après\n"
+"    « Health Foundation »). Health Foundation est un Service gratuit et "
+"personnel permettant à l'Utilisateur\n"
+"    inscrit de bénéficier d'un Service de gestion de son compte, et des "
+"Services qui y sont associés, tels que le\n"
+"    passage d'un test psychotechnique en ligne et la consultation d'une FAQ, "
+"et des ses résulats."
+msgstr ""
+
+#: cgu.php:112
+msgid "Pour créer un compte Health Foundation, l’Utilisateur doit :"
+msgstr ""
+
+#: cgu.php:115
+msgid ""
+"Entrer son email,mot de passe, et un code d'inscription puis remplir un "
+"formulaire d’inscription en fournissant des\n"
+"    informations personnelles, dont notamment le nom, le prénom, un numéro "
+"de téléphone, un date de naissance, qui lui\n"
+"    permettront\n"
+"    ensuite de s’identifier et de lui faciliter l’accès ;"
+msgstr ""
+
+#: cgu.php:122
+msgid ""
+"Ces informations personnelles sont collectées et conservées avec le "
+"consentement de l'Utilisateur et feront l'objet\n"
+"    d'un traitement conformément à la loi n°78-17 du 6 janvier 1978 modifiée "
+"relative à l’informatique, aux fichiers et\n"
+"    aux libertés,\n"
+"    et du Règlement européen n°2016/679 du 27 avril 2016 relatif à la "
+"protection des personnes physiques à l’égard du\n"
+"    traitement des données à caractère personnel et à la libre circulation "
+"de ces données (ci-après la « Règlementation\n"
+"    applicable »).\n"
+"    Les données des mineurs, en fonction de leur âge, sont collectées et "
+"conservées avec le consentement de leurs\n"
+"    parents ou titulaires de l’autorité parentale, en plus du leur."
+msgstr ""
+
+#: cgu.php:133
+msgid ""
+"L’Utilisateur est informé que l’Administrateur se réserve le droit de "
+"modifier ou de supprimer, à tout moment, sans préavis\n"
+"    et à son entière discrétion, tout ou partie des Services."
+msgstr ""
+
+#: cgu.php:137
+msgid "2.2 Gestion des identifiants"
+msgstr ""
+
+#: cgu.php:139
+msgid ""
+"L'adresse email et mot de passe (ci-après les «&nbsp;Identifiants&nbsp;») "
+"permettent à chaque Utilisateur de\n"
+"    s'identifier et de se connecter aux Services. Ils sont personnels et "
+"confidentiels et ne peuvent être modifiés que\n"
+"    sur demande de son\n"
+"    titulaire ou à l’initiative de l’Administrateur."
+msgstr ""
+
+#: cgu.php:146
+msgid ""
+"Chaque Utilisateur est entièrement responsable de l'utilisation de ses "
+"Identifiants qu’il s'engage à conserver\n"
+"    secrets et à ne pas divulguer sous quelque forme que ce soit à des "
+"tiers. En cas de perte, de vol ou de toute\n"
+"    utilisation frauduleuse\n"
+"    de ses Identifiants, l’Utilisateur devra immédiatement en informer "
+"l’Administrateur."
+msgstr ""
+
+#: cgu.php:152
+msgid "L'Utilisateur peut alors :"
+msgstr ""
+
+#: cgu.php:155
+msgid ""
+"Soit solliciter le remplacement de ses Identifiants lorsqu'il existe un "
+"risque que ceux-ci soient utilisés par\n"
+"    un tiers ;"
+msgstr ""
+
+#: cgu.php:157
+msgid "Soit solliciter la restitution sécurisée de ses Identifiants."
+msgstr ""
+
+#: cgu.php:160
+msgid ""
+"Chaque Utilisateur est en conséquence seul responsable de l’utilisation du "
+"ou des Service(s) faite sous son\n"
+"    identification. Toute connexion ou transmission de données effectuée en "
+"utilisant les Identifiants sera réputée\n"
+"    avoir été effectuée par\n"
+"    l’Utilisateur et sous sa responsabilité exclusive. En conséquence "
+"l’Administrateur ne pourra être tenu responsable de\n"
+"    l'utilisation frauduleuse des Identifiants de l'Utilisateur par un tiers."
+msgstr ""
+
+#: cgu.php:172
+msgid "ARTICLE 3 – ACCÈS AUX SERVICES ET SUSPENSION DES SERVICES"
+msgstr ""
+
+#: cgu.php:175
+msgid "3.1 Disponibilité du Site et des Applications"
+msgstr ""
+
+#: cgu.php:177
+msgid ""
+"L’Administrateur s’engage à faire ses meilleurs efforts pour que l'accès et "
+"le fonctionnement du Site et des Applications\n"
+"    soient assurés 24 heures sur 24 (24H/24) et 7 jours sur 7 (7J/7) sans "
+"interruption."
+msgstr ""
+
+#: cgu.php:179
+msgid ""
+"Toutefois, l’Administrateur ne peut voir sa responsabilité recherchée en cas "
+"d'indisponibilité temporaire du Site, des\n"
+"    Applications et des Services (i) en cas de maintenance du Site, des "
+"Applications ou des serveurs sur lesquels ils\n"
+"    sont hébergés, (ii)\n"
+"    en cas de survenance d'événements extérieurs à sa volonté et à son "
+"contrôle, ou (iii) en raison de cas de force\n"
+"    majeure. L’Administrateur informera au préalable l'Utilisateur de "
+"l'indisponibilité si l'événement à l'origine de\n"
+"    l'indisponibilité est\n"
+"    prévisible."
+msgstr ""
+
+#: cgu.php:187
+msgid "3.2 Suspension de l'accès"
+msgstr ""
+
+#: cgu.php:189
+msgid ""
+"L’Administrateur se réserve le droit de suspendre l'accès aux Services (i) "
+"en cas de perte, vol et/ou utilisation\n"
+"    frauduleuse des Identifiants de l'Utilisateur dont ce dernier l'a "
+"informé, (ii) en cas d'utilisation non conforme\n"
+"    aux dispositions des\n"
+"    présentes, ou (iii) en cas d'opérations de maintenance. La "
+"responsabilité de l’Administrateur ne peut être engagée en\n"
+"    raison de ces interruptions et des conséquences qui peuvent en découler "
+"pour l’Utilisateur."
+msgstr ""
+
+#: cgu.php:200
+msgid "ARTICLE 4 - ENGAGEMENT DES UTILISATEURS"
+msgstr ""
+
+#: cgu.php:202
+msgid ""
+"L'Utilisateur est informé que l'ensemble des lois et règlements en vigueur "
+"sont applicables sur Internet."
+msgstr ""
+
+#: cgu.php:204
+msgid "4.1 Comportement général des utilisateurs"
+msgstr ""
+
+#: cgu.php:206
+msgid ""
+"Lors de son inscription et à l’occasion de toute utilisation des différents "
+"Services auxquels le compte Health\n"
+"    Foundation donne accès, tout Utilisateur s’engage tant à l’égard de "
+"l’Administrateur que des autres Utilisateurs inscrits\n"
+"    et de manière\n"
+"    générale auprès de tout tiers, à :"
+msgstr ""
+
+#: cgu.php:211
+msgid "Fournir des données exactes, actualisées, vraies, complètes ;"
+msgstr ""
+
+#: cgu.php:212
+msgid "Ne pas fournir de données erronées, obsolètes ;"
+msgstr ""
+
+#: cgu.php:213
+msgid ""
+"Ne pas usurper, en tout ou partie, l’identité, le titre ou la qualité d’un "
+"tiers ;</br>\n"
+"    Respecter la gestion des accès et en particulier ne pas masquer sa "
+"véritable identité en se connectant sous les\n"
+"    paramètres personnels d'un autre Utilisateur ;"
+msgstr ""
+
+#: cgu.php:216
+msgid ""
+"Garder confidentiels ses Identifiants et ne pas les dévoiler à des tiers ;"
+msgstr ""
+
+#: cgu.php:217
+msgid ""
+"Avertir l’Administrateur de tous les dysfonctionnements logiques et "
+"techniques qu’il pourrait constater et toutes les\n"
+"    anomalies qu’il pourrait découvrir, telles en particulier les intrusions "
+"non autorisées au sein de son compte\n"
+"    Health Foundation."
+msgstr ""
+
+#: cgu.php:221
+msgid ""
+"En cas de non-respect des principes énoncés ci-dessus, l’Administrateur se "
+"réserve la possibilité de suspendre ou refuser\n"
+"    l’accès, sans préavis ni indemnité, de façon temporaire ou définitive, à "
+"tout ou partie des Services."
+msgstr ""
+
+#: cgu.php:223
+msgid ""
+"Tout Utilisateur qui s’inscrit et qui utilise les différents Services "
+"associés à son compte Health Foundation, en\n"
+"    ce compris notamment la publication de données à caractère personnel le "
+"concernant, reconnaît qu’il y procède sous\n"
+"    son entière et\n"
+"    exclusive responsabilité, en ce compris la responsabilité du fait de la "
+"diffusion et de la reproduction des\n"
+"    informations, et du fait des conséquences qui en découlent vis-à-vis des "
+"autres Utilisateurs et/ou des tiers\n"
+"    intéressés."
+msgstr ""
+
+#: cgu.php:230
+msgid "4.2 Engagements quant aux Commentaires publiés par l'Utilisateur"
+msgstr ""
+
+#: cgu.php:233
+msgid "Le Site et les informations qui y sont publiées sont réservés : "
+msgstr ""
+
+#: cgu.php:234
+msgid ""
+"        i.           A la\n"
+"    consultation des informations au moyen du système de traitement "
+"automatisé de données de l’Administrateur ;"
+msgstr ""
+
+#: cgu.php:236
+msgid ""
+"      ii           Aux\n"
+"    utilisations strictement réservées à l’usage privé et non marchand de "
+"l’Utilisateur et non destinées à une\n"
+"    utilisation collective, gratuite\n"
+"    ou payante."
+msgstr ""
+
+#: cgu.php:240
+msgid ""
+"L’Utilisateur déclare et reconnaît que toutes les informations, données, "
+"textes, logiciels, musiques, sons,\n"
+"    photographies, images, vidéos, messages ou tout autre contenu qu’il émet "
+"le sont sous son entière et seule\n"
+"    responsabilité."
+msgstr ""
+
+#: cgu.php:243
+msgid ""
+"L’Utilisateur s’engage tant à l’égard de l’Administrateur, que des autres "
+"Utilisateurs et de manière générale de tout\n"
+"    tiers, à respecter de manière inconditionnelle l'ensemble de la "
+"législation applicable, et plus particulièrement :"
+msgstr ""
+
+#: cgu.php:247
+msgid ""
+"Le droit de la propriété intellectuelle applicables aux créations, aux "
+"logiciels, aux textes, aux bases de\n"
+"    données, aux images de toute nature ;"
+msgstr ""
+
+#: cgu.php:249
+msgid ""
+"La loi Informatique, Fichiers et Libertés en matière de protection des "
+"personnes à l’égard des traitements de\n"
+"    données à caractère personnel ;"
+msgstr ""
+
+#: cgu.php:251
+msgid "Le dispositif légal de protection de la fraude informatique."
+msgstr ""
+
+#: cgu.php:253
+msgid ""
+"En conséquence, tout Utilisateur inscrit s’interdit tant à l’égard de "
+"l’Administrateur, que des autres Utilisateurs\n"
+"    inscrits et de manière générale de tout tiers :"
+msgstr ""
+
+#: cgu.php:256
+msgid ""
+"De diffuser des propos diffamatoires, abusifs, harcelant ou menaçant "
+"quiconque, ou en violation des droits\n"
+"      d’autrui ;"
+msgstr ""
+
+#: cgu.php:258
+msgid ""
+"De faire l’apologie des crimes contre l’humanité, d’inciter à la haine "
+"raciale ou à la pédophilie ;"
+msgstr ""
+
+#: cgu.php:259
+msgid ""
+"De créer une fausse identité ou usurper l’identité d’un tiers ;</br>\n"
+"    De transmettre des virus, un cheval de Troie, des bombes logiques ou "
+"tout autre programme nuisible ou\n"
+"    destructeur ;"
+msgstr ""
+
+#: cgu.php:262
+msgid "D’entraver les Services associés au compte Health Foundation ;"
+msgstr ""
+
+#: cgu.php:263
+msgid ""
+"De reproduire et/ou utiliser la marque, la dénomination sociale, le logo ou "
+"tout signe distinctif et de manière\n"
+"    générale toute donnée de quelque nature qu’elle soit, rédactionnelle, "
+"graphique ou autre de l’Administrateur, d’un autre\n"
+"    Utilisateur ou d’un tiers ;"
+msgstr ""
+
+#: cgu.php:266
+msgid ""
+"De procéder ou même de tenter une intrusion du sein du Site ou du système "
+"d’information d’administration du Site\n"
+"    ou de modifier, totalement ou partiellement les éléments qui y sont "
+"contenus."
+msgstr ""
+
+#: cgu.php:270
+msgid ""
+"L’Utilisateur s’engage le cas échéant à indemniser l’Administrateur de tout "
+"préjudice directement ou indirectement lié au\n"
+"    non-respect de ces garanties."
+msgstr ""
+
+#: cgu.php:274
+msgid ""
+"Tout Utilisateur qui agit en fraude des CGU s’expose à des poursuites "
+"civiles et/ou pénales."
+msgstr ""
+
+#: cgu.php:284
+msgid "ARTICLE 5 - DONNÉES A CARACTÈRE PERSONNEL"
+msgstr ""
+
+#: cgu.php:285
+msgid "5.1 Données personnelles"
+msgstr ""
+
+#: cgu.php:286
+msgid ""
+"Lors de l’utilisation des Services par l’Utilisateur, des données à "
+"caractère personnel sont susceptibles d’être\n"
+"      collectées et traitées en vue de permettre l’accès aux Services à des "
+"fins d’identification, d’administration et\n"
+"      de gestion\n"
+"      technique des Services ainsi qu’à des fins de statistiques et de "
+"prospection commerciale, conformément au cadre\n"
+"      légal applicable."
+msgstr ""
+
+#: cgu.php:291
+msgid ""
+"Les données à caractère personnel recueillies par l’Administrateur dans le "
+"cadre des présentes font l’objet d’un\n"
+"      traitement au sens de la Règlementation applicable."
+msgstr ""
+
+#: cgu.php:293
+msgid ""
+"L’Administrateur garantit avoir déclaré le traitement des données "
+"personnelles effectué sur le Site auprès de la CNIL\n"
+"      pour les données traitées avant l’entrée en vigueur du Règlement "
+"européen n° 2016/679 relatif à la protection des\n"
+"      personnes\n"
+"      physiques à l’égard du traitement des données à caractère personnel du "
+"27 avril 2016."
+msgstr ""
+
+#: cgu.php:297
+msgid ""
+"En application des dispositions de la Règlementation applicable, toute "
+"personne physique dispose des droits\n"
+"      d’accès, de rectification, d’effacement, d’opposition, de limitation, "
+"et de portabilité des données la concernant."
+msgstr ""
+
+#: cgu.php:300
+msgid ""
+"Lorsque le traitement des données est effectué sur le fondement du "
+"consentement de l’Utilisateur, ce dernier peut\n"
+"      retirer son consentement à tout moment. Un tel retrait ne remettra pas "
+"en cause la licéité du traitement effectué\n"
+"      avant le\n"
+"      retrait."
+msgstr ""
+
+#: cgu.php:304
+msgid ""
+"Lorsque le traitement est fondé sur l’intérêt légitime de l’Administrateur "
+"ou d’un tiers, l’Utilisateur peut s’opposer\n"
+"      au traitement à tout moment, pour des raisons tenant à sa situation "
+"particulière. Toutefois, lorsque le but du\n"
+"      traitement est la\n"
+"      prospection, l’Utilisateur peut s’opposer à ce traitement sans motif, "
+"y compris au profilage dans la mesure où il\n"
+"      est lié à une telle prospection."
+msgstr ""
+
+#: cgu.php:309
+msgid ""
+"L’Utilisateur a la possibilité de définir des directives relatives au sort "
+"de ses données personnelles après son\n"
+"      décès."
+msgstr ""
+
+#: cgu.php:311
+msgid ""
+"L’Utilisateur peut exercer ses droits à tout moment, auprès de "
+"l’Administrateur, lorsque celui-ci est responsable de\n"
+"      traitement, via les moyens suivants : "
+msgstr ""
+
+#: cgu.php:315
+msgid "10 rue des vanves,92130,Issy-Les-Moulineaux"
+msgstr ""
+
+#: cgu.php:318
+msgid "Par voie électronique : contact@Health Foundation.fr "
+msgstr ""
+
+#: cgu.php:322
+msgid ""
+"Les données personnelles qui seront communiquées à l’Utilisateur dans le "
+"cadre de l’exercice de son droit d’accès\n"
+"    et/ou de portabilité, le seront à titre personnel et confidentiel. A ce "
+"titre, pour que sa demande d’accès et/ou de\n"
+"    portabilité\n"
+"    soi(en)t prise(s) en compte, nous lui demandons de bien vouloir nous "
+"fournir les éléments nécessaires à son\n"
+"    identification, à savoir, une attestation écrite sur l’honneur par "
+"laquelle il certifie être le titulaire des dites\n"
+"    données personnelles\n"
+"    ainsi qu’une photocopie de sa pièce d’identité comportant une signature."
+msgstr ""
+
+#: cgu.php:329
+msgid ""
+"En cas de litige, l’Utilisateur dispose du droit de saisir la Commission "
+"Nationale de l’Informatique et des\n"
+"    Libertés."
+msgstr ""
+
+#: cgu.php:331
+msgid ""
+"Les données personnelles recueillies à l'occasion de la création et "
+"exploitation d'un compte Utilisateur sont\n"
+"    nécessaires au traitement informatique du compte de l'Utilisateur. Elles "
+"sont destinées aux services internes du\n"
+"    groupe d'Infinite Measures', à ses prestataires et tous sous-traitants, "
+"ainsi qu'éventuellement à des partenaires commerciaux\n"
+"    de l’Administrateur et/ou d’autres entités en cas de consentement "
+"spécifique de l’Utilisateur dans le formulaire\n"
+"    d’inscription."
+msgstr ""
+
+#: cgu.php:343
+msgid "ARTICLE 6 - LIENS HYPERTEXTES ET SITES COMMERCIAUX PARTENAIRES"
+msgstr ""
+
+#: cgu.php:346
+msgid ""
+"La mise en place d'un hyperlien vers le Site nécessite une autorisation "
+"préalable de l’Administrateur. De tels liens ne\n"
+"      sauraient engager la responsabilité de l’Administrateur."
+msgstr ""
+
+#: cgu.php:353
+msgid ""
+"Par ailleurs l’Administrateur peut proposer des liens vers d’autres sites "
+"Web ou d’autres sources d’informations gérées\n"
+"      par des sites tiers. L’Administrateur étant dans l’impossibilité de "
+"contrôler le contenu de ces sites, l’existence de\n"
+"      tels liens ne saurait engager la responsabilité de l’Administrateur "
+"quant au contenu, publicités, produits ou services\n"
+"      disponibles sur ces sites externes, ce que l’Utilisateur reconnaît et "
+"accepte. Plus particulièrement, la\n"
+"      responsabilité de l’Administrateur au titre des dommages directs ou "
+"indirects tels que notamment perte de clientèle,\n"
+"      action en justice, trouble commercial quelconque, perte d'image de "
+"marque, manque à gagner, ne pourra être\n"
+"      recherchée ni au titre de la qualité et/ou des spécifications des "
+"produits et services vendus par des partenaires\n"
+"      commerciaux, ni au titre des opérations de paiement effectuées sur ces "
+"sites."
+msgstr ""
+
+#: cgu.php:367
+msgid "ARTICLE 7 - CONSERVATION, ARCHIVAGE ET CONVENTION SUR LA PREUVE "
+msgstr ""
+
+#: cgu.php:369
+msgid "7.1 Conservation et archivage "
+msgstr ""
+
+#: cgu.php:371
+msgid ""
+"Conformément aux dispositions de la Loi pour la confiance dans l’économie "
+"numérique du 21 juin 2004, l’Administrateur\n"
+"      est tenue, en sa qualité d’hébergeur de contenu de détenir et "
+"conserver les données de nature à permettre\n"
+"      l’identification de toute personne ayant diffusé des contenus par son "
+"intermédiaire, pour le cas où les autorités\n"
+"      judiciaires en feraient la demande."
+msgstr ""
+
+#: cgu.php:376
+msgid ""
+"Les fichiers informatisés conservés dans les systèmes informatiques de "
+"l’Administrateur dans des conditions raisonnables\n"
+"      de sécurité, seront considérés comme les preuves de dépôt des "
+"Commentaires ainsi que des différentes transmissions\n"
+"      d’informations entre l'Utilisateur et l’Administrateur, permettant à "
+"ce dernier d'assurer les traitements souhaités par\n"
+"      l'Utilisateur."
+msgstr ""
+
+#: cgu.php:381
+msgid ""
+"L'archivage de ces données est effectué sur un support fiable et durable de "
+"manière à correspondre à une copie\n"
+"      fidèle et durable, conformément à l'article 1379 du Code civil."
+msgstr ""
+
+#: cgu.php:384
+msgid "7.2 Convention sur la preuve"
+msgstr ""
+
+#: cgu.php:386
+msgid ""
+"L’Administrateur et l’Utilisateur acceptent de communiquer principalement "
+"par voie électronique. Ces communications\n"
+"      électroniques font foi entre l’Administrateur et l’Utilisateur et "
+"constituent des preuves recevables, valides et\n"
+"      opposables. Par ailleurs, l’Administrateur et l’Utilisateur attribuent "
+"la même valeur probante au fait de cocher la\n"
+"      mention « j’ai lu et j’accepte les conditions générales de Public » "
+"telle que prévue notamment au sein du\n"
+"      formulaire d'inscription au compte Public, qu’à une signature "
+"manuscrite."
+msgstr ""
+
+#: cgu.php:397
+msgid "ARTICLE 8 - LOI APPLICABLE ET JUGE COMPETENT "
+msgstr ""
+
+#: cgu.php:399
+msgid ""
+"Le non-respect par l’Utilisateur, quelle que soit sa localisation, de l’une "
+"quelconque des dispositions des CGU\n"
+"      et de façon plus générale toute difficulté touchant à son exécution, "
+"son interprétation ou sa validité, sont\n"
+"      soumis à la loi française et aux juridictions françaises. "
+msgstr ""
+
+#: connexion.php:25 header.php:36
+msgid "Connexion"
+msgstr ""
+
+#: connexion.php:26 footer.php:14 header.php:37
+msgid "Inscription"
+msgstr ""
+
+#: connexion.php:32
+msgid "Email"
+msgstr ""
+
+#: connexion.php:35 inscription.php:41
+msgid "Mot de passe"
+msgstr ""
+
+#: connexion.php:38 inscription.php:55
+msgid "Suivant"
+msgstr ""
+
+#: connexion.php:41
+msgid "Mot de passe oublié"
+msgstr ""
+
+#: contact.php:22 contactMessageEnvoye.php:17
+msgid " Contact "
+msgstr ""
+
+#: contact.php:29 critere.php:85 faq.php:140
+msgid "Nom"
+msgstr ""
+
+#: contact.php:32 faq.php:142 gestionDesStructures.php:33
+#: gestionDesUtilisateurs.php:125 monCompte.php:93
+msgid "Prénom"
+msgstr ""
+
+#: contact.php:35
+msgid "Adresse email"
+msgstr ""
+
+#: contact.php:38
+msgid "Objet"
+msgstr ""
+
+#: contact.php:41 faq.php:146 faq.php:147
+msgid "Votre message"
+msgstr ""
+
+#: contact.php:45 faq.php:150 faqReponse.php:33
+msgid "Envoyer"
+msgstr ""
+
+#: contactMessageEnvoye.php:22
+msgid "Votre message a bien été envoyé!"
+msgstr ""
+
+#: contactMessageEnvoye.php:25
+msgid ""
+"Vous recevrez une réponse dans\n"
+"        les plus bref délais."
+msgstr ""
+
+#: contactMessageEnvoye.php:30 motDePasseOublieConfirmation.php:22
+msgid " Retourner à l'accueil"
+msgstr ""
+
+#: critere.php:75 gestionDesStructures.php:82 gestionDesStructures.php:83
+#: gestionDesUtilisateurs.php:118 resultatsPilote.php:30
+msgid "Rechercher"
+msgstr ""
+
+#: critere.php:78
+msgid "Ajouter un critère"
+msgstr ""
+
+#: critere.php:81
+msgid "Retirer le critère"
+msgstr ""
+
+#: critere.php:88 gestionDesStructures.php:35 monCompte.php:95
+msgid "Type"
+msgstr ""
+
+#: critere.php:91 gestionDesUtilisateurs.php:128
+msgid "Structure"
+msgstr ""
+
+#: critere.php:97 gestionDesStructures.php:100
+msgid "Pays"
+msgstr ""
+
+#: faq.php:18
+msgid " FAQ "
+msgstr ""
+
+#: faq.php:23
+msgid " Ajouter une question"
+msgstr ""
+
+#: faq.php:26
+msgid "Question"
+msgstr ""
+
+#: faq.php:30
+msgid "Réponse"
+msgstr ""
+
+#: faq.php:37
+msgid " Répondre aux questions de la FAQ "
+msgstr ""
+
+#: faq.php:39
+msgid "Cliquer ici pour répondre aux questions de la FAQ"
+msgstr ""
+
+#: faq.php:46
+msgid " Les questions souvent posées"
+msgstr ""
+
+#: faq.php:138
+msgid "Votre question n'est pas présente?"
+msgstr ""
+
+#: faq.php:144 modificationProfil.php:43
+msgid "Adresse e-mail"
+msgstr ""
+
+#: faqReponse.php:14
+msgid "Question posée dans la FAQ"
+msgstr ""
+
+#: footer.php:9
+msgid " CGU"
+msgstr ""
+
+#: footer.php:10
+msgid " FAQ/Aide"
+msgstr ""
+
+#: footer.php:11
+msgid " Contact"
+msgstr ""
+
+#: footer.php:20
+msgid "©Copyright Health Foundation, tous droits réservés"
+msgstr ""
+
+#: gestionDesStructures.php:22
+msgid " Gestion des structures"
+msgstr ""
+
+#: gestionDesStructures.php:27
+msgid " Compte(s) à valider "
+msgstr ""
+
+#: gestionDesStructures.php:32 gestionDesStructures.php:95
+#: gestionDesUtilisateurs.php:124 inscriptionSuite.php:34 monCompte.php:92
+#: resultatsPilote.php:37
+msgid "Nom "
+msgstr ""
+
+#: gestionDesStructures.php:34 gestionDesUtilisateurs.php:126 monCompte.php:94
+msgid "Date de naissance"
+msgstr ""
+
+#: gestionDesStructures.php:36 gestionDesStructures.php:103 monCompte.php:96
+msgid "Statut"
+msgstr ""
+
+#: gestionDesStructures.php:61
+msgid "Valider l'inscription"
+msgstr ""
+
+#: gestionDesStructures.php:62 gestionDesStructures.php:131
+#: gestionDesStructures.php:162 gestionDesUtilisateurs.php:151
+#: gestionDesUtilisateurs.php:176 monCompte.php:119
+msgid "Supprimer"
+msgstr ""
+
+#: gestionDesStructures.php:72
+msgid "Pas d'utilisateur à valider"
+msgstr ""
+
+#: gestionDesStructures.php:87
+msgid "Ajouter une structure"
+msgstr ""
+
+#: gestionDesStructures.php:94
+msgid "ID "
+msgstr ""
+
+#: gestionDesStructures.php:96
+msgid "Référent"
+msgstr ""
+
+#: gestionDesStructures.php:98 modificationProfil.php:59
+msgid "Ville "
+msgstr ""
+
+#: gestionDesStructures.php:101 inscriptionSuite.php:312
+#: modificationProfil.php:325
+msgid "Numéro de téléphone"
+msgstr ""
+
+#: gestionDesStructures.php:102
+msgid "Code"
+msgstr ""
+
+#: gestionDesStructures.php:104 gestionDesUtilisateurs.php:131
+msgid "Gestion"
+msgstr ""
+
+#: gestionDesStructures.php:132 gestionDesStructures.php:163
+msgid "Générer un code"
+msgstr ""
+
+#: gestionDesStructures.php:133
+msgid "Marquer comme inactive"
+msgstr ""
+
+#: gestionDesStructures.php:164
+msgid "Passer inactif"
+msgstr ""
+
+#: gestionDesUtilisateurs.php:118
+msgid "Research"
+msgstr ""
+
+#: gestionDesUtilisateurs.php:123
+msgid "Sexe"
+msgstr ""
+
+#: gestionDesUtilisateurs.php:127
+msgid "Type "
+msgstr ""
+
+#: gestionDesUtilisateurs.php:129
+msgid "Statut "
+msgstr ""
+
+#: gestionDesUtilisateurs.php:152 gestionDesUtilisateurs.php:177
+msgid "Bannir"
+msgstr ""
+
+#: gestionDesUtilisateurs.php:153 gestionDesUtilisateurs.php:179
+msgid "Passer en référent"
+msgstr ""
+
+#: gestionDesUtilisateurs.php:183
+msgid "Changer le mail"
+msgstr ""
+
+#: header.php:18
+msgid " Accueil"
+msgstr ""
+
+#: header.php:21
+msgid "À propos"
+msgstr ""
+
+#: header.php:28
+msgid "Resultats Pilotes"
+msgstr ""
+
+#: header.php:42 monCompte.php:15
+msgid "Mon compte"
+msgstr ""
+
+#: header.php:43 header.php:53
+msgid "Déconnexion"
+msgstr ""
+
+#: header.php:49
+msgid "Gestion des utilisateurs"
+msgstr ""
+
+#: header.php:52
+msgid "Gestion des structures"
+msgstr ""
+
+#: header.php:59
+msgid "Passer site en anglais"
+msgstr ""
+
+#: header.php:60
+msgid "Turn to french"
+msgstr ""
+
+#: inscription.php:24
+msgid " Connexion "
+msgstr ""
+
+#: inscription.php:25
+msgid " Inscription "
+msgstr ""
+
+#: inscription.php:31
+msgid "E-mail"
+msgstr ""
+
+#: inscription.php:35 motDePasseOublieNouveauMotDePasse.php:22
+msgid "Le mot de passe doit contenir au moins:"
+msgstr ""
+
+#: inscription.php:36 motDePasseOublieNouveauMotDePasse.php:23
+msgid "Une lettre minuscule"
+msgstr ""
+
+#: inscription.php:37 motDePasseOublieNouveauMotDePasse.php:24
+msgid "Une lettre majuscule"
+msgstr ""
+
+#: inscription.php:38 motDePasseOublieNouveauMotDePasse.php:25
+msgid "Un nombre"
+msgstr ""
+
+#: inscription.php:39
+msgid "8 caractères"
+msgstr ""
+
+#: inscription.php:42 motDePasseOublieNouveauMotDePasse.php:29
+msgid ""
+"doit contenir une lettre minuscule, une lettre majuscule,un chiffre et au "
+"moins 8 caractères"
+msgstr ""
+
+#: inscription.php:46
+msgid "Confirmation du mot de passe"
+msgstr ""
+
+#: inscription.php:49 motDePasseOublieNouveauMotDePasse.php:34
+msgid " Les mots de passe ne correspondent pas !"
+msgstr ""
+
+#: inscription.php:51
+msgid "Code formateur"
+msgstr ""
+
+#: inscriptionCompteValide.php:15 inscriptionMailEnvoye.php:16
+msgid "Confirmation de création de compte "
+msgstr ""
+
+#: inscriptionCompteValide.php:16
+msgid ""
+"Votre mail a bien été validé. Avant pouvoir vous connecter il faudra "
+"attendre que votre compte soit validé par votre\n"
+"                formateur ou votre structure. "
+msgstr ""
+
+#: inscriptionMailEnvoye.php:17
+msgid "Un mail a été envoyé à l’adresse"
+msgstr ""
+
+#: inscriptionSuite.php:16
+msgid " Coordonnées "
+msgstr ""
+
+#: inscriptionSuite.php:24
+msgid " Inscription Pilote "
+msgstr ""
+
+#: inscriptionSuite.php:27
+msgid " Inscription Formateur "
+msgstr ""
+
+#: inscriptionSuite.php:30
+msgid " Femme"
+msgstr ""
+
+#: inscriptionSuite.php:31
+msgid " Homme"
+msgstr ""
+
+#: inscriptionSuite.php:32
+msgid " Autre"
+msgstr ""
+
+#: inscriptionSuite.php:37 modificationProfil.php:32 resultatsPilote.php:38
+msgid "Prénom "
+msgstr ""
+
+#: inscriptionSuite.php:40 modificationProfil.php:37 resultatsPilote.php:39
+msgid "Date de naissance "
+msgstr ""
+
+#: inscriptionSuite.php:43 modificationProfil.php:49
+msgid "Adresse postale"
+msgstr ""
+
+#: inscriptionSuite.php:46
+msgid "Code postal "
+msgstr ""
+
+#: inscriptionSuite.php:52 modificationProfil.php:64
+msgid "Pays "
+msgstr ""
+
+#: inscriptionSuite.php:315
+msgid " champ obligatoire"
+msgstr ""
+
+#: inscriptionSuite.php:317
+msgid ""
+" J'ai lu et j'accepte\n"
+"          la politique de confidentialité "
+msgstr ""
+
+#: inscriptionSuite.php:320
+msgid "Terminer l'inscription"
+msgstr ""
+
+#: modificationMotDePasse.php:26
+msgid " Modification du mot de passe "
+msgstr ""
+
+#: modificationMotDePasse.php:27
+msgid "Ancien mot de passe "
+msgstr ""
+
+#: modificationMotDePasse.php:30 motDePasseOublieNouveauMotDePasse.php:28
+msgid "Nouveau mot de passe "
+msgstr ""
+
+#: modificationMotDePasse.php:33 motDePasseOublieNouveauMotDePasse.php:31
+msgid "Confirmer votre mot de passe "
+msgstr ""
+
+#: modificationMotDePasse.php:37 modificationProfil.php:30
+#: modificationProfil.php:35 modificationProfil.php:40
+#: modificationProfil.php:46 modificationProfil.php:52
+#: modificationProfil.php:57 modificationProfil.php:62
+#: modificationProfil.php:323 modificationProfil.php:329
+msgid "Enregistrer"
+msgstr ""
+
+#: modificationProfil.php:332
+msgid ""
+"Retourner à la page Mon\n"
+"              compte"
+msgstr ""
+
+#: modificationValide.php:24
+msgid " Les modifications ont bien été enregistrées "
+msgstr ""
+
+#: modificationValide.php:27
+msgid " Retourner à la page d'accueil "
+msgstr ""
+
+#: monCompte.php:29
+msgid " Adresse email"
+msgstr ""
+
+#: monCompte.php:40
+msgid " Résumé des resultats "
+msgstr ""
+
+#: monCompte.php:41 resultatsPilote.php:40
+msgid "Résultats "
+msgstr ""
+
+#: monCompte.php:42 monCompte.php:50 monCompte.php:55 monCompte.php:61
+#: monCompte.php:67 monCompte.php:75 resultatsParPilote.php:26
+#: resultatsParPilote.php:40 resultatsParPilote.php:46
+#: resultatsParPilote.php:52 resultatsParPilote.php:61
+msgid "Description"
+msgstr ""
+
+#: monCompte.php:47
+msgid " Resultats détaillés "
+msgstr ""
+
+#: monCompte.php:49 resultatsGestionDuStress.php:18 resultatsParPilote.php:33
+msgid "Gestion du stress"
+msgstr ""
+
+#: monCompte.php:53 resultatsParPilote.php:38
+msgid ""
+"Reconnaissance de\n"
+"                    tonalité"
+msgstr ""
+
+#: monCompte.php:60 resultatsParPilote.php:45 resultatsTempsDeReaction.php:22
+msgid "Temps de réaction"
+msgstr ""
+
+#: monCompte.php:66 resultatsParPilote.php:51 resultatsSeuilDePerception.php:19
+msgid "Seuil de perception"
+msgstr ""
+
+#: monCompte.php:72
+msgid " Resultats des test en ligne "
+msgstr ""
+
+#: monCompte.php:74 resultats.php:22 resultatsParPilote.php:60
+#: resultatsPilote.php:65
+msgid "Résultats"
+msgstr ""
+
+#: monCompte.php:87
+msgid " Compte à valider "
+msgstr ""
+
+#: monCompte.php:118
+msgid "Activer"
+msgstr ""
+
+#: monCompte.php:132
+msgid "Aucun utilisateur à valider"
+msgstr ""
+
+#: monCompte.php:137
+msgid "Générer un code unique "
+msgstr ""
+
+#: motDePasseOublie.php:6 motDePasseOublieMailEnvoye.php:16
+msgid " Mot de passe oublié "
+msgstr ""
+
+#: motDePasseOublie.php:12
+msgid "Veuillez indiquer l'adresse e-mail associée à votre compte "
+msgstr ""
+
+#: motDePasseOublieConfirmation.php:16 motDePasseOublieNouveauMotDePasse.php:15
+msgid " Nouveau mot de passe "
+msgstr ""
+
+#: motDePasseOublieConfirmation.php:20
+msgid " Votre mot de passe a bien été enregistré "
+msgstr ""
+
+#: motDePasseOublieMailEnvoye.php:21
+msgid "L'e-mail a bien été envoyé. Veuillez vérifiez dans votre boîte mail."
+msgstr ""
+
+#: motDePasseOublieMailEnvoye.php:22
+msgid "Retourner à l'accueil"
+msgstr ""
+
+#: motDePasseOublieNouveauMotDePasse.php:26
+msgid "8 caractères minimum"
+msgstr ""
+
+#: motDePasseOublieNouveauMotDePasse.php:36
+msgid "Valider"
+msgstr ""
+
+#: psychotestEnLigne.php:60
+msgid "Test psychotechnique en ligne"
+msgstr ""
+
+#: psychotestEnLigne.php:72
+msgid "titre"
+msgstr ""
+
+#: psychotestEnLigne.php:73
+msgid "instructions"
+msgstr ""
+
+#: psychotestEnLigne.php:74
+msgid "questions"
+msgstr ""
+
+#: resultats.php:30 resultatsGestionDuStress.php:30 resultatsGlobaux.php:33
+#: resultatsReconnaissanceDeTonalite.php:32 resultatsSeuilDePerception.php:31
+#: resultatsTempsDeReaction.php:33
+msgid "id"
+msgstr ""
+
+#: resultats.php:31 resultatsGestionDuStress.php:31 resultatsGlobaux.php:34
+#: resultatsReconnaissanceDeTonalite.php:33 resultatsSeuilDePerception.php:32
+#: resultatsTempsDeReaction.php:34
+msgid "test"
+msgstr ""
+
+#: resultats.php:32 resultatsGestionDuStress.php:32 resultatsGlobaux.php:35
+#: resultatsReconnaissanceDeTonalite.php:34 resultatsSeuilDePerception.php:33
+#: resultatsTempsDeReaction.php:35
+msgid "timeline"
+msgstr ""
+
+#: resultats.php:33 resultatsGestionDuStress.php:33 resultatsGlobaux.php:36
+#: resultatsReconnaissanceDeTonalite.php:35 resultatsTempsDeReaction.php:36
+msgid "value"
+msgstr ""
+
+#: resultats.php:34 resultatsGestionDuStress.php:34 resultatsGlobaux.php:37
+#: resultatsReconnaissanceDeTonalite.php:36 resultatsSeuilDePerception.php:35
+#: resultatsTempsDeReaction.php:37
+msgid "type"
+msgstr ""
+
+#: resultats.php:35 resultatsGestionDuStress.php:35 resultatsGlobaux.php:38
+#: resultatsReconnaissanceDeTonalite.php:37 resultatsSeuilDePerception.php:36
+#: resultatsTempsDeReaction.php:38
+msgid "unité"
+msgstr ""
+
+#: resultats.php:36 resultatsGestionDuStress.php:36 resultatsGlobaux.php:39
+#: resultatsReconnaissanceDeTonalite.php:38 resultatsSeuilDePerception.php:37
+#: resultatsTempsDeReaction.php:39
+msgid "date"
+msgstr ""
+
+#: resultats.php:37 resultatsGestionDuStress.php:37 resultatsGlobaux.php:40
+#: resultatsReconnaissanceDeTonalite.php:39 resultatsSeuilDePerception.php:38
+#: resultatsTempsDeReaction.php:40
+msgid "durée"
+msgstr ""
+
+#: resultats.php:38 resultatsGestionDuStress.php:38 resultatsGlobaux.php:41
+#: resultatsReconnaissanceDeTonalite.php:40 resultatsSeuilDePerception.php:39
+#: resultatsTempsDeReaction.php:41
+msgid "score"
+msgstr ""
+
+#: resultats.php:39 resultatsGestionDuStress.php:39 resultatsGlobaux.php:42
+#: resultatsReconnaissanceDeTonalite.php:41 resultatsSeuilDePerception.php:40
+#: resultatsTempsDeReaction.php:42
+msgid "banc de test"
+msgstr ""
+
+#: resultats.php:40 resultatsGestionDuStress.php:40 resultatsGlobaux.php:43
+#: resultatsReconnaissanceDeTonalite.php:42 resultatsTempsDeReaction.php:43
+msgid "pilot"
+msgstr ""
+
+#: resultats.php:41 resultatsGestionDuStress.php:41 resultatsGlobaux.php:44
+#: resultatsReconnaissanceDeTonalite.php:43 resultatsSeuilDePerception.php:42
+#: resultatsTempsDeReaction.php:44
+msgid "instructeur"
+msgstr ""
+
+#: resultats.php:42 resultatsGestionDuStress.php:42 resultatsGlobaux.php:45
+#: resultatsReconnaissanceDeTonalite.php:44 resultatsSeuilDePerception.php:43
+#: resultatsTempsDeReaction.php:45
+msgid "capteurs"
+msgstr ""
+
+#: resultats.php:74 resultatsGestionDuStress.php:74 resultatsGlobaux.php:77
+msgid " pas de données à afficher "
+msgstr ""
+
+#: resultatsGlobaux.php:23
+msgid "Résultats globaux"
+msgstr ""
+
+#: resultatsParPilote.php:18
+msgid "Résultats de"
+msgstr ""
+
+#: resultatsParPilote.php:24
+msgid "Résumé des resultats"
+msgstr ""
+
+#: resultatsParPilote.php:31
+msgid "Resultats détaillés"
+msgstr ""
+
+#: resultatsParPilote.php:34
+msgid ""
+"Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test "
+"de la gestion du stress"
+msgstr ""
+
+#: resultatsParPilote.php:58
+msgid "Resultats test en ligne"
+msgstr ""
+
+#: resultatsPilote.php:15
+msgid "Resultats pilote"
+msgstr ""
+
+#: resultatsPilote.php:27
+msgid "Mes pilotes"
+msgstr ""
+
+#: resultatsPilote.php:36
+msgid "Sexe "
+msgstr ""
+
+#: resultatsReconnaissanceDeTonalite.php:21
+msgid "Reconnaissance de tonalité"
+msgstr ""
+
+#: resultatsReconnaissanceDeTonalite.php:76 resultatsSeuilDePerception.php:75
+msgid "pas de données à afficher "
+msgstr ""
+
+#: resultatsSeuilDePerception.php:34
+msgid "valeur"
+msgstr ""
+
+#: resultatsSeuilDePerception.php:41
+msgid "pilote"
+msgstr ""
+
+#: resultatsTempsDeReaction.php:77
+msgid "pas de données à afficher"
+msgstr ""

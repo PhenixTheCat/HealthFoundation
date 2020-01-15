@@ -16,15 +16,15 @@
 
   <div class="centrer_bloc">
     <div class="headerContact">
-      <h1> Mon compte </h1>
+      <h1><?php echo _(" Mon compte ");?></h1>
 
 
       <div class="piloteModiMdpv">
 
-        <h3> Les modifications ont bien été enregistrées </h3>
+        <h3><?php echo _(" Les modifications ont bien été enregistrées ");?></h3>
 
 
-        <a class="submitButtons" href="index.php?redirect=user"> Retourner à la page d'accueil </a>
+        <a class="submitButtons" href="index.php?redirect=user"><?php echo _(" Retourner à la page d'accueil ");?></a>
 
         </fieldset>
       </div>

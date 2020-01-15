@@ -12,7 +12,7 @@
 
 
     <div class="headerContact">
-        <h1>Resultats pilote</h1>
+        <h1><?php echo _("Resultats pilote");?></h1>
         
     </br>
       <img src="index.php?redirect=user&function=chartBar">
@@ -24,20 +24,20 @@
     <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
 
     <div class="tableau">
-        <h3> Mes pilotes </h3>
+        <h3> <?php echo _("Mes pilotes");?> </h3>
         <form action="" id="searchUser" method="post">
             <input id="search" name="searchUser" type="text" placeholder="Rechercher" />
-            <input class="submitButtons" type="submit" name="rechercher" value="Rechercher" />
+            <input class="submitButtons" type="submit" name="rechercher" value=<?php echo _("Rechercher");?> />
         </form>
 
         <table border="1" class="resultatPilote">
             <thead>
                 <tr>
-                     <th>Sexe </th>
-                    <th>Nom </th>
-                    <th>Prénom</th>
-                    <th>Date de naissance</th>
-                    <th>Résultats</th>
+                     <th><?php echo _("Sexe ");?></th>
+                    <th><?php echo _("Nom ");?></th>
+                    <th><?php echo _("Prénom ");?></th>
+                    <th><?php echo _("Date de naissance ");?></th>
+                    <th><?php echo _("Résultats ");?></th>
 
                 </tr>
             </thead>
@@ -61,8 +61,8 @@
                     
                         <td>
                             <form action="" id="showResults" method="post">
-                                <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-                                <input class="gestionButtons" type="submit" name="results" value="Page de résultats" /> </br>
+                                <input class="editButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                                <input class="editButtons" type="submit" name="results" value=<?php echo _("Résultats");?> /> </br>
                             </form>
                         </td>
                 </tr>

@@ -20,7 +20,7 @@
 
   <div class="centrer_bloc">
     <div class="headerContact">
-      <h1> Mon compte </h1>
+      <h1><?php echo _(" Mon compte ");?></h1>
 
 
 
@@ -30,22 +30,22 @@
 
 
         <form action="" method="post">
-          <h3> Informations détaillés </h3>
+          <h3><?php echo _(" Informations détaillés ");?></h3>
 
-          <h4> Nom </h4>
+          <h4><?php echo _(" Nom ");?></h4>
           <h5> <?php echo $coordonnees['last_name'];?></h5>
-          <h4> Prénom </h4>
+          <h4><?php echo _(" Prénom ");?></h4>
           <h5> <?php echo $coordonnees['first_name'];?></h5>
-          <h4> Date de naissance </h4>
+          <h4><?php echo _(" Date de naissance ");?></h4>
           <h5><?php echo $coordonnees['birthdate'];?></h5>
-          <h4> Adresse e-mail</h4>
+          <h4><?php echo _(" Adresse e-mail");?></h4>
           <h5><?php echo $coordonnees['email'];?></h5>
-          <h4> Mot de passe </h4>
+          <h4><?php echo _(" Mot de passe ");?></h4>
 
 
 
-          <a class="lien" href="admin-modif-mdp.php">Modifier le mot de passe </a>
-          <a class="lien" href="admin-modif-profil-perso.php"> Modifier le profil</a>
+          <a class="lien" href="admin-modif-mdp.php"><?php echo _("Modifier le mot de passe ");?></a>
+          <a class="lien" href="admin-modif-profil-perso.php"><?php echo _(" Modifier le profil");?></a>
 
 
 

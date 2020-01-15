@@ -13,13 +13,13 @@
   <div class="centrer_bloc">
     <div class="motDePasseOublie">
       <span class="enteteInscription">
-        <a> Mot de passe oublié </a>
+        <a><?php echo _(" Mot de passe oublié ");?></a>
         <?php echo printError($error); ?>
       </span>
 
 
-      <p>L'e-mail a bien été envoyé. Veuillez vérifiez dans votre boîte mail.</p>
-      <a class="submitButtons" href="index.php">Retourner à l'accueil</a>
+      <p><?php echo _("L'e-mail a bien été envoyé. Veuillez vérifiez dans votre boîte mail.");?></p>
+      <a class="submitButtons" href="index.php"><?php echo _("Retourner à l'accueil");?></a>
 
     </div>
   </div>

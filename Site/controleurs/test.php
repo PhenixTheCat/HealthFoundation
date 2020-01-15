@@ -33,19 +33,10 @@ switch ($function) {
         break;
 
 
-   case 'resultatsGlobaux':
+    case 'resultatsGlobaux':
         $vue = "resultatsGlobaux";
         $error = false;
-        $id = $_SESSION['pilotId'];
-
-        if (getResultatsOverallResult($database, $id) != array(null)) {
-            $rowAll = getResultatsOverallResult($database, $id);
-            $NbreData = 1;
-        } else {
-            $NbreData = 0;
-        }
         break;
-        
 
     case 'resultatsGestionDuStress':
 
@@ -101,17 +92,11 @@ switch ($function) {
         }
         break;
 
-    case 'resultatsPsychotesteEnLigne':
+    case 'resultats':
 
-        $vue = "resultatsPsychotesteEnLigne";
+        $vue = "resultats";
         $error = false;
-        $id = $_SESSION['pilotId'];
-        if (getResultatsPsychotestEnLigne($database, $id) != array(null)) {
-            $rowAll = getResultatsPsychotestEnLigne($database, $id);
-            $NbreData = 1;
-        } else {
-            $NbreData = 0;
-        }
+        
         break;
 
     case 'resultatsParPilote':

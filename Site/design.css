@@ -1667,18 +1667,6 @@ div.titreProduit {
 	margin-right: 5%;
 	margin-bottom: 0%;
 }
-#seuilDePerception p {
-	background-color: white;
-}	
-#tempsDeReaction p {
-	background-color: white;
-}
-#reconnaissanceDeTonalite p {
-	background-color: white;
-}
-#gestionDuStress p {
-	background-color: white;
-}
 
 #reconnaissanceDeTonalite h1 {
 	background-image: linear-gradient(rgba(173, 132, 238, 0.75), rgba(173, 132, 238, 0.75) 80%), url("Images/tonalite.jpg");
@@ -1987,6 +1975,7 @@ table {
 	width: 60%;
 
 }
+
 #search {
 	background-color: #ffffff;
 	border-style: solid;
@@ -1995,85 +1984,9 @@ table {
 
 	width: 70%;
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: normal;
 	letter-spacing: 1px;
-        margin:0;
-        border-radius: 3px;
-}
-.Criterias{
-    padding-top: 10px;
-    border:2px solid rgba(0,0,0,0.1);
-    width:90%;
-    margin:auto;
-    background-color:rgba(248, 248, 243,0.3);
-    border-radius: 150px;
-}
-.multiCritereRadio label{
-    display:inline-block;
-    margin-right:10px;
-}
-.multiCritereRadio{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-.partieInput{
-    width:60%;
-    margin:auto;
-    display:block;
-}
-.multiCritereRadio input[type=radio]{
-    margin-top:0;
-}
-div.partieInput input#Boutton{
-    float: right;
-    width: 20%;
-    height: 25px;
-    font-weight: bold;
-    
-    font-size: 16px;
-    font-weight: bold;
-    font-family: Nunito Sans;
-    text-align: center;
-    cursor: pointer;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
-    border-radius: 3px;
-    transition: all 0s;
-    border: 1px solid rgba(41, 105, 151, 0.49);
-}
-div.partieInput input#Boutton:hover{
-    background-color:lightblue;
-}
-div.partieInput input#search{
-    width: 80%;
-    height: 25px;
-}
-button[value=Research]{
-    width: 200px;
-    height: 35px;
-    font-size: 15px;
-    font-weight: bold;
-    margin:10px auto;
-    display:block;
-    
-    font-size: 24px;
-    background-color: rgba(41, 105, 151, 0.3);
-    font-weight: bold;
-    font-family: Nunito Sans;
-    text-align: center;
-    height: 2em;
-    cursor: pointer;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
-    border-radius: 3px;
-    transition: all 0.1s;
-    border: 1px solid rgba(41, 105, 151, 0.49);
-}
-button[value=Research]:hover {
-    background-color: lightblue;
-    text-shadow: -0.5px -0.5px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 760px) {
@@ -2288,7 +2201,7 @@ div.article6 {
   padding: 1%;
 }
 
-div.article10 {
+div.article7 {
 	width: 90%;
   height: 300px; 
   background-color: #7CA0E4; 
@@ -2298,7 +2211,7 @@ div.article10 {
   padding: 1%;
 }
 
-div.article11 {
+div.article8 {
 	width: 90%;
   height: 80px; 
   background-color: #7CA0E4; 

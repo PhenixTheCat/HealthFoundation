@@ -13,6 +13,14 @@ session_start();
 include("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
 include("vues/fonctions.php");
+// Appel de la fonction de gestion de langue
+include("controleurs/languages.php");
+
+// Langue par défaut
+if(!isset($_SESSION['language']))
+{
+    $_SESSION['language'] = "en";
+}
 
 if(!isset($_SESSION['isConnected']))
 {
@@ -43,5 +51,13 @@ if(isset($_GET['redirect']) && !empty($_GET['redirect'])) {
 }
 
 // On appelle le contrôleur
-include('controleurs/' . $url . '.php');
+include('controleurs/' . $url .  '.php');
+
+
+
+
+
+
+
+
 ?>

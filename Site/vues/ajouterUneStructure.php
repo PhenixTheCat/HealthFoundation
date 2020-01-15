@@ -16,7 +16,7 @@
 <body>
 
   <div class="headerContact">
-    <h1> Ajouter une structure</h1>
+    <h1><?php echo _(" Ajouter une structure")?></h1>
   </div>
 
   <div class="centrer_bloc">
@@ -27,273 +27,274 @@
       <fieldset>
         <form action="" method="post">
 
-          <label for="name">Nom de la structure</label>
+          <label for="name"><?php echo _("Nom de la structure");?></label>
           <input type="text" name="name">
           <br>
-          <label for="address">Adresse</label>
+          <label for="address"><?php echo _("Adresse")?></label>
           <input type="text" name="address">
           <br>
-          <label for="city">Ville</label>
+          <label for="city"><?php echo _("Ville")?></label>
           <input type="text" name="city">
           <br>
-          <label for="postcode">Code postal</label>
+          <label for="postcode"><?php echo _("Code postal")?></label>
           <input type="text" name="postcode">
           <br>
-          <select name="country">
-            <option value="France" selected="selected">France </option>
+          <select name="pays">
+              <option value="<?php echo $user['country']; ?>" selected="selected"><?php echo $user['country']; ?></option>
+              <option value="France"><?php echo _("France ");?></option>
+              <option value="Afghanistan"><?php echo _("Afghanistan ");?></option>
+              <option value="Afrique_Centrale"><?php echo _("Afrique Centrale ");?></option>
+              <option value="Afrique_du_sud"><?php echo _("Afrique du Sud ");?></option>
+              <option value="Albanie"><?php echo _("Albanie ");?></option>
+              <option value="Algerie"><?php echo _("Algérie ");?></option>
+              <option value="Allemagne"><?php echo _("Allemagne ");?></option>
+              <option value="Andorre"><?php echo _("Andorre ");?></option>
+              <option value="Angola"><?php echo _("Angola ");?></option>
+              <option value="Anguilla"><?php echo _("Anguilla ");?></option>
+              <option value="Arabie_Saoudite"><?php echo _("Arabie Saoudite ");?></option>
+              <option value="Argentine"><?php echo _("Argentine ");?></option>
+              <option value="Armenie"><?php echo _("Arménie ");?></option>
+              <option value="Australie"><?php echo _("Australie ");?></option>
+              <option value="Autriche"><?php echo _("Autriche ");?></option>
+              <option value="Azerbaidjan"><?php echo _("Azerbaïdjan ");?></option>
 
-            <option value="Afghanistan">Afghanistan </option>
-            <option value="Afrique_Centrale">Afrique&#32;Centrale </option>
-            <option value="Afrique_du_sud">Afrique&#32;du&#32;Sud </option>
-            <option value="Albanie">Albanie </option>
-            <option value="Algerie">Alg&#233;rie </option>
-            <option value="Allemagne">Allemagne </option>
-            <option value="Andorre">Andorre </option>
-            <option value="Angola">Angola </option>
-            <option value="Anguilla">Anguilla </option>
-            <option value="Arabie_Saoudite">Arabie Saoudite </option>
-            <option value="Argentine">Argentine </option>
-            <option value="Armenie">Arm&#233;nie </option>
-            <option value="Australie">Australie </option>
-            <option value="Autriche">Autriche </option>
-            <option value="Azerbaidjan">Azerba&#239;djan </option>
+              <option value="Bahamas"><?php echo _("Bahamas ");?></option>
+              <option value="Bangladesh"><?php echo _("Bangladesh ");?></option>
+              <option value="Barbade"><?php echo _("Barbade ");?></option>
+              <option value="Bahrein"><?php echo _("Bahreïn ");?></option>
+              <option value="Belgique"><?php echo _("Belgique ");?></option>
+              <option value="Belize"><?php echo _("Belize ");?></option>
+              <option value="Benin"><?php echo _("Bénin ");?></option>
+              <option value="Bermudes"><?php echo _("Bermudes ");?></option>
+              <option value="Bielorussie"><?php echo _("Biélorussie ");?></option>
+              <option value="Bolivie"><?php echo _("Bolivie ");?></option>
+              <option value="Botswana"><?php echo _("Botswana ");?></option>
+              <option value="Bhoutan"><?php echo _("Bhoutan ");?></option>
+              <option value="Boznie_Herzegovine"><?php echo _("Boznie-Herzégovine ");?></option>
+              <option value="Bresil"><?php echo _("Brésil ");?></option>
+              <option value="Brunei"><?php echo _("Brunei ");?></option>
+              <option value="Bulgarie"><?php echo _("Bulgarie ");?></option>
+              <option value="Burkina_Faso"><?php echo _("Burkina Faso ");?></option>
+              <option value="Burundi"><?php echo _("Burundi ");?></option>
 
-            <option value="Bahamas">Bahamas </option>
-            <option value="Bangladesh">Bangladesh </option>
-            <option value="Barbade">Barbade </option>
-            <option value="Bahrein">Bahre&#239;n </option>
-            <option value="Belgique">Belgique </option>
-            <option value="Belize">Belize </option>
-            <option value="Benin">B&#233;nin </option>
-            <option value="Bermudes">Bermudes </option>
-            <option value="Bielorussie">Bi&#233;lorussie </option>
-            <option value="Bolivie">Bolivie </option>
-            <option value="Botswana">Botswana </option>
-            <option value="Bhoutan">Bhoutan </option>
-            <option value="Boznie_Herzegovine">Boznie&#45;Herz&#233;govine </option>
-            <option value="Bresil">Br&#233;sil </option>
-            <option value="Brunei">Brunei </option>
-            <option value="Bulgarie">Bulgarie </option>
-            <option value="Burkina_Faso">Burkina Faso </option>
-            <option value="Burundi">Burundi </option>
+              <option value="Caiman"><?php echo _("Îles Caïman ");?></option>
+              <option value="Cambodge"><?php echo _("Cambodge ");?></option>
+              <option value="Cameroun"><?php echo _("Cameroun ");?></option>
+              <option value="Canada"><?php echo _("Canada ");?></option>
+              <option value="Canaries"><?php echo _("Îles Canaries ");?></option>
+              <option value="Cap_vert"><?php echo _("Cap-Vert ");?></option>
+              <option value="Chili"><?php echo _("Chili ");?></option>
+              <option value="Chine"><?php echo _("Chine ");?></option>
+              <option value="Chypre"><?php echo _("Chypre ");?></option>
+              <option value="Colombie"><?php echo _("Colombie ");?></option>
+              <option value="Comores"><?php echo _("Colombie ");?></option>
+              <option value="Congo"><?php echo _("Congo ");?></option>
+              <option value="Congo_democratique"><?php echo _("République démocratique du Congo ");?></option>
+              <option value="Cook"><?php echo _("Îles Cook ");?></option>
+              <option value="Coree_du_Nord"><?php echo _("Corée du Nord ");?></option>
+              <option value="Coree_du_Sud"><?php echo _("Corée du Sud ");?></option>
+              <option value="Costa_Rica"><?php echo _("Costa Rica ");?></option>
+              <option value="Cote_d_Ivoire"><?php echo _("Côte d'Ivoire ");?></option>
+              <option value="Croatie"><?php echo _("Croatie ");?></option>
+              <option value="Cuba"><?php echo _("Cuba ");?></option>
 
-            <option value="Caiman">&#206;les Ca&#239;man </option>
-            <option value="Cambodge">Cambodge </option>
-            <option value="Cameroun">Cameroun </option>
-            <option value="Canada">Canada </option>
-            <option value="Canaries">&#206;les Canaries </option>
-            <option value="Cap_vert">Cap&#150;Vert </option>
-            <option value="Chili">Chili </option>
-            <option value="Chine">Chine </option>
-            <option value="Chypre">Chypre </option>
-            <option value="Colombie">Colombie </option>
-            <option value="Comores">Colombie </option>
-            <option value="Congo">Congo </option>
-            <option value="Congo_democratique">R&#233;publique&#32;d&#233;mocratique du Congo </option>
-            <option value="Cook">&#206;les Cook </option>
-            <option value="Coree_du_Nord">Cor&#233;e du Nord </option>
-            <option value="Coree_du_Sud">Cor&#233;e du Sud </option>
-            <option value="Costa_Rica">Costa Rica </option>
-            <option value="Cote_d_Ivoire">Côte d&#39;Ivoire </option>
-            <option value="Croatie">Croatie </option>
-            <option value="Cuba">Cuba </option>
+              <option value="Danemark"><?php echo _("Danemark ");?></option>
+              <option value="Djibouti"><?php echo _("Djibouti ");?></option>
+              <option value="Dominique"><?php echo _("Dominique ");?></option>
 
-            <option value="Danemark">Danemark </option>
-            <option value="Djibouti">Djibouti </option>
-            <option value="Dominique">Dominique </option>
+              <option value="Egypte"><?php echo _("Égypte ");?></option>
+              <option value="Emirats_Arabes_Unis"><?php echo _("Émirats arabes unis ");?></option>
+              <option value="Equateur"><?php echo _("Équateur ");?></option>
+              <option value="Erythree"><?php echo _("Érythrée ");?></option>
+              <option value="Espagne"><?php echo _("Espagne ");?></option>
+              <option value="Estonie"><?php echo _("Estonie ");?></option>
+              <option value="Etats_Unis"><?php echo _("États Unis ");?></option>
+              <option value="Ethiopie"><?php echo _("Éthiopie ");?></option>
 
-            <option value="Egypte">&#201;gypte </option>
-            <option value="Emirats_Arabes_Unis">&#201;mirats arabes unis </option>
-            <option value="Equateur">&#201;quateur </option>
-            <option value="Erythree">&#201;rythr&#233;e </option>
-            <option value="Espagne">Espagne </option>
-            <option value="Estonie">Estonie </option>
-            <option value="Etats_Unis">&#201;tats&#150;Unis </option>
-            <option value="Ethiopie">&#201;thiopie </option>
+              <option value="Falkland"><?php echo _("Falkland ");?></option>
+              <option value="Feroe"><?php echo _("Féroé ");?></option>
+              <option value="Fidji"><?php echo _("Îles Fidji ");?></option>
+              <option value="Finlande"><?php echo _("Finlande ");?></option>
 
-            <option value="Falkland">Falkland </option>
-            <option value="Feroe">F&#233;ro&#233; </option>
-            <option value="Fidji">&#206;les Fidji </option>
-            <option value="Finlande">Finlande </option>
+              <option value="Gabon"><?php echo _("Gabon ");?></option>
+              <option value="Gambie"><?php echo _("Gambie ");?></option>
+              <option value="Georgie"><?php echo _("Géorgie ");?></option>
+              <option value="Ghana"><?php echo _("Ghana ");?></option>
+              <option value="Gibraltar"><?php echo _("Gibraltar ");?></option>
+              <option value="Grece"><?php echo _("Grèce ");?></option>
+              <option value="Grenade"><?php echo _("Grenade ");?></option>
+              <option value="Groenland"><?php echo _("Groenland ");?></option>
+              <option value="Guadeloupe"><?php echo _("Guadeloupe ");?></option>
+              <option value="Guam"><?php echo _("Guam ");?></option>
+              <option value="Guatemala"><?php echo _("Guatemala ");?></option>
+              <option value="Guernesey"><?php echo _("Guernesey ");?></option>
+              <option value="Guinee"><?php echo _("Guinée ");?></option>
+              <option value="Guinee_Bissau"><?php echo _("Guinée Bissau ");?></option>
+              <option value="Guinee_equatoriale"><?php echo _("Guinee ;équatoriale ");?></option>
+              <option value="Guyana"><?php echo _("Guyana ");?></option>
+              <option value="Guyane"><?php echo _("Guyane ");?></option>
 
-            <option value="Gabon">Gabon </option>
-            <option value="Gambie">Gambie </option>
-            <option value="Georgie">G&#233;orgie </option>
-            <option value="Ghana">Ghana </option>
-            <option value="Gibraltar">Gibraltar </option>
-            <option value="Grece">Gr&#232;ce </option>
-            <option value="Grenade">Grenade </option>
-            <option value="Groenland">Groenland </option>
-            <option value="Guadeloupe">Guadeloupe </option>
-            <option value="Guam">Guam </option>
-            <option value="Guatemala">Guatemala</option>
-            <option value="Guernesey">Guernesey </option>
-            <option value="Guinee">Guin&#233;e </option>
-            <option value="Guinee_Bissau">Guin&#233;e&#150;Bissau </option>
-            <option value="Guinee_equatoriale">Guinee ;&#233;quatoriale </option>
-            <option value="Guyana">Guyana </option>
-            <option value="Guyane">Guyane </option>
+              <option value="Haiti"><?php echo _("Haïti ");?></option>
+              <option value="Hawai"><?php echo _("Hawaï ");?></option>
+              <option value="Honduras"><?php echo _("Honduras ");?></option>
+              <option value="Hong_Kong"><?php echo _("Hong Kong ");?></option>
+              <option value="Hongrie"><?php echo _("Hongrie ");?></option>
 
-            <option value="Haiti">Ha&#239;ti </option>
-            <option value="Hawai">Hawa&#239; </option>
-            <option value="Honduras">Honduras </option>
-            <option value="Hong_Kong">Hong Kong </option>
-            <option value="Hongrie">Hongrie </option>
+              <option value="Inde"><?php echo _("Inde ");?></option>
+              <option value="Indonesie"><?php echo _("Indonésie ");?></option>
+              <option value="Iran"><?php echo _("Iran ");?></option>
+              <option value="Irak"><?php echo _("Irak ");?></option>
+              <option value="Irlande"><?php echo _("Irlande ");?></option>
+              <option value="Islande"><?php echo _("Islande ");?></option>
+              <option value="Israel"><?php echo _("Israël ");?></option>
+              <option value="Italie"><?php echo _("Italie ");?></option>
 
-            <option value="Inde">Inde </option>
-            <option value="Indonesie">Indon&#233;sie </option>
-            <option value="Iran">Iran </option>
-            <option value="Irak">Irak </option>
-            <option value="Irlande">Irlande </option>
-            <option value="Islande">Islande </option>
-            <option value="Israel">Isra&#235;l </option>
-            <option value="Italie">Italie </option>
+              <option value="Jamaique"><?php echo _("Jamaïque ");?></option>
+              <option value="Jan Mayen"><?php echo _("Jan Mayen ");?></option>
+              <option value="Japon"><?php echo _("Japon ");?></option>
+              <option value="Jersey"><?php echo _("Jersey ");?></option>
+              <option value="Jordanie"><?php echo _("Jordanie ");?></option>
 
-            <option value="Jamaique">Jama&#239;que </option>
-            <option value="Jan Mayen">Jan Mayen </option>
-            <option value="Japon">Japon </option>
-            <option value="Jersey">Jersey </option>
-            <option value="Jordanie">Jordanie </option>
+              <option value="Kazakhstan"><?php echo _("Kazakhstan ");?></option>
+              <option value="Kenya"><?php echo _("Kenya ");?></option>
+              <option value="Kirghizstan"><?php echo _("Kirghizistan ");?></option>
+              <option value="Kiribati"><?php echo _("Kiribati ");?></option>
+              <option value="Koweit"><?php echo _("Koweït ");?></option>
 
-            <option value="Kazakhstan">Kazakhstan </option>
-            <option value="Kenya">Kenya </option>
-            <option value="Kirghizstan">Kirghizistan </option>
-            <option value="Kiribati">Kiribati </option>
-            <option value="Koweit">Kowe&#239;t </option>
+              <option value="Laos"><?php echo _("Laos ");?></option>
+              <option value="Lesotho"><?php echo _("Lesotho ");?></option>
+              <option value="Lettonie"><?php echo _("Lettonie ");?></option>
+              <option value="Liban"><?php echo _("Liban ");?></option>
+              <option value="Liberia"><?php echo _("Liberia ");?></option>
+              <option value="Liechtenstein"><?php echo _("Liechtenstein ");?></option>
+              <option value="Lituanie"><?php echo _("Lituanie ");?></option>
+              <option value="Luxembourg"><?php echo _("Luxembourg ");?></option>
+              <option value="Lybie"><?php echo _("Lybie ");?></option>
 
-            <option value="Laos">Laos </option>
-            <option value="Lesotho">Lesotho </option>
-            <option value="Lettonie">Lettonie </option>
-            <option value="Liban">Liban </option>
-            <option value="Liberia">Liberia </option>
-            <option value="Liechtenstein">Liechtenstein </option>
-            <option value="Lituanie">Lituanie </option>
-            <option value="Luxembourg">Luxembourg </option>
-            <option value="Lybie">Lybie </option>
+              <option value="Macao"><?php echo _("Macao ");?></option>
+              <option value="Macedoine"><?php echo _("Macédoine ");?></option>
+              <option value="Madagascar"><?php echo _("Madagascar ");?></option>
+              <option value="Madere"><?php echo _("Madère ");?></option>
+              <option value="Malaisie"><?php echo _("Malaisie ");?></option>
+              <option value="Malawi"><?php echo _("Malawi ");?></option>
+              <option value="Maldives"><?php echo _("Maldives ");?></option>
+              <option value="Mali"><?php echo _("Mali ");?></option>
+              <option value="Malte"><?php echo _("Malte ");?></option>
+              <option value="Man"><?php echo _("Man ");?></option>
+              <option value="Mariannes"><?php echo _("Îles Mariannes");?></option>
+              <option value="Mariannes du Nord"><?php echo _("Mariannes du Nord ");?></option>
+              <option value="Maroc"><?php echo _("Maroc ");?></option>
+              <option value="Marshall"><?php echo _("Îles Marshall ");?></option>
+              <option value="Martinique"><?php echo _("Martinique ");?></option>
+              <option value="Maurice"><?php echo _("Îles Maurice ");?></option>
+              <option value="Mauritanie"><?php echo _("Mauritanie ");?></option>
+              <option value="Mayotte"><?php echo _("Mayotte ");?></option>
+              <option value="Mexique"><?php echo _("Mexique ");?></option>
+              <option value="Micronesie"><?php echo _("Micronésie ");?></option>
+              <option value="Midway"><?php echo _("Îles Midway ");?></option>
+              <option value="Moldavie"><?php echo _("Moldavie ");?></option>
+              <option value="Monaco"><?php echo _("Monaco ");?></option>
+              <option value="Mongolie"><?php echo _("Mongolie ");?></option>
+              <option value="Montserrat"><?php echo _("Montserrat ");?></option>
+              <option value="Mozambique"><?php echo _("Mozambique ");?></option>
 
-            <option value="Macao">Macao </option>
-            <option value="Macedoine">Mac&#233;doine </option>
-            <option value="Madagascar">Madagascar </option>
-            <option value="Madere">Mad&#232;re </option>
-            <option value="Malaisie">Malaisie </option>
-            <option value="Malawi">Malawi </option>
-            <option value="Maldives">Maldives </option>
-            <option value="Mali">Mali </option>
-            <option value="Malte">Malte </option>
-            <option value="Man">Man </option>
-            <option value="Mariannes">&#206;les Mariannes</option>
-            <option value="Mariannes du Nord">Mariannes du Nord </option>
-            <option value="Maroc">Maroc </option>
-            <option value="Marshall">&#206;les Marshall </option>
-            <option value="Martinique">Martinique </option>
-            <option value="Maurice">&#206;les Maurice </option>
-            <option value="Mauritanie">Mauritanie </option>
-            <option value="Mayotte">Mayotte </option>
-            <option value="Mexique">Mexique </option>
-            <option value="Micronesie">Micron&#233;sie </option>
-            <option value="Midway">&#206;les Midway </option>
-            <option value="Moldavie">Moldavie </option>
-            <option value="Monaco">Monaco </option>
-            <option value="Mongolie">Mongolie </option>
-            <option value="Montserrat">Montserrat </option>
-            <option value="Mozambique">Mozambique </option>
+              <option value="Namibie"><?php echo _("Namibie ");?></option>
+              <option value="Nauru"><?php echo _("Nauru ");?></option>
+              <option value="Nepal"><?php echo _("Népal ");?></option>
+              <option value="Nicaragua"><?php echo _("Nicaragua ");?></option>
+              <option value="Niger"><?php echo _("Niger ");?></option>
+              <option value="Nigeria"><?php echo _("Nigeria ");?></option>
+              <option value="Niue"><?php echo _("Niue ");?></option>
+              <option value="Norfolk"><?php echo _("Norfolk ");?></option>
+              <option value="Norvege"><?php echo _("Norvège ");?></option>
+              <option value="Nouvelle_Caledonie"><?php echo _("Nouvelle-Calédonie ");?></option>
+              <option value="Nouvelle_Zelande"><?php echo _("Nouvelle-Zélande ");?></option>
 
-            <option value="Namibie">Namibie </option>
-            <option value="Nauru">Nauru </option>
-            <option value="Nepal">N&#233;pal </option>
-            <option value="Nicaragua">Nicaragua </option>
-            <option value="Niger">Niger </option>
-            <option value="Nigeria">Nigeria </option>
-            <option value="Niue">Niue </option>
-            <option value="Norfolk">Norfolk </option>
-            <option value="Norvege">Norv&#232;ge </option>
-            <option value="Nouvelle_Caledonie">Nouvelle&#45;Cal&#233;donie </option>
-            <option value="Nouvelle_Zelande">Nouvelle&#45;Z&#233;lande </option>
+              <option value="Oman"><?php echo _("Oman ");?></option>
+              <option value="Ouganda"><?php echo _("Ouganda ");?></option>
+              <option value="Ouzbekistan"><?php echo _("Ouzbékistan ");?></option>
 
-            <option value="Oman">Oman </option>
-            <option value="Ouganda">Ouganda </option>
-            <option value="Ouzbekistan">Ouzb&#233;kistan </option>
+              <option value="Pakistan"><?php echo _("Pakistan ");?></option>
+              <option value="Palaos"><?php echo _("Palaos ");?></option>
+              <option value="Palestine"><?php echo _("Palestine ");?></option>
+              <option value="Panama"><?php echo _("Panama ");?></option>
+              <option value="Papouasie_Nouvelle_Guinee"><?php echo _("Papouasie Nouvelle Guinée ");?></option>
+              <option value="Paraguay"><?php echo _("Paraguay ");?></option>
+              <option value="Pays_Bas"><?php echo _("Pays Bas ");?></option>
+              <option value="Perou"><?php echo _("Pérou ");?></option>
+              <option value="Philippines"><?php echo _("Philippines ");?></option>
+              <option value="Pologne"><?php echo _("Pologne ");?></option>
+              <option value="Polynesie"><?php echo _("Polynésie ");?></option>
+              <option value="Porto_Rico"><?php echo _("Porto Rico ");?></option>
+              <option value="Portugal"><?php echo _("Portugal ");?></option>
 
-            <option value="Pakistan">Pakistan </option>
-            <option value="Palaos">Palaos </option>
-            <option value="Palestine">Palestine </option>
-            <option value="Panama">Panama </option>
-            <option value="Papouasie_Nouvelle_Guinee">Papouasie&#150;Nouvelle&#150;Guin&#233;e </option>
-            <option value="Paraguay">Paraguay </option>
-            <option value="Pays_Bas">Pays&#150;Bas </option>
-            <option value="Perou">P&#233;rou </option>
-            <option value="Philippines">Philippines </option>
-            <option value="Pologne">Pologne </option>
-            <option value="Polynesie">Polyn&#233;sie </option>
-            <option value="Porto_Rico">Porto&#32;Rico </option>
-            <option value="Portugal">Portugal </option>
+              <option value="Qatar"><?php echo _("Qatar ");?></option>
 
-            <option value="Qatar">Qatar </option>
+              <option value="Republique_Dominicaine"><?php echo _("République dominicaine ");?></option>
+              <option value="Republique_Tcheque"><?php echo _("République Tchèque ");?></option>
+              <option value="Reunion"><?php echo _("Réunion ");?></option>
+              <option value="Roumanie"><?php echo _("Roumanie ");?></option>
+              <option value="Royaume_Uni"><?php echo _("Royaume Uni ");?></option>
+              <option value="Russie"><?php echo _("Russie ");?></option>
+              <option value="Rwanda"><?php echo _("Rwanda ");?></option>
 
-            <option value="Republique_Dominicaine">R&#233;publique dominicaine </option>
-            <option value="Republique_Tcheque">R&#233;publique&#32;Tch&#232;que </option>
-            <option value="Reunion">R&#233;union </option>
-            <option value="Roumanie">Roumanie </option>
-            <option value="Royaume_Uni">Royaume&#150;Uni </option>
-            <option value="Russie">Russie </option>
-            <option value="Rwanda">Rwanda </option>
+              <option value="Sahara_Occidental"><?php echo _("Sahara Occidental ");?></option>
+              <option value="Sainte_Lucie"><?php echo _("Sainte Lucie ");?></option>
+              <option value="Saint_Marin"><?php echo _("Saint-Marin ");?></option>
+              <option value="Salomon"><?php echo _("Îles Salomon ");?></option>
+              <option value="Salvador"><?php echo _("Salvador ");?></option>
+              <option value="Samoa"><?php echo _("Îles Samoa");?></option>
+              <option value="Sao_Tome_et_Principe"><?php echo _("Sao Tomé et Principe ");?></option>
+              <option value="Senegal"><?php echo _("Sénégal ");?></option>
+              <option value="Seychelles"><?php echo _("Seychelles ");?></option>
+              <option value="Sierra Leone"><?php echo _("Sierra Leone ");?></option>
+              <option value="Singapour"><?php echo _("Singapour ");?></option>
+              <option value="Slovaquie"><?php echo _("Slovaquie ");?></option>
+              <option value="Slovenie"><?php echo _("Slov nie");?></option>
+              <option value="Somalie"><?php echo _("Somalie ");?></option>
+              <option value="Soudan"><?php echo _("Soudan ");?></option>
+              <option value="Sri_Lanka"><?php echo _("Sri Lanka ");?></option>
+              <option value="Suede"><?php echo _("Suède ");?></option>
+              <option value="Suisse"><?php echo _("Suisse ");?></option>
+              <option value="Suriname"><?php echo _("Suriname ");?></option>
+              <option value="Eswatini"><?php echo _("Eswatini ");?></option>
+              <option value="Syrie"><?php echo _("Syrie ");?></option>
 
-            <option value="Sahara_Occidental">Sahara Occidental </option>
-            <option value="Sainte_Lucie">Sainte&#150;Lucie </option>
-            <option value="Saint_Marin">Saint&#45;Marin </option>
-            <option value="Salomon">&#206;les Salomon </option>
-            <option value="Salvador">Salvador </option>
-            <option value="Samoa">&#206;les&#32;Samoa</option>
-            <option value="Sao_Tome_et_Principe">Sao&#32;Tom&#233;&#150;et&#150;Principe </option>
-            <option value="Senegal">S&#233;n&#233;gal </option>
-            <option value="Seychelles">Seychelles </option>
-            <option value="Sierra Leone">Sierra Leone </option>
-            <option value="Singapour">Singapour </option>
-            <option value="Slovaquie">Slovaquie </option>
-            <option value="Slovenie">Slov&#32;nie</option>
-            <option value="Somalie">Somalie </option>
-            <option value="Soudan">Soudan </option>
-            <option value="Sri_Lanka">Sri&#150;Lanka </option>
-            <option value="Suede">Su&#232;de </option>
-            <option value="Suisse">Suisse </option>
-            <option value="Suriname">Suriname </option>
-            <option value="Eswatini">Eswatini </option>
-            <option value="Syrie">Syrie </option>
+              <option value="Tadjikistan"><?php echo _("Tadjikistan ");?></option>
+              <option value="Taiwan"><?php echo _("Taïwan ");?></option>
+              <option value="Tonga"><?php echo _("Tonga ");?></option>
+              <option value="Tanzanie"><?php echo _("Tanzanie ");?></option>
+              <option value="Tchad"><?php echo _("Tchad ");?></option>
+              <option value="Thailande"><?php echo _("Thaïlande ");?></option>
+              <option value="Tibet"><?php echo _("Tibet ");?></option>
+              <option value="Timor"><?php echo _("Timor ");?></option>
+              <option value="Togo"><?php echo _("Togo ");?></option>
+              <option value="Trinite_et_Tobago"><?php echo _("Trinité et Tobago ");?></option>
+              <option value="Tristan da cunha"><?php echo _("Tristan da cuncha ");?></option>
+              <option value="Tunisie"><?php echo _("Tunisie ");?></option>
+              <option value="Turkmenistan"><?php echo _("Turkménistan ");?></option>
+              <option value="Turquie"><?php echo _("Turquie ");?></option>
 
-            <option value="Tadjikistan">Tadjikistan </option>
-            <option value="Taiwan">Ta&#239;wan </option>
-            <option value="Tonga">Tonga </option>
-            <option value="Tanzanie">Tanzanie </option>
-            <option value="Tchad">Tchad </option>
-            <option value="Thailande">Tha&#239;lande </option>
-            <option value="Tibet">Tibet </option>
-            <option value="Timor">Timor </option>
-            <option value="Togo">Togo </option>
-            <option value="Trinite_et_Tobago">Trinit&#233;&#150;et&#150;Tobago </option>
-            <option value="Tristan da cunha">Tristan da cuncha </option>
-            <option value="Tunisie">Tunisie </option>
-            <option value="Turkmenistan">Turm&#233;nistan </option>
-            <option value="Turquie">Turquie </option>
+              <option value="Ukraine"><?php echo _("Ukraine ");?></option>
+              <option value="Uruguay"><?php echo _("Uruguay ");?></option>
 
-            <option value="Ukraine">Ukraine </option>
-            <option value="Uruguay">Uruguay </option>
+              <option value="Vanuatu"><?php echo _("Vanuatu ");?></option>
+              <option value="Vatican"><?php echo _("Vatican ");?></option>
+              <option value="Venezuela"><?php echo _("Vénézuéla ");?></option>
+              <option value="Vierges"><?php echo _("Îles Vierges ");?></option>
+              <option value="Vietnam"><?php echo _("Vietnam ");?></option>
 
-            <option value="Vanuatu">Vanuatu </option>
-            <option value="Vatican">Vatican </option>
-            <option value="Venezuela">V&#233;n&#233;zu&#233;la </option>
-            <option value="Vierges">&#206;les Vierges </option>
-            <option value="Vietnam">Vietnam </option>
+              <option value="Wake"><?php echo _("Wake ");?></option>
+              <option value="Wallis et Futuna"><?php echo _("Wallis et Futuna ");?></option>
 
-            <option value="Wake">Wake </option>
-            <option value="Wallis et Futuna">Wallis&#150;et&#150;Futuna </option>
+              <option value="Yemen"><?php echo _("Yemen ");?></option>
+              <option value="Yougoslavie"><?php echo _("Yougoslavie ");?></option>
 
-            <option value="Yemen">Yemen </option>
-            <option value="Yougoslavie">Yougoslavie </option>
+              <option value="Zambie"><?php echo _("Zambie ");?></option>
+              <option value="Zimbabwe"><?php echo _("Zimbabwe ");?></option>
 
-            <option value="Zambie">Zambie </option>
-            <option value="Zimbabwe">Zimbabwe </option>
 
-          </select>
+            </select>
           <br>
           <label for="phoneNumber">Numéro de téléphone</label>
           <input type="text" name="phoneNumber">

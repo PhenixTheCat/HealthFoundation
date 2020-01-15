@@ -19,30 +19,30 @@
 
 
   <div class="headerContact">
-    <h1> Contact </h1>
+    <h1><?php echo _(" Contact ");?></h1>
   </div>
   <?php echo printError($error); ?>
   <div class"center_bloc">
     <div class="formulaireContact">
       <?php echo printError($error); ?>
       <form action="" method="post">
-        <label for="Nom" id="nom">Nom</label>
+        <label for="Nom" id="nom"><?php echo _("Nom");?></label>
         <input type="text" name="nom" 
           value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />
-        <label for="prenom">Prénom</label>
+        <label for="prenom"><?php echo _("Prénom");?></label>
         <input type="text" name="prenom" 
           value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>" /><br /><br />
-        <label for="mail">Adresse email</label>
+        <label for="mail"><?php echo _("Adresse email");?></label>
         <input type="email" name="mail"
           value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
-        <label for="objet">Objet</label>
+        <label for="objet"><?php echo _("Objet");?></label>
         <input type="text" name="objet"
           value="<?php if(isset($_POST['objet'])) { echo $_POST['objet']; } ?>" /><br /><br />
-        <label for="message">Votre message</label>
+        <label for="message"><?php echo _("Votre message");?></label>
         <textarea name="message" rows="10" cols="55" >
         <?php if(isset($_POST['message'])) { echo $_POST['message']; } ?>
     </textarea>
-        <input class="submitButtons" type="submit" Value="Envoyer" id="envoi">
+        <input class="submitButtons" type="submit" Value=<?php echo _("Envoyer");?> id="envoi">
       </form>
     </div>
   </div>

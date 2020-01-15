@@ -34,38 +34,18 @@ switch ($function) {
     case 'gestionDesStructures':
         $vue = "gestionDesStructures";
         $error = false;
-		
-		if(!isset($_SESSION["nbCriteriaStructure"]))
-		{
-			$_SESSION["nbCriteriaStructure"] = 1;
-		}
-		$_SESSION["firstLoad"] = "true";
-
-		
-        if(isset($_POST['Research']))
-		{
-			$_SESSION["firstLoadStructure"] = "false";
-			
-			for($i = 0; $i<$_SESSION['nbCriteriaStructure'];$i++)
-			{
-				$_SESSION['criteriaTextStructure'][$i] = $_POST['Text'.$i];
-				if(isset($_POST[$i]))
-				{
-					$_SESSION['criteriaTypeStructure'][$i] = $_POST[$i];
-				}
-				
-			}
-			
-			$structures = multiCriteriaResearchStructure($database);
-
-		}
-		else{
-				$structures = multiCriteriaResearchStructure($database);
-
-		}
-		
-		
-		
+        if (isset($_POST['rechercher'])) {
+            if (isString($_POST['searchUser'])) {
+                $search = $_POST['searchUser'];
+                $structure = searchStructureByName($database, $search);
+            } else {
+                $error = "Rentrez le nom d'une structure!";
+            }
+        } else {
+            if (getStructure($database) != array(null)) {
+                $structure = getStructure($database);
+            }
+        }
         if (isset($_POST['delete'])) {
             $id = $_POST['id'];
             if (deleteStructure($database, $id)) {

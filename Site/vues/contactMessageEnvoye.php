@@ -14,20 +14,20 @@
 <body>
 
   <div class="headerContact">
-    <h1> Contact </h1>
+    <h1><?php echo _(" Contact ");?></h1>
   </div>
   <div class="centrer_bloc">
     <div class="confirmationContact">
 
-      <p>Votre message a bien été envoyé!
+      <p><?php echo _("Votre message a bien été envoyé!");?>
         <br>
         <br>
-        Vous recevrez une réponse dans
-        les plus bref délais.
+        <?php echo _("Vous recevrez une réponse dans
+        les plus bref délais."):.>
       </p>
 
       <br>
-      <a classe="submitButtons" href="index.php"> Retourner à l'accueil</a>
+      <a classe="submitButtons" href="index.php"><?php echo _(" Retourner à l'accueil");?></a>
 
     </div>
   </div>

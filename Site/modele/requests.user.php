@@ -781,30 +781,9 @@ function multiCriteriaRequest(PDO $database) : array
 	{
 		
 		//importation des variables de session
-		if(isset($_SESSION['nbCriteria']))
-		{
-			$nbCriteria = $_SESSION['nbCriteria'];
-		}
-		else
-		{
-			$nbCriteria = 0;
-		}
-		if(isset($_SESSION['criteriaText']))
-		{
-			$criteriaText = $_SESSION['criteriaText'];
-		}
-		else
-		{
-			$criteriaText = array();
-		}
-		if(isset($_SESSION['criteriaType']))
-		{
-			$criteriaType = $_SESSION['criteriaType'];
-		}
-		else
-		{
-			$criteriaType = array();
-		}
+		$nbCriteria = $_SESSION['nbCriteria'];
+		$criteriaText = $_SESSION['criteriaText'];
+		$criteriaType = $_SESSION['criteriaType'];
 		
 		//Ecriture de la requête
 		$requestText="SELECT user.*,structure.name AS structureName FROM user INNER JOIN structure where user.structure = structure.id";

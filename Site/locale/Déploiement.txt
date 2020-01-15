@@ -1,0 +1,12 @@
+Pour traduire le site dans une autre langue, il suffit d'ouvrir le fichier "catalog.pot" en tant que journal de
+traductions, l'enregistrer dans un dossier "LC_MESSAGES", lui-même dans un dossier "xx_XX" (exemple ; fr_FR pour
+traduire en français (cf traductions disponibles pour plus de clarté).
+(Logiciel conseillé : POEDIT https://poedit.net/ )
+
+Ensuite, modifier le fichier"languages.php" dans le dossier "/Site/.controleurs/languages"
+Ligne 12, ajouter dans l'array des "supported locales" la langue de traduction supplémentaire, en respectant le
+format d'écriture.
+
+(Pour ajouter le drapeau correspondant, c'est un peu plus compliqué, demande raux gérants du site.)
+
+Pour accéder au site traduit, il suffit d'ajouter ?lang=xx_XX à la fin de l'URL (xx_XX définis précédemment).

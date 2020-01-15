@@ -19,7 +19,7 @@
 
   <section class="error404">
     <img src="Images/404.png" alt="404">
-    <h1>La page que vous cherchez n'existe pas</h1>
+    <h1><?php echo _("La page que vous cherchez n'existe pas");?></h1>
   </section>
 
 

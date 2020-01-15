@@ -13,9 +13,9 @@
 
     <div class="centrer_bloc">
         <div class="confirmationInscription">
-            <h2>Confirmation de création de compte </h2>
-            <p>Un mail a été envoyé à l’adresse <?php $_SESSION['signupMail']?>. Pour confirmer votre inscription,
-                veuillez vérifier votre boîte de réception</p>
+            <h2><?php echo _("Confirmation de création de compte ");?></h2>
+            <p><?php echo _("Un mail a été envoyé à l’adresse".<?php $_SESSION['signupMail']?>.". Pour confirmer votre inscription,
+                veuillez vérifier votre boîte de réception");?></p>
         </div>
     </div>
 

@@ -290,11 +290,6 @@ switch ($function) {
         $error = false;
         break;
 
-case 'psychotestEnLigne':
-        $vue = "psychotestEnLigne";
-        $error = false;
-        break;
-		
     case 'monCompte':
         $vue = "monCompte";
         $error = false;
@@ -436,11 +431,11 @@ case 'psychotestEnLigne':
         $vue = "gestionDesUtilisateurs";
         $error = false;
 			
-		if(!isset($_SESSION["nbCriteria"]))
-		{
-			$_SESSION["nbCriteria"] = 1;
-		}
-		$_SESSION["firstLoad"] = "true";
+			if(!isset($_SESSION["nbCriteria"]))
+			{
+				$_SESSION["nbCriteria"] = 1;
+			}
+			$_SESSION["firstLoad"] = "true";
 
 		if(isset($_POST['Research']))
 		{
@@ -460,9 +455,11 @@ case 'psychotestEnLigne':
 
 		}
 		else{
-
+			if(multiCriteriaResearc($database)!=array(null))
+			{	
 				$users = multiCriteriaResearch($database);
 
+			}
 		}
 					
 			

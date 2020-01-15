@@ -57,7 +57,7 @@ if(!isset($_SESSION['isConnected']))
 <html  lang="fr" >
   <head>
 		
-    <title>Test psychotechnique en ligne</title>
+    <title><?php echo _("Test psychotechnique en ligne");?></title>
     
   
 	
@@ -69,9 +69,9 @@ if(!isset($_SESSION['isConnected']))
 
   <body onload="start();">
     <div id="main">
-      <div id="titre">.</div>
-      <div id="instructions">.</div>
-      <div id="questions">.</div>
+      <div id=<?php echo _("titre");?></di>>.</div>
+      <div id=<?php echo _("instructions");?></di>>.</div>
+      <div id=<?php echo _("questions");?></di>>.</div>
     </div>
 	
 

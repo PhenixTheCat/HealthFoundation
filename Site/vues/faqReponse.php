@@ -11,7 +11,7 @@
 
 
     <div class="headerContact">
-        <h1>Question posée dans la FAQ</h1>
+        <h1><?php echo _("Question posée dans la FAQ");?></h1>
     </div>
 
     <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
@@ -30,7 +30,7 @@
             <input type="hidden" name="id" value="<?php echo $ans['id']; ?>">
             <input type="text" name="answer">
             </br>
-            <input class="submitButtons" type="submit" name="Envoyer" Value="Envoyer">
+            <input class="submitButtons" type="submit" name="Envoyer" Value=<?php echo _("Envoyer");?></inpu>>
         </form>
 
         <?php } ?>

@@ -12,9 +12,9 @@
 
     <div class="centrer_bloc">
         <div class="confirmationInscription">
-            <h2>Confirmation de création de compte </h2>
-            <p>Votre mail a bien été validé. Avant pouvoir vous connecter il faudra attendre que votre compte soit validé par votre
-                formateur ou votre structure. </p>
+            <h2><?php echo _("Confirmation de création de compte ");?></h2>
+            <p><?php echo _("Votre mail a bien été validé. Avant pouvoir vous connecter il faudra attendre que votre compte soit validé par votre
+                formateur ou votre structure. ");?></p>
         </div>
     </div>
 

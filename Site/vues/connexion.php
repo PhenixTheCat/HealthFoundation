@@ -22,23 +22,23 @@
 
       <span>
 
-        <a class="enteteInscription" href="index.php?redirect=user&function=connexion"> Connexion </a>
-        <a class="enteteInscription" href="index.php?redirect=user&function=inscription"> Inscription </a>
+        <a class="enteteInscription" href="index.php?redirect=user&function=connexion"> <?php echo _("Connexion");?> </a>
+        <a class="enteteInscription" href="index.php?redirect=user&function=inscription"> <?php echo _("Inscription");?> </a>
       </span>
 
       <fieldset>
         <form action="" method="post">
 
-          <label id="email">Email</label>
+          <label id="email"><?php echo _("Email");?></label>
           <input type="email" name="mail" id="mail" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
           <br>
-          <label>Mot de passe</label>
+          <label><?php echo _("Mot de passe");?></label>
           <input type="password" name="mdp" id="mdp">
           <br>
-          <input class="submitButtons" type="submit" Value="Suivant" name="Connexion">
+          <input class="submitButtons" type="submit" Value=<?php echo _("Suivant");?> name="Connexion">
         </form>
       </fieldset>
-      <a id=mdp href="index.php?redirect=user&function=motDePasseOublie">Mot de passe oublié</a>
+      <a id=mdp href="index.php?redirect=user&function=motDePasseOublie"><?php echo _("Mot de passe oublié");?></a>
     </div>
   </div>
 

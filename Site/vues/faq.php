@@ -15,35 +15,35 @@
 <body>
 
     <div class="headerFAQ">
-        <h1> FAQ </h1>
+        <h1><?php echo _(" FAQ ");?></h1>
     </div>
 
     <div class="faq">
     <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
-        <h2> Ajouter une question</h2>
+        <h2><?php echo _(" Ajouter une question");?></h2>
         <form method="POST"> 
             
-        <label for="question">Question</label>
+        <label for="question"><?php echo _("Question");?></label>
 
             <input type="text" name="question">
 
-            <label for="answer">Réponse</label>
+            <label for="answer"><?php echo _("Réponse");?></label>
 
             <input type="text" name="answer">
             </br>
 
            <input class="submitButtons" type="submit" value="Ajouter" name="addQuestion">
            <div class="resultatsParCat">
-        <h3> Répondre aux questions de la FAQ </h3>
+        <h3><?php echo _(" Répondre aux questions de la FAQ ");?></h3>
 
-        <a href="index.php?redirect=faq&function=faqReponse">Cliquer ici pour répondre aux questions de la FAQ</a>
+        <a href="index.php?redirect=faq&function=faqReponse"><?php echo _("Cliquer ici pour répondre aux questions de la FAQ");?></a>
         
 
     </div>
            <?php endif;?>
         </form>
         
-        <h2> Les questions souvent posées</h2>
+        <h2><?php echo _(" Les questions souvent posées");?></h2>
         <?php foreach ($questions as $ans) { ?>
         <div class="question">
             <button class="questionVisible"> <?php echo $ans['question']; ?></button>
@@ -135,19 +135,19 @@
         -->
 
         <div class="formulaireContact">
-            <h2>Votre question n'est pas présente?</h2>
+            <h2><?php echo _("Votre question n'est pas présente?");?></h2>
             <form action="" method="post">
-                <label for="Nom" id="nom">Nom</label>
+                <label for="Nom" id="nom"><?php echo _("Nom");?></label>
                 <input type="text" name="nom">
-                <label for="prenom">Prénom</label>
+                <label for="prenom"><?php echo _("Prénom");?></label>
                 <input type="text" name="prenom">
-                <label for="mail">Adresse e-mail</label>
+                <label for="mail"><?php echo _("Adresse e-mail");?></label>
                 <input type="email" name="mail">
-                <label for="message">Votre message</label>
-                <textarea name="message" rows="10" cols="55" placeholder="Votre message">
+                <label for="message"><?php echo _("Votre message");?></label>
+                <textarea name="message" rows="10" cols="55" placeholder=<?php echo _("Votre message");?></textare>>
 
         </textarea>
-                <input class="submitButtons" name="envoi" type="submit" Value="Envoyer" id="envoi">
+                <input class="submitButtons" name="envoi" type="submit" Value=<?php echo _("Envoyer");?> id="envoi">
             </form>
         </div>
     </div>

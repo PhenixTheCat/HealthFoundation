@@ -1,7 +1,7 @@
 <?php
-/* Page qui permet d'afficher les résultats du test de perception */
-?>
+/* Page qui affiche les résultats des différents tests */
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -15,13 +15,12 @@
 
 <body>
 
-  <div class="seuilDePerception">
-      <h1><a href="seuilDePerception.php"><?php echo _("Seuil de perception");?></a></h1>
-      <div class="testResults">
-      <img src="index.php?redirect=user&function=chartPerception">
-      
-      <?php
 
+
+  <div class="RésultatsEnLigne">
+    <span class="Résultats">
+      <h1><?php echo _("Résultats");?></h1>
+      <?php
 if ($NbreData != 0)
 {
 ?>
@@ -31,14 +30,14 @@ if ($NbreData != 0)
             <th><?php echo _("id");?></th>
             <th><?php echo _("test");?></th>
             <th><?php echo _("timeline");?></th>
-            <th><?php echo _("valeur");?></th>
+            <th><?php echo _("value");?></th>
             <th><?php echo _("type");?></th>
             <th><?php echo _("unité");?></th>
             <th><?php echo _("date");?></th>
             <th><?php echo _("durée");?></th>
             <th><?php echo _("score");?></th>
             <th><?php echo _("banc de test");?></th>
-            <th><?php echo _("pilote");?></th>
+            <th><?php echo _("pilot");?></th>
             <th><?php echo _("instructeur");?></th>
             <th><?php echo _("capteurs");?></th>
           </tr>
@@ -72,16 +71,21 @@ if ($NbreData != 0)
       </table>
       <?php
 } else { ?>
-      <a> <?php echo _("pas de données à afficher ");?></a>
+      <a><?php echo _(" pas de données à afficher ");?></a>
       <?php
 }
 ?>
 
-    </div>
+
+    </span>
   </div>
 
-<script src="vues/js/form.js"></script>
+
+
+<script src="js/form.js"></script>
 <script src="script.js"></script>
+
+ 
 
 </body>
 

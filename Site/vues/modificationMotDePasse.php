@@ -16,25 +16,25 @@
 
   <div class="centrer_bloc">
     <div class="headerContact">
-      <h1> Mon compte </h1>
+      <h1><?php echo _(" Mon compte ");?></h1>
 
 
       <div class="piloteModiMdp">
         <?php echo printError($error); ?>
         <fieldset>
           <form action="" method="post">
-            <h4> Modification du mot de passe </h4>
-            <label for="Amdp" id="Amdp">Ancien mot de passe </label>
+            <h4><?php echo _(" Modification du mot de passe ");?></h4>
+            <label for="Amdp" id="Amdp"><?php echo _("Ancien mot de passe ");?></label>
             <input type="password" name="Amdp" id="Amdp">
             <br>
-            <label for="Nmdp" id="Nmdp">Nouveau mot de passe </label>
+            <label for="Nmdp" id="Nmdp"><?php echo _("Nouveau mot de passe ");?></label>
             <input type="password" name="Nmdp" id="Nmdp">
             <br>
-            <label for="Cmdp" id="Cmdp">Confirmer votre mot de passe </label>
+            <label for="Cmdp" id="Cmdp"><?php echo _("Confirmer votre mot de passe ");?></label>
             <input type="password" name="Cmdp" id="Cmdp">
             <br>
 
-            <input class="submitButtons" type="submit" Value="Enregistrer" name="piloteModifMdp">
+            <input class="submitButtons" type="submit" Value=<?php echo _("Enregistrer");?> name="piloteModifMdp">
           </form>
         </fieldset>
       </div>

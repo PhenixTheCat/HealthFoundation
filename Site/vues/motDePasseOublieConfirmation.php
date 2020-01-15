@@ -13,13 +13,13 @@
   <div class="centrer_bloc">
     <div class="nouveauMdpc">
       <span>
-        <a class="enteteNouveauMdpc"> Nouveau mot de passe </a>
+        <a class="enteteNouveauMdpc"><?php echo _(" Nouveau mot de passe ");?></a>
 
       </span>
 
-      <h3> Votre mot de passe a bien été enregistré </h3>
+      <h3><?php echo _(" Votre mot de passe a bien été enregistré ");?></h3>
 
-      <a class="submitButtons" href="index.php?redirect=user"> Retourner à l'accueil</a>
+      <a class="submitButtons" href="index.php?redirect=user"><?php echo _(" Retourner à l'accueil");?></a>
 
     </div>
   </div>
