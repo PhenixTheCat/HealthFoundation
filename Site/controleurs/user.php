@@ -455,7 +455,7 @@ switch ($function) {
 
 		}
 		else{
-			if(getUser($database)!=array(null))
+			if(multiCriteriaResearch($database)!=array(null))
 			{	
 				$users = multiCriteriaResearch($database);
 

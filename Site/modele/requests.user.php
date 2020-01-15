@@ -1,13 +1,9 @@
 <?php
-
 // on récupère les requêtes génériques
 include('requests.generiques.php');
-
 //on définit le nom de la table
 $table = "user";
-
 // requêtes spécifiques à la table des utiliteurs
-
 /**
  * Retourne l'utilisateur correspondant au mail et mot de passe en parametre
  * @param PDO $database : base de donnée (health_foundation.sql)
@@ -17,7 +13,6 @@ $table = "user";
  */
 function findUserConnexion(PDO $database,string $email, $password) : array 
 {
-
 	
 	$request = $database->query('SELECT * FROM user WHERE email=\''.$email.'\' AND password =\''.$password.'\'');
 	if($data = $request->fetch())
@@ -30,7 +25,6 @@ function findUserConnexion(PDO $database,string $email, $password) : array
 		return array(null); // A verifier si ça fonctionne
 	}
 }
-
 /**
  * Vérifie si le compte en parametre a validé son adresse mail
  * @param PDO $database : base de donnée (health_foundation.sql)
@@ -50,7 +44,6 @@ function verifyAccount(PDO $database,array $user) : bool
 		return false;
 	}
 }
-
 /**
  * teste si l'email en parametre est déja dans la base de donnée ou s'il est libre (inscription)
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -71,7 +64,6 @@ function testEmailExist(PDO $database,string $email) : bool
 	}
 	
 }
-
 /**
  * test si le code en parametre appartient a un instructeur (inscription)
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -96,7 +88,6 @@ function testCodeInstructor(PDO $database,string $code) : array
 	}
 	
 }
-
 /**
  * test si le code en parametre appartient a une structure (inscription)
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -122,9 +113,6 @@ function testCodeStructure(PDO $database,string $code) : array
 	}
 	
 }
-
-
-
 /**
  * Retourne le type de l'utilisatuer dont l'id est entrée en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -145,7 +133,6 @@ function getUserType(PDO $database,int $userID)
 		return null;
 	}
 }
-
 /**
  * Ajoute un utilisatuer dans la base de donnée avec ses données entrées en parametre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -156,7 +143,6 @@ function addUser(PDO $database,array $data) : bool
 {
 	try
 	{
-
         
 		$request = $database->prepare('INSERT INTO user (`id`,`sex`,`first_name`, `last_name`, `type`, `email`, `password`, `birthdate`, `instructor`, `structure`, `adress`, `city`, `postecode`, `country`, `phone_number`, `code`, `status`, `validation_key`) VALUES (0,?, ?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?,"","P",?)');
 		$request->execute($data);
@@ -168,7 +154,6 @@ function addUser(PDO $database,array $data) : bool
 		return false;
 	}
 }
-
 /**
  * Change le mot de passe de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -192,7 +177,6 @@ function changePassword(PDO $database,int $userID, string $newPassword) : bool
 		return false;
 	}
 }
-
 /**
  * Change le prénom de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -214,7 +198,6 @@ function changeFirstName(PDO $database,int $userID, string $newFirstName) : bool
 		return false;
 	}
 }
-
 /**
  * Change le nom de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -236,7 +219,6 @@ function changeLastName(PDO $database,int $userID, string $newLastName) : bool
 		return false;
 	}
 }
-
 /**
  * Change le type de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -258,7 +240,6 @@ function changeType(PDO $database,int $userID, string $newType) : bool
 		return false;
 	}
 }
-
 /**
  * Change le mail de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -280,7 +261,6 @@ function changeEmail(PDO $database,int $userID, string $newEmail) : bool
 		return false;
 	}
 }
-
 /**
  * Change la date de naissance de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -302,7 +282,6 @@ function changeBirthDate(PDO $database,int $userID,string $newBirthDate) : bool
 		return false;
 	}
 }
-
 /**
  * Change l'id de l'instructeur de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -324,7 +303,6 @@ function changeInstructor(PDO $database,int $userID, int $newInstructorID) : boo
 		return false;
 	}
 }
-
 /**
  * Change l'id de la structure de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -346,7 +324,6 @@ function changeStructure(PDO $database,int $userID, int $newStructureID) : bool
 		return false;
 	}
 }
-
 /**
  * Change l'adresse de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -368,7 +345,6 @@ function changeAddress(PDO $database,int $userID, string $newAddress) : bool
 		return false;
 	}
 }
-
 /**
  * Change la ville de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -390,7 +366,6 @@ function changeCity(PDO $database,int $userID, string $newCity) : bool
 		return false;
 	}
 }
-
 /**
  * Change le code postal de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -412,7 +387,6 @@ function changePostCode(PDO $database,int $userID, int $newPostCode) : bool
 		return false;
 	}
 }
-
 /**
  * Change le pays de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -434,7 +408,6 @@ function changeCountry(PDO $database,int $userID, string $newCountry) : bool
 		return false;
 	}
 }
-
 /**
  * Change le numero de telephone de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -456,7 +429,6 @@ function changePhoneNumber(PDO $database,int $userID, int $newPhoneNumber) : boo
 		return false;
 	}
 }
-
 /**
  * Change le code de l'utilisateur dont l'ID est en paramètre (si c'est un formateur)
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -478,7 +450,6 @@ function changeCode(PDO $database,int $userID, string $newCode) : bool
 		return false;
 	}
 }
-
 /**
  * Change le status du compte de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -500,7 +471,6 @@ function changeStatus(PDO $database,int $userID, string $newStatus) : bool
 		return false;
 	}
 }
-
 /**
  * Change la clef d'inscription du compte de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -522,7 +492,6 @@ function changeValidationKey(PDO $database,int $userID, string $newValidationKey
 		return false;
 	}
 }
-
 /**
  * Change la clef d'inscription du compte de l'utilisateur dont l'ID est en paramètre
  * @param PDO $database : Base de donnée (health_foundation.sql)
@@ -544,7 +513,6 @@ function resetPassword(PDO $database,string $email, string $newPassword) : bool
 		return false;
 	}
 }
-
 function getUser(PDO $database)
 {
 	try
@@ -559,7 +527,6 @@ function getUser(PDO $database)
 		return array(null);
 	}
 }
-
 function getOneUser(PDO $database,int $id)
 {
 	try
@@ -574,7 +541,6 @@ function getOneUser(PDO $database,int $id)
 		return array(null);
 	}
 }
-
 function getUserByInstructor(PDO $database,$instructorId)
 {
 	try
@@ -589,7 +555,6 @@ function getUserByInstructor(PDO $database,$instructorId)
 		return array(null);
 	}
 }
-
 function getUserNotValidated(PDO $database,$instructorId)
 {
 	try
@@ -618,7 +583,6 @@ function validateUser(PDO $database,$userId)
 		return false;
 	}
 }
-
 function getUserByNameByInstructor(PDO $database,$instructorId,$search)
 {
 	try
@@ -633,7 +597,6 @@ function getUserByNameByInstructor(PDO $database,$instructorId,$search)
 		return array(null);
 	}
 }
-
 function getUserInfo(PDO $database,int $userId)
 {
 	try
@@ -648,7 +611,6 @@ function getUserInfo(PDO $database,int $userId)
 		return null;
 	}
 }
-
 function validationKey(PDO $database,$email,$code)
 {
 	try
@@ -666,7 +628,6 @@ function validationKey(PDO $database,$email,$code)
 		return false;
 	}
 }
-
 function mailValidated(PDO $database,string $code){
 	try{
 	$reqcode = $database->prepare('UPDATE user SET status =? WHERE  validation_key =?');
@@ -677,7 +638,6 @@ function mailValidated(PDO $database,string $code){
 		return false;
 	}
 }
-
 function getStructureByCode(PDO $database,string $code)
 {
 	try
@@ -699,8 +659,6 @@ function getStructureByCode(PDO $database,string $code)
 		return null;
 	}
 }
-
-
 function getInstructorByCode(PDO $database,string $code)
 {
 	try
@@ -717,9 +675,7 @@ function getInstructorByCode(PDO $database,string $code)
 		return null;
 	}
 }
-
 function searchUserByName(PDO $database,$search){
-
 		try
 		{
 			$requser = $database->prepare("SELECT * FROM user where (last_name like '$search%' ||first_name like '$search%') ORDER BY last_name ");
@@ -732,7 +688,6 @@ function searchUserByName(PDO $database,$search){
 			return array(null);
 		}
 }
-
 function deleteUser(PDO $database,int $id) {
     try{
 	$requete = $database->prepare("DELETE FROM user WHERE id = ? ");
@@ -745,7 +700,6 @@ function deleteUser(PDO $database,int $id) {
 		}
     
 }
-
 function banUser(PDO $database,int $id){
 	try{
 		$requete = $database->prepare("UPDATE user SET status = \"B\" WHERE id =? ");
@@ -757,7 +711,6 @@ function banUser(PDO $database,int $id){
 				return array(null);
 			}
 }
-
 function passUserToReferent(PDO $database,int $id){
 	try{
 		$requete = $database->prepare("UPDATE structure SET referent = ? WHERE id = (SELECT structure from user WHERE id =?) ");
@@ -851,7 +804,4 @@ function multiCriteriaRequest(PDO $database) : array
 		return array();
 	}
 }
-
-
-
 ?>
