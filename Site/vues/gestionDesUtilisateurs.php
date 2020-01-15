@@ -137,10 +137,10 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
-           
+		<td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['last_name'] ?></td>
           <td> <?php echo $user['first_name'] ?></td>
-		  <td><php><?php echo $user['sex']; ?></php></td>
+		 
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
           <td> <?php echo $user['structureName'] ?></td>
@@ -164,10 +164,10 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
-       
+		<td><php><?php echo $user['sex']; ?></php></td>
           <td> <?php echo $user['last_name'] ?></td>
 		  <td> <?php echo $user['first_name'] ?></td>
-		  <td><php><?php echo $user['sex']; ?></php></td>
+		
           <td> <?php echo $user['birthdate'] ?></td>
           <td> <?php echo $user['type'] ?></td>
           <td> <?php echo $user['structureName'] ?></td>
