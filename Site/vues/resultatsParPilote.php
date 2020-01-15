@@ -57,7 +57,7 @@
     <div id="resultatstestenligne" >
         <h3> Resultats test en ligne </h3>
         <div id="resultatenligne">
-            <h1><a href="index.php?redirect=test&function=resultats">Résultats</a></h1>
+            <h1><a href="index.php?redirect=test&function=resultatsPsychotesteEnLigne">Résultats</a></h1>
             <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test en ligne</p>
         </div>
     </div>
