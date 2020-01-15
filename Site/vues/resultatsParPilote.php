@@ -23,7 +23,7 @@
     <div class="resumeResultat">
         <h3> Résumé des resultats </h3>
         <h1><a href="index.php?redirect=test&function=resultatsGlobaux">Résultats </a></h1>
-        <p>Description</p>
+        <p>Cliquez sur l'onglet ci-dessus pour faire apparaitre les résultats de tout les tests effectués</p>
     </div>
 
 
@@ -37,19 +37,19 @@
         <div id="reconnaissanceDeTonalite">
             <h1><a href="index.php?redirect=test&function=resultatsReconnaissanceDeTonalite">Reconnaissance de
                     tonalité</a></h1>
-            <p>Description</p>
+            <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test de la reconnaissance de tonalité</p>
         </div>
 
         <div id="tempsDeReaction" >
 
             <h1><a href="index.php?redirect=test&function=resultatsTempsDeReaction">Temps de réaction</a></h1>
-            <p>Description</p>
+            <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test du temps de réaction</p>
 
         </div>
 
         <div id="seuilDePerception" >
             <h1><a href="index.php?redirect=test&function=resultatSeuilsDePerception">Seuil de perception</a></h1>
-            <p>Description</p>
+            <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test du seuil de perceptions</p>
 
         </div>
 
@@ -58,7 +58,7 @@
         <h3> Resultats test en ligne </h3>
         <div id="resultatenligne">
             <h1><a href="index.php?redirect=test&function=resultats">Résultats</a></h1>
-            <p>Description</p>
+            <p>Cliquez sur l'onglet ci-dessus pour faire apparaître les résultats du test en ligne</p>
         </div>
     </div>
 
