@@ -43,7 +43,7 @@ switch ($function) {
                 /*TODO : Securiser le mail*/
                 $password = hashPassword($_POST['mdp']);
 
-                if (testEmailExist($database, $email) || findUserConnexion($database, $email, $password) != array(null)) {
+                if (findUserConnexion($database, $email, $password) != array(null)) {
 
                     // Tout est ok, on peut connecter l'utilisateur
                     $user = findUserConnexion($database, $email, $password);

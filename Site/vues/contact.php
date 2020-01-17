@@ -21,7 +21,6 @@
   <div class="headerContact">
     <h1> Contact </h1>
   </div>
-  <?php echo printError($error); ?>
   <div class"center_bloc">
     <div class="formulaireContact">
       <?php echo printError($error); ?>
