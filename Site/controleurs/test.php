@@ -33,10 +33,19 @@ switch ($function) {
         break;
 
 
-    case 'resultatsGlobaux':
+   case 'resultatsGlobaux':
         $vue = "resultatsGlobaux";
         $error = false;
+        $id = $_SESSION['pilotId'];
+
+        if (getResultatsOverallResult($database, $id) != array(null)) {
+            $rowAll = getResultatsOverallResult($database, $id);
+            $NbreData = 1;
+        } else {
+            $NbreData = 0;
+        }
         break;
+        
 
     case 'resultatsGestionDuStress':
 
