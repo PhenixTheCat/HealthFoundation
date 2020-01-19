@@ -29,7 +29,8 @@
 
             <label for="answer">Réponse</label>
 
-            <textarea name="answer" rows="10" cols="55" >
+            <textarea name="answer" rows="10%" cols="50%" >
+            </textarea>
             </br>
 
            <input class="submitButtons" type="submit" value="Ajouter" name="addQuestion">
