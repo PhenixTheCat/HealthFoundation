@@ -116,7 +116,7 @@
 		<script>showCriterias(0,1,true,0);</script>
 		</div>
 		<div id="Criterias" class = "Criterias"><b></b></div>
-		<button class ="submitButtons" type="submit" value = "Research" name="Research">Rechercher</button>
+		<button type="submit" value = "Research" name="Research">Rechercher</button>
 		</form>
 		<table border="1">	
 		  <thead>
