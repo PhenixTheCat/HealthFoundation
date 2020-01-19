@@ -30,7 +30,7 @@ switch ($function) {
         if(isset($_POST['addQuestion'])){
             if(isString($_POST['question'])&&isString($_POST['answer'])){
                 $question=$_POST['question'];
-                $question=$_POST['answer'];
+                $answer=$_POST['answer'];
                 insertQuestion($database, "", "", "", $question,$answer,1);
             }
         }

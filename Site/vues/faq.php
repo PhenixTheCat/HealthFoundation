@@ -29,7 +29,7 @@
 
             <label for="answer">Réponse</label>
 
-            <input type="text" name="answer">
+            <textarea name="answer" rows="10" cols="55" >
             </br>
 
            <input class="submitButtons" type="submit" value="Ajouter" name="addQuestion">
