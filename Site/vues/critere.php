@@ -81,6 +81,7 @@ for($i=0;$i<$_SESSION["nbCriteria"];$i++) {
 	$_SESSION['criteriaText'][$i] = $criteriaMemory[$i];
 	$_SESSION['criteriaType'][$i] = $criteriaType[$i];
 	?>
+<div class="partieInput">
 	<input id="search" class="criteriaSearch" name="Text<?php echo($i)?>" type="text" placeholder="Rechercher" value = "<?php echo($_SESSION['criteriaText'][$i]) ?>" />
 	<?php if($i == $_SESSION["nbCriteria"]-1) {?>
 	
@@ -89,6 +90,7 @@ for($i=0;$i<$_SESSION["nbCriteria"];$i++) {
 	<?php if($i != $_SESSION["nbCriteria"]-1) {?>
 	<input id="Boutton" type="button" value="Retirer le critère" onclick="showCriterias(-1,<?php echo($_SESSION["nbCriteria"]);?>,false,<?php echo($i)?>)" />
 	<?php }?>
+	</div>
 	<div class="multiCritereRadio">
 		<input type="radio" id="Name<?php echo($i)?>" name="<?php echo($i)?>" value="Name" <?php if($criteriaType[$i] == "Name") { echo("checked");} ?> >
 		<label for="Name<?php echo($i)?>">Nom</label>
