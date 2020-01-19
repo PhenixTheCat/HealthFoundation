@@ -228,7 +228,7 @@ switch ($function) {
 
                 insertInformationResetPass($database, $mailTo, $code);
                 $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/index.php?redirect=user&function=motDePasseOublieNouveauMotDePasse&code=$code";
-                $message = "Vous avez démandé un changement de mot de passe ?
+                $message = "Vous avez demandé un changement de mot de passe ?
                 Cliquez sur ce <a href='$url'>lien  </a>pour changer votre mot de passe
                 Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/index.php?redirect=user&function=motDePasseOublieNouveauMotDePasse&code=$code dans votre navigateur
                  ";
