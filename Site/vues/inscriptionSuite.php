@@ -26,7 +26,7 @@
           <?php if($_SESSION['signupCodeType'] == "structure") : ?>
           <h3> Inscription Formateur </h3>
           <?php endif;?>
-          <label for="sex" id="sex">Sex <span class="etoile"> * </span> </label>
+          <label for="sex" id="sex">Sexe <span class="etoile"> * </span> </label>
           <input type="radio" name="sex" value="Female"> Femme
           <input type="radio" name="sex" value="Male"> Homme
           <input type="radio" name="sex" value="Other"> Autre<br>
