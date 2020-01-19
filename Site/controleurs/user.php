@@ -91,6 +91,7 @@ switch ($function) {
                                 $structureId = getStructureByCode($database, $codeformateur);
                                 $_SESSION['structureId'] = $structureId['id'];
                                 $_SESSION['instructorId'] = $structureId['referent'];
+                                
                                 header('Location:index.php?redirect=user&function=inscriptionSuite');
                             }
 
@@ -184,10 +185,14 @@ switch ($function) {
         Ou copiez ce lien http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/index.php?redirect=user&function=inscriptionCompteValide&code=$code dans votre navigateur
             ";
                     if (sendMail($email, "Inscription validation", $message)) {
+
+                        isFirstReferent($database,$structure,$email);
+
                         header("Location:index.php?redirect=user&function=inscriptionMailEnvoye");
                     } else {
                         $error = "Le mail n'a pas pu être envoyé";
                     }
+
                 } else {
                     $error = "Erreur lors de l'ajout!";
                 }

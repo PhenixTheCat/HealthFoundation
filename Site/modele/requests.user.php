@@ -873,6 +873,21 @@ function multiCriteriaRequest(PDO $database) : array
 	}
 }
 
+function isFirstReferent(PDO $database,$idStructure,$email){
+	try{
+		
+		$requete = $database->prepare("UPDATE structure SET referent = (SELECT id FROM user where email=?) WHERE (id =? & referent is NULL) ");
+		$requete->execute(array($email,$idStructure));
+		return true;
+		}
+		
+		catch(Exception $e)
+			{
+				return false;
+			}
+}
+		
+
 
 
 ?>

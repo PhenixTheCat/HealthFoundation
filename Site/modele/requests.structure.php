@@ -24,7 +24,7 @@ catch(Exception $error)
 
 function insertStructure(PDO $database,array $data){
     try{
-    $reqStructure = $database->prepare("INSERT INTO `structure`(`id`, `name`, `referent`, `address`, `city`, `postcode`, `country`, `phone_number`, `code`) VALUES (0,?,NULL,?,?,?,?,?,?,'Active')");
+    $reqStructure = $database->prepare("INSERT INTO `structure`(`id`, `name`, `referent`, `address`, `city`, `postcode`, `country`, `phone_number`, `code`,`status`) VALUES (0,?,NULL,?,?,?,?,?,?,'Active')");
     $reqStructure->execute($data);
     return true;
         }

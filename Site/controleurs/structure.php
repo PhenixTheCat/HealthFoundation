@@ -128,7 +128,7 @@ switch ($function) {
                 if (insertStructure($database, $data)) {
                     header('Location:index.php?redirect=structure&function=gestionDesStructures');
                 } else {
-                    $error = "erreur lors de l'insertion";
+                    $error = "Erreur lors de l'insertion";
                 }
             } else {
                 $error = "Remplir tous les champs";
