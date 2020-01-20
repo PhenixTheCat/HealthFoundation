@@ -60,8 +60,23 @@
     </form>
     <?php endif;?>
         <?php } ?>
-        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Pilot") : ?>
+        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?>
+            <div class="formulaireContact">
+            <h2>Votre question n'est pas présente?</h2>
+            <form action="" method="post">
+                <label for="Nom" id="nom">Nom</label>
+                <input type="text" name="nom">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom">
+                <label for="mail">Adresse e-mail</label>
+                <input type="email" name="mail">
+                <label for="message">Votre message</label>
+                <textarea name="message" rows="10" cols="55" placeholder="Votre message">
 
+        </textarea>
+                <input class="submitButtons" name="envoi" type="submit" Value="Envoyer" id="envoi">
+            </form>
+        </div>
         
     <?php endif;?>
         <!--
@@ -135,22 +150,7 @@
 
         -->
 
-        <div class="formulaireContact">
-            <h2>Votre question n'est pas présente?</h2>
-            <form action="" method="post">
-                <label for="Nom" id="nom">Nom</label>
-                <input type="text" name="nom">
-                <label for="prenom">Prénom</label>
-                <input type="text" name="prenom">
-                <label for="mail">Adresse e-mail</label>
-                <input type="email" name="mail">
-                <label for="message">Votre message</label>
-                <textarea name="message" rows="10" cols="55" placeholder="Votre message">
 
-        </textarea>
-                <input class="submitButtons" name="envoi" type="submit" Value="Envoyer" id="envoi">
-            </form>
-        </div>
     </div>
 
 
