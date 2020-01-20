@@ -142,7 +142,7 @@
         <?php } ?>
 
         <form action="" method="post">
-            <input class="submitButtons" type="submit" name="changeCodeInstructor">
+            <input class="submitButtons" type="submit" value="Générer" name="changeCodeInstructor">
         </form>
     </div>
 

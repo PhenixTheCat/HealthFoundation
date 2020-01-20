@@ -60,7 +60,7 @@
     </form>
     <?php endif;?>
         <?php } ?>
-        <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] != "Administrator") : ?>
+        <?php  if($_SESSION['userType'] != "Administrator") : ?>
             <div class="formulaireContact">
             <h2>Votre question n'est pas présente?</h2>
             <form action="" method="post">

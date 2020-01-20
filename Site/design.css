@@ -1888,7 +1888,8 @@ div.titreProduit {
 .submitButtons {
 	font-size: 20px;
 	overflow: hidden;
-	border: 3px solid #000000;
+	border: 1px solid rgba(41, 105, 151, 0.49);
+	border-radius: 3px;
 	background-color: rgba(41, 105, 151, 0.49);
 	color: #000000;
 	background: none;
@@ -1930,16 +1931,19 @@ div.titreProduit {
 .editButtons {
 	font-size: 14px;
 	overflow: hidden;
-	border: 3px solid #000000;
+	border: 1px solid rgba(41, 105, 151, 0.49);
+	border-radius: 3px;
+	background-color: rgba(41, 105, 151, 0.49);
 	color: #000000;
 	background: none;
 	cursor: pointer;
-
+	padding: 1% 5%;
 	display: inline-block;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(25, 25, 255, 0.1), rgba(0, 0, 0, 0.2));
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 0%;
-	margin-bottom: 7%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	letter-spacing: 1px;
 	font-weight: 400;
 	transition: all 0.3s;
@@ -1949,7 +1953,8 @@ div.titreProduit {
 
 .editButtons:hover {
 	content: '';
-	background: #D2E1FF;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(240, 240, 240, 0.1),rgba(0, 0, 0, 0.2));
+	background-color: rgba(102, 165, 211, 0.49);
 
 
 }
@@ -2034,7 +2039,7 @@ table {
 .multiCritereRadio input[type=radio]{
     margin-top:0;
 }
-div.partieInput input#Boutton{
+ input#Boutton{
     float: right;
     width: 20%;
     height: 25px;
@@ -2050,7 +2055,7 @@ div.partieInput input#Boutton{
     transition: all 0s;
     border: 1px solid rgba(41, 105, 151, 0.49);
 }
-div.partieInput input#Boutton:hover{
+input#Boutton:hover{
     background-color:lightblue;
 }
 div.partieInput input#search{

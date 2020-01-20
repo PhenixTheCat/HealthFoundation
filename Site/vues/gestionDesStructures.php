@@ -173,7 +173,7 @@
 	</form>
 
 
-    <a class="editButtons" href="index.php?redirect=structure&function=ajouterUneStructure">Ajouter une structure</a>
+    <a class="submitButtons" href="index.php?redirect=structure&function=ajouterUneStructure">Ajouter une structure</a>
 
 
 
