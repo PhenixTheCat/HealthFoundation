@@ -91,6 +91,7 @@
         <table border="1" class="validerCompte">
             <thead>
                 <tr>
+                    <th>Sexe</th>
                     <th>Nom </th>
                     <th>Prénom</th>
                     <th>Date de naissance</th>
@@ -101,20 +102,24 @@
             <tbody>
                 <?php foreach ($userToValidate as $user) { ?>
                 <tr>
-                    <td>
+                <td  data-label="Sex">
+                        <php><?php echo $user['sex']; ?></php>
+                    </td>
+
+                    <td  data-label="Nom">
                         <php><?php echo $user['last_name']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Prénom">
                         <php><?php echo $user['first_name']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Date de naissance">
                         <php><?php echo $user['birthdate']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Type">
                         <php><?php echo $user['type']; ?></php>
                     </td>
                     <form></form>
-                    <td>
+                    <td data-label="Statut">
                         <form action="" method="POST">
                             <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
                             <input class="gestionButtons" type="submit" name="activate" value="Activer">

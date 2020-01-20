@@ -126,23 +126,23 @@
       <tbody>
         <?php foreach ($userToValidate as $user) { ?>
         <tr>
-          <td>
+          <td data-label="Nom de famille">
             <php><?php echo $user['last_name']; ?></php>
           </td>
-          <td>
+          <td data-label="Prénom">
             <php><?php echo $user['first_name']; ?></php>
           </td>
-          <!-- <td><php><?php //echo $user['sex']; ?></php></td> -->
-          <td>
+  
+          <td data-label="Date de naissance">
             <php><?php echo $user['birthdate']; ?></php>
           </td>
-          <td>
+          <td data-label="Type">
             <php><?php echo $user['type']; ?></php>
           </td>
 
 
           <form></form>
-          <td>
+          <td data-label="Statut">
             <form action="" method="POST">
               <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
               <input class="gestionButtons" type="submit" name="activate" value="Valider l'inscription">
@@ -200,18 +200,17 @@
         <?php foreach ($structures as $struc) { ?>
 
         <tr>
-          <td> <?php echo $struc['id'] ?></td>
-          <td> <?php echo $struc['name'] ?></td>
-          <td> <?php echo $struc['last_name'].' '.$struc['first_name'] ?></td>
-          <td> <?php echo $struc['address'] ?></td>
-          <td> <?php echo $struc['city'] ?></td>
-          <td> <?php echo $struc['postcode'] ?></td>
-          <td> <?php echo $struc['country'] ?></td>
-          <td> <?php echo $struc['phone_number'] ?></td>
-          <td> <?php echo $struc['code'] ?></td>
-          <td><?php echo $struc['status']; ?></td>
-          <td>
-          <td>
+          <td data-label="ID"> <?php echo $struc['id'] ?></td>
+          <td data-label="Nom">  <?php echo $struc['name'] ?></td>
+          <td data-label="Référent"> <?php echo $struc['last_name'].' '.$struc['first_name'] ?></td>
+          <td data-label="Adresse"> <?php echo $struc['address'] ?></td>
+          <td data-label="Ville"> <?php echo $struc['city'] ?></td>
+          <td data-label="Code postal"> <?php echo $struc['postcode'] ?></td>
+          <td data-label="Pays"> <?php echo $struc['country'] ?></td>
+          <td data-label="Numéro de téléphone"> <?php echo $struc['phone_number'] ?></td>
+          <td data-label="Code"> <?php echo $struc['code'] ?></td>
+          <td data-label="Statut"><?php echo $struc['status']; ?></td>
+          <td data-label="Statut">
 
             <form action="" id="searchUser" method="post">
               <input class="gestionButtons" type="hidden" name="id" value="<?php echo $struc['id'];?>">
@@ -231,22 +230,23 @@
         <?php foreach ($structures as $struc) { ?>
 
         <tr>
-          <td> <?php echo $struc['id'] ?></td>
-          <td> <?php echo $struc['name'] ?></td>
-          <td> <?php echo $struc['last_name'].' '.$struc['first_name'] ?></td>
-          <td> <?php echo $struc['address'] ?></td>
-          <td> <?php echo $struc['city'] ?></td>
-          <td> <?php echo $struc['postcode'] ?></td>
-          <td> <?php echo $struc['country'] ?></td>
-          <td> <?php echo $struc['phone_number'] ?></td>
-          <td> <?php echo $struc['code'] ?></td>
-          <td><?php echo $struc['status']; ?></td>
-          <td>
+          <td data-label="ID"> <?php echo $struc['id'] ?></td>
+          <td data-label="Nom">  <?php echo $struc['name'] ?></td>
+          <td data-label="Référent"> <?php echo $struc['last_name'].' '.$struc['first_name'] ?></td>
+          <td data-label="Adresse"> <?php echo $struc['address'] ?></td>
+          <td data-label="Ville"> <?php echo $struc['city'] ?></td>
+          <td data-label="Code postal"> <?php echo $struc['postcode'] ?></td>
+          <td data-label="Pays"> <?php echo $struc['country'] ?></td>
+          <td data-label="Numéro de téléphone"> <?php echo $struc['phone_number'] ?></td>
+          <td data-label="Code"> <?php echo $struc['code'] ?></td>
+          <td data-label="Statut"><?php echo $struc['status']; ?></td>
+          <td data-label="Statut">
+
             <form action="" id="searchUser" method="post">
-              <input  type="hidden" name="id" value="<?php echo $struc['id'];?>">
+              <input class="gestionButtons" type="hidden" name="id" value="<?php echo $struc['id'];?>">
               <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
               <input class="gestionButtons" type="submit" name="generateCode" value="Générer un code" /> </br>
-              <input class="gestionButtons" type="submit" name="inactive" value="Passer inactif" /> </br>
+              <input class="gestionButtons" type="submit" name="inactive" value="Marquer comme inactive" /> </br>
 
             </form>
           </td>

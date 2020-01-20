@@ -312,7 +312,7 @@
       traitement, via les moyens suivants :&nbsp;</p>
     <table class="renderedtable" border="0" cellpadding="2" cellspacing="0" width="100%">
       <tr>
-        <td valign="top">10 rue des vanves,92130,Issy-Les-Moulineaux
+        <td  valign="top">10 rue des vanves,92130,Issy-Les-Moulineaux
   </p>
 
   <p>Par voie électronique : contact@Health Foundation.fr&nbsp;</p>

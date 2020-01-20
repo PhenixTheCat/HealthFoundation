@@ -29,44 +29,44 @@ if ($NbreData != 0)
 ?>
       <table border="1">
         <thead>
-          <tr>
-            <th>id</th>
-            <th>test</th>
-            <th>timeline</th>
-            <th>value</th>
-            <th>type</th>
-            <th>unité</th>
-            <th>date</th>
-            <th>durée</th>
-            <th>score</th>
-            <th>banc de test</th>
-            <th>pilot</th>
-            <th>instructeur</th>
-            <th>capteurs</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
+        <tr>
+                        <th>Id</th>
+                        <th>Test</th>
+                        <th>Timeline</th>
+                        <th>Valeur</th>
+                        <th>Type</th>
+                        <th>Unité</th>
+                        <th>Date</th>
+                        <th>Durée</th>
+                        <th>Score</th>
+                        <th>Banc de test</th>
+                        <th>Pilot</th>
+                        <th>Formateur</th>
+                        <th>Capteurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
     // pour chaque ligne (chaque enregistrement)
     foreach ( $rowAll as $row )
     {
         // DONNEES A AFFICHER dans chaque cellule de la ligne
 ?>
-          <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['test']; ?></td>
-            <td><?php echo $row['timeline']; ?></td>
-            <td><?php echo $row['value']; ?></td>
-            <td><?php echo $row['type']; ?></td>
-            <td><?php echo $row['unit']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['duration']; ?></td>
-            <td><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
-            <td><?php echo $row['testbed']; ?></td>
-            <td><?php echo $row['pilot']; ?></td>
-            <td><?php echo $row['instructor']; ?></td>
-            <td><?php echo $row['sensor']; ?></td>
-          </tr>
+                    <tr>
+                        <td data-label="ID"><?php echo $row['id']; ?></td>
+                        <td data-label="Test"><?php echo $row['test']; ?></td>
+                        <td data-label="Timeline"><?php echo $row['timeline']; ?></td>
+                        <td data-label="Valeur"><?php echo $row['value']; ?></td>
+                        <td data-label="Type"><?php echo $row['type']; ?></td>
+                        <td data-label="Unité"><?php echo $row['unit']; ?></td>
+                        <td data-label="Date"><?php echo $row['date']; ?></td>
+                        <td data-label="Durée"><?php echo $row['duration']; ?></td>
+                        <td data-label="Score"><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
+                        <td data-label="Banc de test"><?php echo $row['testbed']; ?></td>
+                        <td data-label="Pilote"><?php echo $row['pilot']; ?></td>
+                        <td data-label="Formateur"><?php echo $row['instructor']; ?></td>
+                        <td data-label="Capteur"><?php echo $row['sensor']; ?></td>
+                    </tr>
           <?php
     } // fin foreach
 ?>

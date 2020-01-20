@@ -27,15 +27,15 @@ if ($NbreData != 0)
       <table border="1">
         <thead>
           <tr>
-            <th>id</th>
-            <th>date</th>
-            <th>durée</th>
-            <th>score</th>
-            <th>banc de test</th>
-            <th>données mesurées</th>
-            <th>pilot</th>
-            <th>instructeur</th>
-            <th>capteur</th>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Durée</th>
+            <th>Score</th>
+            <th>Banc de test</th>
+            <th>Données mesurées</th>
+            <th>Pilote</th>
+            <th>Formateur</th>
+
             
           </tr>
         </thead>
@@ -47,16 +47,16 @@ if ($NbreData != 0)
         // DONNEES A AFFICHER dans chaque cellule de la ligne
 ?>
           <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['duration']; ?></td>
-            <td><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
-            <td><?php echo $row['testbed']; ?></td>
-            <td><?php echo $row['measured_data']; ?></td>
-            <td><?php echo $row['pilot']; ?></td>
+            <td data-label="ID"><?php echo $row['id']; ?></td>
+            <td data-label="Date"><?php echo $row['date']; ?></td>
+            <td data-label="Durée"><?php echo $row['duration']; ?></td>
+            <td data-label="Score"><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
+            <td data-label="Banc de test"><?php echo $row['testbed']; ?></td>
+            <td data-label="Données mesurées"><?php echo $row['measured_data']; ?></td>
+            <td data-label="Pilote"><?php echo $row['pilot']; ?></td>
            
-            <td><?php echo $row['instructor']; ?></td>
-            <td><?php echo $row['sensor']; ?></td>
+            <td data-label="Formateur"><?php echo $row['instructor']; ?></td>
+
 
           </tr>
           <?php

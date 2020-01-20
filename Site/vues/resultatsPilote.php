@@ -46,20 +46,20 @@
 
                 <?php foreach ($userByInstructor as $user) { ?>
                 <tr>
-                <td>
+                <td data-label="Sex">
                         <php><?php echo $user['sex']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Nom">
                         <php><?php echo $user['last_name']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Prénom">
                         <php><?php echo $user['first_name']; ?></php>
                     </td>
-                    <td>
+                    <td data-label="Date de naissance">
                         <php><?php echo $user['birthdate']; ?></php>
                     </td>
                     
-                        <td>
+                        <td data-label="Résultats">
                             <form action="" id="showResults" method="post">
                                 <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
                                 <input class="gestionButtons" type="submit" name="results" value="Page de résultats" /> </br>

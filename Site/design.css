@@ -320,7 +320,10 @@ li a {
 }
 
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 900px) {
+	body{
+		margin-bottom: 40%;
+	}
 	.footerBloque {
 		position: inherit;
 		display: flex;
@@ -652,7 +655,7 @@ div.menuBas>a#footerButton {
 
 /*La gestion de taille d'écran est renseignée ici */
 
-/*  ==============      A REVOIR (MEDIA QUERIES) =============== */
+
 
 /* min-width pour moyennes résolutions */
 @media screen and (min-width: 1024px) {
@@ -2087,6 +2090,26 @@ button[value=Research]:hover {
     text-shadow: -0.5px -0.5px rgba(0, 0, 0, 0.2);
 }
 
+
+@media (max-width: 700px){
+	table thead {
+	display: none;
+	}
+	table tr{
+	display: block;
+	margin-bottom: 40px;
+	}
+	table td {
+	display: block;
+	text-align: right;
+	}
+	table td:before {
+	content: attr(data-label);
+	float: left;
+	font-weight: bold;
+	}
+	}
+	/*
 @media only screen and (max-width: 760px) {
 	.tableau {
 		width: 100%;
@@ -2102,8 +2125,9 @@ button[value=Research]:hover {
 	tr {
 		display: block;
 	}
+	
 
-	/* On cache l'affichage des entetes*/
+/*
 	thead tr {
 		position: absolute;
 		top: -9999px;
@@ -2122,20 +2146,20 @@ button[value=Research]:hover {
 	}
 
 	td:before {
-		/* Now like a table header */
+
 		position: absolute;
-		/* Top/left values mimic padding */
+
 		top: 6px;
 		left: 6px;
 		width: 10%;
 		padding-right: 10px;
 		white-space: nowrap;
 	}
-
+*/
 	/*
 	Titre
 	*/
-
+/*
 	.td:nth-of-type(1):before {
 		content: "Nom";
 	}
@@ -2162,7 +2186,7 @@ button[value=Research]:hover {
 
 
 
-}
+}*/
 
 .gestionButtons{
 	background: none;

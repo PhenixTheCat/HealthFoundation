@@ -137,15 +137,15 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
-		<td><php><?php echo $user['sex']; ?></php></td>
-          <td> <?php echo $user['last_name'] ?></td>
-          <td> <?php echo $user['first_name'] ?></td>
+		<td data-label="Sex"><php><?php echo $user['sex']; ?></php></td>
+          <td data-label="Nom"> <?php echo $user['last_name'] ?></td>
+          <td data-label="Prénom"> <?php echo $user['first_name'] ?></td>
 		 
-          <td> <?php echo $user['birthdate'] ?></td>
-          <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structureName'] ?></td>
-          <td> <?php echo $user['status'] ?></td>
-          <td>
+          <td data-label="Date de naissance"> <?php echo $user['birthdate'] ?></td>
+          <td data-label="Type"> <?php echo $user['type'] ?></td>
+          <td data-label="Structure"> <?php echo $user['structureName'] ?></td>
+          <td data-label="Status"> <?php echo $user['status'] ?></td>
+          <td data-label="Gestion">
             <form action="" id="searchUser" method="post">
               <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 
@@ -164,15 +164,15 @@
         <?php foreach ($users as $user) { ?>
 
         <tr>
-		<td><php><?php echo $user['sex']; ?></php></td>
-          <td> <?php echo $user['last_name'] ?></td>
-		  <td> <?php echo $user['first_name'] ?></td>
+		<td data-label="Sex"><php><?php echo $user['sex']; ?></php></td>
+          <td data-label="Nom"> <?php echo $user['last_name'] ?></td>
+		  <td data-label="Prénom" > <?php echo $user['first_name'] ?></td>
 		
-          <td> <?php echo $user['birthdate'] ?></td>
-          <td> <?php echo $user['type'] ?></td>
-          <td> <?php echo $user['structureName'] ?></td>
-          <td> <?php echo $user['status'] ?></td>
-          <td>
+          <td data-label="Date de naissance"> <?php echo $user['birthdate'] ?></td>
+          <td  data-label="Type"> <?php echo $user['type'] ?></td>
+          <td data-label="Structure"> <?php echo $user['structureName'] ?></td>
+          <td data-label="Status"> <?php echo $user['status'] ?></td>
+          <td data-label="Gestion">
             <form action="" id="searchUser" method="post">
               <input class="gestionButtons" type="hidden" name="id" value="<?php echo $user['id']; ?>">
               <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
