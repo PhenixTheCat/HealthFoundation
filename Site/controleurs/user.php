@@ -544,6 +544,9 @@ case 'psychotestEnLigne':
 
         if(getTestTimeline($database,$_SESSION['pilotId'],1)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],1)!=array(null)){
         drawPointGraphics("Resultats du stress en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],1)),(getTestValue($database,$_SESSION['pilotId'],1)));}
+        else{
+            drawPointGraphics("",array(0),array(0));}
+        
 
         break;
 
@@ -553,6 +556,8 @@ case 'psychotestEnLigne':
         if(getTestTimeline($database,$_SESSION['pilotId'],4)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],4)!=array(null)){
         drawPointGraphics("Resultats de la reconnaissance de tonalité en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],4)),(getTestValue($database,$_SESSION['pilotId'],4)));
         }
+        else{
+            drawPointGraphics("",array(0),array(0));}
         break;
 
     case 'chartReactionTime':
@@ -561,6 +566,8 @@ case 'psychotestEnLigne':
         if(getTestTimeline($database,$_SESSION['pilotId'],2)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],2)!=array(null)){
         drawPointGraphics("Resultats du temps de réaction en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],2)),(getTestValue($database,$_SESSION['pilotId'],2)));
         }
+        else{
+            drawPointGraphics("",array(0),array(0));}
       
 
         break;
@@ -571,6 +578,8 @@ case 'psychotestEnLigne':
         if(getTestTimeline($database,$_SESSION['pilotId'],3)!=array(null)&&getTestValue($database,$_SESSION['pilotId'],3)!=array(null)){
         drawPointGraphics("Resultats du seuil de perception en fonction du temps",(getTestTimeline($database,$_SESSION['pilotId'],3)),(getTestValue($database,$_SESSION['pilotId'],3)));
         }
+        else{
+            drawPointGraphics("",array(0),array(0));}
 
         break;
 
