@@ -55,11 +55,11 @@
         </ul>
 
 
-        <div class=" logoLangue">
-            <a href="index.php?lang=en"><img src="Images/logoAnglais.jpg" class="logo" alt="Passer site en anglais"></a>
-            <a href="index.php?lang=fr"><img src="Images/logoFrance.jpg" class="logo" alt="Passer site en francais"></a>
+/* <div class=" logoLangue">
+            <a href="index.php?lang=en"><img src="Images/logoAnglais.jpg" class="logo" alt="Turn to english"></a>
+            <a href="index.php?lang=fr"><img src="Images/logoFrance.jpg" class="logo" alt="Passer le site en français"></a>
         </div>
-    </nav>
+    </nav> */
 
 </header>
 
