@@ -41,6 +41,7 @@ switch ($function) {
 		}
 		$_SESSION["firstLoad"] = "true";
 
+        $newStructures = getStructure($database);
 		
         if(isset($_POST['Research']))
 		{

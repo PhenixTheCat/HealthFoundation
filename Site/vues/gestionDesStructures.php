@@ -176,7 +176,66 @@
     <a class="submitButtons" href="index.php?redirect=structure&function=ajouterUneStructure">Ajouter une structure</a>
 
 
+   
+<?php if( count($newStructures)>0){ ?>
+  <h2>Nouvelles structures sans référents</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID </th>
+          <th>Nom </th>
+          <th>Référent</th>
+          <th>Adresse</th>
+          <th>Ville </th>
+          <th>Code postal</th>
+          <th>Pays</th>
+          <th>Numéro de telephone</th>
+          <th>Code</th>
+          <th>Statut</th>
+          <th>Gestion</th>
 
+
+        </tr>
+      </thead>
+      <?php foreach ($newStructures as $struc) { ?>
+
+<tr>
+  <td data-label="ID"> <?php echo $struc['id'] ?></td>
+  <td data-label="Nom">  <?php echo $struc['name'] ?></td>
+  <td data-label="Référent">Pas de référent</td>
+  <td data-label="Adresse"> <?php echo $struc['address'] ?></td>
+  <td data-label="Ville"> <?php echo $struc['city'] ?></td>
+  <td data-label="Code postal"> <?php echo $struc['postcode'] ?></td>
+  <td data-label="Pays"> <?php echo $struc['country'] ?></td>
+  <td data-label="Numéro de téléphone"> <?php echo $struc['phone_number'] ?></td>
+  <td data-label="Code"> <?php echo $struc['code'] ?></td>
+  <td data-label="Statut"><?php echo $struc['status']; ?></td>
+  <td data-label="Statut">
+
+    <form action="" id="searchUser" method="post">
+      <input class="gestionButtons" type="hidden" name="id" value="<?php echo $struc['id'];?>">
+      <input class="gestionButtons" type="submit" name="delete" value="Supprimer" /> </br>
+      <input class="gestionButtons" type="submit" name="generateCode" value="Générer un code" /> </br>
+      <input class="gestionButtons" type="submit" name="inactive" value="Marquer comme inactive" /> </br>
+
+    </form>
+  </td>
+
+</tr>
+
+<?php
+        }
+    
+        ?>
+    </table>
+    <?php
+        }
+    
+        ?>
+    
+
+
+    <h2>Structures</h2>
     <table border="1">
       <thead>
         <tr>
@@ -196,7 +255,10 @@
         </tr>
       </thead>
       <tbody>
+
+      
         <?php  if(isset($_POST['Research'])) { ?>
+          <?php if( count($structures)>0){ ?>
         <?php foreach ($structures as $struc) { ?>
 
         <tr>
@@ -225,9 +287,17 @@
         <?php 
     }
     }
+    else{
+      ?>
+      <h5>Aucune structure de ce type</h5>
+      <?php
+    }
+  }
     else 
         { ?>
-        <?php foreach ($structures as $struc) { ?>
+
+
+  <?php foreach ($structures as $struc) { ?>
 
         <tr>
           <td data-label="ID"> <?php echo $struc['id'] ?></td>

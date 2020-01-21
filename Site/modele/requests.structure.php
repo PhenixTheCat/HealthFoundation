@@ -68,7 +68,7 @@ function getStructure(PDO $database){
 try
 	{
         
-	$reqStructure = $database->prepare("SELECT * FROM `structure` ORDER BY `structure`.`name` ASC");
+	$reqStructure = $database->prepare("SELECT * FROM `structure` where referent IS NULL ORDER BY `structure`.`name` ASC");
     $reqStructure->execute();
     return $reqStructure->fetchAll();
 	}
