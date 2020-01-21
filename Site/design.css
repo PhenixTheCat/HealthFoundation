@@ -85,6 +85,7 @@ footer {
 	margin: 10px;
 	display: flex;
 	flex-direction: row;
+	display: inline;
 
 }
 
@@ -288,13 +289,13 @@ li a {
 
 }
 
-.logoLangue .logo {
+/*.logoLangue {
 	display: inline;
 	height: 20px;
 	width: 32px;
 	float: right;
 	margin: 10px;
-}
+}*/
 
 /* =================   Footer non connecté  ============== */
 
