@@ -623,7 +623,7 @@ function getUserByNameByInstructor(PDO $database,$instructorId,$search)
 {
 	try
 	{
-		$requser = $database->prepare("SELECT * FROM user where (last_name like '$search%' ||first_name like '$search%' && instructor= ?) ORDER BY last_name ");
+		$requser = $database->prepare("SELECT * FROM user where (instructor =? && (last_name like '$search%' ||first_name like '$search%')) ORDER BY last_name ");
 		$requser->execute(array($instructorId));
 		return $requser->fetchAll();
         
