@@ -50,7 +50,7 @@ if ($NbreData != 0)
             <td data-label="ID"><?php echo $row['id']; ?></td>
             <td data-label="Date"><?php echo $row['date']; ?></td>
             <td data-label="Durée"><?php echo $row['duration']; ?></td>
-            <td data-label="Score"><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
+            <td data-label="Score"><p id="score" class="invalid"><?php echo $row['score'];?></p></td>
             <td data-label="Banc de test"><?php echo $row['testbed']; ?></td>
             <td data-label="Données mesurées"><?php echo $row['measured_data']; ?></td>
             <td data-label="Pilote"><?php echo $row['pilot']; ?></td>

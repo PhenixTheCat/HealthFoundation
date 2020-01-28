@@ -14,7 +14,7 @@
         <h1>Question posée dans la FAQ</h1>
     </div>
 
-    <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Instructor") : ?>
+    <?php  if($_SESSION['isConnected']&& $_SESSION['userType'] == "Administrator") : ?>
     <div class="resultatsParCat">
 
         <?php  if(!empty($answer)) { ?>

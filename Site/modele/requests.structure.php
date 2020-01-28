@@ -99,7 +99,7 @@ function getReferentNotValidated(PDO $database)
 	try
 	{
         
-	$requser = $database->prepare("SELECT * FROM user WHERE id in(SELECT referent FROM structure) && status =? ");
+	$requser = $database->prepare("SELECT * FROM user WHERE (id in(SELECT referent FROM structure) && status =? && type='Instructor') ");
     $requser->execute(array('M'));
     return $requser->fetchAll();
 	}

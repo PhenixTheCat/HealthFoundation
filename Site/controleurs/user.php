@@ -475,9 +475,9 @@ case 'psychotestEnLigne':
             
             //$id = $_POST["id"]; 
             if(isset($_POST['delete'])){
-               
+               $id = $_POST['id'];
            if(deleteUser($database,$id)){
-               header("Location : index.php?redirect=user&function=gestionDesUtilisateurs");
+               header("Location:index.php?redirect=user&function=gestionDesUtilisateurs");
            }
            else{
                $error = "L'utilisateur n'a pas pu être supprimé!";
@@ -485,34 +485,21 @@ case 'psychotestEnLigne':
             
          }
          
-         if(isset($_POST['banned'])){
+         if(isset($_POST['block'])){
+            $id = $_POST['id'];
             if(banUser($database,$id)){
-                header("Location : index.php?redirect=user&function=gestionDesUtilisateurs");
+                header("Location:index.php?redirect=user&function=gestionDesUtilisateurs");
             }
             else{
                 $error = "L'utilisateur n'a pas pu être banni!";
             }
         }
 
-        if(isset($_POST['instructor'])){
-            
-            $count = count($_POST['instructor']);
-            for ($i = 0; $i < $count; $i++){
-                $code =$_POST['instructorCode'][$i];
-                $idsToInstructor = $_POST['instructor'][$i];
-        
-           $requete = $bdd->prepare("UPDATE user SET code = '$code' WHERE id = '$idsToInstructor' ");
-           $requete->execute();
-            }
-        }
         if(isset($_POST['referent'])){    
-            $count = count($_POST['referent']);
-            $uniqId = [];
-            for ($i = 0; $i < $count; $i++){
-                $idsToReferent = $_POST['referent'][$i];
-            $requete = $bdd->prepare("UPDATE structure SET referent = '$idsToReferent' WHERE id = (SELECT structure from user WHERE id = '$idsToReferent') ");
-            $requete->execute();
-            }
+            $id = $_POST['id'];
+            passUserToReferent($database,$id);
+            header("Location:index.php?redirect=user&function=gestionDesUtilisateurs");
+
         }
             
         
