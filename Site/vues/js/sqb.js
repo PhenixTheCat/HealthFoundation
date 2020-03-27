@@ -191,6 +191,10 @@ function calcul_score(){
 	msg.innerHTML="<p class='score'>Votre score : "+points+" / "+nb_q+"&nbsp;&nbsp;&nbsp;<small>[ soit "+result+"% ]<\/small><\/p>";
 	
 	document.getElementById("feedback").appendChild(msg);
+	
+	
+
+
 //TO DO envoyer le score dans la base de donnée 
 /*if (window.XMLHttpRequest) {
 xmlhttp=new XMLHttpRequest();

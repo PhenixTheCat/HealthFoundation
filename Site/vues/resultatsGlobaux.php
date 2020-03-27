@@ -32,20 +32,17 @@ if ($NbreData != 0)
 ?>
             <table border="1">
                 <thead>
-                <tr>
-                        <th>Id</th>
-                        <th>Test</th>
-                        <th>Timeline</th>
-                        <th>Valeur</th>
-                        <th>Type</th>
-                        <th>Unité</th>
-                        <th>Date</th>
+                    <tr>
+                        <th>Type de test</th>
+                        <th>Date </th>
                         <th>Durée</th>
-                        <th>Score</th>
-                        <th>Banc de test</th>
-                        <th>Pilot</th>
-                        <th>Formateur</th>
-                        <th>Capteurs</th>
+                        <th>Localisation</th>
+                        <th>Structure</th>
+                        <th>Nom de l'instructeur</th>
+                        <th>Prénom de l'instructeur</th>
+                        <th>Nom du capteur</th>
+                        <th>Score du test</th>
+                        <th>Unité</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,20 +53,19 @@ if ($NbreData != 0)
         // DONNEES A AFFICHER dans chaque cellule de la ligne
 ?>
                     <tr>
-                        <td data-label="ID"><?php echo $row['id']; ?></td>
-                        <td data-label="Test"><?php echo $row['test']; ?></td>
-                        <td data-label="Timeline"><?php echo $row['timeline']; ?></td>
-                        <td data-label="Valeur"><?php echo $row['value']; ?></td>
-                        <td data-label="Type"><?php echo $row['type']; ?></td>
-                        <td data-label="Unité"><?php echo $row['unit']; ?></td>
-                        <td data-label="Date"><?php echo $row['date']; ?></td>
-                        <td data-label="Durée"><?php echo $row['duration']; ?></td>
-                        <td data-label="Score"><html><p id="score" class="invalid"><?php echo $row['score'];?></p></html></td>
-                        <td data-label="Banc de test"><?php echo $row['testbed']; ?></td>
-                        <td data-label="Pilote"><?php echo $row['pilot']; ?></td>
-                        <td data-label="Formateur"><?php echo $row['instructor']; ?></td>
-                        <td data-label="Capteur"><?php echo $row['sensor']; ?></td>
+                        <td data-label="ID"><?php echo $row[0]; ?></td>
+                        <td data-label="Test"><?php echo $row[1]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[2]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[3]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[4]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[5]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[6]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[7]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[8]; ?></td>
+                        <td data-label="Timeline"><?php echo $row[9]; ?></td>
+                       
                     </tr>
+                    
                     <?php
     } // fin foreach
 ?>
@@ -82,6 +78,7 @@ if ($NbreData != 0)
 }
 ?>
         </span>
+        <p> Score total :</p>
     </div>
 </div>
 

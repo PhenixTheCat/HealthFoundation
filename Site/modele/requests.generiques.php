@@ -79,45 +79,13 @@ function insertion(PDO $database, array $values, string $table): bool
 
     return $donnees->execute();
 }
-
-function getResultatsReactionTime(PDO $database, int $id): array
-{
-    try {
-
-        $query = $database->prepare("SELECT A.id, A.test, A.timeline, A.value, B.type, B.unit,C.date,C.duration,C.score,C.testbed,C.pilot,C.instructor,C.sensor FROM results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id WHERE (C.pilot=? AND measured_data LIKE '1') ORDER BY date DESC");
-        $query->execute(array($id));
-        if ($query->rowCount() > 0) {
-            return $query->fetchAll();
-        } else {
-            return array(null);
-        }
-    } catch (Exception $e) {
-        return array(null);
-    }
-}
-
-function getResultatsStressManagement(PDO $database, int $id): array
-{
-    try {
-
-        $query = $database->prepare("SELECT A.id, A.test, A.timeline, A.value, B.type, B.unit,C.date,C.duration,C.score,C.testbed,C.pilot,C.instructor,C.sensor FROM results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id WHERE (C.pilot=? AND measured_data LIKE '2') ORDER BY date DESC");
-        $query->execute(array($id));
-        if ($query->rowCount() > 0) {
-            return $query->fetchAll();
-        } else {
-            return array(null);
-        }
-    } catch (Exception $e) {
-        return array(null);
-    }
-}
-
 function getResultatsOverallResult(PDO $database, int $id): array
 {
 
     try {
 
-        $query = $database->prepare("SELECT A.id, A.test, A.timeline, A.value, B.type, B.unit,C.date,C.duration,C.score,C.testbed,C.pilot,C.instructor,C.sensor FROM results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id WHERE C.pilot=?  ORDER BY date DESC");
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? 
+        ORDER BY date DESC");
         $query->execute(array($id));
         return $query->fetchAll();
     } catch (Exception $e) {
@@ -125,11 +93,13 @@ function getResultatsOverallResult(PDO $database, int $id): array
     }
 }
 
-function getResultatsAcknowledgmentOfTotality(PDO $database, int $id): array
+
+function getResultatsStressManagement(PDO $database, int $id): array
 {
     try {
 
-        $query = $database->prepare("SELECT A.id, A.test, A.timeline, A.value, B.type, B.unit,C.date,C.duration,C.score,C.testbed,C.pilot,C.instructor,C.sensor FROM results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id WHERE (C.pilot=? AND measured_data LIKE '3') ORDER BY date DESC");
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? AND G.measured_data = 1
+        ORDER BY date DESC");
         $query->execute(array($id));
         if ($query->rowCount() > 0) {
             return $query->fetchAll();
@@ -140,12 +110,12 @@ function getResultatsAcknowledgmentOfTotality(PDO $database, int $id): array
         return array(null);
     }
 }
-
 function getResultatsThresholdOfPerseption(PDO $database, int $id): array
 {
     try {
 
-        $query = $database->prepare("SELECT A.id, A.test, A.timeline, A.value, B.type, B.unit,C.date,C.duration,C.score,C.testbed,C.pilot,C.instructor,C.sensor FROM results A JOIN psychotechnical_data B JOIN test C ON A.id=B.id AND A.test=C.id AND C.measured_data=B.id WHERE (C.pilot=? AND measured_data LIKE '4') ORDER BY date DESC");
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? AND G.measured_data = 2
+        ORDER BY date DESC");
         $query->execute(array($id));
         if ($query->rowCount() > 0) {
             return $query->fetchAll();
@@ -156,12 +126,50 @@ function getResultatsThresholdOfPerseption(PDO $database, int $id): array
         return array(null);
     }
 }
+function getResultatsReactionTime(PDO $database, int $id): array
+{
+    try {
+
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? AND G.measured_data = 3
+        ORDER BY date DESC");
+        $query->execute(array($id));
+        if ($query->rowCount() > 0) {
+            return $query->fetchAll();
+        } else {
+            return array(null);
+        }
+    } catch (Exception $e) {
+        return array(null);
+    }
+}
+
+
+
+function getResultatsAcknowledgmentOfTotality(PDO $database, int $id): array
+{
+    try {
+
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? AND G.measured_data = 4
+        ORDER BY date DESC");
+        $query->execute(array($id));
+        if ($query->rowCount() > 0) {
+            return $query->fetchAll();
+        } else {
+            return array(null);
+        }
+    } catch (Exception $e) {
+        return array(null);
+    }
+}
+
+
 
 function getResultatsPsychotestEnLigne(PDO $database, int $id): array
 {
     try {
 
-        $query = $database->prepare("SELECT A.id,A.date,A.duration,A.score,A.testbed,A.measured_data,A.pilot,A.instructor,A.sensor FROM test A JOIN online_psychotest B ON A.pilot =B.id_pilot WHERE (A.pilot=? AND A.measured_data LIKE '5') ORDER BY date DESC ");
+        $query = $database->prepare("SELECT D.type, A.date , A.duration, B.location, C.name ,H.last_name, H.first_name,G.name,A.value, G.unit FROM test A JOIN testbed B JOIN structure C JOIN psychotechnical_data D JOIN user F JOIN sensor G JOIN user H WHERE B.id = A.testbed AND B.structure = C.id AND A.instructor = H.id AND G.measured_data = D.id AND G.id = A.sensor AND F.id = ? AND G.measured_data = 5
+        ORDER BY date DESC");
         $query->execute(array($id));
         if ($query->rowCount() > 0) {
             return $query->fetchAll();

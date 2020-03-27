@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 21, 2020 at 10:30 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Host: localhost:3306
+-- Generation Time: Mar 27, 2020 at 05:48 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `health_foundation`
+-- Database: `default`
 --
 
 -- --------------------------------------------------------
@@ -41,36 +39,13 @@ CREATE TABLE `faq` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `online_psychotest`
---
-
-CREATE TABLE `online_psychotest` (
-  `id` int(11) NOT NULL,
-  `id_pilot` int(11) NOT NULL,
-  `score` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `psychotechnical_data`
 --
 
 CREATE TABLE `psychotechnical_data` (
   `id` int(11) NOT NULL,
-  `type` varchar(255) NOT NULL,
-  `unit` varchar(255) NOT NULL
+  `type` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `psychotechnical_data`
---
-
-INSERT INTO `psychotechnical_data` (`id`, `type`, `unit`) VALUES
-(1, 'Stress', 'Bpm'),
-(2, 'Perception', 'Hz'),
-(3, 'Temps de réaction', 'ms'),
-(4, 'Tonalité', 'Hz');
 
 -- --------------------------------------------------------
 
@@ -94,7 +69,7 @@ CREATE TABLE `results` (
   `id` int(11) NOT NULL,
   `test` int(11) NOT NULL COMMENT 'test id',
   `timeline` int(11) NOT NULL COMMENT 'moment of the measure in the test',
-  `value` int(11) NOT NULL
+  `score` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -105,7 +80,9 @@ CREATE TABLE `results` (
 
 CREATE TABLE `sensor` (
   `id` int(11) NOT NULL,
-  `measured_data` int(11) NOT NULL COMMENT 'psychotechnical_data id'
+  `name` varchar(255) COLLATE utf8_bin NOT NULL,
+  `measured_data` int(11) NOT NULL COMMENT 'psychotechnical_data id',
+  `unit` varchar(10) COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -137,9 +114,8 @@ CREATE TABLE `test` (
   `id` int(11) NOT NULL,
   `date` date NOT NULL,
   `duration` int(11) NOT NULL COMMENT 'duration in seconds',
-  `score` int(11) NOT NULL,
+  `value` int(11) NOT NULL,
   `testbed` int(11) DEFAULT NULL COMMENT 'testbed id',
-  `measured_data` int(11) DEFAULT NULL COMMENT 'psychotechnical data id',
   `pilot` int(11) DEFAULT NULL COMMENT 'pilot id',
   `instructor` int(11) DEFAULT NULL COMMENT 'instructor id',
   `sensor` int(11) NOT NULL COMMENT 'sensor id'
@@ -185,13 +161,6 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `sex`, `type`, `email`, `password`, `birthdate`, `instructor`, `structure`, `adress`, `city`, `postecode`, `country`, `phone_number`, `code`, `status`, `validation_key`) VALUES
-(1, 'Admin', 'Istrator', '', 'Administrator', 'admin@email.fr', 'f7d2f352146fb9b88320961c4b52f17f6d57fd86', '0000-00-00', 0, NULL, '', '', '', NULL, NULL, 'ad15474325', 'A', '1');
-
---
 -- Indexes for dumped tables
 --
 
@@ -199,12 +168,6 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `sex`, `type`, `email`, `pa
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `online_psychotest`
---
-ALTER TABLE `online_psychotest`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -266,46 +229,40 @@ ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `online_psychotest`
---
-ALTER TABLE `online_psychotest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `psychotechnical_data`
 --
 ALTER TABLE `psychotechnical_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `resetpass`
 --
 ALTER TABLE `resetpass`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sensor`
 --
 ALTER TABLE `sensor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `structure`
 --
 ALTER TABLE `structure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `testbed`
@@ -317,8 +274,7 @@ ALTER TABLE `testbed`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
