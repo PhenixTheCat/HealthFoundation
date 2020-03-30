@@ -18,7 +18,6 @@
             <h1>Gestion du stress</h1>
             <?php echo printError($error); ?>
             <div class="testResults">
-            <img src="index.php?redirect=user&function=chartStress">
             <?php
             
 

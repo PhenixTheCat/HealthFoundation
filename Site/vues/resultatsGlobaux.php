@@ -23,7 +23,6 @@
             <h1>Résultats globaux</h1>
             <?php echo printError($error); ?>
             <div class="testResults">
-            <img src="index.php?redirect=user&function=chartStress">
                 <p> L'ID du test temps de réaction est 1.</br>L'ID du test gestion du stress est 2.</br>L'ID du test de reconnaissance de tonalité est 3.</br>L'ID du test seuil de perception est 4.</br>l'ID du psychoteste en ligne est 5.</br> </p>
             <?php
 
