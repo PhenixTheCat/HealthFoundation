@@ -258,7 +258,8 @@ function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4,$dat
     $b7plot = new BarPlot($datatest7);
 
 
-    
+    $graph->legend->SetPos(0,0,'right','top');
+
 
     $gbplot = new GroupBarPlot(array($b1plot,$b2plot,$b3plot,$b4plot,$b5plot,$b6plot,$b7plot));
     $graph->Add($gbplot);
