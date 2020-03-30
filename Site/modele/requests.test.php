@@ -10,7 +10,7 @@ $table = "test";
 
 function getTestAVGPerGender(PDO $database,$gender,$testId,$instructorId){
     try{
-        $request = $database->prepare("SELECT AVG(score) AS avggender FROM results WHERE (pilot IN (SELECT id FROM user WHERE sex =?) && `measured_data` =? && instructor=?)");
+        $request = $database->prepare("SELECT AVG(value) AS avggender FROM test WHERE pilot IN (SELECT id FROM user WHERE sex =?) && sensor = ? && instructor=?");
         $request->execute(array($gender,$testId,$instructorId));
 
         return $request->fetch();}
@@ -20,7 +20,7 @@ function getTestAVGPerGender(PDO $database,$gender,$testId,$instructorId){
         }
 
 }
-
+/*
 function getTestTimeline($database,$pilotId,$testId){
     try{
         $request = $database->prepare("SELECT timeline FROM results WHERE results=(SELECT id FROM test WHERE (pilot =? && measured_data=?))");
@@ -55,7 +55,7 @@ function getTestValue($database,$pilotId,$testId){
             return array(null);
         }
 }
-
+*/
 
 
 
