@@ -241,8 +241,8 @@ function drawPointGraphics($title,$datax,$datay){
     
 }
 
-function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4){
-    $graph = new Graph(600,400,'auto');
+function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4,$datatest5,$datatest6,$datatest7){
+    $graph = new Graph(800,500,'auto');
     $graph->SetScale("textlin");
 
     $graph->SetBox(false);
@@ -253,21 +253,47 @@ function drawBarGraphics($title,$datatest1,$datatest2,$datatest3,$datatest4){
     $b2plot = new BarPlot($datatest2);
     $b3plot = new BarPlot($datatest3);
     $b4plot = new BarPlot($datatest4);
+    $b5plot = new BarPlot($datatest5);
+    $b6plot = new BarPlot($datatest6);
+    $b7plot = new BarPlot($datatest7);
 
-    $gbplot = new GroupBarPlot(array($b1plot,$b2plot,$b3plot,$b4plot));
+
+    
+
+    $gbplot = new GroupBarPlot(array($b1plot,$b2plot,$b3plot,$b4plot,$b5plot,$b6plot,$b7plot));
     $graph->Add($gbplot);
-    $b1plot->SetColor("white");
+    
     $b1plot->SetFillColor("#cc1111");
+    $b1plot->SetLegend("Frequence cardiaque");
 
 
-    $b2plot->SetColor("white");
+
     $b2plot->SetFillColor("#11cccc");
+    $b2plot->SetLegend("Température");
 
-    $b3plot->SetColor("white");
+
     $b3plot->SetFillColor("#1111cc");
+    $b3plot->SetLegend("Seuil de perception");
 
-    $b4plot->SetColor("white");
+
     $b4plot->SetFillColor("#5511cc");
+    $b4plot->SetLegend("Temps de réaction à une lumière attendu");
+
+
+
+    $b5plot->SetFillColor("#ca7159");
+    $b5plot->SetLegend("Temps de réaction à une lumière inattendu");
+
+   
+    $b6plot->SetFillColor("#613e3b");
+    $b6plot->SetLegend("Reconnaissance de tonalité");
+
+    $b7plot->SetFillColor("#f3d18e");
+    $b7plot ->SetLegend("Test en ligne");
+   
+  
+ 
+    
     $graph->title->Set($title);
 
     $graph->Stroke();

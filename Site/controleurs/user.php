@@ -523,9 +523,16 @@ case 'psychotestEnLigne':
             $error = false;
             //TODO : Ajouter les resultats des test moyens des femmes et des hommes
            
-            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",array(getTestAVGPerGender($database,'Female',1,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',1,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',2,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',2,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',3,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',3,$_SESSION['userID'])[0]),array(getTestAVGPerGender($database,'Female',4,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',4,$_SESSION['userID'])[0]));
+            drawBarGraphics("Moyenne des résultats de la structure des différents tests entre les femmes et les hommes",
+            array(getTestAVGPerGender($database,'Female',1,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',1,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',2,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',2,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',3,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',3,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',4,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',4,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',5,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',5,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',6,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',6,$_SESSION['userID'])[0]),
+            array(getTestAVGPerGender($database,'Female',7,$_SESSION['userID'])[0],getTestAVGPerGender($database,'Male',7,$_SESSION['userID'])[0]));
             break;
-    case 'chartStress':
+   /* case 'chartStress':
         $vue = "chart";
         $error = false;
 
@@ -568,7 +575,7 @@ case 'psychotestEnLigne':
         else{
             drawPointGraphics("",array(0),array(0));}
 
-        break;
+        break;*/
 
     default:
         // si aucune fonction ne correspond au paramètre function passé en GET
