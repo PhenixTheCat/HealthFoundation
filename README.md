@@ -2,7 +2,7 @@
 ==========
 
 Ce projet correspond à la partie informatique de notre projet APP. <img src= "Site/Images/AppLogo.png" width="25">   </br>
-Il comprend le site web dans son entièreté.
+Il comprend le site web dans son entièreté (base de données manquante).
 
 
 
